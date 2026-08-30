@@ -18,8 +18,11 @@ function predict(fixture) {
   const awayForm = total(fixture.away.form);
   const homeH2h = total(fixture.h2h);
   const awayH2h = total(fixture.h2h.map(opposite));
-  const homeRating = (homeForm / 15 * 10 * CONFIG.recentFormWeight) + (homeH2h / 12 * 10 * CONFIG.headToHeadWeight) + CONFIG.homeAdvantage;
-  const awayRating = (awayForm / 15 * 10 * CONFIG.recentFormWeight) + (awayH2h / 12 * 10 * CONFIG.headToHeadWeight);
+  const formHomeMaximum = Math.max(1, fixture.home.form.length * 3);
+  const formAwayMaximum = Math.max(1, fixture.away.form.length * 3);
+  const h2hMaximum = Math.max(1, fixture.h2h.length * 3);
+  const homeRating = (homeForm / formHomeMaximum * 10 * CONFIG.recentFormWeight) + (homeH2h / h2hMaximum * 10 * CONFIG.headToHeadWeight) + CONFIG.homeAdvantage;
+  const awayRating = (awayForm / formAwayMaximum * 10 * CONFIG.recentFormWeight) + (awayH2h / h2hMaximum * 10 * CONFIG.headToHeadWeight);
   const gap = Math.abs(homeRating - awayRating);
   let label = "Draw expected";
   if (gap >= CONFIG.drawThreshold) label = homeRating > awayRating ? `${fixture.home.name} win` : `${fixture.away.name} win`;
@@ -81,9 +84,17 @@ async function loadFixtures() {
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     const data = await response.json();
     fixtures = data.fixtures;
+    document.querySelector("#data-status").textContent = "Live weekly data · football-data.org";
+    if (fixtures.length) {
+      const first = new Date(fixtures[0].utcDate);
+      const last = new Date(fixtures[fixtures.length - 1].utcDate);
+      document.querySelector("#weekend-days").textContent = `${first.getDate()}—${last.getDate()}`;
+      document.querySelector("#weekend-month").textContent = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(first).toUpperCase();
+    }
     document.querySelector(".notice").innerHTML = `<span>✓</span>Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} · football-data.org`;
     render();
   } catch (error) {
+    document.querySelector("#data-status").textContent = "Football data unavailable";
     document.querySelector("#match-list").innerHTML = '<div class="empty">Fixture data is temporarily unavailable. Please try again shortly.</div>';
     console.error(error);
   }
