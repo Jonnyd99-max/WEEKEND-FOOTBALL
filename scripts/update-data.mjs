@@ -40,11 +40,12 @@ const { from, to } = nextWeekend();
 const upcoming = await api(`/competitions/PL/matches?dateFrom=${from}&dateTo=${to}`);
 if (!upcoming.matches?.length) throw new Error(`No Premier League fixtures found from ${from} to ${to}`);
 
-const completed = await api("/competitions/PL/matches?status=FINISHED");
-const completedChronological = [...completed.matches].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
-
-function recentForm(teamId) {
-  return completedChronological.filter(match => match.homeTeam.id === teamId || match.awayTeam.id === teamId).slice(-5).map(match => resultFor(match, teamId));
+const teamIds = [...new Set(upcoming.matches.flatMap(match => [match.homeTeam.id, match.awayTeam.id]))];
+const forms = new Map();
+for (const teamId of teamIds) {
+  const history = await api(`/teams/${teamId}/matches?competitions=PL&status=FINISHED&limit=5`);
+  const matches = [...(history.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-5);
+  forms.set(teamId, matches.map(match => resultFor(match, teamId)));
 }
 
 const fixtures = [];
@@ -58,8 +59,8 @@ for (const match of upcoming.matches.sort((a, b) => new Date(a.utcDate) - new Da
     date: formatKickoff(match.utcDate),
     utcDate: match.utcDate,
     venue: match.venue || "Venue TBC",
-    home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), form: recentForm(match.homeTeam.id) },
-    away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), form: recentForm(match.awayTeam.id) },
+    home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.homeTeam.id) ?? [] },
+    away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.awayTeam.id) ?? [] },
     h2h,
   });
 }
