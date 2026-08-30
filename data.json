@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T18:54:38.501Z",
+  "updatedAt": "2026-08-30T19:00:53.328Z",
   "source": "football-data.org",
   "fixtures": [
     {
@@ -13,7 +13,8 @@
         "name": "Newcastle United FC",
         "short": "NEW",
         "form": [
-          "D"
+          "D",
+          "W"
         ]
       },
       "away": {
@@ -21,7 +22,8 @@
         "name": "AFC Bournemouth",
         "short": "BOU",
         "form": [
-          "L"
+          "L",
+          "D"
         ]
       },
       "h2h": [
@@ -41,7 +43,8 @@
         "name": "Nottingham Forest FC",
         "short": "NOT",
         "form": [
-          "L"
+          "L",
+          "D"
         ]
       },
       "away": {
@@ -49,6 +52,7 @@
         "name": "Tottenham Hotspur FC",
         "short": "TOT",
         "form": [
+          "L",
           "L"
         ]
       },
@@ -79,6 +83,7 @@
         "name": "Coventry City FC",
         "short": "COV",
         "form": [
+          "L",
           "L"
         ]
       },
@@ -185,6 +190,7 @@
         "name": "Hull City AFC",
         "short": "HUL",
         "form": [
+          "W",
           "W"
         ]
       },
@@ -209,7 +215,8 @@
         "name": "Everton FC",
         "short": "EVE",
         "form": [
-          "W"
+          "W",
+          "D"
         ]
       },
       "away": {
