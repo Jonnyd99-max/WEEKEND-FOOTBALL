@@ -77,9 +77,19 @@ function topPicksTable(picks) {
   if (!picks.length) return '<div class="empty">No predictions currently meet the 85% confidence threshold.</div>';
   const rows = picks.map(fixture => {
     const result = predict(fixture);
-    return `<tr><td><span class="table-league">${fixture.competition?.name || "Premier League"}</span></td><td><strong>${fixture.home.name}</strong><span class="table-versus">vs</span><strong>${fixture.away.name}</strong></td><td>${fixture.date}</td><td>${result.label}</td><td><span class="table-confidence">${result.confidence}%</span></td></tr>`;
+    return `<article class="top-pick-row">
+      <div class="top-pick-match">
+        <span class="top-pick-league">${fixture.competition?.name || "Premier League"}</span>
+        <div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div>
+        <span class="top-pick-kickoff">${fixture.date}</span>
+      </div>
+      <div class="top-pick-call">
+        <div><span class="eyebrow">OUR PREDICTION</span><strong>${result.label}</strong></div>
+        <div class="top-pick-score"><b>${result.confidence}%</b><small>confidence</small></div>
+      </div>
+    </article>`;
   }).join("");
-  return `<div class="top-picks-panel"><div class="top-picks-heading"><div><span class="section-kicker">HIGH-CONFIDENCE FORECASTS</span><h2>Top picks</h2></div><span class="threshold">85%+ confidence</span></div><div class="table-scroll"><table class="top-picks-table"><thead><tr><th>League</th><th>Fixture</th><th>Kick-off</th><th>Prediction</th><th>Confidence</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGH-CONFIDENCE FORECASTS</span><h2>Top picks</h2><p>The strongest calls across your selected leagues.</p></div><span class="threshold">85%+ confidence</span></div><div class="top-picks-list">${rows}</div></div>`;
 }
 
 function renderLeaguePicker() {
