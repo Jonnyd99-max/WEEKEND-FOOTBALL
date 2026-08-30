@@ -63,9 +63,23 @@ function card(fixture) {
 
 let currentFilter = "all";
 function render() {
-  const visible = fixtures.filter(fixture => (currentFilter === "all" || fixture.day === currentFilter) && (currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague));
+  const visible = fixtures.filter(fixture => {
+    const matchesDay = currentFilter === "all" || currentFilter === "top" || fixture.day === currentFilter;
+    const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
+    const matchesConfidence = currentFilter !== "top" || predict(fixture).confidence >= 85;
+    return matchesDay && matchesLeague && matchesConfidence;
+  });
   document.querySelector("#fixture-count").textContent = visible.length;
-  document.querySelector("#match-list").innerHTML = visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+  document.querySelector("#match-list").innerHTML = currentFilter === "top" ? topPicksTable(visible) : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+}
+
+function topPicksTable(picks) {
+  if (!picks.length) return '<div class="empty">No predictions currently meet the 85% confidence threshold.</div>';
+  const rows = picks.map(fixture => {
+    const result = predict(fixture);
+    return `<tr><td><span class="table-league">${fixture.competition?.name || "Premier League"}</span></td><td><strong>${fixture.home.name}</strong><span class="table-versus">vs</span><strong>${fixture.away.name}</strong></td><td>${fixture.date}</td><td>${result.label}</td><td><span class="table-confidence">${result.confidence}%</span></td></tr>`;
+  }).join("");
+  return `<div class="top-picks-panel"><div class="top-picks-heading"><div><span class="section-kicker">HIGH-CONFIDENCE FORECASTS</span><h2>Top picks</h2></div><span class="threshold">85%+ confidence</span></div><div class="table-scroll"><table class="top-picks-table"><thead><tr><th>League</th><th>Fixture</th><th>Kick-off</th><th>Prediction</th><th>Confidence</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 
 function renderLeaguePicker() {
@@ -114,3 +128,4 @@ async function loadFixtures() {
 }
 
 loadFixtures();
+
