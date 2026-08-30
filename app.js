@@ -7,13 +7,7 @@ const CONFIG = {
   maximumConfidence: 89,
 };
 
-const fixtures = [
-  { id: 101, day: "saturday", date: "Saturday 29 Aug · 12:30", venue: "Emirates Stadium", home: { name: "Arsenal", short: "ARS", form: ["W","W","D","W","W"] }, away: { name: "Leeds United", short: "LEE", form: ["L","D","L","W","L"] }, h2h: ["W","W","D","W"] },
-  { id: 102, day: "saturday", date: "Saturday 29 Aug · 15:00", venue: "Craven Cottage", home: { name: "Fulham", short: "FUL", form: ["D","W","L","D","W"] }, away: { name: "Chelsea", short: "CHE", form: ["W","W","W","D","L"] }, h2h: ["L","L","D","L"] },
-  { id: 103, day: "saturday", date: "Saturday 29 Aug · 17:30", venue: "Anfield", home: { name: "Liverpool", short: "LIV", form: ["W","D","W","W","L"] }, away: { name: "Manchester United", short: "MUN", form: ["D","W","L","W","D"] }, h2h: ["W","D","W","L"] },
-  { id: 104, day: "sunday", date: "Sunday 30 Aug · 14:00", venue: "Villa Park", home: { name: "Aston Villa", short: "AVL", form: ["W","L","W","D","W"] }, away: { name: "Everton", short: "EVE", form: ["D","L","W","D","L"] }, h2h: ["W","D","W","W"] },
-  { id: 105, day: "sunday", date: "Sunday 30 Aug · 16:30", venue: "Etihad Stadium", home: { name: "Manchester City", short: "MCI", form: ["W","W","W","W","D"] }, away: { name: "Tottenham Hotspur", short: "TOT", form: ["W","L","D","W","W"] }, h2h: ["L","W","W","D"] },
-];
+let fixtures = [];
 
 const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
 const total = results => results.reduce((sum, result) => sum + points(result), 0);
@@ -81,4 +75,18 @@ document.querySelector("#refresh").addEventListener("click", event => {
   setTimeout(() => { render(); event.currentTarget.classList.remove("spinning"); }, 450);
 });
 
-render();
+async function loadFixtures() {
+  try {
+    const response = await fetch(`data.json?v=${Date.now()}`);
+    if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
+    const data = await response.json();
+    fixtures = data.fixtures;
+    document.querySelector(".notice").innerHTML = `<span>✓</span>Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} · football-data.org`;
+    render();
+  } catch (error) {
+    document.querySelector("#match-list").innerHTML = '<div class="empty">Fixture data is temporarily unavailable. Please try again shortly.</div>';
+    console.error(error);
+  }
+}
+
+loadFixtures();

@@ -1,0 +1,11 @@
+{
+  "updatedAt": "2026-08-30T18:40:00.000Z",
+  "source": "sample",
+  "fixtures": [
+    {"id":101,"day":"saturday","date":"Saturday 29 Aug · 12:30","utcDate":"2026-08-29T11:30:00Z","venue":"Emirates Stadium","home":{"id":57,"name":"Arsenal","short":"ARS","form":["W","W","D","W","W"]},"away":{"id":341,"name":"Leeds United","short":"LEE","form":["L","D","L","W","L"]},"h2h":["W","W","D","W"]},
+    {"id":102,"day":"saturday","date":"Saturday 29 Aug · 15:00","utcDate":"2026-08-29T14:00:00Z","venue":"Craven Cottage","home":{"id":63,"name":"Fulham","short":"FUL","form":["D","W","L","D","W"]},"away":{"id":61,"name":"Chelsea","short":"CHE","form":["W","W","W","D","L"]},"h2h":["L","L","D","L"]},
+    {"id":103,"day":"saturday","date":"Saturday 29 Aug · 17:30","utcDate":"2026-08-29T16:30:00Z","venue":"Anfield","home":{"id":64,"name":"Liverpool","short":"LIV","form":["W","D","W","W","L"]},"away":{"id":66,"name":"Manchester United","short":"MUN","form":["D","W","L","W","D"]},"h2h":["W","D","W","L"]},
+    {"id":104,"day":"sunday","date":"Sunday 30 Aug · 14:00","utcDate":"2026-08-30T13:00:00Z","venue":"Villa Park","home":{"id":58,"name":"Aston Villa","short":"AVL","form":["W","L","W","D","W"]},"away":{"id":62,"name":"Everton","short":"EVE","form":["D","L","W","D","L"]},"h2h":["W","D","W","W"]},
+    {"id":105,"day":"sunday","date":"Sunday 30 Aug · 16:30","utcDate":"2026-08-30T15:30:00Z","venue":"Etihad Stadium","home":{"id":65,"name":"Manchester City","short":"MCI","form":["W","W","W","W","D"]},"away":{"id":73,"name":"Tottenham Hotspur","short":"TOT","form":["W","L","D","W","W"]},"h2h":["L","W","W","D"]}
+  ]
+}
