@@ -8,6 +8,7 @@ const CONFIG = {
 };
 
 let fixtures = [];
+let currentLeague = "all";
 
 const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
 const total = results => results.reduce((sum, result) => sum + points(result), 0);
@@ -35,7 +36,7 @@ const pill = result => `<span class="form-pill form-${result.toLowerCase()}" tit
 function card(fixture) {
   const result = predict(fixture);
   return `<article class="match-card">
-    <div class="card-topline"><span>${fixture.date}</span><span class="venue">${fixture.venue}</span></div>
+    <div class="card-topline"><span>${fixture.date}<span class="competition-tag">${fixture.competition?.name || "Premier League"}</span></span><span class="venue">${fixture.venue}</span></div>
     <div class="teams">
       <div class="team"><span class="crest crest-home">${fixture.home.short[0]}</span><div><small>HOME</small><h2>${fixture.home.name}</h2></div></div>
       <div class="versus">VS</div>
@@ -62,9 +63,20 @@ function card(fixture) {
 
 let currentFilter = "all";
 function render() {
-  const visible = currentFilter === "all" ? fixtures : fixtures.filter(fixture => fixture.day === currentFilter);
+  const visible = fixtures.filter(fixture => (currentFilter === "all" || fixture.day === currentFilter) && (currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague));
   document.querySelector("#fixture-count").textContent = visible.length;
   document.querySelector("#match-list").innerHTML = visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+}
+
+function renderLeaguePicker() {
+  const leagues = [...new Map(fixtures.map(fixture => [fixture.competition?.code || "PL", fixture.competition?.name || "Premier League"])).entries()];
+  const options = [["all", "All leagues"], ...leagues];
+  document.querySelector("#league-tabs").innerHTML = options.map(([code, name]) => `<button data-league="${code}" class="${currentLeague === code ? "active" : ""}">${name}</button>`).join("");
+  document.querySelectorAll("[data-league]").forEach(button => button.addEventListener("click", () => {
+    currentLeague = button.dataset.league;
+    renderLeaguePicker();
+    render();
+  }));
 }
 
 document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => {
@@ -84,6 +96,7 @@ async function loadFixtures() {
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     const data = await response.json();
     fixtures = data.fixtures;
+    renderLeaguePicker();
     document.querySelector("#data-status").textContent = "Live weekly data · football-data.org";
     if (fixtures.length) {
       const first = new Date(fixtures[0].utcDate);

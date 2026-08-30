@@ -9,7 +9,7 @@ A dependency-free, responsive Premier League prediction dashboard.
 - A transparent 70% form / 30% head-to-head model
 - Home advantage and confidence calculations
 - Expandable calculation details
-- Automated real-world fixtures and form from football-data.org
+- Automated real-world fixtures and form for the Premier League, Championship, Bundesliga, La Liga, and Serie A
 
 ## Run locally
 
