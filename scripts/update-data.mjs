@@ -4,6 +4,14 @@ const API_ROOT = "https://api.football-data.org/v4";
 const token = process.env.FOOTBALL_DATA_API_KEY;
 if (!token) throw new Error("FOOTBALL_DATA_API_KEY is not configured");
 
+const COMPETITIONS = [
+  { code: "PL", name: "Premier League" },
+  { code: "ELC", name: "Championship" },
+  { code: "BL1", name: "Bundesliga" },
+  { code: "PD", name: "La Liga" },
+  { code: "SA", name: "Serie A" },
+];
+
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 let lastRequestAt = 0;
 
@@ -37,33 +45,38 @@ function formatKickoff(utcDate) {
 }
 
 const { from, to } = nextWeekend();
-const upcoming = await api(`/competitions/PL/matches?dateFrom=${from}&dateTo=${to}`);
-if (!upcoming.matches?.length) throw new Error(`No Premier League fixtures found from ${from} to ${to}`);
-
-const teamIds = [...new Set(upcoming.matches.flatMap(match => [match.homeTeam.id, match.awayTeam.id]))];
-const forms = new Map();
-for (const teamId of teamIds) {
-  const history = await api(`/teams/${teamId}/matches?competitions=PL&status=FINISHED&limit=5`);
-  const matches = [...(history.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-5);
-  forms.set(teamId, matches.map(match => resultFor(match, teamId)));
-}
-
 const fixtures = [];
-for (const match of upcoming.matches.sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))) {
-  const h2hData = await api(`/matches/${match.id}/head2head?limit=4`);
-  const h2h = [...(h2hData.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-4).map(previous => resultFor(previous, match.homeTeam.id));
-  const londonDay = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "long" }).format(new Date(match.utcDate)).toLowerCase();
-  fixtures.push({
-    id: match.id,
-    day: londonDay,
-    date: formatKickoff(match.utcDate),
-    utcDate: match.utcDate,
-    venue: match.venue || "Venue TBC",
-    home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.homeTeam.id) ?? [] },
-    away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.awayTeam.id) ?? [] },
-    h2h,
-  });
+for (const competition of COMPETITIONS) {
+  console.log(`Fetching ${competition.name}…`);
+  const upcoming = await api(`/competitions/${competition.code}/matches?dateFrom=${from}&dateTo=${to}`);
+  const matches = upcoming.matches ?? [];
+  const teamIds = [...new Set(matches.flatMap(match => [match.homeTeam.id, match.awayTeam.id]))];
+  const forms = new Map();
+  for (const teamId of teamIds) {
+    const history = await api(`/teams/${teamId}/matches?competitions=${competition.code}&status=FINISHED&limit=5`);
+    const previous = [...(history.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-5);
+    forms.set(teamId, previous.map(match => resultFor(match, teamId)));
+  }
+  for (const match of matches) {
+    const h2hData = await api(`/matches/${match.id}/head2head?limit=4`);
+    const h2h = [...(h2hData.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-4).map(previous => resultFor(previous, match.homeTeam.id));
+    const londonDay = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "long" }).format(new Date(match.utcDate)).toLowerCase();
+    fixtures.push({
+      id: match.id,
+      competition,
+      day: londonDay,
+      date: formatKickoff(match.utcDate),
+      utcDate: match.utcDate,
+      venue: match.venue || "Venue TBC",
+      home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.homeTeam.id) ?? [] },
+      away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.awayTeam.id) ?? [] },
+      h2h,
+    });
+  }
 }
+
+if (!fixtures.length) throw new Error(`No selected-league fixtures found from ${from} to ${to}`);
+fixtures.sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
 
 await writeFile("data.json", `${JSON.stringify({ updatedAt: new Date().toISOString(), source: "football-data.org", fixtures }, null, 2)}\n`);
-console.log(`Updated ${fixtures.length} weekend fixtures (${from} to ${to}).`);
+console.log(`Updated ${fixtures.length} fixtures across ${COMPETITIONS.length} leagues (${from} to ${to}).`);
