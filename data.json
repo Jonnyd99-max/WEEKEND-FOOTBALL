@@ -1,11 +1,260 @@
 {
-  "updatedAt": "2026-08-30T18:40:00.000Z",
-  "source": "sample",
+  "updatedAt": "2026-08-30T18:54:38.501Z",
+  "source": "football-data.org",
   "fixtures": [
-    {"id":101,"day":"saturday","date":"Saturday 29 Aug · 12:30","utcDate":"2026-08-29T11:30:00Z","venue":"Emirates Stadium","home":{"id":57,"name":"Arsenal","short":"ARS","form":["W","W","D","W","W"]},"away":{"id":341,"name":"Leeds United","short":"LEE","form":["L","D","L","W","L"]},"h2h":["W","W","D","W"]},
-    {"id":102,"day":"saturday","date":"Saturday 29 Aug · 15:00","utcDate":"2026-08-29T14:00:00Z","venue":"Craven Cottage","home":{"id":63,"name":"Fulham","short":"FUL","form":["D","W","L","D","W"]},"away":{"id":61,"name":"Chelsea","short":"CHE","form":["W","W","W","D","L"]},"h2h":["L","L","D","L"]},
-    {"id":103,"day":"saturday","date":"Saturday 29 Aug · 17:30","utcDate":"2026-08-29T16:30:00Z","venue":"Anfield","home":{"id":64,"name":"Liverpool","short":"LIV","form":["W","D","W","W","L"]},"away":{"id":66,"name":"Manchester United","short":"MUN","form":["D","W","L","W","D"]},"h2h":["W","D","W","L"]},
-    {"id":104,"day":"sunday","date":"Sunday 30 Aug · 14:00","utcDate":"2026-08-30T13:00:00Z","venue":"Villa Park","home":{"id":58,"name":"Aston Villa","short":"AVL","form":["W","L","W","D","W"]},"away":{"id":62,"name":"Everton","short":"EVE","form":["D","L","W","D","L"]},"h2h":["W","D","W","W"]},
-    {"id":105,"day":"sunday","date":"Sunday 30 Aug · 16:30","utcDate":"2026-08-30T15:30:00Z","venue":"Etihad Stadium","home":{"id":65,"name":"Manchester City","short":"MCI","form":["W","W","W","W","D"]},"away":{"id":73,"name":"Tottenham Hotspur","short":"TOT","form":["W","L","D","W","W"]},"h2h":["L","W","W","D"]}
+    {
+      "id": 560571,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 12:30",
+      "utcDate": "2026-09-05T11:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 67,
+        "name": "Newcastle United FC",
+        "short": "NEW",
+        "form": [
+          "D"
+        ]
+      },
+      "away": {
+        "id": 1044,
+        "name": "AFC Bournemouth",
+        "short": "BOU",
+        "form": [
+          "L"
+        ]
+      },
+      "h2h": [
+        "L",
+        "D",
+        "L"
+      ]
+    },
+    {
+      "id": 560562,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 15:00",
+      "utcDate": "2026-09-05T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 351,
+        "name": "Nottingham Forest FC",
+        "short": "NOT",
+        "form": [
+          "L"
+        ]
+      },
+      "away": {
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "short": "TOT",
+        "form": [
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "id": 560563,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 15:00",
+      "utcDate": "2026-09-05T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 65,
+        "name": "Manchester City FC",
+        "short": "MCI",
+        "form": [
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "short": "COV",
+        "form": [
+          "L"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 560564,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 15:00",
+      "utcDate": "2026-09-05T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 397,
+        "name": "Brighton & Hove Albion FC",
+        "short": "BHA",
+        "form": [
+          "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 341,
+        "name": "Leeds United FC",
+        "short": "LEE",
+        "form": [
+          "W",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "id": 560565,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 15:00",
+      "utcDate": "2026-09-05T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 402,
+        "name": "Brentford FC",
+        "short": "BRE",
+        "form": [
+          "W",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 71,
+        "name": "Sunderland AFC",
+        "short": "SUN",
+        "form": [
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "W"
+      ]
+    },
+    {
+      "id": 560568,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 15:00",
+      "utcDate": "2026-09-05T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 63,
+        "name": "Fulham FC",
+        "short": "FUL",
+        "form": [
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 354,
+        "name": "Crystal Palace FC",
+        "short": "CRY",
+        "form": [
+          "L",
+          "L"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "id": 560569,
+      "day": "saturday",
+      "date": "Saturday 5 Sept, 17:30",
+      "utcDate": "2026-09-05T16:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 322,
+        "name": "Hull City AFC",
+        "short": "HUL",
+        "form": [
+          "W"
+        ]
+      },
+      "away": {
+        "id": 58,
+        "name": "Aston Villa FC",
+        "short": "AVL",
+        "form": [
+          "L"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 560567,
+      "day": "sunday",
+      "date": "Sunday 6 Sept, 14:00",
+      "utcDate": "2026-09-06T13:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 62,
+        "name": "Everton FC",
+        "short": "EVE",
+        "form": [
+          "W"
+        ]
+      },
+      "away": {
+        "id": 66,
+        "name": "Manchester United FC",
+        "short": "MUN",
+        "form": [
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "id": 560570,
+      "day": "sunday",
+      "date": "Sunday 6 Sept, 16:30",
+      "utcDate": "2026-09-06T15:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 57,
+        "name": "Arsenal FC",
+        "short": "ARS",
+        "form": [
+          "W"
+        ]
+      },
+      "away": {
+        "id": 61,
+        "name": "Chelsea FC",
+        "short": "CHE",
+        "form": [
+          "W",
+          "W"
+        ]
+      },
+      "h2h": [
+        "D",
+        "W"
+      ]
+    }
   ]
 }
