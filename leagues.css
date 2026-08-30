@@ -1,2 +1,279 @@
-.league-picker{display:flex;align-items:center;gap:18px;margin-bottom:18px;padding:14px 16px;background:#fffef8;border:1px solid #e1e3dc;border-radius:13px;overflow:hidden}.league-picker-label{flex:0 0 auto;font-size:9px;font-weight:800;letter-spacing:.16em;color:#728078}.league-tabs{display:flex;gap:7px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}.league-tabs button{flex:0 0 auto;border:1px solid #d9ded5;border-radius:8px;padding:9px 12px;background:#f2f3ed;color:#53635a;font:700 10px Manrope,Arial,sans-serif;cursor:pointer}.league-tabs button.active{border-color:#174f3c;background:#174f3c;color:#fff}.competition-tag{display:inline-flex;align-items:center;margin-left:8px;padding:4px 7px;border-radius:6px;background:#e7eee9;color:#315546;font-size:8px;font-weight:800;letter-spacing:.08em}.top-picks-panel{overflow:hidden;background:#fffef8;border:1px solid #e1e3dc;border-radius:18px;box-shadow:0 5px 22px #213a2c0a}.top-picks-heading{display:flex;align-items:center;justify-content:space-between;padding:24px 26px;border-bottom:1px solid #d9ded5}.top-picks-heading h2{margin:4px 0 0;font:600 25px 'Space Grotesk',sans-serif}.threshold{padding:8px 11px;border-radius:8px;background:#c9f54a;font-size:10px;font-weight:800}.table-scroll{overflow-x:auto}.top-picks-table{width:100%;border-collapse:collapse;min-width:780px}.top-picks-table th{text-align:left;padding:12px 18px;background:#f2f3ed;color:#728078;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.top-picks-table td{padding:17px 18px;border-top:1px solid #eceee8;color:#42534a;font-size:11px}.top-picks-table tbody tr:hover{background:#f8f9f3}.table-league{font-weight:800;color:#174f3c}.table-versus{margin:0 7px;color:#929d97}.table-confidence{display:inline-grid;place-items:center;min-width:52px;padding:8px;border-radius:8px;background:#174f3c;color:#fff;font-weight:800}@media(max-width:760px){.league-picker{align-items:flex-start;flex-direction:column;gap:9px}.league-tabs{width:100%}.top-picks-heading{padding:20px}.threshold{font-size:9px}}
+.league-picker {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  overflow: hidden;
+  background: #fffef8;
+  border: 1px solid #e1e3dc;
+  border-radius: 13px;
+}
+
+.league-picker-label {
+  flex: 0 0 auto;
+  color: #728078;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.league-tabs {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+.league-tabs button {
+  flex: 0 0 auto;
+  padding: 9px 12px;
+  color: #53635a;
+  background: #f2f3ed;
+  border: 1px solid #d9ded5;
+  border-radius: 8px;
+  font: 700 10px Manrope, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.league-tabs button.active {
+  color: #fff;
+  background: #174f3c;
+  border-color: #174f3c;
+}
+
+.competition-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  padding: 4px 7px;
+  color: #315546;
+  background: #e7eee9;
+  border-radius: 6px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.top-picks-wrap {
+  display: grid;
+  gap: 14px;
+}
+
+.top-picks-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 28px;
+  background: #fffef8;
+  border: 1px solid #e1e3dc;
+  border-radius: 18px;
+  box-shadow: 0 5px 22px #213a2c0a;
+}
+
+.top-picks-heading h2 {
+  margin: 5px 0 2px;
+  color: #172d23;
+  font: 600 27px 'Space Grotesk', sans-serif;
+}
+
+.top-picks-heading p {
+  margin: 0;
+  color: #728078;
+  font-size: 11px;
+}
+
+.threshold {
+  flex: 0 0 auto;
+  padding: 9px 12px;
+  color: #173629;
+  background: #c9f54a;
+  border-radius: 9px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.top-picks-list {
+  display: grid;
+  gap: 12px;
+}
+
+.top-pick-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(290px, 1fr);
+  overflow: hidden;
+  background: #fffef8;
+  border: 1px solid #e1e3dc;
+  border-radius: 16px;
+  box-shadow: 0 5px 22px #213a2c0a;
+}
+
+.top-pick-match {
+  display: grid;
+  grid-template-columns: 125px minmax(0, 1fr) 165px;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+}
+
+.top-pick-league {
+  justify-self: start;
+  padding: 7px 9px;
+  color: #315546;
+  background: #e7eee9;
+  border-radius: 7px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.top-pick-teams {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  color: #172d23;
+  font: 600 13px 'Space Grotesk', sans-serif;
+}
+
+.top-pick-teams strong {
+  min-width: 0;
+}
+
+.top-pick-teams span {
+  color: #9aa49e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.top-pick-kickoff {
+  color: #68786f;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.top-pick-call {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 22px;
+  color: #fff;
+  background: #174f3c;
+}
+
+.top-pick-call .eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: #b8d1c5;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.top-pick-call strong {
+  font: 600 15px 'Space Grotesk', sans-serif;
+}
+
+.top-pick-score {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  color: #173629;
+  background: #c9f54a;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.top-pick-score b {
+  align-self: end;
+  font-size: 15px;
+}
+
+.top-pick-score small {
+  align-self: start;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+@media (max-width: 980px) {
+  .top-pick-row {
+    grid-template-columns: 1fr;
+  }
+
+  .top-pick-match {
+    grid-template-columns: 105px minmax(0, 1fr) 150px;
+  }
+}
+
+@media (max-width: 760px) {
+  .league-picker {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .league-tabs {
+    width: 100%;
+  }
+
+  .top-picks-heading {
+    align-items: flex-start;
+    padding: 21px;
+  }
+
+  .top-picks-heading h2 {
+    font-size: 24px;
+  }
+
+  .top-picks-heading p {
+    max-width: 210px;
+  }
+
+  .threshold {
+    margin-left: 12px;
+    font-size: 9px;
+  }
+
+  .top-pick-match {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .top-pick-teams {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+  }
+
+  .top-pick-teams span {
+    font-size: 8px;
+  }
+
+  .top-pick-kickoff {
+    text-align: left;
+  }
+
+  .top-pick-call {
+    padding: 17px 20px;
+  }
+
+  .top-pick-call strong {
+    font-size: 14px;
+  }
+
+  .top-pick-score {
+    width: 58px;
+    height: 58px;
+  }
+}
 
