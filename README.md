@@ -19,6 +19,6 @@ Open `index.html` in a modern web browser.
 
 This static app can be hosted directly with GitHub Pages. In repository **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
 
-Fixture data is stored in `data.json`. A GitHub Actions workflow updates it every Friday at 09:00 Europe/London using football-data.org. The API token is stored privately as the `FOOTBALL_DATA_API_KEY` repository secret and is never exposed to the browser.
+Fixture data is stored in `data.json`. A GitHub Actions workflow updates it every Wednesday at 09:00 Europe/London using football-data.org. The API token is stored privately as the `FOOTBALL_DATA_API_KEY` repository secret and is never exposed to the browser.
 
 This is an analysis tool, not a betting service. Predictions are indicative only.
