@@ -2,6 +2,10 @@ name: Update football data
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "scripts/update-data.mjs"
+      - ".github/workflows/update-football-data.yml"
   schedule:
     - cron: "0 9 * * 3"
       timezone: "Europe/London"
@@ -32,3 +36,4 @@ jobs:
           git add data.json
           git commit -m "Update weekend football data"
           git push
+
