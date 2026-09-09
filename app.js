@@ -5,6 +5,7 @@ const CONFIG = {
   drawThreshold: 0.85,
   minimumConfidence: 52,
   maximumConfidence: 89,
+  venuePriorMatches: 5,
 };
 
 let fixtures = [];
@@ -14,7 +15,7 @@ const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
 const total = results => results.reduce((sum, result) => sum + points(result), 0);
 const opposite = result => result === "W" ? "L" : result === "L" ? "W" : "D";
 
-function predict(fixture) {
+function legacyPredict(fixture) {
   const homeForm = total(fixture.home.form);
   const awayForm = total(fixture.away.form);
   const homeH2h = total(fixture.h2h);
@@ -28,13 +29,91 @@ function predict(fixture) {
   let label = "Draw expected";
   if (gap >= CONFIG.drawThreshold) label = homeRating > awayRating ? `${fixture.home.name} win` : `${fixture.away.name} win`;
   const confidence = Math.round(Math.min(CONFIG.maximumConfidence, CONFIG.minimumConfidence + gap / 5 * (CONFIG.maximumConfidence - CONFIG.minimumConfidence)));
-  return { label, confidence, homeForm, awayForm, homeH2h, homeRating: homeRating.toFixed(2), awayRating: awayRating.toFixed(2), gap: gap.toFixed(2) };
+  return { label, confidence, homeForm, awayForm, homeH2h, homeRating: homeRating.toFixed(2), awayRating: awayRating.toFixed(2), gap: gap.toFixed(2), modelVersion: 1 };
+}
+
+const clamp = (value, minimum, maximum) => Math.min(maximum, Math.max(minimum, value));
+const factorial = number => number < 2 ? 1 : Array.from({ length: number }, (_, index) => index + 1).reduce((product, value) => product * value, 1);
+const poisson = (goals, expected) => Math.exp(-expected) * expected ** goals / factorial(goals);
+
+function predict(fixture) {
+  if (fixture.model?.version !== 2) return legacyPredict(fixture);
+  const leagueHome = fixture.model.league.avgHomeGoals || 1.4;
+  const leagueAway = fixture.model.league.avgAwayGoals || 1.1;
+  const prior = CONFIG.venuePriorMatches;
+  const homePlayed = fixture.home.venuePlayed || 0;
+  const awayPlayed = fixture.away.venuePlayed || 0;
+  const homeForRate = (fixture.home.venueGoalsFor + leagueHome * prior) / (homePlayed + prior);
+  const homeAgainstRate = (fixture.home.venueGoalsAgainst + leagueAway * prior) / (homePlayed + prior);
+  const awayForRate = (fixture.away.venueGoalsFor + leagueAway * prior) / (awayPlayed + prior);
+  const awayAgainstRate = (fixture.away.venueGoalsAgainst + leagueHome * prior) / (awayPlayed + prior);
+  const formDifference = (fixture.home.adjustedForm ?? 0.5) - (fixture.away.adjustedForm ?? 0.5);
+  const restDifference = clamp((fixture.home.restDays ?? 6) - (fixture.away.restDays ?? 6), -5, 5);
+  const h2hHome = fixture.h2h.length ? total(fixture.h2h) / (fixture.h2h.length * 3) : 0.5;
+  const h2hAdjustment = (h2hHome - 0.5) * 0.1;
+  const momentumAdjustment = clamp(formDifference * 0.18 + restDifference * 0.01, -0.16, 0.16);
+  let expectedHome = leagueHome * (homeForRate / leagueHome) * (awayAgainstRate / leagueHome);
+  let expectedAway = leagueAway * (awayForRate / leagueAway) * (homeAgainstRate / leagueAway);
+  expectedHome = clamp(expectedHome * (1 + momentumAdjustment + h2hAdjustment), 0.2, 4);
+  expectedAway = clamp(expectedAway * (1 - momentumAdjustment - h2hAdjustment), 0.2, 4);
+
+  let homeProbability = 0;
+  let drawProbability = 0;
+  let awayProbability = 0;
+  for (let homeGoals = 0; homeGoals <= 8; homeGoals += 1) {
+    for (let awayGoals = 0; awayGoals <= 8; awayGoals += 1) {
+      const probability = poisson(homeGoals, expectedHome) * poisson(awayGoals, expectedAway);
+      if (homeGoals > awayGoals) homeProbability += probability;
+      else if (homeGoals < awayGoals) awayProbability += probability;
+      else drawProbability += probability;
+    }
+  }
+  const probabilityTotal = homeProbability + drawProbability + awayProbability;
+  homeProbability /= probabilityTotal;
+  drawProbability /= probabilityTotal;
+  awayProbability /= probabilityTotal;
+  const outcomes = [
+    { key: "home", probability: homeProbability, label: `${fixture.home.name} win` },
+    { key: "draw", probability: drawProbability, label: "Draw expected" },
+    { key: "away", probability: awayProbability, label: `${fixture.away.name} win` },
+  ];
+  const winner = outcomes.sort((a, b) => b.probability - a.probability)[0];
+  const likelyHomeGoals = Math.min(6, Math.floor(expectedHome));
+  const likelyAwayGoals = Math.min(6, Math.floor(expectedAway));
+  const reasons = [];
+  if ((fixture.home.venuePointsPerGame ?? 1.35) > (fixture.away.venuePointsPerGame ?? 1.35) + 0.35) reasons.push("stronger home record");
+  else if ((fixture.away.venuePointsPerGame ?? 1.35) > (fixture.home.venuePointsPerGame ?? 1.35) + 0.35) reasons.push("stronger away record");
+  if (Math.abs(formDifference) > 0.18) reasons.push(formDifference > 0 ? `${fixture.home.short} have stronger recent form` : `${fixture.away.short} have stronger recent form`);
+  if (Math.abs(restDifference) >= 3) reasons.push(restDifference > 0 ? `${fixture.home.short} are better rested` : `${fixture.away.short} are better rested`);
+  if (!reasons.length) reasons.push("season strength and venue performance are closely matched");
+  return {
+    label: winner.label,
+    confidence: Math.round(winner.probability * 100),
+    expectedScore: `${likelyHomeGoals}–${likelyAwayGoals}`,
+    expectedHome: expectedHome.toFixed(2),
+    expectedAway: expectedAway.toFixed(2),
+    probabilities: { home: Math.round(homeProbability * 100), draw: Math.round(drawProbability * 100), away: Math.round(awayProbability * 100) },
+    reason: reasons.slice(0, 2).join(" · "),
+    homeForm: total(fixture.home.form),
+    awayForm: total(fixture.away.form),
+    homeH2h: total(fixture.h2h),
+    modelVersion: 2,
+  };
 }
 
 const pill = result => `<span class="form-pill form-${result.toLowerCase()}" title="${result === "W" ? "Win" : result === "D" ? "Draw" : "Loss"}">${result}</span>`;
 
 function card(fixture) {
   const result = predict(fixture);
+  const explanation = result.modelVersion === 2 ? `<div class="breakdown">
+        <div><span>Expected goals</span><strong>${result.expectedHome} — ${result.expectedAway}</strong></div><div><span>Likely score</span><strong>${result.expectedScore}</strong></div>
+        <div><span>Home / draw / away</span><strong>${result.probabilities.home}% / ${result.probabilities.draw}% / ${result.probabilities.away}%</strong></div><div><span>Venue PPG</span><strong>${fixture.home.venuePointsPerGame} — ${fixture.away.venuePointsPerGame}</strong></div>
+        <div><span>League position</span><strong>${fixture.home.position || "—"} — ${fixture.away.position || "—"}</strong></div><div><span>Rest days</span><strong>${fixture.home.restDays ?? "—"} — ${fixture.away.restDays ?? "—"}</strong></div>
+      </div><p class="formula">Model V2 · attack and defence strength + home/away record + opponent-adjusted form + rest + 5% head-to-head</p>` : `<div class="breakdown">
+        <div><span>Home form</span><strong>${result.homeForm}<small>/15</small></strong></div><div><span>Away form</span><strong>${result.awayForm}<small>/15</small></strong></div>
+        <div><span>Home H2H</span><strong>${result.homeH2h}<small>/12</small></strong></div><div><span>Home boost</span><strong>+${CONFIG.homeAdvantage}</strong></div>
+        <div><span>Final rating</span><strong>${result.homeRating} — ${result.awayRating}</strong></div><div><span>Rating gap</span><strong>${result.gap}</strong></div>
+      </div><p class="formula">Legacy model · 70% recent form + 30% head-to-head + ${CONFIG.homeAdvantage} home advantage</p>`;
   return `<article class="match-card">
     <div class="card-topline"><span>${fixture.date}<span class="competition-tag">${fixture.competition?.name || "Premier League"}</span></span><span class="venue">${fixture.venue}</span></div>
     <div class="teams">
@@ -48,15 +127,11 @@ function card(fixture) {
       <div class="away-form"><span class="form-label">${fixture.away.short} form</span><div class="form-row">${fixture.away.form.map(pill).join("")}</div></div>
     </div>
     <div class="prediction-panel">
-      <div><span class="eyebrow">OUR PREDICTION</span><strong>${result.label}</strong><span class="reason">Based on recent form and head-to-head</span></div>
+      <div><span class="eyebrow">OUR PREDICTION${result.modelVersion === 2 ? ` · EXPECTED ${result.expectedScore}` : ""}</span><strong>${result.label}</strong><span class="reason">${result.reason || "Based on recent form and head-to-head"}</span></div>
       <div class="confidence"><div class="confidence-ring" style="--confidence:${result.confidence * 3.6}deg"><span>${result.confidence}%</span></div><small>confidence</small></div>
     </div>
     <details><summary>How we calculated this <span>＋</span></summary>
-      <div class="breakdown">
-        <div><span>Home form</span><strong>${result.homeForm}<small>/15</small></strong></div><div><span>Away form</span><strong>${result.awayForm}<small>/15</small></strong></div>
-        <div><span>Home H2H</span><strong>${result.homeH2h}<small>/12</small></strong></div><div><span>Home boost</span><strong>+${CONFIG.homeAdvantage}</strong></div>
-        <div><span>Final rating</span><strong>${result.homeRating} — ${result.awayRating}</strong></div><div><span>Rating gap</span><strong>${result.gap}</strong></div>
-      </div><p class="formula">70% recent form + 30% head-to-head + ${CONFIG.homeAdvantage} home advantage</p>
+      ${explanation}
     </details>
   </article>`;
 }
