@@ -13,6 +13,7 @@ const COMPETITIONS = [
 ];
 
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+const clamp = (value, minimum, maximum) => Math.min(maximum, Math.max(minimum, value));
 let lastRequestAt = 0;
 
 async function api(path) {
@@ -33,15 +34,90 @@ function nextWeekend(now = new Date()) {
   return { from: saturday.toISOString().slice(0, 10), to: sunday.toISOString().slice(0, 10) };
 }
 
-function resultFor(match, teamId) {
+function scoreFor(match, teamId) {
   const home = match.homeTeam.id === teamId;
-  const scored = home ? match.score.fullTime.home : match.score.fullTime.away;
-  const conceded = home ? match.score.fullTime.away : match.score.fullTime.home;
+  return {
+    home,
+    scored: home ? match.score.fullTime.home : match.score.fullTime.away,
+    conceded: home ? match.score.fullTime.away : match.score.fullTime.home,
+    opponentId: home ? match.awayTeam.id : match.homeTeam.id,
+  };
+}
+
+function resultFor(match, teamId) {
+  const { scored, conceded } = scoreFor(match, teamId);
   return scored > conceded ? "W" : scored < conceded ? "L" : "D";
 }
 
+const resultPoints = result => result === "W" ? 3 : result === "D" ? 1 : 0;
+
 function formatKickoff(utcDate) {
   return new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "long", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }).format(new Date(utcDate)).replace(" at ", " · ");
+}
+
+function buildTable(matches) {
+  const table = new Map();
+  const row = team => {
+    if (!table.has(team.id)) table.set(team.id, { id: team.id, name: team.name, played: 0, points: 0, goalsFor: 0, goalsAgainst: 0 });
+    return table.get(team.id);
+  };
+  for (const match of matches) {
+    const home = row(match.homeTeam);
+    const away = row(match.awayTeam);
+    const homeGoals = match.score.fullTime.home;
+    const awayGoals = match.score.fullTime.away;
+    home.played += 1;
+    away.played += 1;
+    home.goalsFor += homeGoals;
+    home.goalsAgainst += awayGoals;
+    away.goalsFor += awayGoals;
+    away.goalsAgainst += homeGoals;
+    if (homeGoals > awayGoals) home.points += 3;
+    else if (homeGoals < awayGoals) away.points += 3;
+    else { home.points += 1; away.points += 1; }
+  }
+  const ordered = [...table.values()].sort((a, b) => b.points - a.points || (b.goalsFor - b.goalsAgainst) - (a.goalsFor - a.goalsAgainst) || b.goalsFor - a.goalsFor);
+  ordered.forEach((team, index) => { team.position = index + 1; team.pointsPerGame = team.played ? team.points / team.played : 1.35; });
+  return table;
+}
+
+function describeTeam(teamId, fixtureDate, venue, matches, table) {
+  const previous = matches.filter(match => new Date(match.utcDate) < fixtureDate && (match.homeTeam.id === teamId || match.awayTeam.id === teamId)).sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  const recentMatches = previous.slice(-5);
+  const form = recentMatches.map(match => resultFor(match, teamId));
+  const recencyWeights = [0.55, 0.65, 0.75, 0.88, 1].slice(-recentMatches.length);
+  let weightedPoints = 0;
+  let totalWeight = 0;
+  for (const [index, match] of recentMatches.entries()) {
+    const { opponentId } = scoreFor(match, teamId);
+    const opponentPpg = table.get(opponentId)?.pointsPerGame ?? 1.35;
+    const opponentWeight = clamp(0.75 + opponentPpg / 3 * 0.5, 0.75, 1.25);
+    const weight = recencyWeights[index];
+    weightedPoints += resultPoints(form[index]) / 3 * opponentWeight * weight;
+    totalWeight += weight;
+  }
+  const venueMatches = previous.filter(match => venue === "HOME" ? match.homeTeam.id === teamId : match.awayTeam.id === teamId);
+  const venueTotals = venueMatches.reduce((totals, match) => {
+    const score = scoreFor(match, teamId);
+    totals.goalsFor += score.scored;
+    totals.goalsAgainst += score.conceded;
+    totals.points += resultPoints(resultFor(match, teamId));
+    return totals;
+  }, { goalsFor: 0, goalsAgainst: 0, points: 0 });
+  const tableRow = table.get(teamId) ?? { played: 0, pointsPerGame: 1.35, position: null };
+  const lastPlayed = previous.at(-1)?.utcDate;
+  return {
+    form,
+    played: tableRow.played,
+    position: tableRow.position,
+    pointsPerGame: Number(tableRow.pointsPerGame.toFixed(2)),
+    venuePlayed: venueMatches.length,
+    venueGoalsFor: venueTotals.goalsFor,
+    venueGoalsAgainst: venueTotals.goalsAgainst,
+    venuePointsPerGame: Number((venueMatches.length ? venueTotals.points / venueMatches.length : 1.35).toFixed(2)),
+    adjustedForm: Number((totalWeight ? weightedPoints / totalWeight : 0.5).toFixed(3)),
+    restDays: lastPlayed ? Math.max(0, Math.floor((fixtureDate - new Date(lastPlayed)) / 86400000)) : null,
+  };
 }
 
 const { from, to } = nextWeekend();
@@ -49,18 +125,23 @@ const fixtures = [];
 for (const competition of COMPETITIONS) {
   console.log(`Fetching ${competition.name}…`);
   const upcoming = await api(`/competitions/${competition.code}/matches?dateFrom=${from}&dateTo=${to}`);
+  const completed = await api(`/competitions/${competition.code}/matches?status=FINISHED`);
   const matches = upcoming.matches ?? [];
-  const teamIds = [...new Set(matches.flatMap(match => [match.homeTeam.id, match.awayTeam.id]))];
-  const forms = new Map();
-  for (const teamId of teamIds) {
-    const history = await api(`/teams/${teamId}/matches?competitions=${competition.code}&status=FINISHED&limit=5`);
-    const previous = [...(history.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-5);
-    forms.set(teamId, previous.map(match => resultFor(match, teamId)));
-  }
+  const finishedMatches = (completed.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
+  const table = buildTable(finishedMatches);
+  const league = {
+    avgHomeGoals: Number((finishedMatches.reduce((sum, match) => sum + match.score.fullTime.home, 0) / Math.max(1, finishedMatches.length)).toFixed(3)),
+    avgAwayGoals: Number((finishedMatches.reduce((sum, match) => sum + match.score.fullTime.away, 0) / Math.max(1, finishedMatches.length)).toFixed(3)),
+    completedMatches: finishedMatches.length,
+  };
+
   for (const match of matches) {
+    const fixtureDate = new Date(match.utcDate);
+    const homeStats = describeTeam(match.homeTeam.id, fixtureDate, "HOME", finishedMatches, table);
+    const awayStats = describeTeam(match.awayTeam.id, fixtureDate, "AWAY", finishedMatches, table);
     const h2hData = await api(`/matches/${match.id}/head2head?limit=4`);
     const h2h = [...(h2hData.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-4).map(previous => resultFor(previous, match.homeTeam.id));
-    const londonDay = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "long" }).format(new Date(match.utcDate)).toLowerCase();
+    const londonDay = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "long" }).format(fixtureDate).toLowerCase();
     fixtures.push({
       id: match.id,
       competition,
@@ -68,8 +149,9 @@ for (const competition of COMPETITIONS) {
       date: formatKickoff(match.utcDate),
       utcDate: match.utcDate,
       venue: match.venue || "Venue TBC",
-      home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.homeTeam.id) ?? [] },
-      away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), form: forms.get(match.awayTeam.id) ?? [] },
+      model: { version: 2, league },
+      home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), ...homeStats },
+      away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), ...awayStats },
       h2h,
     });
   }
@@ -78,5 +160,6 @@ for (const competition of COMPETITIONS) {
 if (!fixtures.length) throw new Error(`No selected-league fixtures found from ${from} to ${to}`);
 fixtures.sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
 
-await writeFile("data.json", `${JSON.stringify({ updatedAt: new Date().toISOString(), source: "football-data.org", fixtures }, null, 2)}\n`);
-console.log(`Updated ${fixtures.length} fixtures across ${COMPETITIONS.length} leagues (${from} to ${to}).`);
+await writeFile("data.json", `${JSON.stringify({ updatedAt: new Date().toISOString(), source: "football-data.org", modelVersion: 2, fixtures }, null, 2)}\n`);
+console.log(`Updated ${fixtures.length} Model V2 fixtures across ${COMPETITIONS.length} leagues (${from} to ${to}).`);
+
