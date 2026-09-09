@@ -81,7 +81,7 @@ function buildTable(matches) {
   return table;
 }
 
-function describeTeam(teamId, fixtureDate, venue, matches, table) {
+function describeTeam(teamId, fixtureDate, venue, matches, table, previousTable) {
   const previous = matches.filter(match => new Date(match.utcDate) < fixtureDate && (match.homeTeam.id === teamId || match.awayTeam.id === teamId)).sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
   const recentMatches = previous.slice(-5);
   const form = recentMatches.map(match => resultFor(match, teamId));
@@ -105,6 +105,7 @@ function describeTeam(teamId, fixtureDate, venue, matches, table) {
     return totals;
   }, { goalsFor: 0, goalsAgainst: 0, points: 0 });
   const tableRow = table.get(teamId) ?? { played: 0, pointsPerGame: 1.35, position: null };
+  const previousRow = previousTable.get(teamId);
   const lastPlayed = previous.at(-1)?.utcDate;
   return {
     form,
@@ -117,6 +118,12 @@ function describeTeam(teamId, fixtureDate, venue, matches, table) {
     venuePointsPerGame: Number((venueMatches.length ? venueTotals.points / venueMatches.length : 1.35).toFixed(2)),
     adjustedForm: Number((totalWeight ? weightedPoints / totalWeight : 0.5).toFixed(3)),
     restDays: lastPlayed ? Math.max(0, Math.floor((fixtureDate - new Date(lastPlayed)) / 86400000)) : null,
+    baseline: previousRow ? {
+      played: previousRow.played,
+      pointsPerGame: Number(previousRow.pointsPerGame.toFixed(2)),
+      goalsForPerGame: Number((previousRow.goalsFor / Math.max(1, previousRow.played)).toFixed(3)),
+      goalsAgainstPerGame: Number((previousRow.goalsAgainst / Math.max(1, previousRow.played)).toFixed(3)),
+    } : null,
   };
 }
 
@@ -127,18 +134,23 @@ for (const competition of COMPETITIONS) {
   const upcoming = await api(`/competitions/${competition.code}/matches?dateFrom=${from}&dateTo=${to}`);
   const completed = await api(`/competitions/${competition.code}/matches?status=FINISHED`);
   const matches = upcoming.matches ?? [];
+  const currentSeason = Number(matches[0]?.season?.startDate?.slice(0, 4) ?? (new Date(from).getUTCMonth() >= 6 ? new Date(from).getUTCFullYear() : new Date(from).getUTCFullYear() - 1));
+  const previous = await api(`/competitions/${competition.code}/matches?season=${currentSeason - 1}&status=FINISHED`);
   const finishedMatches = (completed.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
+  const previousMatches = (previous.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
   const table = buildTable(finishedMatches);
+  const previousTable = buildTable(previousMatches);
   const league = {
     avgHomeGoals: Number((finishedMatches.reduce((sum, match) => sum + match.score.fullTime.home, 0) / Math.max(1, finishedMatches.length)).toFixed(3)),
     avgAwayGoals: Number((finishedMatches.reduce((sum, match) => sum + match.score.fullTime.away, 0) / Math.max(1, finishedMatches.length)).toFixed(3)),
     completedMatches: finishedMatches.length,
+    previousAverageGoals: Number((previousMatches.reduce((sum, match) => sum + match.score.fullTime.home + match.score.fullTime.away, 0) / Math.max(1, previousMatches.length * 2)).toFixed(3)),
   };
 
   for (const match of matches) {
     const fixtureDate = new Date(match.utcDate);
-    const homeStats = describeTeam(match.homeTeam.id, fixtureDate, "HOME", finishedMatches, table);
-    const awayStats = describeTeam(match.awayTeam.id, fixtureDate, "AWAY", finishedMatches, table);
+    const homeStats = describeTeam(match.homeTeam.id, fixtureDate, "HOME", finishedMatches, table, previousTable);
+    const awayStats = describeTeam(match.awayTeam.id, fixtureDate, "AWAY", finishedMatches, table, previousTable);
     const h2hData = await api(`/matches/${match.id}/head2head?limit=4`);
     const h2h = [...(h2hData.matches ?? [])].sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate)).slice(-4).map(previous => resultFor(previous, match.homeTeam.id));
     const londonDay = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "long" }).format(fixtureDate).toLowerCase();
