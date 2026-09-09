@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T18:39:34.739Z",
+  "updatedAt": "2026-09-09T18:56:52.922Z",
   "source": "football-data.org",
   "modelVersion": 2,
   "fixtures": [
@@ -18,7 +18,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -40,7 +41,13 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 0.5,
         "adjustedForm": 0.267,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.5,
+          "goalsForPerGame": 1.457,
+          "goalsAgainstPerGame": 1.283
+        }
       },
       "away": {
         "id": 332,
@@ -61,7 +68,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.463,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.39,
+          "goalsForPerGame": 1.239,
+          "goalsAgainstPerGame": 1.217
+        }
       },
       "h2h": [
         "L",
@@ -85,7 +98,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -107,7 +121,8 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.052,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": null
       },
       "away": {
         "id": 715,
@@ -128,7 +143,8 @@
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 0.33,
         "adjustedForm": 0.181,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": null
       },
       "h2h": []
     },
@@ -147,7 +163,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -169,7 +186,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 2.33,
         "adjustedForm": 0.615,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.15,
+          "goalsForPerGame": 1.043,
+          "goalsAgainstPerGame": 1.261
+        }
       },
       "away": {
         "id": 69,
@@ -190,7 +213,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.557,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.26,
+          "goalsForPerGame": 1.326,
+          "goalsAgainstPerGame": 1.587
+        }
       },
       "h2h": [
         "W",
@@ -214,7 +243,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -235,7 +265,8 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.267,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": null
       },
       "away": {
         "id": 263,
@@ -255,7 +286,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.793,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.13,
+          "goalsForPerGame": 1.158,
+          "goalsAgainstPerGame": 1.474
+        }
       },
       "h2h": []
     },
@@ -274,7 +311,8 @@
         "league": {
           "avgHomeGoals": 1.3,
           "avgAwayGoals": 1.433,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.213
         }
       },
       "home": {
@@ -294,7 +332,13 @@
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 0,
         "adjustedForm": 0,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.08,
+          "goalsForPerGame": 1.079,
+          "goalsAgainstPerGame": 1.342
+        }
       },
       "away": {
         "id": 470,
@@ -313,7 +357,8 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.536,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": null
       },
       "h2h": [
         "L",
@@ -335,7 +380,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -354,7 +400,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 0,
         "adjustedForm": 0,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.79,
+          "goalsForPerGame": 1.912,
+          "goalsAgainstPerGame": 1.529
+        }
       },
       "away": {
         "id": 10,
@@ -372,7 +424,13 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.532,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.82,
+          "goalsForPerGame": 2.088,
+          "goalsAgainstPerGame": 1.441
+        }
       },
       "h2h": [
         "D",
@@ -396,7 +454,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -415,7 +474,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.75,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 2.15,
+          "goalsForPerGame": 2.059,
+          "goalsAgainstPerGame": 1
+        }
       },
       "away": {
         "id": 29,
@@ -433,7 +498,8 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.169,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "h2h": [
         "W"
@@ -454,7 +520,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -473,7 +540,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.833,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.26,
+          "goalsForPerGame": 1.324,
+          "goalsAgainstPerGame": 1.794
+        }
       },
       "away": {
         "id": 3,
@@ -491,7 +564,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.443,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.74,
+          "goalsForPerGame": 2,
+          "goalsAgainstPerGame": 1.382
+        }
       },
       "h2h": [
         "L",
@@ -515,7 +594,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -534,7 +614,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.529,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.18,
+          "goalsForPerGame": 1.294,
+          "goalsAgainstPerGame": 1.559
+        }
       },
       "away": {
         "id": 19,
@@ -552,7 +638,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.13,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.29,
+          "goalsForPerGame": 1.794,
+          "goalsAgainstPerGame": 1.912
+        }
       },
       "h2h": [
         "W",
@@ -576,7 +668,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -595,7 +688,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.911,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.38,
+          "goalsForPerGame": 1.5,
+          "goalsAgainstPerGame": 1.676
+        }
       },
       "away": {
         "id": 18,
@@ -613,7 +712,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 0,
         "adjustedForm": 0,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.12,
+          "goalsForPerGame": 1.235,
+          "goalsAgainstPerGame": 1.559
+        }
       },
       "h2h": [
         "W",
@@ -637,7 +742,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -657,7 +763,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.285,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.18,
+          "goalsForPerGame": 1.079,
+          "goalsAgainstPerGame": 1.342
+        }
       },
       "away": {
         "id": 349,
@@ -676,7 +788,8 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.277,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "h2h": [
         "W",
@@ -698,7 +811,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -718,7 +832,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.542,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.58,
+          "goalsForPerGame": 1.658,
+          "goalsAgainstPerGame": 1.395
+        }
       },
       "away": {
         "id": 63,
@@ -737,7 +857,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 0,
         "adjustedForm": 0,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.37,
+          "goalsForPerGame": 1.237,
+          "goalsAgainstPerGame": 1.342
+        }
       },
       "h2h": [
         "D",
@@ -761,7 +887,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -781,7 +908,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.144,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.71,
+          "goalsForPerGame": 1.474,
+          "goalsAgainstPerGame": 1.289
+        }
       },
       "away": {
         "id": 351,
@@ -800,7 +933,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.217,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.16,
+          "goalsForPerGame": 1.263,
+          "goalsAgainstPerGame": 1.342
+        }
       },
       "h2h": [
         "W",
@@ -822,7 +961,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -842,7 +982,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.245,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.5,
+          "goalsForPerGame": 1.526,
+          "goalsAgainstPerGame": 1.421
+        }
       },
       "away": {
         "id": 402,
@@ -861,7 +1007,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.468,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.39,
+          "goalsForPerGame": 1.447,
+          "goalsAgainstPerGame": 1.368
+        }
       },
       "h2h": [
         "L",
@@ -884,7 +1036,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -904,7 +1057,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.539,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.37,
+          "goalsForPerGame": 1.526,
+          "goalsAgainstPerGame": 1.368
+        }
       },
       "away": {
         "id": 322,
@@ -923,7 +1082,8 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.63,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": null
       },
       "h2h": []
     },
@@ -942,7 +1102,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -964,7 +1125,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.724,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": {
+          "played": 48,
+          "pointsPerGame": 1.75,
+          "goalsForPerGame": 1.75,
+          "goalsAgainstPerGame": 1.188
+        }
       },
       "away": {
         "id": 387,
@@ -985,7 +1152,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 2.33,
         "adjustedForm": 0.651,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.35,
+          "goalsForPerGame": 1.283,
+          "goalsAgainstPerGame": 1.283
+        }
       },
       "h2h": [
         "W",
@@ -1009,7 +1182,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1031,7 +1205,13 @@
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.204,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.3,
+          "goalsForPerGame": 1.196,
+          "goalsAgainstPerGame": 1.348
+        }
       },
       "away": {
         "id": 1126,
@@ -1052,7 +1232,8 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 1.5,
         "adjustedForm": 0.329,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "h2h": []
     },
@@ -1071,7 +1252,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1093,7 +1275,13 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.215,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.13,
+          "goalsForPerGame": 0.913,
+          "goalsAgainstPerGame": 1.217
+        }
       },
       "away": {
         "id": 384,
@@ -1114,7 +1302,13 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1.5,
         "adjustedForm": 0.542,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 48,
+          "pointsPerGame": 1.75,
+          "goalsForPerGame": 1.333,
+          "goalsAgainstPerGame": 1.063
+        }
       },
       "h2h": [
         "L",
@@ -1138,7 +1332,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1160,7 +1355,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.552,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.15,
+          "goalsForPerGame": 0.957,
+          "goalsAgainstPerGame": 1.261
+        }
       },
       "away": {
         "id": 325,
@@ -1181,7 +1382,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1.5,
         "adjustedForm": 0.38,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.2,
+          "goalsForPerGame": 1.065,
+          "goalsAgainstPerGame": 1.391
+        }
       },
       "h2h": [
         "L",
@@ -1203,7 +1410,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1225,7 +1433,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 2.33,
         "adjustedForm": 0.323,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.24,
+          "goalsForPerGame": 1.152,
+          "goalsAgainstPerGame": 1.413
+        }
       },
       "away": {
         "id": 70,
@@ -1246,7 +1460,13 @@
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 0.33,
         "adjustedForm": 0.51,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.2,
+          "goalsForPerGame": 1.109,
+          "goalsAgainstPerGame": 1.217
+        }
       },
       "h2h": [
         "W",
@@ -1270,7 +1490,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1292,7 +1513,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 1.67,
         "adjustedForm": 0.46,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.39,
+          "goalsForPerGame": 1.239,
+          "goalsAgainstPerGame": 1.283
+        }
       },
       "away": {
         "id": 328,
@@ -1313,7 +1540,8 @@
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 0.33,
         "adjustedForm": 0.153,
-        "restDays": 3
+        "restDays": 3,
+        "baseline": null
       },
       "h2h": [
         "L",
@@ -1337,7 +1565,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1359,7 +1588,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.69,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 49,
+          "pointsPerGame": 1.65,
+          "goalsForPerGame": 1.49,
+          "goalsAgainstPerGame": 1.02
+        }
       },
       "away": {
         "id": 68,
@@ -1380,7 +1615,13 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.424,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.41,
+          "goalsForPerGame": 1.37,
+          "goalsAgainstPerGame": 1.217
+        }
       },
       "h2h": [
         "D",
@@ -1404,7 +1645,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -1425,7 +1667,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.504,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.11,
+          "goalsForPerGame": 1.158,
+          "goalsAgainstPerGame": 1.316
+        }
       },
       "away": {
         "id": 80,
@@ -1445,7 +1693,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.296,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.21,
+          "goalsForPerGame": 1.132,
+          "goalsAgainstPerGame": 1.447
+        }
       },
       "h2h": [
         "D",
@@ -1469,7 +1723,8 @@
         "league": {
           "avgHomeGoals": 1.3,
           "avgAwayGoals": 1.433,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.213
         }
       },
       "home": {
@@ -1489,7 +1744,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.85,
-        "restDays": 4
+        "restDays": 4,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.42,
+          "goalsForPerGame": 1.079,
+          "goalsAgainstPerGame": 1.053
+        }
       },
       "away": {
         "id": 98,
@@ -1508,7 +1769,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.657,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.84,
+          "goalsForPerGame": 1.395,
+          "goalsAgainstPerGame": 0.921
+        }
       },
       "h2h": [
         "W",
@@ -1531,7 +1798,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -1551,7 +1819,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.109,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.08,
+          "goalsForPerGame": 1.263,
+          "goalsAgainstPerGame": 1.5
+        }
       },
       "away": {
         "id": 62,
@@ -1570,7 +1844,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.481,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.29,
+          "goalsForPerGame": 1.237,
+          "goalsAgainstPerGame": 1.316
+        }
       },
       "h2h": [
         "W",
@@ -1594,7 +1874,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -1613,7 +1894,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.351,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 0.94,
+          "goalsForPerGame": 1.441,
+          "goalsAgainstPerGame": 1.853
+        }
       },
       "away": {
         "id": 12,
@@ -1631,7 +1918,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.532,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 0.94,
+          "goalsForPerGame": 1.088,
+          "goalsAgainstPerGame": 1.765
+        }
       },
       "h2h": [
         "L",
@@ -1655,7 +1948,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -1676,7 +1970,13 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1.5,
         "adjustedForm": 0.546,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.18,
+          "goalsForPerGame": 1.132,
+          "goalsAgainstPerGame": 1.526
+        }
       },
       "away": {
         "id": 285,
@@ -1696,7 +1996,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0.5,
         "adjustedForm": 0.072,
-        "restDays": 4
+        "restDays": 4,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.13,
+          "goalsForPerGame": 1.289,
+          "goalsAgainstPerGame": 1.5
+        }
       },
       "h2h": [
         "W",
@@ -1720,7 +2026,8 @@
         "league": {
           "avgHomeGoals": 1.3,
           "avgAwayGoals": 1.433,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.213
         }
       },
       "home": {
@@ -1740,7 +2047,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.547,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.55,
+          "goalsForPerGame": 1.342,
+          "goalsAgainstPerGame": 0.947
+        }
       },
       "away": {
         "id": 104,
@@ -1759,7 +2072,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.578,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.13,
+          "goalsForPerGame": 1.053,
+          "goalsAgainstPerGame": 1.395
+        }
       },
       "h2h": [
         "W",
@@ -1783,7 +2102,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -1803,7 +2123,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.381,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.42,
+          "goalsForPerGame": 1.105,
+          "goalsAgainstPerGame": 1.263
+        }
       },
       "away": {
         "id": 57,
@@ -1822,7 +2148,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.895,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 2.24,
+          "goalsForPerGame": 1.868,
+          "goalsAgainstPerGame": 0.711
+        }
       },
       "h2h": [
         "D",
@@ -1844,7 +2176,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -1865,7 +2198,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.63,
-        "restDays": 8
+        "restDays": 8,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 2.26,
+          "goalsForPerGame": 2.026,
+          "goalsAgainstPerGame": 0.921
+        }
       },
       "away": {
         "id": 87,
@@ -1885,7 +2224,13 @@
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.368,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.32,
+          "goalsForPerGame": 1.079,
+          "goalsAgainstPerGame": 1.158
+        }
       },
       "h2h": [
         "D",
@@ -1909,7 +2254,8 @@
         "league": {
           "avgHomeGoals": 1.606,
           "avgAwayGoals": 1.288,
-          "completedMatches": 66
+          "completedMatches": 66,
+          "previousAverageGoals": 1.296
         }
       },
       "home": {
@@ -1931,7 +2277,13 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1.33,
         "adjustedForm": 0.5,
-        "restDays": 4
+        "restDays": 4,
+        "baseline": {
+          "played": 46,
+          "pointsPerGame": 1.3,
+          "goalsForPerGame": 1.435,
+          "goalsAgainstPerGame": 1.435
+        }
       },
       "away": {
         "id": 76,
@@ -1952,7 +2304,8 @@
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1.33,
         "adjustedForm": 0.455,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "h2h": [
         "L",
@@ -1975,7 +2328,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -1997,7 +2351,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.193,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.42,
+          "goalsForPerGame": 1.395,
+          "goalsAgainstPerGame": 1.263
+        }
       },
       "away": {
         "id": 84,
@@ -2017,7 +2377,8 @@
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.18,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": null
       },
       "h2h": []
     },
@@ -2036,7 +2397,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -2056,7 +2418,8 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 0,
         "adjustedForm": 0,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "away": {
         "id": 397,
@@ -2075,7 +2438,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.36,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.39,
+          "goalsForPerGame": 1.368,
+          "goalsAgainstPerGame": 1.211
+        }
       },
       "h2h": []
     },
@@ -2094,7 +2463,8 @@
         "league": {
           "avgHomeGoals": 1.3,
           "avgAwayGoals": 1.433,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.213
         }
       },
       "home": {
@@ -2114,7 +2484,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.214,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1,
+          "goalsForPerGame": 0.737,
+          "goalsAgainstPerGame": 1.316
+        }
       },
       "away": {
         "id": 5911,
@@ -2133,7 +2509,8 @@
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 0.5,
         "adjustedForm": 0.102,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "h2h": [
         "D",
@@ -2157,7 +2534,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -2176,7 +2554,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.351,
-        "restDays": 8
+        "restDays": 8,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.91,
+          "goalsForPerGame": 1.941,
+          "goalsAgainstPerGame": 1.382
+        }
       },
       "away": {
         "id": 7,
@@ -2194,7 +2578,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 0,
         "adjustedForm": 0,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 1.12,
+          "goalsForPerGame": 1.176,
+          "goalsAgainstPerGame": 1.588
+        }
       },
       "h2h": [
         "W",
@@ -2216,7 +2606,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -2237,7 +2628,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.466,
-        "restDays": 6
+        "restDays": 6,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.11,
+          "goalsForPerGame": 1.237,
+          "goalsAgainstPerGame": 1.605
+        }
       },
       "away": {
         "id": 81,
@@ -2257,7 +2654,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.873,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 2.47,
+          "goalsForPerGame": 2.5,
+          "goalsAgainstPerGame": 0.947
+        }
       },
       "h2h": [
         "L",
@@ -2281,7 +2684,8 @@
         "league": {
           "avgHomeGoals": 1.6,
           "avgAwayGoals": 1.233,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.375
         }
       },
       "home": {
@@ -2301,7 +2705,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.437,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.87,
+          "goalsForPerGame": 1.816,
+          "goalsAgainstPerGame": 1.316
+        }
       },
       "away": {
         "id": 65,
@@ -2320,7 +2730,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.837,
-        "restDays": 8
+        "restDays": 8,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 2.05,
+          "goalsForPerGame": 2.026,
+          "goalsAgainstPerGame": 0.921
+        }
       },
       "h2h": [
         "W",
@@ -2344,7 +2760,8 @@
         "league": {
           "avgHomeGoals": 2.389,
           "avgAwayGoals": 1.556,
-          "completedMatches": 18
+          "completedMatches": 18,
+          "previousAverageGoals": 1.618
         }
       },
       "home": {
@@ -2363,7 +2780,8 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.867,
-        "restDays": 8
+        "restDays": 8,
+        "baseline": null
       },
       "away": {
         "id": 5,
@@ -2381,7 +2799,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 1,
         "adjustedForm": 0.616,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 34,
+          "pointsPerGame": 2.62,
+          "goalsForPerGame": 3.588,
+          "goalsAgainstPerGame": 1.059
+        }
       },
       "h2h": []
     },
@@ -2400,7 +2824,8 @@
         "league": {
           "avgHomeGoals": 1.3,
           "avgAwayGoals": 1.433,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.213
         }
       },
       "home": {
@@ -2420,7 +2845,13 @@
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.214,
-        "restDays": 8
+        "restDays": 8,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 2,
+          "goalsForPerGame": 1.526,
+          "goalsAgainstPerGame": 0.947
+        }
       },
       "away": {
         "id": 103,
@@ -2439,7 +2870,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.123,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.47,
+          "goalsForPerGame": 1.289,
+          "goalsAgainstPerGame": 1.211
+        }
       },
       "h2h": [
         "W",
@@ -2463,7 +2900,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -2484,7 +2922,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.296,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.34,
+          "goalsForPerGame": 0.842,
+          "goalsAgainstPerGame": 1
+        }
       },
       "away": {
         "id": 560,
@@ -2504,7 +2948,8 @@
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.582,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": null
       },
       "h2h": []
     },
@@ -2523,7 +2968,8 @@
         "league": {
           "avgHomeGoals": 1.3,
           "avgAwayGoals": 1.433,
-          "completedMatches": 30
+          "completedMatches": 30,
+          "previousAverageGoals": 1.213
         }
       },
       "home": {
@@ -2543,7 +2989,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.409,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.29,
+          "goalsForPerGame": 1.211,
+          "goalsAgainstPerGame": 1.316
+        }
       },
       "away": {
         "id": 109,
@@ -2562,7 +3014,13 @@
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
         "adjustedForm": 0.723,
-        "restDays": 7
+        "restDays": 7,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.82,
+          "goalsForPerGame": 1.605,
+          "goalsAgainstPerGame": 0.895
+        }
       },
       "h2h": [
         "W",
@@ -2586,7 +3044,8 @@
         "league": {
           "avgHomeGoals": 1.732,
           "avgAwayGoals": 1.268,
-          "completedMatches": 41
+          "completedMatches": 41,
+          "previousAverageGoals": 1.347
         }
       },
       "home": {
@@ -2608,7 +3067,13 @@
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 2,
         "adjustedForm": 0.451,
-        "restDays": 5
+        "restDays": 5,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.21,
+          "goalsForPerGame": 1.553,
+          "goalsAgainstPerGame": 1.605
+        }
       },
       "away": {
         "id": 78,
@@ -2628,7 +3093,13 @@
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1.5,
         "adjustedForm": 0.508,
-        "restDays": 8
+        "restDays": 8,
+        "baseline": {
+          "played": 38,
+          "pointsPerGame": 1.82,
+          "goalsForPerGame": 1.632,
+          "goalsAgainstPerGame": 1.158
+        }
       },
       "h2h": [
         "L",
