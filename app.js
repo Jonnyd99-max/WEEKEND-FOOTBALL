@@ -52,10 +52,18 @@ function predict(fixture) {
   const h2hHome = fixture.h2h.length ? total(fixture.h2h) / (fixture.h2h.length * 3) : 0.5;
   const h2hAdjustment = (h2hHome - 0.5) * 0.1;
   const momentumAdjustment = clamp(formDifference * 0.18 + restDifference * 0.01, -0.16, 0.16);
+  const currentPpgDifference = (fixture.home.pointsPerGame ?? 1.35) - (fixture.away.pointsPerGame ?? 1.35);
+  const currentStrengthAdjustment = clamp(currentPpgDifference / 3 * 0.08, -0.06, 0.06);
+  const previousAverageGoals = fixture.model.league.previousAverageGoals || (leagueHome + leagueAway) / 2;
+  const baselineWeight = clamp(0.8 * (1 - Math.max(fixture.home.played || 0, fixture.away.played || 0) / 12), 0, 0.8);
+  const baselineAttack = team => team.baseline ? clamp(team.baseline.goalsForPerGame / previousAverageGoals, 0.65, 1.55) : 1;
+  const baselineDefence = team => team.baseline ? clamp(team.baseline.goalsAgainstPerGame / previousAverageGoals, 0.65, 1.55) : 1;
+  const homeBaselineFactor = (baselineAttack(fixture.home) * baselineDefence(fixture.away)) ** baselineWeight;
+  const awayBaselineFactor = (baselineAttack(fixture.away) * baselineDefence(fixture.home)) ** baselineWeight;
   let expectedHome = leagueHome * (homeForRate / leagueHome) * (awayAgainstRate / leagueHome);
   let expectedAway = leagueAway * (awayForRate / leagueAway) * (homeAgainstRate / leagueAway);
-  expectedHome = clamp(expectedHome * (1 + momentumAdjustment + h2hAdjustment), 0.2, 4);
-  expectedAway = clamp(expectedAway * (1 - momentumAdjustment - h2hAdjustment), 0.2, 4);
+  expectedHome = clamp(expectedHome * homeBaselineFactor * (1 + momentumAdjustment + h2hAdjustment + currentStrengthAdjustment), 0.2, 4);
+  expectedAway = clamp(expectedAway * awayBaselineFactor * (1 - momentumAdjustment - h2hAdjustment - currentStrengthAdjustment), 0.2, 4);
 
   let homeProbability = 0;
   let drawProbability = 0;
@@ -93,6 +101,7 @@ function predict(fixture) {
     expectedHome: expectedHome.toFixed(2),
     expectedAway: expectedAway.toFixed(2),
     probabilities: { home: Math.round(homeProbability * 100), draw: Math.round(drawProbability * 100), away: Math.round(awayProbability * 100) },
+    baselineWeight: Math.round(baselineWeight * 100),
     reason: reasons.slice(0, 2).join(" · "),
     homeForm: total(fixture.home.form),
     awayForm: total(fixture.away.form),
@@ -109,7 +118,7 @@ function card(fixture) {
         <div><span>Expected goals</span><strong>${result.expectedHome} — ${result.expectedAway}</strong></div><div><span>Likely score</span><strong>${result.expectedScore}</strong></div>
         <div><span>Home / draw / away</span><strong>${result.probabilities.home}% / ${result.probabilities.draw}% / ${result.probabilities.away}%</strong></div><div><span>Venue PPG</span><strong>${fixture.home.venuePointsPerGame} — ${fixture.away.venuePointsPerGame}</strong></div>
         <div><span>League position</span><strong>${fixture.home.position || "—"} — ${fixture.away.position || "—"}</strong></div><div><span>Rest days</span><strong>${fixture.home.restDays ?? "—"} — ${fixture.away.restDays ?? "—"}</strong></div>
-      </div><p class="formula">Model V2 · attack and defence strength + home/away record + opponent-adjusted form + rest + 5% head-to-head</p>` : `<div class="breakdown">
+      </div><p class="formula">Model V2 · ${result.baselineWeight}% previous-season baseline + current attack and defence + home/away record + opponent-adjusted form + rest + 5% head-to-head</p>` : `<div class="breakdown">
         <div><span>Home form</span><strong>${result.homeForm}<small>/15</small></strong></div><div><span>Away form</span><strong>${result.awayForm}<small>/15</small></strong></div>
         <div><span>Home H2H</span><strong>${result.homeH2h}<small>/12</small></strong></div><div><span>Home boost</span><strong>+${CONFIG.homeAdvantage}</strong></div>
         <div><span>Final rating</span><strong>${result.homeRating} — ${result.awayRating}</strong></div><div><span>Rating gap</span><strong>${result.gap}</strong></div>
@@ -138,18 +147,18 @@ function card(fixture) {
 
 let currentFilter = "all";
 function render() {
-  const visible = fixtures.filter(fixture => {
+  let visible = fixtures.filter(fixture => {
     const matchesDay = currentFilter === "all" || currentFilter === "top" || fixture.day === currentFilter;
     const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
-    const matchesConfidence = currentFilter !== "top" || predict(fixture).confidence >= 85;
-    return matchesDay && matchesLeague && matchesConfidence;
+    return matchesDay && matchesLeague;
   });
+  if (currentFilter === "top") visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, 10);
   document.querySelector("#fixture-count").textContent = visible.length;
   document.querySelector("#match-list").innerHTML = currentFilter === "top" ? topPicksTable(visible) : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
 }
 
 function topPicksTable(picks) {
-  if (!picks.length) return '<div class="empty">No predictions currently meet the 85% confidence threshold.</div>';
+  if (!picks.length) return '<div class="empty">No predictions are currently available.</div>';
   const rows = picks.map(fixture => {
     const result = predict(fixture);
     return `<article class="top-pick-row">
@@ -164,7 +173,7 @@ function topPicksTable(picks) {
       </div>
     </article>`;
   }).join("");
-  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGH-CONFIDENCE FORECASTS</span><h2>Top picks</h2><p>The strongest calls across your selected leagues.</p></div><span class="threshold">85%+ confidence</span></div><div class="top-picks-list">${rows}</div></div>`;
+  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGHEST-CONFIDENCE FORECASTS</span><h2>Top picks</h2><p>The ten strongest calls across your selected leagues.</p></div><span class="threshold">Top 10</span></div><div class="top-picks-list">${rows}</div></div>`;
 }
 
 function renderLeaguePicker() {
