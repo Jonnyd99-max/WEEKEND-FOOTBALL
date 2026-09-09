@@ -1,50 +1,591 @@
 {
-  "updatedAt": "2026-09-02T08:16:48.262Z",
+  "updatedAt": "2026-09-09T08:16:14.236Z",
   "source": "football-data.org",
   "fixtures": [
     {
-      "id": 560571,
+      "id": 561835,
       "competition": {
-        "code": "PL",
-        "name": "Premier League"
+        "code": "ELC",
+        "name": "Championship"
       },
       "day": "saturday",
-      "date": "Saturday 5 Sept, 12:30",
-      "utcDate": "2026-09-05T11:30:00Z",
+      "date": "Saturday 12 Sept, 12:30",
+      "utcDate": "2026-09-12T11:30:00Z",
       "venue": "Venue TBC",
       "home": {
-        "id": 67,
-        "name": "Newcastle United FC",
-        "short": "NEW",
+        "id": 342,
+        "name": "Derby County FC",
+        "short": "DER",
         "form": [
+          "L",
           "D",
-          "W"
+          "L",
+          "W",
+          "L"
         ]
       },
       "away": {
-        "id": 1044,
-        "name": "AFC Bournemouth",
-        "short": "BOU",
+        "id": 332,
+        "name": "Birmingham City FC",
+        "short": "BIR",
         "form": [
-          "L",
+          "D",
+          "D",
+          "W",
+          "D",
           "D"
         ]
       },
       "h2h": [
         "L",
         "D",
-        "L"
+        "D",
+        "W"
       ]
     },
     {
-      "id": 561813,
+      "id": 561837,
       "competition": {
         "code": "ELC",
         "name": "Championship"
       },
       "day": "saturday",
-      "date": "Saturday 5 Sept, 12:30",
-      "utcDate": "2026-09-05T11:30:00Z",
+      "date": "Saturday 12 Sept, 12:30",
+      "utcDate": "2026-09-12T11:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 60,
+        "name": "Bolton Wanderers FC",
+        "short": "BOL",
+        "form": [
+          "D",
+          "L",
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 715,
+        "name": "Cardiff City FC",
+        "short": "CAR",
+        "form": [
+          "D",
+          "D",
+          "L",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 561839,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 12:30",
+      "utcDate": "2026-09-12T11:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 74,
+        "name": "West Bromwich Albion FC",
+        "short": "WBA",
+        "form": [
+          "W",
+          "W",
+          "L",
+          "D",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 69,
+        "name": "Queens Park Rangers FC",
+        "short": "QPR",
+        "form": [
+          "W",
+          "D",
+          "W",
+          "W",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "id": 564670,
+      "competition": {
+        "code": "PD",
+        "name": "La Liga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 13:00",
+      "utcDate": "2026-09-12T12:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 5335,
+        "name": "Real Racing Club de Santander",
+        "short": "SAN",
+        "form": [
+          "D",
+          "L",
+          "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 263,
+        "name": "Deportivo Alavés",
+        "short": "ALA",
+        "form": [
+          "W",
+          "D",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 558604,
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 14:00",
+      "utcDate": "2026-09-12T13:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 107,
+        "name": "Genoa CFC",
+        "short": "GEN",
+        "form": [
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 470,
+        "name": "Frosinone Calcio",
+        "short": "FRO",
+        "form": [
+          "L",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "D"
+      ]
+    },
+    {
+      "id": 565794,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 14:30",
+      "utcDate": "2026-09-12T13:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 2,
+        "name": "TSG 1899 Hoffenheim",
+        "short": "TSG",
+        "form": [
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 10,
+        "name": "VfB Stuttgart",
+        "short": "VFB",
+        "form": [
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "D",
+        "D",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "id": 565795,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 14:30",
+      "utcDate": "2026-09-12T13:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 4,
+        "name": "Borussia Dortmund",
+        "short": "BVB",
+        "form": [
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 29,
+        "name": "SC Paderborn 07",
+        "short": "SCP",
+        "form": [
+          "D",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W"
+      ]
+    },
+    {
+      "id": 565796,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 14:30",
+      "utcDate": "2026-09-12T13:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 16,
+        "name": "FC Augsburg",
+        "short": "FCA",
+        "form": [
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 3,
+        "name": "Bayer 04 Leverkusen",
+        "short": "B04",
+        "form": [
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "id": 565801,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 14:30",
+      "utcDate": "2026-09-12T13:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 15,
+        "name": "1. FSV Mainz 05",
+        "short": "M05",
+        "form": [
+          "D",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 19,
+        "name": "Eintracht Frankfurt",
+        "short": "SGE",
+        "form": [
+          "D",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "id": 565802,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 14:30",
+      "utcDate": "2026-09-12T13:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 17,
+        "name": "SC Freiburg",
+        "short": "SCF",
+        "form": [
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 18,
+        "name": "Borussia Mönchengladbach",
+        "short": "BMG",
+        "form": [
+          "L",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "id": 560572,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 354,
+        "name": "Crystal Palace FC",
+        "short": "CRY",
+        "form": [
+          "L",
+          "L",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 349,
+        "name": "Ipswich Town FC",
+        "short": "IPS",
+        "form": [
+          "W",
+          "L",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "W"
+      ]
+    },
+    {
+      "id": 560573,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 64,
+        "name": "Liverpool FC",
+        "short": "LIV",
+        "form": [
+          "D",
+          "D",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 63,
+        "name": "Fulham FC",
+        "short": "FUL",
+        "form": [
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "h2h": [
+        "D",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "id": 560574,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 58,
+        "name": "Aston Villa FC",
+        "short": "AVL",
+        "form": [
+          "L",
+          "L",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 351,
+        "name": "Nottingham Forest FC",
+        "short": "NOT",
+        "form": [
+          "L",
+          "D",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "D"
+      ]
+    },
+    {
+      "id": 560576,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 1044,
+        "name": "AFC Bournemouth",
+        "short": "BOU",
+        "form": [
+          "L",
+          "D",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 402,
+        "name": "Brentford FC",
+        "short": "BRE",
+        "form": [
+          "W",
+          "D",
+          "D"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "id": 560581,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 61,
+        "name": "Chelsea FC",
+        "short": "CHE",
+        "form": [
+          "W",
+          "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 322,
+        "name": "Hull City AFC",
+        "short": "HUL",
+        "form": [
+          "W",
+          "W",
+          "D"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 561833,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 340,
+        "name": "Southampton FC",
+        "short": "SOU",
+        "form": [
+          "W",
+          "W",
+          "D",
+          "D",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 387,
+        "name": "Bristol City FC",
+        "short": "BRI",
+        "form": [
+          "L",
+          "D",
+          "W",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": [
+        "W",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "id": 561834,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
       "home": {
         "id": 1081,
@@ -54,75 +595,11 @@
           "L",
           "L",
           "L",
+          "W",
           "L"
         ]
       },
       "away": {
-        "id": 59,
-        "name": "Blackburn Rovers FC",
-        "short": "BLA",
-        "form": [
-          "D",
-          "W",
-          "L",
-          "D"
-        ]
-      },
-      "h2h": [
-        "D",
-        "L",
-        "L",
-        "L"
-      ]
-    },
-    {
-      "id": 561815,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 12:30",
-      "utcDate": "2026-09-05T11:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 70,
-        "name": "Stoke City FC",
-        "short": "STK",
-        "form": [
-          "L",
-          "L",
-          "L",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 348,
-        "name": "Charlton Athletic FC",
-        "short": "CHA",
-        "form": [
-          "W",
-          "W",
-          "W"
-        ]
-      },
-      "h2h": [
-        "W",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "id": 561820,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 12:30",
-      "utcDate": "2026-09-05T11:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
         "id": 1126,
         "name": "Lincoln City FC",
         "short": "LIN",
@@ -130,435 +607,192 @@
           "L",
           "L",
           "W",
-          "D"
-        ]
-      },
-      "away": {
-        "id": 340,
-        "name": "Southampton FC",
-        "short": "SOU",
-        "form": [
-          "L",
-          "W",
-          "W",
+          "D",
           "D"
         ]
       },
       "h2h": []
     },
     {
-      "id": 558616,
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 14:00",
-      "utcDate": "2026-09-05T13:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 99,
-        "name": "ACF Fiorentina",
-        "short": "FIO",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 586,
-        "name": "Torino FC",
-        "short": "TOR",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": [
-        "W",
-        "D",
-        "D",
-        "D"
-      ]
-    },
-    {
-      "id": 565785,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 14:30",
-      "utcDate": "2026-09-05T13:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 12,
-        "name": "SV Werder Bremen",
-        "short": "SVW",
-        "form": [
-          "L"
-        ]
-      },
-      "away": {
-        "id": 721,
-        "name": "RB Leipzig",
-        "short": "RBL",
-        "form": [
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "D",
-        "L",
-        "L"
-      ]
-    },
-    {
-      "id": 565787,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 14:30",
-      "utcDate": "2026-09-05T13:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 2,
-        "name": "TSG 1899 Hoffenheim",
-        "short": "TSG",
-        "form": [
-          "L"
-        ]
-      },
-      "away": {
-        "id": 4,
-        "name": "Borussia Dortmund",
-        "short": "BVB",
-        "form": [
-          "W"
-        ]
-      },
-      "h2h": [
-        "D",
-        "L",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "id": 565790,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 14:30",
-      "utcDate": "2026-09-05T13:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 3,
-        "name": "Bayer 04 Leverkusen",
-        "short": "B04",
-        "form": [
-          "L"
-        ]
-      },
-      "away": {
-        "id": 28,
-        "name": "1. FC Union Berlin",
-        "short": "UNB",
-        "form": [
-          "D"
-        ]
-      },
-      "h2h": [
-        "W",
-        "D",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "id": 565792,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 14:30",
-      "utcDate": "2026-09-05T13:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 18,
-        "name": "Borussia Mönchengladbach",
-        "short": "BMG",
-        "form": [
-          "L"
-        ]
-      },
-      "away": {
-        "id": 719,
-        "name": "SV 07 Elversberg",
-        "short": "ELV",
-        "form": [
-          "W"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 565793,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 14:30",
-      "utcDate": "2026-09-05T13:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 29,
-        "name": "SC Paderborn 07",
-        "short": "SCP",
-        "form": [
-          "D"
-        ]
-      },
-      "away": {
-        "id": 17,
-        "name": "SC Freiburg",
-        "short": "SCF",
-        "form": [
-          "W"
-        ]
-      },
-      "h2h": [
-        "W"
-      ]
-    },
-    {
-      "id": 560562,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 351,
-        "name": "Nottingham Forest FC",
-        "short": "NOT",
-        "form": [
-          "L",
-          "D"
-        ]
-      },
-      "away": {
-        "id": 73,
-        "name": "Tottenham Hotspur FC",
-        "short": "TOT",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": [
-        "W",
-        "W",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "id": 560563,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 65,
-        "name": "Manchester City FC",
-        "short": "MCI",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 1076,
-        "name": "Coventry City FC",
-        "short": "COV",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 560564,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 397,
-        "name": "Brighton & Hove Albion FC",
-        "short": "BHA",
-        "form": [
-          "W",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 341,
-        "name": "Leeds United FC",
-        "short": "LEE",
-        "form": [
-          "W",
-          "D"
-        ]
-      },
-      "h2h": [
-        "W",
-        "D",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "id": 560565,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 402,
-        "name": "Brentford FC",
-        "short": "BRE",
-        "form": [
-          "W",
-          "D"
-        ]
-      },
-      "away": {
-        "id": 71,
-        "name": "Sunderland AFC",
-        "short": "SUN",
-        "form": [
-          "L",
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "W"
-      ]
-    },
-    {
-      "id": 560568,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 63,
-        "name": "Fulham FC",
-        "short": "FUL",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 354,
-        "name": "Crystal Palace FC",
-        "short": "CRY",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": [
-        "L",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "id": 561809,
+      "id": 561836,
       "competition": {
         "code": "ELC",
         "name": "Championship"
       },
       "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
       "home": {
-        "id": 69,
-        "name": "Queens Park Rangers FC",
-        "short": "QPR",
+        "id": 59,
+        "name": "Blackburn Rovers FC",
+        "short": "BLA",
         "form": [
           "W",
+          "L",
           "D",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 384,
+        "name": "Millwall FC",
+        "short": "MIL",
+        "form": [
+          "W",
+          "W",
+          "L",
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "id": 561838,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 348,
+        "name": "Charlton Athletic FC",
+        "short": "CHA",
+        "form": [
+          "W",
+          "W",
+          "W",
+          "D",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 325,
+        "name": "Portsmouth FC",
+        "short": "POR",
+        "form": [
+          "L",
+          "W",
+          "L",
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L"
+      ]
+    },
+    {
+      "id": 561840,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 346,
+        "name": "Watford FC",
+        "short": "WAT",
+        "form": [
+          "D",
+          "D",
+          "L",
+          "L",
           "W"
         ]
       },
       "away": {
+        "id": 70,
+        "name": "Stoke City FC",
+        "short": "STK",
+        "form": [
+          "L",
+          "L",
+          "W",
+          "W",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "id": 561841,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 72,
+        "name": "Swansea City AFC",
+        "short": "SWA",
+        "form": [
+          "D",
+          "W",
+          "W",
+          "D",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 328,
+        "name": "Burnley FC",
+        "short": "BUR",
+        "form": [
+          "L",
+          "L",
+          "D",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "id": 561843,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 15:00",
+      "utcDate": "2026-09-12T14:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
         "id": 343,
         "name": "Middlesbrough FC",
         "short": "MID",
         "form": [
           "W",
           "L",
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "L",
-        "L",
-        "L"
-      ]
-    },
-    {
-      "id": 561810,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 356,
-        "name": "Sheffield United FC",
-        "short": "SHE",
-        "form": [
-          "D",
-          "D",
+          "W",
           "D",
           "W"
         ]
@@ -571,849 +805,72 @@
           "L",
           "L",
           "W",
-          "L"
+          "L",
+          "W"
         ]
       },
       "h2h": [
         "D",
-        "W",
         "D",
-        "L"
-      ]
-    },
-    {
-      "id": 561812,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 325,
-        "name": "Portsmouth FC",
-        "short": "POR",
-        "form": [
-          "L",
-          "W",
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 715,
-        "name": "Cardiff City FC",
-        "short": "CAR",
-        "form": [
-          "D",
-          "D",
-          "D"
-        ]
-      },
-      "h2h": [
-        "L",
-        "W"
-      ]
-    },
-    {
-      "id": 561814,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 74,
-        "name": "West Bromwich Albion FC",
-        "short": "WBA",
-        "form": [
-          "W",
-          "W",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 346,
-        "name": "Watford FC",
-        "short": "WAT",
-        "form": [
-          "W",
-          "D",
-          "D",
-          "L"
-        ]
-      },
-      "h2h": [
-        "L",
-        "W",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "id": 561816,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 563,
-        "name": "West Ham United FC",
-        "short": "WHU",
-        "form": [
-          "D",
-          "L",
-          "D",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 342,
-        "name": "Derby County FC",
-        "short": "DER",
-        "form": [
-          "L",
-          "D",
-          "L",
-          "W"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 561817,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 328,
-        "name": "Burnley FC",
-        "short": "BUR",
-        "form": [
-          "D",
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 387,
-        "name": "Bristol City FC",
-        "short": "BRI",
-        "form": [
-          "L",
-          "D",
-          "W",
-          "W"
-        ]
-      },
-      "h2h": [
-        "W",
-        "W",
         "W",
         "W"
       ]
     },
     {
-      "id": 561818,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 15:00",
-      "utcDate": "2026-09-05T14:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 384,
-        "name": "Millwall FC",
-        "short": "MIL",
-        "form": [
-          "W",
-          "W",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 60,
-        "name": "Bolton Wanderers FC",
-        "short": "BOL",
-        "form": [
-          "W",
-          "D",
-          "L",
-          "L"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 564663,
+      "id": 564673,
       "competition": {
         "code": "PD",
         "name": "La Liga"
       },
       "day": "saturday",
-      "date": "Saturday 5 Sept, 15:15",
-      "utcDate": "2026-09-05T14:15:00Z",
+      "date": "Saturday 12 Sept, 15:15",
+      "utcDate": "2026-09-12T14:15:00Z",
       "venue": "Venue TBC",
       "home": {
-        "id": 77,
-        "name": "Athletic Club",
-        "short": "ATH",
-        "form": [
-          "L",
-          "L",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 78,
-        "name": "Club Atlético de Madrid",
-        "short": "ATL",
-        "form": [
-          "W",
-          "D",
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "L",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "id": 558614,
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 17:00",
-      "utcDate": "2026-09-05T16:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 108,
-        "name": "FC Internazionale Milano",
-        "short": "INT",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 113,
-        "name": "SSC Napoli",
-        "short": "NAP",
-        "form": [
-          "W",
-          "L"
-        ]
-      },
-      "h2h": [
-        "D",
-        "D",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "id": 560569,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 17:30",
-      "utcDate": "2026-09-05T16:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 322,
-        "name": "Hull City AFC",
-        "short": "HUL",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 58,
-        "name": "Aston Villa FC",
-        "short": "AVL",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 565789,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 17:30",
-      "utcDate": "2026-09-05T16:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 6,
-        "name": "FC Schalke 04",
-        "short": "S04",
-        "form": [
-          "L"
-        ]
-      },
-      "away": {
-        "id": 5,
-        "name": "FC Bayern München",
-        "short": "FCB",
-        "form": [
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "L",
-        "L",
-        "L"
-      ]
-    },
-    {
-      "id": 564660,
-      "competition": {
-        "code": "PD",
-        "name": "La Liga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 17:30",
-      "utcDate": "2026-09-05T16:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 87,
-        "name": "Rayo Vallecano de Madrid",
-        "short": "RAY",
-        "form": [
-          "L",
-          "D",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 5335,
-        "name": "Real Racing Club de Santander",
-        "short": "SAN",
-        "form": [
-          "D",
-          "L",
-          "W"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 558611,
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 19:45",
-      "utcDate": "2026-09-05T18:45:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 100,
-        "name": "AS Roma",
-        "short": "ROM",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 102,
-        "name": "Atalanta BC",
-        "short": "ATA",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "L",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "id": 561811,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 20:00",
-      "utcDate": "2026-09-05T19:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 72,
-        "name": "Swansea City AFC",
-        "short": "SWA",
-        "form": [
-          "W",
-          "D",
-          "W",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 404,
-        "name": "Wrexham AFC",
-        "short": "WRE",
-        "form": [
-          "D",
-          "D",
-          "L"
-        ]
-      },
-      "h2h": [
-        "W",
-        "L"
-      ]
-    },
-    {
-      "id": 564662,
-      "competition": {
-        "code": "PD",
-        "name": "La Liga"
-      },
-      "day": "saturday",
-      "date": "Saturday 5 Sept, 20:00",
-      "utcDate": "2026-09-05T19:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 94,
-        "name": "Villarreal CF",
-        "short": "VIL",
-        "form": [
-          "D",
-          "D",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 560,
-        "name": "RC Deportivo La Coruña",
-        "short": "DEP",
-        "form": [
-          "D",
-          "D",
-          "W"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 561819,
-      "competition": {
-        "code": "ELC",
-        "name": "Championship"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 12:00",
-      "utcDate": "2026-09-06T11:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 332,
-        "name": "Birmingham City FC",
-        "short": "BIR",
-        "form": [
-          "D",
-          "D",
-          "W",
-          "D"
-        ]
-      },
-      "away": {
-        "id": 76,
-        "name": "Wolverhampton Wanderers FC",
-        "short": "WOL",
-        "form": [
-          "D",
-          "W",
-          "W",
-          "L"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 560567,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 14:00",
-      "utcDate": "2026-09-06T13:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 62,
-        "name": "Everton FC",
-        "short": "EVE",
-        "form": [
-          "W",
-          "D"
-        ]
-      },
-      "away": {
-        "id": 66,
-        "name": "Manchester United FC",
-        "short": "MUN",
-        "form": [
-          "L",
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "D",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "id": 558612,
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 14:00",
-      "utcDate": "2026-09-06T13:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 112,
-        "name": "Parma Calcio 1913",
-        "short": "PAR",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 5911,
-        "name": "AC Monza",
-        "short": "MON",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": [
-        "W",
-        "D"
-      ]
-    },
-    {
-      "id": 558615,
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 14:00",
-      "utcDate": "2026-09-06T13:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 470,
-        "name": "Frosinone Calcio",
-        "short": "FRO",
-        "form": [
-          "L",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 454,
-        "name": "Venezia FC",
-        "short": "VEN",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "h2h": []
-    },
-    {
-      "id": 565788,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 14:30",
-      "utcDate": "2026-09-06T13:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 7,
-        "name": "Hamburger SV",
-        "short": "HSV",
-        "form": [
-          "L"
-        ]
-      },
-      "away": {
-        "id": 15,
-        "name": "1. FSV Mainz 05",
-        "short": "M05",
-        "form": [
-          "D"
-        ]
-      },
-      "h2h": [
-        "W",
-        "D"
-      ]
-    },
-    {
-      "id": 564659,
-      "competition": {
-        "code": "PD",
-        "name": "La Liga"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 15:15",
-      "utcDate": "2026-09-06T14:15:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 95,
-        "name": "Valencia CF",
-        "short": "VAL",
-        "form": [
-          "D",
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 81,
-        "name": "FC Barcelona",
-        "short": "FCB",
-        "form": [
-          "W",
-          "W",
-          "W"
-        ]
-      },
-      "h2h": [
-        "L",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "id": 560570,
-      "competition": {
-        "code": "PL",
-        "name": "Premier League"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 16:30",
-      "utcDate": "2026-09-06T15:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 57,
-        "name": "Arsenal FC",
-        "short": "ARS",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "away": {
-        "id": 61,
-        "name": "Chelsea FC",
-        "short": "CHE",
-        "form": [
-          "W",
-          "W"
-        ]
-      },
-      "h2h": [
-        "D",
-        "W"
-      ]
-    },
-    {
-      "id": 565786,
-      "competition": {
-        "code": "BL1",
-        "name": "Bundesliga"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 16:30",
-      "utcDate": "2026-09-06T15:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 19,
-        "name": "Eintracht Frankfurt",
-        "short": "SGE",
-        "form": [
-          "D"
-        ]
-      },
-      "away": {
-        "id": 16,
-        "name": "FC Augsburg",
-        "short": "FCA",
-        "form": [
-          "W"
-        ]
-      },
-      "h2h": [
-        "D",
-        "D",
-        "W",
-        "D"
-      ]
-    },
-    {
-      "id": 558613,
-      "competition": {
-        "code": "SA",
-        "name": "Serie A"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 17:00",
-      "utcDate": "2026-09-06T16:00:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 103,
-        "name": "Bologna FC 1909",
-        "short": "BOL",
-        "form": [
-          "L",
-          "L"
-        ]
-      },
-      "away": {
-        "id": 471,
-        "name": "US Sassuolo Calcio",
-        "short": "SAS",
-        "form": [
-          "L",
-          "W"
-        ]
-      },
-      "h2h": [
-        "D",
-        "W",
-        "D",
-        "W"
-      ]
-    },
-    {
-      "id": 564664,
-      "competition": {
-        "code": "PD",
-        "name": "La Liga"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 17:30",
-      "utcDate": "2026-09-06T16:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 263,
-        "name": "Deportivo Alavés",
-        "short": "ALA",
-        "form": [
-          "W",
-          "D",
-          "W"
-        ]
-      },
-      "away": {
         "id": 79,
         "name": "CA Osasuna",
         "short": "OSA",
         "form": [
           "D",
           "W",
-          "W"
-        ]
-      },
-      "h2h": [
-        "D",
-        "D",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "id": 564666,
-      "competition": {
-        "code": "PD",
-        "name": "La Liga"
-      },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 17:30",
-      "utcDate": "2026-09-06T16:30:00Z",
-      "venue": "Venue TBC",
-      "home": {
-        "id": 84,
-        "name": "Málaga CF",
-        "short": "MAL",
-        "form": [
-          "L",
-          "D",
+          "W",
           "L"
         ]
       },
       "away": {
-        "id": 88,
-        "name": "Levante UD",
-        "short": "LEV",
+        "id": 80,
+        "name": "RCD Espanyol de Barcelona",
+        "short": "ESP",
         "form": [
+          "W",
           "L",
-          "D",
-          "W"
+          "L",
+          "D"
         ]
       },
-      "h2h": []
+      "h2h": [
+        "D",
+        "W",
+        "L",
+        "L"
+      ]
     },
     {
-      "id": 558618,
+      "id": 558600,
       "competition": {
         "code": "SA",
         "name": "Serie A"
       },
-      "day": "sunday",
-      "date": "Sunday 6 Sept, 19:45",
-      "utcDate": "2026-09-06T18:45:00Z",
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 17:00",
+      "utcDate": "2026-09-12T16:00:00Z",
       "venue": "Venue TBC",
       "home": {
-        "id": 109,
-        "name": "Juventus FC",
-        "short": "JUV",
+        "id": 110,
+        "name": "SS Lazio",
+        "short": "LAZ",
         "form": [
+          "W",
           "W",
           "W"
         ]
@@ -1424,29 +881,359 @@
         "short": "MIL",
         "form": [
           "W",
+          "W",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "id": 560575,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 17:30",
+      "utcDate": "2026-09-12T16:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 73,
+        "name": "Tottenham Hotspur FC",
+        "short": "TOT",
+        "form": [
+          "L",
+          "L",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 62,
+        "name": "Everton FC",
+        "short": "EVE",
+        "form": [
+          "W",
+          "D",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "id": 565798,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 17:30",
+      "utcDate": "2026-09-12T16:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 1,
+        "name": "1. FC Köln",
+        "short": "KOE",
+        "form": [
+          "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 12,
+        "name": "SV Werder Bremen",
+        "short": "SVW",
+        "form": [
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "id": 564676,
+      "competition": {
+        "code": "PD",
+        "name": "La Liga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 17:30",
+      "utcDate": "2026-09-12T16:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 77,
+        "name": "Athletic Club",
+        "short": "ATH",
+        "form": [
+          "L",
+          "L",
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 285,
+        "name": "Elche CF",
+        "short": "ELC",
+        "form": [
+          "D",
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "id": 558607,
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 19:45",
+      "utcDate": "2026-09-12T18:45:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 102,
+        "name": "Atalanta BC",
+        "short": "ATA",
+        "form": [
+          "W",
+          "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 104,
+        "name": "Cagliari Calcio",
+        "short": "CAG",
+        "form": [
+          "W",
+          "L",
           "W"
         ]
       },
       "h2h": [
         "W",
         "D",
-        "D"
+        "W",
+        "L"
       ]
     },
     {
-      "id": 564661,
+      "id": 560577,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 20:00",
+      "utcDate": "2026-09-12T19:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 71,
+        "name": "Sunderland AFC",
+        "short": "SUN",
+        "form": [
+          "L",
+          "W",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 57,
+        "name": "Arsenal FC",
+        "short": "ARS",
+        "form": [
+          "W",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": [
+        "D",
+        "L"
+      ]
+    },
+    {
+      "id": 564677,
+      "competition": {
+        "code": "PD",
+        "name": "La Liga"
+      },
+      "day": "saturday",
+      "date": "Saturday 12 Sept, 20:00",
+      "utcDate": "2026-09-12T19:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 86,
+        "name": "Real Madrid CF",
+        "short": "RMA",
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 87,
+        "name": "Rayo Vallecano de Madrid",
+        "short": "RAY",
+        "form": [
+          "L",
+          "D",
+          "L",
+          "W"
+        ]
+      },
+      "h2h": [
+        "D",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "id": 561844,
+      "competition": {
+        "code": "ELC",
+        "name": "Championship"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 12:00",
+      "utcDate": "2026-09-13T11:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 356,
+        "name": "Sheffield United FC",
+        "short": "SHE",
+        "form": [
+          "D",
+          "D",
+          "W",
+          "L",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 76,
+        "name": "Wolverhampton Wanderers FC",
+        "short": "WOL",
+        "form": [
+          "D",
+          "W",
+          "W",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": [
+        "L",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "id": 564672,
       "competition": {
         "code": "PD",
         "name": "La Liga"
       },
       "day": "sunday",
-      "date": "Sunday 6 Sept, 20:00",
-      "utcDate": "2026-09-06T19:00:00Z",
+      "date": "Sunday 13 Sept, 13:00",
+      "utcDate": "2026-09-13T12:00:00Z",
       "venue": "Venue TBC",
       "home": {
-        "id": 80,
-        "name": "RCD Espanyol de Barcelona",
-        "short": "ESP",
+        "id": 558,
+        "name": "RC Celta de Vigo",
+        "short": "CEL",
+        "form": [
+          "D",
+          "L",
+          "L",
+          "D",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 84,
+        "name": "Málaga CF",
+        "short": "MAL",
+        "form": [
+          "L",
+          "D",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 560578,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 14:00",
+      "utcDate": "2026-09-13T13:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 1076,
+        "name": "Coventry City FC",
+        "short": "COV",
+        "form": [
+          "L",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 397,
+        "name": "Brighton & Hove Albion FC",
+        "short": "BHA",
+        "form": [
+          "W",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 558605,
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 14:00",
+      "utcDate": "2026-09-13T13:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 5890,
+        "name": "US Lecce",
+        "short": "USL",
         "form": [
           "W",
           "L",
@@ -1454,11 +1241,298 @@
         ]
       },
       "away": {
-        "id": 559,
-        "name": "Sevilla FC",
-        "short": "SEV",
+        "id": 5911,
+        "name": "AC Monza",
+        "short": "MON",
+        "form": [
+          "L",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": [
+        "D",
+        "D",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "id": 565799,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 14:30",
+      "utcDate": "2026-09-13T13:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 721,
+        "name": "RB Leipzig",
+        "short": "RBL",
         "form": [
           "W",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 7,
+        "name": "Hamburger SV",
+        "short": "HSV",
+        "form": [
+          "L",
+          "L"
+        ]
+      },
+      "h2h": [
+        "W",
+        "W"
+      ]
+    },
+    {
+      "id": 564675,
+      "competition": {
+        "code": "PD",
+        "name": "La Liga"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 15:15",
+      "utcDate": "2026-09-13T14:15:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 88,
+        "name": "Levante UD",
+        "short": "LEV",
+        "form": [
+          "L",
+          "D",
+          "W",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 81,
+        "name": "FC Barcelona",
+        "short": "FCB",
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": [
+        "L",
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "id": 560580,
+      "competition": {
+        "code": "PL",
+        "name": "Premier League"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 16:30",
+      "utcDate": "2026-09-13T15:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 66,
+        "name": "Manchester United FC",
+        "short": "MUN",
+        "form": [
+          "L",
+          "W",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 65,
+        "name": "Manchester City FC",
+        "short": "MCI",
+        "form": [
+          "W",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": [
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "id": 565800,
+      "competition": {
+        "code": "BL1",
+        "name": "Bundesliga"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 16:30",
+      "utcDate": "2026-09-13T15:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 719,
+        "name": "SV 07 Elversberg",
+        "short": "ELV",
+        "form": [
+          "W",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 5,
+        "name": "FC Bayern München",
+        "short": "FCB",
+        "form": [
+          "W",
+          "D"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 558599,
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 17:00",
+      "utcDate": "2026-09-13T16:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 113,
+        "name": "SSC Napoli",
+        "short": "NAP",
+        "form": [
+          "W",
+          "L",
+          "L"
+        ]
+      },
+      "away": {
+        "id": 103,
+        "name": "Bologna FC 1909",
+        "short": "BOL",
+        "form": [
+          "L",
+          "L",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "D",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "id": 564668,
+      "competition": {
+        "code": "PD",
+        "name": "La Liga"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 17:30",
+      "utcDate": "2026-09-13T16:30:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 82,
+        "name": "Getafe CF",
+        "short": "GET",
+        "form": [
+          "L",
+          "W",
+          "L",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 560,
+        "name": "RC Deportivo La Coruña",
+        "short": "DEP",
+        "form": [
+          "D",
+          "D",
+          "W",
+          "W"
+        ]
+      },
+      "h2h": []
+    },
+    {
+      "id": 558608,
+      "competition": {
+        "code": "SA",
+        "name": "Serie A"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 19:45",
+      "utcDate": "2026-09-13T18:45:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 471,
+        "name": "US Sassuolo Calcio",
+        "short": "SAS",
+        "form": [
+          "L",
+          "W",
+          "D"
+        ]
+      },
+      "away": {
+        "id": 109,
+        "name": "Juventus FC",
+        "short": "JUV",
+        "form": [
+          "W",
+          "W",
+          "D"
+        ]
+      },
+      "h2h": [
+        "W",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "id": 564674,
+      "competition": {
+        "code": "PD",
+        "name": "La Liga"
+      },
+      "day": "sunday",
+      "date": "Sunday 13 Sept, 20:00",
+      "utcDate": "2026-09-13T19:00:00Z",
+      "venue": "Venue TBC",
+      "home": {
+        "id": 92,
+        "name": "Real Sociedad de Fútbol",
+        "short": "RSO",
+        "form": [
+          "L",
+          "L",
+          "W",
+          "D",
+          "W"
+        ]
+      },
+      "away": {
+        "id": 78,
+        "name": "Club Atlético de Madrid",
+        "short": "ATL",
+        "form": [
+          "W",
+          "D",
           "W",
           "L"
         ]
@@ -1466,7 +1540,6 @@
       "h2h": [
         "L",
         "D",
-        "W",
         "L"
       ]
     }
