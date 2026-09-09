@@ -1,6 +1,7 @@
 {
-  "updatedAt": "2026-09-09T08:16:14.236Z",
+  "updatedAt": "2026-09-09T18:39:34.739Z",
   "source": "football-data.org",
+  "modelVersion": 2,
   "fixtures": [
     {
       "id": 561835,
@@ -12,6 +13,14 @@
       "date": "Saturday 12 Sept, 12:30",
       "utcDate": "2026-09-12T11:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 342,
         "name": "Derby County FC",
@@ -22,7 +31,16 @@
           "L",
           "W",
           "L"
-        ]
+        ],
+        "played": 5,
+        "position": 21,
+        "pointsPerGame": 0.8,
+        "venuePlayed": 2,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 0.5,
+        "adjustedForm": 0.267,
+        "restDays": 6
       },
       "away": {
         "id": 332,
@@ -34,7 +52,16 @@
           "W",
           "D",
           "D"
-        ]
+        ],
+        "played": 5,
+        "position": 14,
+        "pointsPerGame": 1.4,
+        "venuePlayed": 2,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.463,
+        "restDays": 6
       },
       "h2h": [
         "L",
@@ -53,6 +80,14 @@
       "date": "Saturday 12 Sept, 12:30",
       "utcDate": "2026-09-12T11:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 60,
         "name": "Bolton Wanderers FC",
@@ -63,7 +98,16 @@
           "L",
           "L",
           "L"
-        ]
+        ],
+        "played": 6,
+        "position": 22,
+        "pointsPerGame": 0.67,
+        "venuePlayed": 3,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.052,
+        "restDays": 3
       },
       "away": {
         "id": 715,
@@ -75,7 +119,16 @@
           "L",
           "L",
           "D"
-        ]
+        ],
+        "played": 6,
+        "position": 20,
+        "pointsPerGame": 0.67,
+        "venuePlayed": 3,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 6,
+        "venuePointsPerGame": 0.33,
+        "adjustedForm": 0.181,
+        "restDays": 3
       },
       "h2h": []
     },
@@ -89,6 +142,14 @@
       "date": "Saturday 12 Sept, 12:30",
       "utcDate": "2026-09-12T11:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 74,
         "name": "West Bromwich Albion FC",
@@ -99,7 +160,16 @@
           "L",
           "D",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 7,
+        "pointsPerGame": 2,
+        "venuePlayed": 3,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 2.33,
+        "adjustedForm": 0.615,
+        "restDays": 6
       },
       "away": {
         "id": 69,
@@ -111,7 +181,16 @@
           "W",
           "W",
           "L"
-        ]
+        ],
+        "played": 5,
+        "position": 5,
+        "pointsPerGame": 2,
+        "venuePlayed": 2,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.557,
+        "restDays": 6
       },
       "h2h": [
         "W",
@@ -130,6 +209,14 @@
       "date": "Saturday 12 Sept, 13:00",
       "utcDate": "2026-09-12T12:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 5335,
         "name": "Real Racing Club de Santander",
@@ -139,7 +226,16 @@
           "L",
           "W",
           "L"
-        ]
+        ],
+        "played": 4,
+        "position": 13,
+        "pointsPerGame": 1,
+        "venuePlayed": 2,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.267,
+        "restDays": 6
       },
       "away": {
         "id": 263,
@@ -150,7 +246,16 @@
           "D",
           "W",
           "W"
-        ]
+        ],
+        "played": 4,
+        "position": 2,
+        "pointsPerGame": 2.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.793,
+        "restDays": 5
       },
       "h2h": []
     },
@@ -164,6 +269,14 @@
       "date": "Saturday 12 Sept, 14:00",
       "utcDate": "2026-09-12T13:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.3,
+          "avgAwayGoals": 1.433,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 107,
         "name": "Genoa CFC",
@@ -172,7 +285,16 @@
           "L",
           "L",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 19,
+        "pointsPerGame": 0,
+        "venuePlayed": 2,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 6,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0,
+        "restDays": 7
       },
       "away": {
         "id": 470,
@@ -182,7 +304,16 @@
           "L",
           "W",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 7,
+        "pointsPerGame": 2,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.536,
+        "restDays": 6
       },
       "h2h": [
         "L",
@@ -199,6 +330,14 @@
       "date": "Saturday 12 Sept, 14:30",
       "utcDate": "2026-09-12T13:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 2,
         "name": "TSG 1899 Hoffenheim",
@@ -206,7 +345,16 @@
         "form": [
           "L",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 16,
+        "pointsPerGame": 0,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0,
+        "restDays": 7
       },
       "away": {
         "id": 10,
@@ -215,7 +363,16 @@
         "form": [
           "L",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 9,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.532,
+        "restDays": 7
       },
       "h2h": [
         "D",
@@ -234,6 +391,14 @@
       "date": "Saturday 12 Sept, 14:30",
       "utcDate": "2026-09-12T13:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 4,
         "name": "Borussia Dortmund",
@@ -241,7 +406,16 @@
         "form": [
           "W",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 3,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.75,
+        "restDays": 7
       },
       "away": {
         "id": 29,
@@ -250,7 +424,16 @@
         "form": [
           "D",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 12,
+        "pointsPerGame": 0.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.169,
+        "restDays": 7
       },
       "h2h": [
         "W"
@@ -266,6 +449,14 @@
       "date": "Saturday 12 Sept, 14:30",
       "utcDate": "2026-09-12T13:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 16,
         "name": "FC Augsburg",
@@ -273,7 +464,16 @@
         "form": [
           "W",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 1,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.833,
+        "restDays": 5
       },
       "away": {
         "id": 3,
@@ -282,7 +482,16 @@
         "form": [
           "L",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 7,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.443,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -301,6 +510,14 @@
       "date": "Saturday 12 Sept, 14:30",
       "utcDate": "2026-09-12T13:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 15,
         "name": "1. FSV Mainz 05",
@@ -308,7 +525,16 @@
         "form": [
           "D",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 5,
+        "pointsPerGame": 2,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.529,
+        "restDays": 6
       },
       "away": {
         "id": 19,
@@ -317,7 +543,16 @@
         "form": [
           "D",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 13,
+        "pointsPerGame": 0.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.13,
+        "restDays": 5
       },
       "h2h": [
         "W",
@@ -336,6 +571,14 @@
       "date": "Saturday 12 Sept, 14:30",
       "utcDate": "2026-09-12T13:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 17,
         "name": "SC Freiburg",
@@ -343,7 +586,16 @@
         "form": [
           "W",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 2,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.911,
+        "restDays": 7
       },
       "away": {
         "id": 18,
@@ -352,7 +604,16 @@
         "form": [
           "L",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 17,
+        "pointsPerGame": 0,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -371,6 +632,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 354,
         "name": "Crystal Palace FC",
@@ -379,7 +648,16 @@
           "L",
           "L",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 14,
+        "pointsPerGame": 1,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.285,
+        "restDays": 7
       },
       "away": {
         "id": 349,
@@ -389,7 +667,16 @@
           "W",
           "L",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 13,
+        "pointsPerGame": 1,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.277,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -406,6 +693,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 64,
         "name": "Liverpool FC",
@@ -414,7 +709,16 @@
           "D",
           "D",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 7,
+        "pointsPerGame": 1.67,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.542,
+        "restDays": 7
       },
       "away": {
         "id": 63,
@@ -424,7 +728,16 @@
           "L",
           "L",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 19,
+        "pointsPerGame": 0,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0,
+        "restDays": 7
       },
       "h2h": [
         "D",
@@ -443,6 +756,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 58,
         "name": "Aston Villa FC",
@@ -451,7 +772,16 @@
           "L",
           "L",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 18,
+        "pointsPerGame": 0.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.144,
+        "restDays": 6
       },
       "away": {
         "id": 351,
@@ -461,7 +791,16 @@
           "L",
           "D",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 16,
+        "pointsPerGame": 0.67,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.217,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -478,6 +817,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 1044,
         "name": "AFC Bournemouth",
@@ -486,7 +833,16 @@
           "L",
           "D",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 15,
+        "pointsPerGame": 0.67,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.245,
+        "restDays": 7
       },
       "away": {
         "id": 402,
@@ -496,7 +852,16 @@
           "W",
           "D",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 5,
+        "pointsPerGame": 1.67,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.468,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -514,6 +879,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 61,
         "name": "Chelsea FC",
@@ -522,7 +895,16 @@
           "W",
           "W",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 4,
+        "pointsPerGame": 2,
+        "venuePlayed": 1,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.539,
+        "restDays": 5
       },
       "away": {
         "id": 322,
@@ -532,7 +914,16 @@
           "W",
           "W",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 3,
+        "pointsPerGame": 2.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.63,
+        "restDays": 6
       },
       "h2h": []
     },
@@ -546,6 +937,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 340,
         "name": "Southampton FC",
@@ -556,7 +955,16 @@
           "D",
           "D",
           "W"
-        ]
+        ],
+        "played": 6,
+        "position": 1,
+        "pointsPerGame": 1.83,
+        "venuePlayed": 3,
+        "venueGoalsFor": 11,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.724,
+        "restDays": 3
       },
       "away": {
         "id": 387,
@@ -568,7 +976,16 @@
           "W",
           "W",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 6,
+        "pointsPerGame": 2,
+        "venuePlayed": 3,
+        "venueGoalsFor": 7,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 2.33,
+        "adjustedForm": 0.651,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -587,6 +1004,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 1081,
         "name": "Preston North End FC",
@@ -597,7 +1022,16 @@
           "L",
           "W",
           "L"
-        ]
+        ],
+        "played": 6,
+        "position": 24,
+        "pointsPerGame": 0.5,
+        "venuePlayed": 3,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 7,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.204,
+        "restDays": 3
       },
       "away": {
         "id": 1126,
@@ -609,7 +1043,16 @@
           "W",
           "D",
           "D"
-        ]
+        ],
+        "played": 5,
+        "position": 19,
+        "pointsPerGame": 1,
+        "venuePlayed": 2,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 1.5,
+        "adjustedForm": 0.329,
+        "restDays": 7
       },
       "h2h": []
     },
@@ -623,6 +1066,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 59,
         "name": "Blackburn Rovers FC",
@@ -633,7 +1084,16 @@
           "D",
           "L",
           "L"
-        ]
+        ],
+        "played": 6,
+        "position": 18,
+        "pointsPerGame": 0.83,
+        "venuePlayed": 3,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.215,
+        "restDays": 3
       },
       "away": {
         "id": 384,
@@ -645,7 +1105,16 @@
           "L",
           "L",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 9,
+        "pointsPerGame": 1.8,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 1.5,
+        "adjustedForm": 0.542,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -664,6 +1133,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 348,
         "name": "Charlton Athletic FC",
@@ -674,7 +1151,16 @@
           "W",
           "D",
           "L"
-        ]
+        ],
+        "played": 5,
+        "position": 8,
+        "pointsPerGame": 2,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.552,
+        "restDays": 7
       },
       "away": {
         "id": 325,
@@ -686,7 +1172,16 @@
           "L",
           "L",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 17,
+        "pointsPerGame": 1.2,
+        "venuePlayed": 2,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 1.5,
+        "adjustedForm": 0.38,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -703,6 +1198,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 346,
         "name": "Watford FC",
@@ -713,7 +1216,16 @@
           "L",
           "L",
           "W"
-        ]
+        ],
+        "played": 6,
+        "position": 12,
+        "pointsPerGame": 1.33,
+        "venuePlayed": 3,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 2.33,
+        "adjustedForm": 0.323,
+        "restDays": 3
       },
       "away": {
         "id": 70,
@@ -725,7 +1237,16 @@
           "W",
           "W",
           "D"
-        ]
+        ],
+        "played": 6,
+        "position": 15,
+        "pointsPerGame": 1.17,
+        "venuePlayed": 3,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 8,
+        "venuePointsPerGame": 0.33,
+        "adjustedForm": 0.51,
+        "restDays": 3
       },
       "h2h": [
         "W",
@@ -744,6 +1265,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 72,
         "name": "Swansea City AFC",
@@ -754,7 +1283,16 @@
           "W",
           "D",
           "L"
-        ]
+        ],
+        "played": 6,
+        "position": 3,
+        "pointsPerGame": 1.83,
+        "venuePlayed": 3,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 1.67,
+        "adjustedForm": 0.46,
+        "restDays": 3
       },
       "away": {
         "id": 328,
@@ -766,7 +1304,16 @@
           "D",
           "L",
           "D"
-        ]
+        ],
+        "played": 6,
+        "position": 23,
+        "pointsPerGame": 0.5,
+        "venuePlayed": 3,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 8,
+        "venuePointsPerGame": 0.33,
+        "adjustedForm": 0.153,
+        "restDays": 3
       },
       "h2h": [
         "L",
@@ -785,6 +1332,14 @@
       "date": "Saturday 12 Sept, 15:00",
       "utcDate": "2026-09-12T14:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 343,
         "name": "Middlesbrough FC",
@@ -795,7 +1350,16 @@
           "W",
           "D",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 4,
+        "pointsPerGame": 2,
+        "venuePlayed": 2,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.69,
+        "restDays": 7
       },
       "away": {
         "id": 68,
@@ -807,7 +1371,16 @@
           "W",
           "L",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 16,
+        "pointsPerGame": 1.2,
+        "venuePlayed": 3,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.424,
+        "restDays": 7
       },
       "h2h": [
         "D",
@@ -826,6 +1399,14 @@
       "date": "Saturday 12 Sept, 15:15",
       "utcDate": "2026-09-12T14:15:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 79,
         "name": "CA Osasuna",
@@ -835,7 +1416,16 @@
           "W",
           "W",
           "L"
-        ]
+        ],
+        "played": 4,
+        "position": 8,
+        "pointsPerGame": 1.75,
+        "venuePlayed": 2,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.504,
+        "restDays": 5
       },
       "away": {
         "id": 80,
@@ -846,7 +1436,16 @@
           "L",
           "L",
           "D"
-        ]
+        ],
+        "played": 4,
+        "position": 12,
+        "pointsPerGame": 1,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.296,
+        "restDays": 5
       },
       "h2h": [
         "D",
@@ -865,6 +1464,14 @@
       "date": "Saturday 12 Sept, 17:00",
       "utcDate": "2026-09-12T16:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.3,
+          "avgAwayGoals": 1.433,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 110,
         "name": "SS Lazio",
@@ -873,7 +1480,16 @@
           "W",
           "W",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 3,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.85,
+        "restDays": 4
       },
       "away": {
         "id": 98,
@@ -883,7 +1499,16 @@
           "W",
           "W",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 5,
+        "pointsPerGame": 2.33,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.657,
+        "restDays": 5
       },
       "h2h": [
         "W",
@@ -901,6 +1526,14 @@
       "date": "Saturday 12 Sept, 17:30",
       "utcDate": "2026-09-12T16:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 73,
         "name": "Tottenham Hotspur FC",
@@ -909,7 +1542,16 @@
           "L",
           "L",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 17,
+        "pointsPerGame": 0.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.109,
+        "restDays": 7
       },
       "away": {
         "id": 62,
@@ -919,7 +1561,16 @@
           "W",
           "D",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 8,
+        "pointsPerGame": 1.67,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.481,
+        "restDays": 6
       },
       "h2h": [
         "W",
@@ -938,6 +1589,14 @@
       "date": "Saturday 12 Sept, 17:30",
       "utcDate": "2026-09-12T16:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 1,
         "name": "1. FC Köln",
@@ -945,7 +1604,16 @@
         "form": [
           "W",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 11,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.351,
+        "restDays": 7
       },
       "away": {
         "id": 12,
@@ -954,7 +1622,16 @@
         "form": [
           "L",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 10,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.532,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -973,6 +1650,14 @@
       "date": "Saturday 12 Sept, 17:30",
       "utcDate": "2026-09-12T16:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 77,
         "name": "Athletic Club",
@@ -982,7 +1667,16 @@
           "L",
           "W",
           "W"
-        ]
+        ],
+        "played": 4,
+        "position": 10,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 2,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 1.5,
+        "adjustedForm": 0.546,
+        "restDays": 7
       },
       "away": {
         "id": 285,
@@ -993,7 +1687,16 @@
           "L",
           "L",
           "L"
-        ]
+        ],
+        "played": 4,
+        "position": 19,
+        "pointsPerGame": 0.25,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 0.5,
+        "adjustedForm": 0.072,
+        "restDays": 4
       },
       "h2h": [
         "W",
@@ -1012,6 +1715,14 @@
       "date": "Saturday 12 Sept, 19:45",
       "utcDate": "2026-09-12T18:45:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.3,
+          "avgAwayGoals": 1.433,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 102,
         "name": "Atalanta BC",
@@ -1020,7 +1731,16 @@
           "W",
           "W",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 8,
+        "pointsPerGame": 2,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.547,
+        "restDays": 7
       },
       "away": {
         "id": 104,
@@ -1030,7 +1750,16 @@
           "W",
           "L",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 9,
+        "pointsPerGame": 2,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.578,
+        "restDays": 5
       },
       "h2h": [
         "W",
@@ -1049,6 +1778,14 @@
       "date": "Saturday 12 Sept, 20:00",
       "utcDate": "2026-09-12T19:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 71,
         "name": "Sunderland AFC",
@@ -1057,7 +1794,16 @@
           "L",
           "W",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 12,
+        "pointsPerGame": 1.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.381,
+        "restDays": 7
       },
       "away": {
         "id": 57,
@@ -1067,7 +1813,16 @@
           "W",
           "W",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 2,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.895,
+        "restDays": 6
       },
       "h2h": [
         "D",
@@ -1084,6 +1839,14 @@
       "date": "Saturday 12 Sept, 20:00",
       "utcDate": "2026-09-12T19:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 86,
         "name": "Real Madrid CF",
@@ -1093,7 +1856,16 @@
           "W",
           "W",
           "L"
-        ]
+        ],
+        "played": 4,
+        "position": 3,
+        "pointsPerGame": 2.25,
+        "venuePlayed": 2,
+        "venueGoalsFor": 8,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.63,
+        "restDays": 8
       },
       "away": {
         "id": 87,
@@ -1104,7 +1876,16 @@
           "D",
           "L",
           "W"
-        ]
+        ],
+        "played": 4,
+        "position": 14,
+        "pointsPerGame": 1,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 7,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.368,
+        "restDays": 7
       },
       "h2h": [
         "D",
@@ -1123,6 +1904,14 @@
       "date": "Sunday 13 Sept, 12:00",
       "utcDate": "2026-09-13T11:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.606,
+          "avgAwayGoals": 1.288,
+          "completedMatches": 66
+        }
+      },
       "home": {
         "id": 356,
         "name": "Sheffield United FC",
@@ -1133,7 +1922,16 @@
           "W",
           "L",
           "W"
-        ]
+        ],
+        "played": 6,
+        "position": 10,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 3,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 1.33,
+        "adjustedForm": 0.5,
+        "restDays": 4
       },
       "away": {
         "id": 76,
@@ -1145,7 +1943,16 @@
           "W",
           "L",
           "D"
-        ]
+        ],
+        "played": 5,
+        "position": 11,
+        "pointsPerGame": 1.6,
+        "venuePlayed": 3,
+        "venueGoalsFor": 7,
+        "venueGoalsAgainst": 7,
+        "venuePointsPerGame": 1.33,
+        "adjustedForm": 0.455,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -1163,6 +1970,14 @@
       "date": "Sunday 13 Sept, 13:00",
       "utcDate": "2026-09-13T12:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 558,
         "name": "RC Celta de Vigo",
@@ -1173,7 +1988,16 @@
           "L",
           "D",
           "D"
-        ]
+        ],
+        "played": 5,
+        "position": 16,
+        "pointsPerGame": 0.6,
+        "venuePlayed": 2,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.193,
+        "restDays": 5
       },
       "away": {
         "id": 84,
@@ -1184,7 +2008,16 @@
           "D",
           "L",
           "D"
-        ]
+        ],
+        "played": 4,
+        "position": 18,
+        "pointsPerGame": 0.5,
+        "venuePlayed": 2,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 6,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.18,
+        "restDays": 6
       },
       "h2h": []
     },
@@ -1198,6 +2031,14 @@
       "date": "Sunday 13 Sept, 14:00",
       "utcDate": "2026-09-13T13:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 1076,
         "name": "Coventry City FC",
@@ -1206,7 +2047,16 @@
           "L",
           "L",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 20,
+        "pointsPerGame": 0,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0,
+        "restDays": 7
       },
       "away": {
         "id": 397,
@@ -1216,7 +2066,16 @@
           "W",
           "L",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 10,
+        "pointsPerGame": 1.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.36,
+        "restDays": 7
       },
       "h2h": []
     },
@@ -1230,6 +2089,14 @@
       "date": "Sunday 13 Sept, 14:00",
       "utcDate": "2026-09-13T13:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.3,
+          "avgAwayGoals": 1.433,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 5890,
         "name": "US Lecce",
@@ -1238,7 +2105,16 @@
           "W",
           "L",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 14,
+        "pointsPerGame": 1,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.214,
+        "restDays": 5
       },
       "away": {
         "id": 5911,
@@ -1248,7 +2124,16 @@
           "L",
           "L",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 17,
+        "pointsPerGame": 0.33,
+        "venuePlayed": 2,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 5,
+        "venuePointsPerGame": 0.5,
+        "adjustedForm": 0.102,
+        "restDays": 7
       },
       "h2h": [
         "D",
@@ -1267,6 +2152,14 @@
       "date": "Sunday 13 Sept, 14:30",
       "utcDate": "2026-09-13T13:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 721,
         "name": "RB Leipzig",
@@ -1274,7 +2167,16 @@
         "form": [
           "W",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 8,
+        "pointsPerGame": 1.5,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.351,
+        "restDays": 8
       },
       "away": {
         "id": 7,
@@ -1283,7 +2185,16 @@
         "form": [
           "L",
           "L"
-        ]
+        ],
+        "played": 2,
+        "position": 18,
+        "pointsPerGame": 0,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -1300,6 +2211,14 @@
       "date": "Sunday 13 Sept, 15:15",
       "utcDate": "2026-09-13T14:15:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 88,
         "name": "Levante UD",
@@ -1309,7 +2228,16 @@
           "D",
           "W",
           "D"
-        ]
+        ],
+        "played": 4,
+        "position": 11,
+        "pointsPerGame": 1.25,
+        "venuePlayed": 1,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.466,
+        "restDays": 6
       },
       "away": {
         "id": 81,
@@ -1320,7 +2248,16 @@
           "W",
           "W",
           "W"
-        ]
+        ],
+        "played": 4,
+        "position": 1,
+        "pointsPerGame": 3,
+        "venuePlayed": 2,
+        "venueGoalsFor": 10,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.873,
+        "restDays": 7
       },
       "h2h": [
         "L",
@@ -1339,6 +2276,14 @@
       "date": "Sunday 13 Sept, 16:30",
       "utcDate": "2026-09-13T15:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.6,
+          "avgAwayGoals": 1.233,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 66,
         "name": "Manchester United FC",
@@ -1347,7 +2292,16 @@
           "L",
           "W",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 11,
+        "pointsPerGame": 1.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 5,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.437,
+        "restDays": 7
       },
       "away": {
         "id": 65,
@@ -1357,7 +2311,16 @@
           "W",
           "W",
           "W"
-        ]
+        ],
+        "played": 3,
+        "position": 1,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.837,
+        "restDays": 8
       },
       "h2h": [
         "W",
@@ -1376,6 +2339,14 @@
       "date": "Sunday 13 Sept, 16:30",
       "utcDate": "2026-09-13T15:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 2.389,
+          "avgAwayGoals": 1.556,
+          "completedMatches": 18
+        }
+      },
       "home": {
         "id": 719,
         "name": "SV 07 Elversberg",
@@ -1383,7 +2354,16 @@
         "form": [
           "W",
           "W"
-        ]
+        ],
+        "played": 2,
+        "position": 4,
+        "pointsPerGame": 3,
+        "venuePlayed": 1,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.867,
+        "restDays": 8
       },
       "away": {
         "id": 5,
@@ -1392,7 +2372,16 @@
         "form": [
           "W",
           "D"
-        ]
+        ],
+        "played": 2,
+        "position": 6,
+        "pointsPerGame": 2,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 1,
+        "adjustedForm": 0.616,
+        "restDays": 7
       },
       "h2h": []
     },
@@ -1406,6 +2395,14 @@
       "date": "Sunday 13 Sept, 17:00",
       "utcDate": "2026-09-13T16:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.3,
+          "avgAwayGoals": 1.433,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 113,
         "name": "SSC Napoli",
@@ -1414,7 +2411,16 @@
           "W",
           "L",
           "L"
-        ]
+        ],
+        "played": 3,
+        "position": 12,
+        "pointsPerGame": 1,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 2,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.214,
+        "restDays": 8
       },
       "away": {
         "id": 103,
@@ -1424,7 +2430,16 @@
           "L",
           "L",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 15,
+        "pointsPerGame": 0.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 0,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 0,
+        "adjustedForm": 0.123,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -1443,6 +2458,14 @@
       "date": "Sunday 13 Sept, 17:30",
       "utcDate": "2026-09-13T16:30:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 82,
         "name": "Getafe CF",
@@ -1452,7 +2475,16 @@
           "W",
           "L",
           "D"
-        ]
+        ],
+        "played": 4,
+        "position": 15,
+        "pointsPerGame": 1,
+        "venuePlayed": 2,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.296,
+        "restDays": 5
       },
       "away": {
         "id": 560,
@@ -1463,7 +2495,16 @@
           "D",
           "W",
           "W"
-        ]
+        ],
+        "played": 4,
+        "position": 5,
+        "pointsPerGame": 2,
+        "venuePlayed": 2,
+        "venueGoalsFor": 4,
+        "venueGoalsAgainst": 3,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.582,
+        "restDays": 7
       },
       "h2h": []
     },
@@ -1477,6 +2518,14 @@
       "date": "Sunday 13 Sept, 19:45",
       "utcDate": "2026-09-13T18:45:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.3,
+          "avgAwayGoals": 1.433,
+          "completedMatches": 30
+        }
+      },
       "home": {
         "id": 471,
         "name": "US Sassuolo Calcio",
@@ -1485,7 +2534,16 @@
           "L",
           "W",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 11,
+        "pointsPerGame": 1.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.409,
+        "restDays": 7
       },
       "away": {
         "id": 109,
@@ -1495,7 +2553,16 @@
           "W",
           "W",
           "D"
-        ]
+        ],
+        "played": 3,
+        "position": 6,
+        "pointsPerGame": 2.33,
+        "venuePlayed": 1,
+        "venueGoalsFor": 1,
+        "venueGoalsAgainst": 0,
+        "venuePointsPerGame": 3,
+        "adjustedForm": 0.723,
+        "restDays": 7
       },
       "h2h": [
         "W",
@@ -1514,6 +2581,14 @@
       "date": "Sunday 13 Sept, 20:00",
       "utcDate": "2026-09-13T19:00:00Z",
       "venue": "Venue TBC",
+      "model": {
+        "version": 2,
+        "league": {
+          "avgHomeGoals": 1.732,
+          "avgAwayGoals": 1.268,
+          "completedMatches": 41
+        }
+      },
       "home": {
         "id": 92,
         "name": "Real Sociedad de Fútbol",
@@ -1524,7 +2599,16 @@
           "W",
           "D",
           "W"
-        ]
+        ],
+        "played": 5,
+        "position": 9,
+        "pointsPerGame": 1.4,
+        "venuePlayed": 2,
+        "venueGoalsFor": 2,
+        "venueGoalsAgainst": 1,
+        "venuePointsPerGame": 2,
+        "adjustedForm": 0.451,
+        "restDays": 5
       },
       "away": {
         "id": 78,
@@ -1535,7 +2619,16 @@
           "D",
           "W",
           "L"
-        ]
+        ],
+        "played": 4,
+        "position": 7,
+        "pointsPerGame": 1.75,
+        "venuePlayed": 2,
+        "venueGoalsFor": 3,
+        "venueGoalsAgainst": 4,
+        "venuePointsPerGame": 1.5,
+        "adjustedForm": 0.508,
+        "restDays": 8
       },
       "h2h": [
         "L",
