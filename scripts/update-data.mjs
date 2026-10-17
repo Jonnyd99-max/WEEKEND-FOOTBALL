@@ -144,13 +144,17 @@ function describeTeam(teamId, fixtureDate, venue, matches, table, previousTable,
 const { from, to } = nextWeekend();
 const previousData = await readJson("data.json", { updatedAt: null, fixtures: [] });
 const existingHistory = await readJson("history.json", { updatedAt: null, fixtures: [] });
-const recentFrom = new Date(`${from}T00:00:00Z`);
-recentFrom.setUTCDate(recentFrom.getUTCDate() - 28);
 const recentTo = new Date();
 recentTo.setUTCDate(recentTo.getUTCDate() + 1);
+const recentMiddle = new Date(recentTo);
+recentMiddle.setUTCDate(recentMiddle.getUTCDate() - 10);
+const recentFrom = new Date(recentMiddle);
+recentFrom.setUTCDate(recentFrom.getUTCDate() - 10);
 console.log("Fetching recent matches across all available competitions for recovery days…");
-const recentAll = await api(`/matches?dateFrom=${recentFrom.toISOString().slice(0, 10)}&dateTo=${recentTo.toISOString().slice(0, 10)}&status=FINISHED`);
-const allCompetitionMatches = (recentAll.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
+const recentOlder = await api(`/matches?dateFrom=${recentFrom.toISOString().slice(0, 10)}&dateTo=${recentMiddle.toISOString().slice(0, 10)}&status=FINISHED`);
+const recentNewer = await api(`/matches?dateFrom=${recentMiddle.toISOString().slice(0, 10)}&dateTo=${recentTo.toISOString().slice(0, 10)}&status=FINISHED`);
+const allCompetitionMatches = [...(recentOlder.matches ?? []), ...(recentNewer.matches ?? [])]
+  .filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
 const fixtures = [];
 const completedById = new Map();
 for (const competition of COMPETITIONS) {
