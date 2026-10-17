@@ -9,6 +9,7 @@ const CONFIG = {
 };
 
 let fixtures = [];
+let historyFixtures = [];
 let currentLeague = "all";
 
 const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
@@ -117,8 +118,8 @@ function card(fixture) {
   const explanation = result.modelVersion === 2 ? `<div class="breakdown">
         <div><span>Expected goals</span><strong>${result.expectedHome} — ${result.expectedAway}</strong></div><div><span>Likely score</span><strong>${result.expectedScore}</strong></div>
         <div><span>Home / draw / away</span><strong>${result.probabilities.home}% / ${result.probabilities.draw}% / ${result.probabilities.away}%</strong></div><div><span>Venue PPG</span><strong>${fixture.home.venuePointsPerGame} — ${fixture.away.venuePointsPerGame}</strong></div>
-        <div><span>League position</span><strong>${fixture.home.position || "—"} — ${fixture.away.position || "—"}</strong></div><div><span>Rest days</span><strong>${fixture.home.restDays ?? "—"} — ${fixture.away.restDays ?? "—"}</strong></div>
-      </div><p class="formula">Model V2 · ${result.baselineWeight}% previous-season baseline + current attack and defence + home/away record + opponent-adjusted form + rest + 5% head-to-head</p>` : `<div class="breakdown">
+        <div><span>League position</span><strong>${fixture.home.position || "—"} — ${fixture.away.position || "—"}</strong></div><div><span>Rest days · all comps</span><strong>${fixture.home.restDays ?? "—"} — ${fixture.away.restDays ?? "—"}</strong></div>
+      </div><p class="formula">Model V2 · ${result.baselineWeight}% previous-season baseline + current attack and defence + home/away record + opponent-adjusted form + all-competition rest + 5% head-to-head</p>` : `<div class="breakdown">
         <div><span>Home form</span><strong>${result.homeForm}<small>/15</small></strong></div><div><span>Away form</span><strong>${result.awayForm}<small>/15</small></strong></div>
         <div><span>Home H2H</span><strong>${result.homeH2h}<small>/12</small></strong></div><div><span>Home boost</span><strong>+${CONFIG.homeAdvantage}</strong></div>
         <div><span>Final rating</span><strong>${result.homeRating} — ${result.awayRating}</strong></div><div><span>Rating gap</span><strong>${result.gap}</strong></div>
@@ -148,13 +149,42 @@ function card(fixture) {
 let currentFilter = "all";
 function render() {
   let visible = fixtures.filter(fixture => {
-    const matchesDay = currentFilter === "all" || currentFilter === "top" || fixture.day === currentFilter;
+    const matchesDay = currentFilter === "all" || currentFilter === "top" || currentFilter === "review" || fixture.day === currentFilter;
     const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
     return matchesDay && matchesLeague;
   });
   if (currentFilter === "top") visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, 10);
-  document.querySelector("#fixture-count").textContent = visible.length;
-  document.querySelector("#match-list").innerHTML = currentFilter === "top" ? topPicksTable(visible) : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+  document.querySelector("#fixture-count").textContent = currentFilter === "review" ? reviewPicks().length : visible.length;
+  document.querySelector("#match-list").innerHTML = currentFilter === "top" ? topPicksTable(visible) : currentFilter === "review" ? reviewTable() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+}
+
+function reviewPicks() {
+  const filtered = historyFixtures.filter(fixture => fixture.actual && (currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague));
+  const batches = [...new Set(filtered.map(fixture => fixture.predictionBatch).filter(Boolean))].sort((a, b) => new Date(b) - new Date(a));
+  if (!batches.length) return [];
+  return filtered.filter(fixture => fixture.predictionBatch === batches[0])
+    .sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, 10);
+}
+
+function reviewTable() {
+  const picks = reviewPicks();
+  if (!picks.length) return '<div class="empty"><strong>No completed review yet.</strong><br>The first result report will appear after the next Wednesday update settles a completed weekend.</div>';
+  const predictedOutcome = prediction => prediction.probabilities ? ["home", "draw", "away"].sort((a, b) => prediction.probabilities[b] - prediction.probabilities[a])[0] : null;
+  const correct = picks.filter(fixture => predictedOutcome(predict(fixture)) === fixture.actual.outcome).length;
+  const accuracy = Math.round(correct / picks.length * 100);
+  const rows = picks.map((fixture, index) => {
+    const prediction = predict(fixture);
+    const actualLabel = fixture.actual.outcome === "draw" ? "Draw" : `${fixture[fixture.actual.outcome].name} won`;
+    const hit = predictedOutcome(prediction) === fixture.actual.outcome;
+    return `<article class="review-row">
+      <span class="review-rank">${index + 1}</span>
+      <div><span class="top-pick-league">${fixture.competition?.name || "Premier League"}</span><div class="review-match"><strong>${fixture.home.name} ${fixture.actual.homeGoals}–${fixture.actual.awayGoals} ${fixture.away.name}</strong><small>${fixture.date}</small></div></div>
+      <div class="review-call"><span>Predicted</span><strong>${prediction.label}</strong><small>${prediction.confidence}% confidence</small></div>
+      <div class="review-result ${hit ? "is-correct" : "is-missed"}"><b>${hit ? "✓ Correct" : "× Missed"}</b><small>${actualLabel}</small></div>
+    </article>`;
+  }).join("");
+  const batchDate = new Date(picks[0].predictionBatch).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">LATEST COMPLETED TOP 10</span><h2>Performance review</h2><p>Predictions published ${batchDate}, checked against final scores.</p></div><div class="review-stat"><strong>${correct}/${picks.length}</strong><span>correct · ${accuracy}%</span></div></div><div class="review-list">${rows}</div></div>`;
 }
 
 function topPicksTable(picks) {
@@ -203,6 +233,12 @@ async function loadFixtures() {
     const response = await fetch(`data.json?v=${Date.now()}`);
     if (!response.ok) throw new Error(`Data request failed: ${response.status}`);
     const data = await response.json();
+    try {
+      const historyResponse = await fetch(`history.json?v=${Date.now()}`);
+      if (historyResponse.ok) historyFixtures = (await historyResponse.json()).fixtures ?? [];
+    } catch (historyError) {
+      console.warn("Performance history is not available yet.", historyError);
+    }
     fixtures = data.fixtures;
     renderLeaguePicker();
     document.querySelector("#data-status").textContent = "Live weekly data · football-data.org";
