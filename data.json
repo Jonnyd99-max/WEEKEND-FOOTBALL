@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T18:20:21.628Z",
+  "updatedAt": "2026-10-21T13:23:11.097Z",
   "source": "football-data.org",
   "modelVersion": 2,
   "fixtures": [
@@ -16,9 +16,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -27,22 +27,22 @@
         "name": "Aston Villa FC",
         "short": "AVL",
         "form": [
-          "L",
           "D",
           "L",
           "W",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 6,
-        "position": 17,
-        "pointsPerGame": 0.83,
+        "played": 7,
+        "position": 12,
+        "pointsPerGame": 1.14,
         "venuePlayed": 3,
         "venueGoalsFor": 3,
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 0.33,
-        "adjustedForm": 0.332,
-        "restDays": 9,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.542,
+        "restDays": 6,
+        "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.71,
@@ -68,9 +68,9 @@
         "venueGoalsFor": 8,
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 3,
-        "adjustedForm": 0.946,
-        "restDays": 6,
-        "lastMatchCompetition": "Premier League",
+        "adjustedForm": 0.939,
+        "restDays": 3,
+        "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 2.05,
@@ -98,9 +98,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -180,9 +180,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -204,7 +204,7 @@
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 1.8,
-        "adjustedForm": 0.177,
+        "adjustedForm": 0.176,
         "restDays": 7,
         "lastMatchCompetition": "Championship",
         "baseline": {
@@ -260,9 +260,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -272,20 +272,20 @@
         "short": "POR",
         "form": [
           "D",
-          "D",
           "L",
           "W",
-          "W"
+          "W",
+          "D"
         ],
-        "played": 10,
+        "played": 11,
         "position": 13,
-        "pointsPerGame": 1.4,
+        "pointsPerGame": 1.36,
         "venuePlayed": 5,
         "venueGoalsFor": 8,
         "venueGoalsAgainst": 9,
         "venuePointsPerGame": 1.4,
-        "adjustedForm": 0.557,
-        "restDays": 6,
+        "adjustedForm": 0.531,
+        "restDays": 3,
         "lastMatchCompetition": "Championship",
         "baseline": {
           "played": 46,
@@ -342,9 +342,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -353,21 +353,21 @@
         "name": "Rayo Vallecano de Madrid",
         "short": "RAY",
         "form": [
-          "L",
           "W",
           "L",
           "W",
+          "D",
           "D"
         ],
-        "played": 7,
+        "played": 8,
         "position": 13,
-        "pointsPerGame": 1.14,
+        "pointsPerGame": 1.13,
         "venuePlayed": 3,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 2.33,
-        "adjustedForm": 0.442,
-        "restDays": 35,
+        "adjustedForm": 0.458,
+        "restDays": 4,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
@@ -394,7 +394,7 @@
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 1.2,
-        "adjustedForm": 0.372,
+        "adjustedForm": 0.375,
         "restDays": 6,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
@@ -424,9 +424,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -435,21 +435,21 @@
         "name": "Cagliari Calcio",
         "short": "CAG",
         "form": [
-          "L",
           "W",
           "W",
           "W",
-          "D"
+          "D",
+          "L"
         ],
-        "played": 6,
-        "position": 5,
-        "pointsPerGame": 2.17,
+        "played": 7,
+        "position": 7,
+        "pointsPerGame": 1.86,
         "venuePlayed": 3,
         "venueGoalsFor": 2,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.641,
-        "restDays": 12,
+        "adjustedForm": 0.545,
+        "restDays": 4,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -470,13 +470,13 @@
           "L"
         ],
         "played": 7,
-        "position": 14,
+        "position": 15,
         "pointsPerGame": 0.71,
         "venuePlayed": 3,
         "venueGoalsFor": 2,
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.317,
+        "adjustedForm": 0.331,
         "restDays": 6,
         "lastMatchCompetition": "Serie A",
         "baseline": {
@@ -506,9 +506,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -519,20 +519,20 @@
         "form": [
           "W",
           "W",
-          "W",
           "L",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 6,
-        "position": 8,
-        "pointsPerGame": 1.83,
+        "played": 7,
+        "position": 5,
+        "pointsPerGame": 2,
         "venuePlayed": 2,
         "venueGoalsFor": 2,
         "venueGoalsAgainst": 1,
         "venuePointsPerGame": 2,
-        "adjustedForm": 0.556,
-        "restDays": 9,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.574,
+        "restDays": 6,
+        "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.87,
@@ -552,13 +552,13 @@
           "L"
         ],
         "played": 7,
-        "position": 11,
+        "position": 13,
         "pointsPerGame": 1.14,
         "venuePlayed": 4,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 10,
         "venuePointsPerGame": 0.25,
-        "adjustedForm": 0.304,
+        "adjustedForm": 0.298,
         "restDays": 7,
         "lastMatchCompetition": "Serie A",
         "baseline": {
@@ -586,9 +586,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -638,7 +638,7 @@
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 0.67,
-        "adjustedForm": 0.559,
+        "adjustedForm": 0.552,
         "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
@@ -668,9 +668,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -714,13 +714,13 @@
           "L"
         ],
         "played": 6,
-        "position": 14,
+        "position": 15,
         "pointsPerGame": 0.83,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.271,
+        "adjustedForm": 0.272,
         "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": null
@@ -743,9 +743,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -754,22 +754,22 @@
         "name": "RB Leipzig",
         "short": "RBL",
         "form": [
-          "W",
           "L",
           "W",
           "L",
-          "W"
+          "W",
+          "L"
         ],
-        "played": 5,
+        "played": 6,
         "position": 7,
-        "pointsPerGame": 1.8,
+        "pointsPerGame": 1.5,
         "venuePlayed": 3,
         "venueGoalsFor": 14,
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 3,
-        "adjustedForm": 0.557,
-        "restDays": 10,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.393,
+        "restDays": 6,
+        "lastMatchCompetition": "Bundesliga",
         "baseline": {
           "played": 34,
           "pointsPerGame": 1.91,
@@ -815,9 +815,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -833,13 +833,13 @@
           "D"
         ],
         "played": 6,
-        "position": 15,
+        "position": 16,
         "pointsPerGame": 0.83,
         "venuePlayed": 3,
         "venueGoalsFor": 3,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.253,
+        "adjustedForm": 0.267,
         "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": null
@@ -862,7 +862,7 @@
         "venueGoalsFor": 3,
         "venueGoalsAgainst": 9,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.62,
+        "adjustedForm": 0.635,
         "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
@@ -887,9 +887,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -911,7 +911,7 @@
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1.67,
-        "adjustedForm": 0.286,
+        "adjustedForm": 0.29,
         "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
@@ -933,7 +933,7 @@
           "D"
         ],
         "played": 6,
-        "position": 16,
+        "position": 17,
         "pointsPerGame": 0.83,
         "venuePlayed": 2,
         "venueGoalsFor": 0,
@@ -969,9 +969,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -982,20 +982,20 @@
         "form": [
           "W",
           "W",
-          "W",
           "L",
+          "W",
           "W"
         ],
-        "played": 6,
+        "played": 7,
         "position": 2,
-        "pointsPerGame": 2.5,
+        "pointsPerGame": 2.57,
         "venuePlayed": 3,
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
-        "adjustedForm": 0.737,
-        "restDays": 10,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.75,
+        "restDays": 5,
+        "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 2.24,
@@ -1015,13 +1015,13 @@
           "L"
         ],
         "played": 7,
-        "position": 7,
+        "position": 8,
         "pointsPerGame": 1.43,
         "venuePlayed": 3,
         "venueGoalsFor": 3,
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.354,
+        "adjustedForm": 0.357,
         "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
@@ -1051,9 +1051,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -1064,19 +1064,19 @@
         "form": [
           "L",
           "L",
-          "L",
           "W",
-          "W"
+          "W",
+          "L"
         ],
-        "played": 6,
-        "position": 14,
-        "pointsPerGame": 1,
+        "played": 7,
+        "position": 17,
+        "pointsPerGame": 0.86,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.458,
-        "restDays": 11,
+        "adjustedForm": 0.386,
+        "restDays": 4,
         "lastMatchCompetition": "Premier League",
         "baseline": null
       },
@@ -1092,7 +1092,7 @@
           "W"
         ],
         "played": 7,
-        "position": 15,
+        "position": 18,
         "pointsPerGame": 0.71,
         "venuePlayed": 3,
         "venueGoalsFor": 1,
@@ -1126,9 +1126,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1202,9 +1202,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1284,9 +1284,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1366,9 +1366,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1448,9 +1448,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1515,9 +1515,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1562,7 +1562,7 @@
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.618,
+        "adjustedForm": 0.617,
         "restDays": 7,
         "lastMatchCompetition": "Championship",
         "baseline": {
@@ -1591,9 +1591,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1615,7 +1615,7 @@
         "venueGoalsFor": 9,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1.8,
-        "adjustedForm": 0.597,
+        "adjustedForm": 0.596,
         "restDays": 7,
         "lastMatchCompetition": "Championship",
         "baseline": {
@@ -1671,9 +1671,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.588,
-          "avgAwayGoals": 1.298,
-          "completedMatches": 131,
+          "avgHomeGoals": 1.583,
+          "avgAwayGoals": 1.295,
+          "completedMatches": 132,
           "previousAverageGoals": 1.296
         }
       },
@@ -1683,20 +1683,20 @@
         "short": "WOL",
         "form": [
           "W",
+          "L",
+          "L",
           "W",
-          "L",
-          "L",
-          "W"
+          "D"
         ],
-        "played": 10,
+        "played": 11,
         "position": 8,
-        "pointsPerGame": 1.7,
-        "venuePlayed": 4,
-        "venueGoalsFor": 8,
-        "venueGoalsAgainst": 6,
-        "venuePointsPerGame": 1.75,
-        "adjustedForm": 0.547,
-        "restDays": 7,
+        "pointsPerGame": 1.64,
+        "venuePlayed": 5,
+        "venueGoalsFor": 9,
+        "venueGoalsAgainst": 7,
+        "venuePointsPerGame": 1.6,
+        "adjustedForm": 0.436,
+        "restDays": 3,
         "lastMatchCompetition": "Championship",
         "baseline": null
       },
@@ -1747,9 +1747,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -1758,21 +1758,21 @@
         "name": "Real Racing Club de Santander",
         "short": "SAN",
         "form": [
-          "L",
           "W",
           "L",
           "L",
-          "D"
+          "D",
+          "L"
         ],
-        "played": 8,
-        "position": 15,
-        "pointsPerGame": 1,
+        "played": 9,
+        "position": 16,
+        "pointsPerGame": 0.89,
         "venuePlayed": 4,
         "venueGoalsFor": 9,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 2,
-        "adjustedForm": 0.241,
-        "restDays": 12,
+        "adjustedForm": 0.203,
+        "restDays": 6,
         "lastMatchCompetition": "Primera Division",
         "baseline": null
       },
@@ -1788,13 +1788,13 @@
           "L"
         ],
         "played": 9,
-        "position": 12,
+        "position": 15,
         "pointsPerGame": 0.89,
         "venuePlayed": 4,
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.195,
+        "adjustedForm": 0.2,
         "restDays": 7,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
@@ -1819,9 +1819,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -1843,9 +1843,9 @@
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 2,
-        "adjustedForm": 0.447,
-        "restDays": 7,
-        "lastMatchCompetition": "Serie A",
+        "adjustedForm": 0.446,
+        "restDays": 3,
+        "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 2,
@@ -1860,19 +1860,19 @@
         "form": [
           "W",
           "W",
-          "W",
           "D",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 6,
+        "played": 7,
         "position": 3,
-        "pointsPerGame": 2.33,
+        "pointsPerGame": 2.43,
         "venuePlayed": 3,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 0,
         "venuePointsPerGame": 2.33,
-        "adjustedForm": 0.67,
-        "restDays": 9,
+        "adjustedForm": 0.688,
+        "restDays": 3,
         "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
@@ -1901,9 +1901,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -1925,7 +1925,7 @@
         "venueGoalsFor": 11,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 2.33,
-        "adjustedForm": 0.504,
+        "adjustedForm": 0.518,
         "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
@@ -1940,21 +1940,21 @@
         "name": "Tottenham Hotspur FC",
         "short": "TOT",
         "form": [
-          "L",
           "D",
           "D",
           "L",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 6,
-        "position": 20,
-        "pointsPerGame": 0.5,
+        "played": 7,
+        "position": 16,
+        "pointsPerGame": 0.86,
         "venuePlayed": 3,
         "venueGoalsFor": 1,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 0.67,
-        "adjustedForm": 0.195,
-        "restDays": 14,
+        "adjustedForm": 0.401,
+        "restDays": 4,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -1983,9 +1983,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -2001,15 +2001,15 @@
           "D"
         ],
         "played": 6,
-        "position": 1,
+        "position": 2,
         "pointsPerGame": 2.33,
         "venuePlayed": 3,
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 2.33,
-        "adjustedForm": 0.606,
-        "restDays": 7,
-        "lastMatchCompetition": "Bundesliga",
+        "adjustedForm": 0.616,
+        "restDays": 3,
+        "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 34,
           "pointsPerGame": 2.15,
@@ -2035,7 +2035,7 @@
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 10,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.498,
+        "adjustedForm": 0.494,
         "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
@@ -2064,9 +2064,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -2076,20 +2076,20 @@
         "short": "VAL",
         "form": [
           "L",
-          "L",
           "W",
           "L",
+          "D",
           "D"
         ],
-        "played": 8,
+        "played": 9,
         "position": 19,
-        "pointsPerGame": 0.63,
-        "venuePlayed": 4,
+        "pointsPerGame": 0.67,
+        "venuePlayed": 5,
         "venueGoalsFor": 2,
         "venueGoalsAgainst": 9,
-        "venuePointsPerGame": 0.25,
-        "adjustedForm": 0.272,
-        "restDays": 12,
+        "venuePointsPerGame": 0.4,
+        "adjustedForm": 0.315,
+        "restDays": 6,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
@@ -2110,15 +2110,15 @@
           "D"
         ],
         "played": 9,
-        "position": 9,
+        "position": 12,
         "pointsPerGame": 1,
         "venuePlayed": 5,
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.393,
-        "restDays": 7,
-        "lastMatchCompetition": "Primera Division",
+        "adjustedForm": 0.392,
+        "restDays": 3,
+        "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.89,
@@ -2146,9 +2146,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -2158,20 +2158,20 @@
         "short": "LAZ",
         "form": [
           "W",
-          "W",
           "D",
+          "W",
           "W",
           "W"
         ],
-        "played": 6,
+        "played": 7,
         "position": 2,
-        "pointsPerGame": 2.67,
+        "pointsPerGame": 2.71,
         "venuePlayed": 3,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 2.33,
-        "adjustedForm": 0.754,
-        "restDays": 13,
+        "adjustedForm": 0.82,
+        "restDays": 6,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -2185,21 +2185,21 @@
         "name": "Parma Calcio 1913",
         "short": "PAR",
         "form": [
-          "L",
           "D",
           "L",
           "W",
+          "L",
           "L"
         ],
-        "played": 6,
-        "position": 18,
-        "pointsPerGame": 0.67,
+        "played": 7,
+        "position": 19,
+        "pointsPerGame": 0.57,
         "venuePlayed": 3,
         "venueGoalsFor": 1,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 0,
-        "adjustedForm": 0.247,
-        "restDays": 14,
+        "adjustedForm": 0.209,
+        "restDays": 5,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -2228,9 +2228,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -2252,9 +2252,9 @@
         "venueGoalsFor": 10,
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 2.5,
-        "adjustedForm": 0.982,
-        "restDays": 7,
-        "lastMatchCompetition": "Primera Division",
+        "adjustedForm": 0.989,
+        "restDays": 4,
+        "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.82,
@@ -2274,13 +2274,13 @@
           "D"
         ],
         "played": 9,
-        "position": 8,
+        "position": 9,
         "pointsPerGame": 1.22,
         "venuePlayed": 4,
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1.25,
-        "adjustedForm": 0.197,
+        "adjustedForm": 0.194,
         "restDays": 8,
         "lastMatchCompetition": "Primera Division",
         "baseline": null
@@ -2300,9 +2300,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -2324,7 +2324,7 @@
         "venueGoalsFor": 15,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 3,
-        "adjustedForm": 0.787,
+        "adjustedForm": 0.782,
         "restDays": 7,
         "lastMatchCompetition": "Serie A",
         "baseline": {
@@ -2340,20 +2340,20 @@
         "short": "FIO",
         "form": [
           "L",
-          "L",
           "W",
           "D",
+          "L",
           "L"
         ],
-        "played": 6,
-        "position": 19,
-        "pointsPerGame": 0.67,
+        "played": 7,
+        "position": 18,
+        "pointsPerGame": 0.57,
         "venuePlayed": 3,
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.237,
-        "restDays": 14,
+        "adjustedForm": 0.204,
+        "restDays": 6,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -2382,9 +2382,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -2393,21 +2393,21 @@
         "name": "Athletic Club",
         "short": "ATH",
         "form": [
-          "L",
           "W",
           "W",
           "D",
+          "D",
           "D"
         ],
-        "played": 6,
+        "played": 7,
         "position": 11,
-        "pointsPerGame": 1.33,
+        "pointsPerGame": 1.29,
         "venuePlayed": 4,
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1.25,
-        "adjustedForm": 0.535,
-        "restDays": 35,
+        "adjustedForm": 0.539,
+        "restDays": 7,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
@@ -2422,12 +2422,12 @@
         "short": "GET",
         "form": [
           "D",
-          "D",
           "L",
           "W",
-          "L"
+          "L",
+          "D"
         ],
-        "played": 8,
+        "played": 9,
         "position": 14,
         "pointsPerGame": 1,
         "venuePlayed": 4,
@@ -2435,7 +2435,7 @@
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 0,
         "adjustedForm": 0.289,
-        "restDays": 14,
+        "restDays": 5,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
@@ -2464,9 +2464,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -2488,9 +2488,9 @@
         "venueGoalsFor": 2,
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 0.67,
-        "adjustedForm": 0.609,
-        "restDays": 8,
-        "lastMatchCompetition": "Premier League",
+        "adjustedForm": 0.62,
+        "restDays": 4,
+        "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.58,
@@ -2503,21 +2503,21 @@
         "name": "Brighton & Hove Albion FC",
         "short": "BHA",
         "form": [
-          "L",
           "D",
+          "W",
           "W",
           "W",
           "W"
         ],
-        "played": 6,
+        "played": 7,
         "position": 3,
-        "pointsPerGame": 2.17,
+        "pointsPerGame": 2.29,
         "venuePlayed": 3,
         "venueGoalsFor": 10,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 2,
-        "adjustedForm": 0.729,
-        "restDays": 15,
+        "adjustedForm": 0.863,
+        "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -2545,9 +2545,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -2556,21 +2556,21 @@
         "name": "Crystal Palace FC",
         "short": "CRY",
         "form": [
-          "L",
           "W",
           "L",
           "D",
-          "W"
+          "W",
+          "L"
         ],
-        "played": 6,
-        "position": 12,
-        "pointsPerGame": 1.17,
+        "played": 7,
+        "position": 14,
+        "pointsPerGame": 1,
         "venuePlayed": 3,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.456,
-        "restDays": 14,
+        "adjustedForm": 0.389,
+        "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -2584,21 +2584,21 @@
         "name": "Newcastle United FC",
         "short": "NEW",
         "form": [
-          "W",
           "D",
           "L",
           "W",
+          "L",
           "L"
         ],
-        "played": 6,
+        "played": 7,
         "position": 11,
-        "pointsPerGame": 1.33,
+        "pointsPerGame": 1.14,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.388,
-        "restDays": 12,
+        "adjustedForm": 0.232,
+        "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -2627,9 +2627,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -2638,22 +2638,22 @@
         "name": "Manchester United FC",
         "short": "MUN",
         "form": [
-          "W",
           "D",
           "L",
           "D",
+          "D",
           "D"
         ],
-        "played": 6,
+        "played": 7,
         "position": 13,
         "pointsPerGame": 1,
         "venuePlayed": 3,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.333,
-        "restDays": 11,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.258,
+        "restDays": 7,
+        "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.87,
@@ -2668,19 +2668,19 @@
         "form": [
           "D",
           "D",
-          "D",
           "L",
-          "L"
+          "L",
+          "W"
         ],
-        "played": 6,
-        "position": 19,
-        "pointsPerGame": 0.5,
+        "played": 7,
+        "position": 15,
+        "pointsPerGame": 0.86,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 9,
         "venuePointsPerGame": 0.33,
-        "adjustedForm": 0.167,
-        "restDays": 15,
+        "adjustedForm": 0.322,
+        "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -2709,9 +2709,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -2733,7 +2733,7 @@
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 1.67,
-        "adjustedForm": 0.178,
+        "adjustedForm": 0.181,
         "restDays": 8,
         "lastMatchCompetition": "Premier League",
         "baseline": null
@@ -2756,7 +2756,7 @@
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.364,
+        "adjustedForm": 0.37,
         "restDays": 8,
         "lastMatchCompetition": "Premier League",
         "baseline": {
@@ -2783,9 +2783,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -2794,21 +2794,21 @@
         "name": "Atalanta BC",
         "short": "ATA",
         "form": [
+          "L",
+          "L",
+          "L",
           "W",
-          "L",
-          "L",
-          "L",
-          "W"
+          "L"
         ],
-        "played": 6,
-        "position": 10,
-        "pointsPerGame": 1.5,
+        "played": 7,
+        "position": 11,
+        "pointsPerGame": 1.29,
         "venuePlayed": 4,
         "venueGoalsFor": 7,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 2.25,
-        "adjustedForm": 0.339,
-        "restDays": 12,
+        "adjustedForm": 0.189,
+        "restDays": 6,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -2829,13 +2829,13 @@
           "W"
         ],
         "played": 7,
-        "position": 4,
+        "position": 6,
         "pointsPerGame": 1.86,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.619,
+        "adjustedForm": 0.623,
         "restDays": 8,
         "lastMatchCompetition": "Serie A",
         "baseline": null
@@ -2858,9 +2858,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -2870,20 +2870,20 @@
         "short": "GEN",
         "form": [
           "L",
-          "L",
           "D",
           "L",
-          "W"
+          "W",
+          "L"
         ],
-        "played": 6,
+        "played": 7,
         "position": 17,
-        "pointsPerGame": 0.67,
+        "pointsPerGame": 0.57,
         "venuePlayed": 4,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.294,
-        "restDays": 15,
+        "adjustedForm": 0.254,
+        "restDays": 7,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -2933,9 +2933,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -2945,20 +2945,20 @@
         "short": "TSG",
         "form": [
           "L",
-          "L",
           "W",
           "L",
-          "L"
+          "L",
+          "W"
         ],
-        "played": 5,
-        "position": 17,
-        "pointsPerGame": 0.6,
+        "played": 6,
+        "position": 14,
+        "pointsPerGame": 1,
         "venuePlayed": 3,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.18,
-        "restDays": 15,
+        "adjustedForm": 0.351,
+        "restDays": 6,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
           "played": 34,
@@ -2972,21 +2972,21 @@
         "name": "Bayer 04 Leverkusen",
         "short": "B04",
         "form": [
-          "L",
           "W",
           "D",
           "W",
+          "W",
           "W"
         ],
-        "played": 5,
+        "played": 6,
         "position": 4,
-        "pointsPerGame": 2,
+        "pointsPerGame": 2.17,
         "venuePlayed": 3,
         "venueGoalsFor": 8,
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.724,
-        "restDays": 15,
+        "adjustedForm": 0.905,
+        "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
           "played": 34,
@@ -3015,9 +3015,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -3028,19 +3028,19 @@
         "form": [
           "D",
           "D",
-          "D",
           "W",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 8,
-        "position": 10,
-        "pointsPerGame": 1,
-        "venuePlayed": 4,
-        "venueGoalsFor": 7,
-        "venueGoalsAgainst": 5,
-        "venuePointsPerGame": 1,
-        "adjustedForm": 0.442,
-        "restDays": 14,
+        "played": 9,
+        "position": 8,
+        "pointsPerGame": 1.22,
+        "venuePlayed": 5,
+        "venueGoalsFor": 9,
+        "venueGoalsAgainst": 6,
+        "venuePointsPerGame": 1.4,
+        "adjustedForm": 0.583,
+        "restDays": 7,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
@@ -3056,20 +3056,20 @@
         "form": [
           "W",
           "W",
-          "W",
           "D",
-          "W"
+          "W",
+          "L"
         ],
-        "played": 8,
-        "position": 3,
-        "pointsPerGame": 2.38,
+        "played": 9,
+        "position": 4,
+        "pointsPerGame": 2.11,
         "venuePlayed": 4,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 1.75,
-        "adjustedForm": 0.809,
-        "restDays": 10,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.569,
+        "restDays": 7,
+        "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
           "pointsPerGame": 1.58,
@@ -3097,9 +3097,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.594,
-          "avgAwayGoals": 1.344,
-          "completedMatches": 64,
+          "avgHomeGoals": 1.614,
+          "avgAwayGoals": 1.286,
+          "completedMatches": 70,
           "previousAverageGoals": 1.375
         }
       },
@@ -3108,21 +3108,21 @@
         "name": "Sunderland AFC",
         "short": "SUN",
         "form": [
-          "W",
           "D",
+          "L",
           "L",
           "L",
           "L"
         ],
-        "played": 6,
-        "position": 18,
-        "pointsPerGame": 0.67,
+        "played": 7,
+        "position": 20,
+        "pointsPerGame": 0.57,
         "venuePlayed": 3,
         "venueGoalsFor": 1,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.181,
-        "restDays": 15,
+        "adjustedForm": 0.047,
+        "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -3137,20 +3137,20 @@
         "short": "LEE",
         "form": [
           "D",
-          "D",
           "W",
           "D",
-          "L"
+          "L",
+          "D"
         ],
-        "played": 6,
-        "position": 8,
-        "pointsPerGame": 1.5,
+        "played": 7,
+        "position": 7,
+        "pointsPerGame": 1.43,
         "venuePlayed": 3,
         "venueGoalsFor": 3,
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.373,
-        "restDays": 15,
+        "adjustedForm": 0.353,
+        "restDays": 7,
         "lastMatchCompetition": "Premier League",
         "baseline": {
           "played": 38,
@@ -3179,9 +3179,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 2.235,
-          "avgAwayGoals": 1.412,
-          "completedMatches": 51,
+          "avgHomeGoals": 2.278,
+          "avgAwayGoals": 1.407,
+          "completedMatches": 54,
           "previousAverageGoals": 1.618
         }
       },
@@ -3192,19 +3192,19 @@
         "form": [
           "W",
           "W",
-          "W",
           "D",
-          "W"
+          "W",
+          "L"
         ],
-        "played": 5,
-        "position": 2,
-        "pointsPerGame": 2.6,
+        "played": 6,
+        "position": 3,
+        "pointsPerGame": 2.17,
         "venuePlayed": 3,
         "venueGoalsFor": 11,
         "venueGoalsAgainst": 2,
         "venuePointsPerGame": 3,
-        "adjustedForm": 0.748,
-        "restDays": 14,
+        "adjustedForm": 0.523,
+        "restDays": 7,
         "lastMatchCompetition": "Bundesliga",
         "baseline": {
           "played": 34,
@@ -3218,22 +3218,22 @@
         "name": "FC Bayern München",
         "short": "FCB",
         "form": [
-          "W",
           "D",
           "W",
           "W",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 5,
-        "position": 3,
-        "pointsPerGame": 2.2,
+        "played": 6,
+        "position": 1,
+        "pointsPerGame": 2.33,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 3,
         "venuePointsPerGame": 1.67,
-        "adjustedForm": 0.672,
-        "restDays": 11,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.727,
+        "restDays": 8,
+        "lastMatchCompetition": "Bundesliga",
         "baseline": {
           "played": 34,
           "pointsPerGame": 2.62,
@@ -3261,9 +3261,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -3273,20 +3273,20 @@
         "short": "USL",
         "form": [
           "L",
-          "L",
           "W",
           "L",
-          "L"
+          "L",
+          "W"
         ],
-        "played": 6,
-        "position": 13,
-        "pointsPerGame": 1,
+        "played": 7,
+        "position": 12,
+        "pointsPerGame": 1.29,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 8,
         "venuePointsPerGame": 1,
-        "adjustedForm": 0.169,
-        "restDays": 14,
+        "adjustedForm": 0.376,
+        "restDays": 7,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -3300,21 +3300,21 @@
         "name": "Juventus FC",
         "short": "JUV",
         "form": [
-          "W",
           "D",
           "L",
           "W",
-          "D"
+          "D",
+          "L"
         ],
-        "played": 6,
-        "position": 7,
-        "pointsPerGame": 1.83,
+        "played": 7,
+        "position": 8,
+        "pointsPerGame": 1.57,
         "venuePlayed": 3,
         "venueGoalsFor": 4,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 1.33,
-        "adjustedForm": 0.511,
-        "restDays": 13,
+        "adjustedForm": 0.323,
+        "restDays": 6,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -3343,9 +3343,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -3354,21 +3354,21 @@
         "name": "Real Sociedad de Fútbol",
         "short": "RSO",
         "form": [
-          "D",
           "W",
           "L",
           "W",
+          "W",
           "W"
         ],
-        "played": 8,
-        "position": 6,
-        "pointsPerGame": 1.63,
+        "played": 9,
+        "position": 5,
+        "pointsPerGame": 1.78,
         "venuePlayed": 4,
         "venueGoalsFor": 5,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 1.75,
-        "adjustedForm": 0.638,
-        "restDays": 14,
+        "adjustedForm": 0.729,
+        "restDays": 7,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
@@ -3395,7 +3395,7 @@
         "venueGoalsFor": 2,
         "venueGoalsAgainst": 7,
         "venuePointsPerGame": 0.6,
-        "adjustedForm": 0.203,
+        "adjustedForm": 0.2,
         "restDays": 8,
         "lastMatchCompetition": "Primera Division",
         "baseline": {
@@ -3425,9 +3425,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.571,
-          "avgAwayGoals": 1.333,
-          "completedMatches": 63,
+          "avgHomeGoals": 1.557,
+          "avgAwayGoals": 1.4,
+          "completedMatches": 70,
           "previousAverageGoals": 1.213
         }
       },
@@ -3436,21 +3436,21 @@
         "name": "Udinese Calcio",
         "short": "UDI",
         "form": [
-          "W",
+          "L",
           "L",
           "L",
           "L",
           "L"
         ],
-        "played": 6,
-        "position": 15,
-        "pointsPerGame": 0.67,
-        "venuePlayed": 3,
+        "played": 7,
+        "position": 16,
+        "pointsPerGame": 0.57,
+        "venuePlayed": 4,
         "venueGoalsFor": 2,
-        "venueGoalsAgainst": 4,
-        "venuePointsPerGame": 0.33,
-        "adjustedForm": 0.124,
-        "restDays": 13,
+        "venueGoalsAgainst": 7,
+        "venuePointsPerGame": 0.25,
+        "adjustedForm": 0,
+        "restDays": 7,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -3464,21 +3464,21 @@
         "name": "AC Milan",
         "short": "MIL",
         "form": [
-          "W",
           "D",
           "D",
           "W",
-          "D"
+          "D",
+          "W"
         ],
-        "played": 6,
-        "position": 6,
-        "pointsPerGame": 2,
+        "played": 7,
+        "position": 4,
+        "pointsPerGame": 2.14,
         "venuePlayed": 4,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 5,
         "venuePointsPerGame": 1.5,
-        "adjustedForm": 0.548,
-        "restDays": 14,
+        "adjustedForm": 0.629,
+        "restDays": 7,
         "lastMatchCompetition": "Serie A",
         "baseline": {
           "played": 38,
@@ -3507,9 +3507,9 @@
       "model": {
         "version": 2,
         "league": {
-          "avgHomeGoals": 1.704,
-          "avgAwayGoals": 1.309,
-          "completedMatches": 81,
+          "avgHomeGoals": 1.716,
+          "avgAwayGoals": 1.352,
+          "completedMatches": 88,
           "previousAverageGoals": 1.347
         }
       },
@@ -3524,15 +3524,15 @@
           "W",
           "W"
         ],
-        "played": 8,
+        "played": 9,
         "position": 1,
         "pointsPerGame": 3,
         "venuePlayed": 4,
         "venueGoalsFor": 17,
         "venueGoalsAgainst": 4,
         "venuePointsPerGame": 3,
-        "adjustedForm": 0.933,
-        "restDays": 12,
+        "adjustedForm": 0.977,
+        "restDays": 5,
         "lastMatchCompetition": "UEFA Champions League",
         "baseline": {
           "played": 38,
@@ -3546,22 +3546,22 @@
         "name": "Real Madrid CF",
         "short": "RMA",
         "form": [
-          "L",
           "W",
           "W",
           "L",
+          "W",
           "W"
         ],
-        "played": 8,
-        "position": 4,
-        "pointsPerGame": 2.25,
+        "played": 9,
+        "position": 3,
+        "pointsPerGame": 2.33,
         "venuePlayed": 4,
         "venueGoalsFor": 6,
         "venueGoalsAgainst": 6,
         "venuePointsPerGame": 1.5,
-        "adjustedForm": 0.571,
-        "restDays": 11,
-        "lastMatchCompetition": "UEFA Champions League",
+        "adjustedForm": 0.758,
+        "restDays": 7,
+        "lastMatchCompetition": "Primera Division",
         "baseline": {
           "played": 38,
           "pointsPerGame": 2.26,
