@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T13:23:11.097Z",
+  "updatedAt": "2026-10-28T15:38:31.346Z",
   "fixtures": [
     {
       "id": 564723,
@@ -82,8 +82,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 1,
+        "awayGoals": 2
+      }
     },
     {
       "id": 558559,
@@ -167,8 +171,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 2
+      }
     },
     {
       "id": 564726,
@@ -252,8 +260,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
     },
     {
       "id": 558566,
@@ -337,8 +349,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 2
+      }
     },
     {
       "id": 560621,
@@ -422,8 +438,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
     },
     {
       "id": 565836,
@@ -507,8 +527,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 1,
+        "awayGoals": 3
+      }
     },
     {
       "id": 564725,
@@ -592,8 +616,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
     },
     {
       "id": 565835,
@@ -677,8 +705,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 3,
+        "awayGoals": 0
+      }
     },
     {
       "id": 560612,
@@ -761,8 +793,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
     },
     {
       "id": 560613,
@@ -846,8 +882,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 2
+      }
     },
     {
       "id": 560615,
@@ -931,8 +971,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 3
+      }
     },
     {
       "id": 560619,
@@ -1008,8 +1052,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
     },
     {
       "id": 558562,
@@ -1086,8 +1134,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 4,
+        "awayGoals": 4
+      }
     },
     {
       "id": 558568,
@@ -1164,8 +1216,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
     },
     {
       "id": 564720,
@@ -1249,8 +1305,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 4,
+        "awayGoals": 0
+      }
     },
     {
       "id": 558563,
@@ -1334,8 +1394,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
     },
     {
       "id": 564724,
@@ -1409,8 +1473,12 @@
       },
       "h2h": [],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
     },
     {
       "id": 558565,
@@ -1494,8 +1562,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
     },
     {
       "id": 560617,
@@ -1579,8 +1651,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 2
+      }
     },
     {
       "id": 565837,
@@ -1663,8 +1739,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
     },
     {
       "id": 564722,
@@ -1748,8 +1828,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 1,
+        "awayGoals": 2
+      }
     },
     {
       "id": 558564,
@@ -1833,8 +1917,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 3,
+        "awayGoals": 3
+      }
     },
     {
       "id": 564727,
@@ -1908,8 +1996,12 @@
       },
       "h2h": [],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
     },
     {
       "id": 560616,
@@ -1993,8 +2085,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
     },
     {
       "id": 560618,
@@ -2071,8 +2167,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 1
+      }
     },
     {
       "id": 561893,
@@ -2150,8 +2250,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
     },
     {
       "id": 561896,
@@ -2235,8 +2339,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 5,
+        "awayGoals": 0
+      }
     },
     {
       "id": 561897,
@@ -2320,8 +2428,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
     },
     {
       "id": 561898,
@@ -2405,8 +2517,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
     },
     {
       "id": 561899,
@@ -2475,8 +2591,12 @@
       },
       "h2h": [],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 4,
+        "awayGoals": 1
+      }
     },
     {
       "id": 561900,
@@ -2554,8 +2674,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 2,
+        "awayGoals": 3
+      }
     },
     {
       "id": 561902,
@@ -2637,8 +2761,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
     },
     {
       "id": 561903,
@@ -2716,8 +2844,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
     },
     {
       "id": 565830,
@@ -2801,8 +2933,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 2,
+        "awayGoals": 3
+      }
     },
     {
       "id": 565831,
@@ -2879,8 +3015,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 0,
+        "awayGoals": 0
+      }
     },
     {
       "id": 565832,
@@ -2954,8 +3094,12 @@
       },
       "h2h": [],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 4,
+        "awayGoals": 0
+      }
     },
     {
       "id": 565834,
@@ -3029,8 +3173,12 @@
       },
       "h2h": [],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 1,
+        "awayGoals": 0
+      }
     },
     {
       "id": 565838,
@@ -3114,8 +3262,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
     },
     {
       "id": 558560,
@@ -3199,8 +3351,12 @@
         "D"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 2
+      }
     },
     {
       "id": 558561,
@@ -3282,8 +3438,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 0
+      }
     },
     {
       "id": 564718,
@@ -3367,8 +3527,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 0,
+        "awayGoals": 3
+      }
     },
     {
       "id": 560614,
@@ -3452,8 +3616,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
     },
     {
       "id": 561895,
@@ -3537,8 +3705,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
     },
     {
       "id": 561901,
@@ -3620,8 +3792,12 @@
         "L"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "away",
+        "homeGoals": 1,
+        "awayGoals": 3
+      }
     },
     {
       "id": 561904,
@@ -3705,8 +3881,12 @@
         "W"
       ],
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-10-28T15:38:31.346Z",
+      "actual": {
+        "outcome": "home",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
     },
     {
       "id": 564709,
