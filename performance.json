@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T12:39:40.359Z",
+  "generatedAt": "2026-11-08T12:48:40.599Z",
   "modelVersion": 2,
   "note": "Frozen weekly Top 10 predictions recomputed from their saved original model inputs. Use this file for model reviews; never tune from one surprising result.",
   "overall": {
@@ -8,6 +8,1829 @@
     "correct": 28,
     "accuracy": 70,
     "averageConfidence": 73.9
+  },
+  "strategyOverall": {
+    "top10": {
+      "picks": [
+        {
+          "rank": 1,
+          "fixtureId": 565825,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-17T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Bayern München",
+          "away": "RB Leipzig",
+          "predictedOutcome": "home",
+          "prediction": "FC Bayern München win",
+          "confidence": 90,
+          "probabilities": {
+            "home": 90,
+            "draw": 7,
+            "away": 3
+          },
+          "actualOutcome": "home",
+          "finalScore": "6-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 560610,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-17T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Manchester City FC",
+          "away": "Ipswich Town FC",
+          "predictedOutcome": "home",
+          "prediction": "Manchester City FC win",
+          "confidence": 82,
+          "probabilities": {
+            "home": 82,
+            "draw": 11,
+            "away": 8
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-2",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 558575,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-17T13:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Venezia FC",
+          "away": "SSC Napoli",
+          "predictedOutcome": "away",
+          "prediction": "SSC Napoli win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 10,
+            "draw": 15,
+            "away": 76
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 561882,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-17T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Southampton FC",
+          "away": "Bolton Wanderers FC",
+          "predictedOutcome": "home",
+          "prediction": "Southampton FC win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 76,
+            "draw": 13,
+            "away": 11
+          },
+          "actualOutcome": "draw",
+          "finalScore": "0-0",
+          "correct": false
+        },
+        {
+          "rank": 5,
+          "fixtureId": 558572,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-17T18:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "AS Roma",
+          "away": "Genoa CFC",
+          "predictedOutcome": "home",
+          "prediction": "AS Roma win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 76,
+            "draw": 15,
+            "away": 9
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "correct": true
+        },
+        {
+          "rank": 6,
+          "fixtureId": 564709,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-18T19:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Real Madrid CF",
+          "away": "Sevilla FC",
+          "predictedOutcome": "home",
+          "prediction": "Real Madrid CF win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 75,
+            "draw": 15,
+            "away": 10
+          },
+          "actualOutcome": "home",
+          "finalScore": "4-1",
+          "correct": true
+        },
+        {
+          "rank": 7,
+          "fixtureId": 558577,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-18T13:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "ACF Fiorentina",
+          "away": "Como 1907",
+          "predictedOutcome": "away",
+          "prediction": "Como 1907 win",
+          "confidence": 72,
+          "probabilities": {
+            "home": 11,
+            "draw": 17,
+            "away": 72
+          },
+          "actualOutcome": "away",
+          "finalScore": "1-3",
+          "correct": true
+        },
+        {
+          "rank": 8,
+          "fixtureId": 561887,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-17T11:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
+          "home": "Middlesbrough FC",
+          "away": "Cardiff City FC",
+          "predictedOutcome": "home",
+          "prediction": "Middlesbrough FC win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 17,
+            "away": 13
+          },
+          "actualOutcome": "draw",
+          "finalScore": "2-2",
+          "correct": false
+        },
+        {
+          "rank": 9,
+          "fixtureId": 565827,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-18T13:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Bayer 04 Leverkusen",
+          "away": "SC Freiburg",
+          "predictedOutcome": "home",
+          "prediction": "Bayer 04 Leverkusen win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 17,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 10,
+          "fixtureId": 565821,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-17T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "1. FC Union Berlin",
+          "away": "Borussia Dortmund",
+          "predictedOutcome": "away",
+          "prediction": "Borussia Dortmund win",
+          "confidence": 67,
+          "probabilities": {
+            "home": 15,
+            "draw": 18,
+            "away": 67
+          },
+          "actualOutcome": "draw",
+          "finalScore": "0-0",
+          "correct": false
+        },
+        {
+          "rank": 1,
+          "fixtureId": 558563,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-25T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
+          "home": "FC Internazionale Milano",
+          "away": "ACF Fiorentina",
+          "predictedOutcome": "home",
+          "prediction": "FC Internazionale Milano win",
+          "confidence": 85,
+          "probabilities": {
+            "home": 85,
+            "draw": 9,
+            "away": 6
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 565832,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-24T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "RB Leipzig",
+          "away": "SV 07 Elversberg",
+          "predictedOutcome": "home",
+          "prediction": "RB Leipzig win",
+          "confidence": 82,
+          "probabilities": {
+            "home": 82,
+            "draw": 11,
+            "away": 6
+          },
+          "actualOutcome": "home",
+          "finalScore": "4-0",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 565837,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-24T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Borussia Dortmund",
+          "away": "Eintracht Frankfurt",
+          "predictedOutcome": "home",
+          "prediction": "Borussia Dortmund win",
+          "confidence": 79,
+          "probabilities": {
+            "home": 79,
+            "draw": 12,
+            "away": 9
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 4,
+          "fixtureId": 565838,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-24T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "FC Augsburg",
+          "away": "1. FC Union Berlin",
+          "predictedOutcome": "home",
+          "prediction": "FC Augsburg win",
+          "confidence": 78,
+          "probabilities": {
+            "home": 78,
+            "draw": 13,
+            "away": 9
+          },
+          "actualOutcome": "draw",
+          "finalScore": "1-1",
+          "correct": false
+        },
+        {
+          "rank": 5,
+          "fixtureId": 560614,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-24T11:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
+          "home": "Aston Villa FC",
+          "away": "Manchester City FC",
+          "predictedOutcome": "away",
+          "prediction": "Manchester City FC win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 9,
+            "draw": 16,
+            "away": 75
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": false
+        },
+        {
+          "rank": 6,
+          "fixtureId": 564723,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-25T20:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Barcelona",
+          "away": "Real Madrid CF",
+          "predictedOutcome": "home",
+          "prediction": "FC Barcelona win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 75,
+            "draw": 14,
+            "away": 11
+          },
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "correct": false
+        },
+        {
+          "rank": 7,
+          "fixtureId": 558565,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-24T18:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "SS Lazio",
+          "away": "Parma Calcio 1913",
+          "predictedOutcome": "home",
+          "prediction": "SS Lazio win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 74,
+            "draw": 17,
+            "away": 9
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 8,
+          "fixtureId": 560617,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-24T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Chelsea FC",
+          "away": "Tottenham Hotspur FC",
+          "predictedOutcome": "home",
+          "prediction": "Chelsea FC win",
+          "confidence": 71,
+          "probabilities": {
+            "home": 71,
+            "draw": 16,
+            "away": 12
+          },
+          "actualOutcome": "away",
+          "finalScore": "0-2",
+          "correct": false
+        },
+        {
+          "rank": 9,
+          "fixtureId": 564724,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-24T19:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Club Atlético de Madrid",
+          "away": "RC Deportivo La Coruña",
+          "predictedOutcome": "home",
+          "prediction": "Club Atlético de Madrid win",
+          "confidence": 71,
+          "probabilities": {
+            "home": 71,
+            "draw": 17,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 10,
+          "fixtureId": 561903,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-24T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Wolverhampton Wanderers FC",
+          "away": "Watford FC",
+          "predictedOutcome": "home",
+          "prediction": "Wolverhampton Wanderers FC win",
+          "confidence": 69,
+          "probabilities": {
+            "home": 69,
+            "draw": 19,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 564732,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-31T20:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Barcelona",
+          "away": "Deportivo Alavés",
+          "predictedOutcome": "home",
+          "prediction": "FC Barcelona win",
+          "confidence": 80,
+          "probabilities": {
+            "home": 80,
+            "draw": 13,
+            "away": 8
+          },
+          "actualOutcome": "home",
+          "finalScore": "6-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 558542,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-31T17:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Udinese Calcio",
+          "away": "AS Roma",
+          "predictedOutcome": "away",
+          "prediction": "AS Roma win",
+          "confidence": 79,
+          "probabilities": {
+            "home": 7,
+            "draw": 14,
+            "away": 79
+          },
+          "actualOutcome": "away",
+          "finalScore": "2-5",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 565845,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-31T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Bayern München",
+          "away": "Borussia Dortmund",
+          "predictedOutcome": "home",
+          "prediction": "FC Bayern München win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 76,
+            "draw": 14,
+            "away": 10
+          },
+          "actualOutcome": "draw",
+          "finalScore": "2-2",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 565847,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-31T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Bayer 04 Leverkusen",
+          "away": "VfB Stuttgart",
+          "predictedOutcome": "home",
+          "prediction": "Bayer 04 Leverkusen win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 75,
+            "draw": 15,
+            "away": 10
+          },
+          "actualOutcome": "away",
+          "finalScore": "2-4",
+          "correct": false
+        },
+        {
+          "rank": 5,
+          "fixtureId": 561911,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-31T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Middlesbrough FC",
+          "away": "Charlton Athletic FC",
+          "predictedOutcome": "home",
+          "prediction": "Middlesbrough FC win",
+          "confidence": 73,
+          "probabilities": {
+            "home": 73,
+            "draw": 15,
+            "away": 12
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-0",
+          "correct": true
+        },
+        {
+          "rank": 6,
+          "fixtureId": 561908,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-31T12:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
+          "home": "Stoke City FC",
+          "away": "Preston North End FC",
+          "predictedOutcome": "home",
+          "prediction": "Stoke City FC win",
+          "confidence": 71,
+          "probabilities": {
+            "home": 71,
+            "draw": 17,
+            "away": 12
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "correct": true
+        },
+        {
+          "rank": 7,
+          "fixtureId": 558543,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-01T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
+          "home": "Como 1907",
+          "away": "Venezia FC",
+          "predictedOutcome": "home",
+          "prediction": "Como 1907 win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 19,
+            "away": 11
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 8,
+          "fixtureId": 558546,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-01T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "SS Lazio",
+          "away": "Cagliari Calcio",
+          "predictedOutcome": "home",
+          "prediction": "SS Lazio win",
+          "confidence": 69,
+          "probabilities": {
+            "home": 69,
+            "draw": 18,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 9,
+          "fixtureId": 564736,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-31T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Real Betis Balompié",
+          "away": "Málaga CF",
+          "predictedOutcome": "home",
+          "prediction": "Real Betis Balompié win",
+          "confidence": 67,
+          "probabilities": {
+            "home": 67,
+            "draw": 19,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 10,
+          "fixtureId": 561914,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-31T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Southampton FC",
+          "away": "Queens Park Rangers FC",
+          "predictedOutcome": "home",
+          "prediction": "Southampton FC win",
+          "confidence": 65,
+          "probabilities": {
+            "home": 65,
+            "draw": 20,
+            "away": 14
+          },
+          "actualOutcome": "home",
+          "finalScore": "4-1",
+          "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 565848,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "RB Leipzig",
+          "away": "FC Augsburg",
+          "predictedOutcome": "home",
+          "prediction": "RB Leipzig win",
+          "confidence": 89,
+          "probabilities": {
+            "home": 89,
+            "draw": 7,
+            "away": 4
+          },
+          "actualOutcome": "home",
+          "finalScore": "5-2",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 558531,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-07T19:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "AS Roma",
+          "away": "US Sassuolo Calcio",
+          "predictedOutcome": "home",
+          "prediction": "AS Roma win",
+          "confidence": 84,
+          "probabilities": {
+            "home": 84,
+            "draw": 10,
+            "away": 6
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-0",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 564741,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-11-07T20:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Valencia CF",
+          "away": "Real Madrid CF",
+          "predictedOutcome": "away",
+          "prediction": "Real Madrid CF win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 9,
+            "draw": 17,
+            "away": 74
+          },
+          "actualOutcome": "away",
+          "finalScore": "0-3",
+          "correct": true
+        },
+        {
+          "rank": 4,
+          "fixtureId": 565850,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Borussia Dortmund",
+          "away": "SV 07 Elversberg",
+          "predictedOutcome": "home",
+          "prediction": "Borussia Dortmund win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 18,
+            "away": 11
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 5,
+          "fixtureId": 560640,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Arsenal FC",
+          "away": "Hull City AFC",
+          "predictedOutcome": "home",
+          "prediction": "Arsenal FC win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 19,
+            "away": 11
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 6,
+          "fixtureId": 565851,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "1. FSV Mainz 05",
+          "away": "FC Bayern München",
+          "predictedOutcome": "away",
+          "prediction": "FC Bayern München win",
+          "confidence": 69,
+          "probabilities": {
+            "home": 14,
+            "draw": 17,
+            "away": 69
+          },
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "correct": true
+        },
+        {
+          "rank": 7,
+          "fixtureId": 561930,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Cardiff City FC",
+          "away": "Burnley FC",
+          "predictedOutcome": "home",
+          "prediction": "Cardiff City FC win",
+          "confidence": 67,
+          "probabilities": {
+            "home": 67,
+            "draw": 18,
+            "away": 16
+          },
+          "actualOutcome": "home",
+          "finalScore": "5-4",
+          "correct": true
+        },
+        {
+          "rank": 8,
+          "fixtureId": 561940,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Birmingham City FC",
+          "away": "Swansea City AFC",
+          "predictedOutcome": "home",
+          "prediction": "Birmingham City FC win",
+          "confidence": 67,
+          "probabilities": {
+            "home": 67,
+            "draw": 18,
+            "away": 15
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 9,
+          "fixtureId": 560641,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-07T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Nottingham Forest FC",
+          "away": "Manchester City FC",
+          "predictedOutcome": "away",
+          "prediction": "Manchester City FC win",
+          "confidence": 66,
+          "probabilities": {
+            "home": 11,
+            "draw": 23,
+            "away": 66
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-1",
+          "correct": false
+        },
+        {
+          "rank": 10,
+          "fixtureId": 561937,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Preston North End FC",
+          "away": "Southampton FC",
+          "predictedOutcome": "away",
+          "prediction": "Southampton FC win",
+          "confidence": 61,
+          "probabilities": {
+            "home": 17,
+            "draw": 22,
+            "away": 61
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": false
+        }
+      ],
+      "correct": 28,
+      "accuracy": 70,
+      "averageConfidence": 73.9
+    },
+    "saturdayTop5": {
+      "picks": [
+        {
+          "rank": 1,
+          "fixtureId": 565825,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-17T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Bayern München",
+          "away": "RB Leipzig",
+          "predictedOutcome": "home",
+          "prediction": "FC Bayern München win",
+          "confidence": 90,
+          "probabilities": {
+            "home": 90,
+            "draw": 7,
+            "away": 3
+          },
+          "actualOutcome": "home",
+          "finalScore": "6-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 560610,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-17T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Manchester City FC",
+          "away": "Ipswich Town FC",
+          "predictedOutcome": "home",
+          "prediction": "Manchester City FC win",
+          "confidence": 82,
+          "probabilities": {
+            "home": 82,
+            "draw": 11,
+            "away": 8
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-2",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 558575,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-17T13:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Venezia FC",
+          "away": "SSC Napoli",
+          "predictedOutcome": "away",
+          "prediction": "SSC Napoli win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 10,
+            "draw": 15,
+            "away": 76
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 561882,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-17T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Southampton FC",
+          "away": "Bolton Wanderers FC",
+          "predictedOutcome": "home",
+          "prediction": "Southampton FC win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 76,
+            "draw": 13,
+            "away": 11
+          },
+          "actualOutcome": "draw",
+          "finalScore": "0-0",
+          "correct": false
+        },
+        {
+          "rank": 5,
+          "fixtureId": 558572,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-17T18:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "AS Roma",
+          "away": "Genoa CFC",
+          "predictedOutcome": "home",
+          "prediction": "AS Roma win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 76,
+            "draw": 15,
+            "away": 9
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 565832,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-24T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "RB Leipzig",
+          "away": "SV 07 Elversberg",
+          "predictedOutcome": "home",
+          "prediction": "RB Leipzig win",
+          "confidence": 82,
+          "probabilities": {
+            "home": 82,
+            "draw": 11,
+            "away": 6
+          },
+          "actualOutcome": "home",
+          "finalScore": "4-0",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 565837,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-24T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Borussia Dortmund",
+          "away": "Eintracht Frankfurt",
+          "predictedOutcome": "home",
+          "prediction": "Borussia Dortmund win",
+          "confidence": 79,
+          "probabilities": {
+            "home": 79,
+            "draw": 12,
+            "away": 9
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 565838,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-24T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "FC Augsburg",
+          "away": "1. FC Union Berlin",
+          "predictedOutcome": "home",
+          "prediction": "FC Augsburg win",
+          "confidence": 78,
+          "probabilities": {
+            "home": 78,
+            "draw": 13,
+            "away": 9
+          },
+          "actualOutcome": "draw",
+          "finalScore": "1-1",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 560614,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-24T11:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
+          "home": "Aston Villa FC",
+          "away": "Manchester City FC",
+          "predictedOutcome": "away",
+          "prediction": "Manchester City FC win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 9,
+            "draw": 16,
+            "away": 75
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": false
+        },
+        {
+          "rank": 5,
+          "fixtureId": 558565,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-24T18:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "SS Lazio",
+          "away": "Parma Calcio 1913",
+          "predictedOutcome": "home",
+          "prediction": "SS Lazio win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 74,
+            "draw": 17,
+            "away": 9
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 564732,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-31T20:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Barcelona",
+          "away": "Deportivo Alavés",
+          "predictedOutcome": "home",
+          "prediction": "FC Barcelona win",
+          "confidence": 80,
+          "probabilities": {
+            "home": 80,
+            "draw": 13,
+            "away": 8
+          },
+          "actualOutcome": "home",
+          "finalScore": "6-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 558542,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-31T17:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Udinese Calcio",
+          "away": "AS Roma",
+          "predictedOutcome": "away",
+          "prediction": "AS Roma win",
+          "confidence": 79,
+          "probabilities": {
+            "home": 7,
+            "draw": 14,
+            "away": 79
+          },
+          "actualOutcome": "away",
+          "finalScore": "2-5",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 565845,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-31T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Bayern München",
+          "away": "Borussia Dortmund",
+          "predictedOutcome": "home",
+          "prediction": "FC Bayern München win",
+          "confidence": 76,
+          "probabilities": {
+            "home": 76,
+            "draw": 14,
+            "away": 10
+          },
+          "actualOutcome": "draw",
+          "finalScore": "2-2",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 565847,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-31T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Bayer 04 Leverkusen",
+          "away": "VfB Stuttgart",
+          "predictedOutcome": "home",
+          "prediction": "Bayer 04 Leverkusen win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 75,
+            "draw": 15,
+            "away": 10
+          },
+          "actualOutcome": "away",
+          "finalScore": "2-4",
+          "correct": false
+        },
+        {
+          "rank": 5,
+          "fixtureId": 561911,
+          "competition": {
+            "code": "ELC",
+            "name": "Championship"
+          },
+          "utcDate": "2026-10-31T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Middlesbrough FC",
+          "away": "Charlton Athletic FC",
+          "predictedOutcome": "home",
+          "prediction": "Middlesbrough FC win",
+          "confidence": 73,
+          "probabilities": {
+            "home": 73,
+            "draw": 15,
+            "away": 12
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-0",
+          "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 565848,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "RB Leipzig",
+          "away": "FC Augsburg",
+          "predictedOutcome": "home",
+          "prediction": "RB Leipzig win",
+          "confidence": 89,
+          "probabilities": {
+            "home": 89,
+            "draw": 7,
+            "away": 4
+          },
+          "actualOutcome": "home",
+          "finalScore": "5-2",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 558531,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-07T19:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "AS Roma",
+          "away": "US Sassuolo Calcio",
+          "predictedOutcome": "home",
+          "prediction": "AS Roma win",
+          "confidence": 84,
+          "probabilities": {
+            "home": 84,
+            "draw": 10,
+            "away": 6
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-0",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 564741,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-11-07T20:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Valencia CF",
+          "away": "Real Madrid CF",
+          "predictedOutcome": "away",
+          "prediction": "Real Madrid CF win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 9,
+            "draw": 17,
+            "away": 74
+          },
+          "actualOutcome": "away",
+          "finalScore": "0-3",
+          "correct": true
+        },
+        {
+          "rank": 4,
+          "fixtureId": 565850,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Borussia Dortmund",
+          "away": "SV 07 Elversberg",
+          "predictedOutcome": "home",
+          "prediction": "Borussia Dortmund win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 18,
+            "away": 11
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 5,
+          "fixtureId": 560640,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Arsenal FC",
+          "away": "Hull City AFC",
+          "predictedOutcome": "home",
+          "prediction": "Arsenal FC win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 19,
+            "away": 11
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        }
+      ],
+      "correct": 14,
+      "accuracy": 70,
+      "averageConfidence": 77.9
+    },
+    "sundayTop5": {
+      "picks": [
+        {
+          "rank": 1,
+          "fixtureId": 564709,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-18T19:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Real Madrid CF",
+          "away": "Sevilla FC",
+          "predictedOutcome": "home",
+          "prediction": "Real Madrid CF win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 75,
+            "draw": 15,
+            "away": 10
+          },
+          "actualOutcome": "home",
+          "finalScore": "4-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 558577,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-18T13:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "ACF Fiorentina",
+          "away": "Como 1907",
+          "predictedOutcome": "away",
+          "prediction": "Como 1907 win",
+          "confidence": 72,
+          "probabilities": {
+            "home": 11,
+            "draw": 17,
+            "away": 72
+          },
+          "actualOutcome": "away",
+          "finalScore": "1-3",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 565827,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-10-18T13:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Bayer 04 Leverkusen",
+          "away": "SC Freiburg",
+          "predictedOutcome": "home",
+          "prediction": "Bayer 04 Leverkusen win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 17,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 4,
+          "fixtureId": 558569,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-18T16:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "AC Milan",
+          "away": "Atalanta BC",
+          "predictedOutcome": "home",
+          "prediction": "AC Milan win",
+          "confidence": 67,
+          "probabilities": {
+            "home": 67,
+            "draw": 21,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-2",
+          "correct": true
+        },
+        {
+          "rank": 5,
+          "fixtureId": 560609,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-18T13:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Brighton & Hove Albion FC",
+          "away": "Crystal Palace FC",
+          "predictedOutcome": "home",
+          "prediction": "Brighton & Hove Albion FC win",
+          "confidence": 66,
+          "probabilities": {
+            "home": 66,
+            "draw": 21,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "5-0",
+          "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 558563,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-25T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
+          "home": "FC Internazionale Milano",
+          "away": "ACF Fiorentina",
+          "predictedOutcome": "home",
+          "prediction": "FC Internazionale Milano win",
+          "confidence": 85,
+          "probabilities": {
+            "home": 85,
+            "draw": 9,
+            "away": 6
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 564723,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-10-25T20:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "FC Barcelona",
+          "away": "Real Madrid CF",
+          "predictedOutcome": "home",
+          "prediction": "FC Barcelona win",
+          "confidence": 75,
+          "probabilities": {
+            "home": 75,
+            "draw": 14,
+            "away": 11
+          },
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "correct": false
+        },
+        {
+          "rank": 3,
+          "fixtureId": 560612,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-25T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Liverpool FC",
+          "away": "Brighton & Hove Albion FC",
+          "predictedOutcome": "away",
+          "prediction": "Brighton & Hove Albion FC win",
+          "confidence": 69,
+          "probabilities": {
+            "home": 14,
+            "draw": 17,
+            "away": 69
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 558566,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-10-25T17:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "US Lecce",
+          "away": "Juventus FC",
+          "predictedOutcome": "away",
+          "prediction": "Juventus FC win",
+          "confidence": 69,
+          "probabilities": {
+            "home": 13,
+            "draw": 18,
+            "away": 69
+          },
+          "actualOutcome": "away",
+          "finalScore": "0-2",
+          "correct": true
+        },
+        {
+          "rank": 5,
+          "fixtureId": 560615,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-10-25T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Manchester United FC",
+          "away": "AFC Bournemouth",
+          "predictedOutcome": "home",
+          "prediction": "Manchester United FC win",
+          "confidence": 63,
+          "probabilities": {
+            "home": 63,
+            "draw": 18,
+            "away": 19
+          },
+          "actualOutcome": "away",
+          "finalScore": "0-3",
+          "correct": false
+        },
+        {
+          "rank": 1,
+          "fixtureId": 558543,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-01T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
+          "home": "Como 1907",
+          "away": "Venezia FC",
+          "predictedOutcome": "home",
+          "prediction": "Como 1907 win",
+          "confidence": 70,
+          "probabilities": {
+            "home": 70,
+            "draw": 19,
+            "away": 11
+          },
+          "actualOutcome": "home",
+          "finalScore": "1-0",
+          "correct": true
+        },
+        {
+          "rank": 2,
+          "fixtureId": 558546,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-01T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "SS Lazio",
+          "away": "Cagliari Calcio",
+          "predictedOutcome": "home",
+          "prediction": "SS Lazio win",
+          "confidence": 69,
+          "probabilities": {
+            "home": 69,
+            "draw": 18,
+            "away": 13
+          },
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "correct": true
+        },
+        {
+          "rank": 3,
+          "fixtureId": 565841,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-01T14:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "1. FC Union Berlin",
+          "away": "1. FC Köln",
+          "predictedOutcome": "home",
+          "prediction": "1. FC Union Berlin win",
+          "confidence": 52,
+          "probabilities": {
+            "home": 52,
+            "draw": 23,
+            "away": 24
+          },
+          "actualOutcome": "draw",
+          "finalScore": "1-1",
+          "correct": false
+        },
+        {
+          "rank": 4,
+          "fixtureId": 565844,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-01T16:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Eintracht Frankfurt",
+          "away": "Hamburger SV",
+          "predictedOutcome": "home",
+          "prediction": "Eintracht Frankfurt win",
+          "confidence": 52,
+          "probabilities": {
+            "home": 52,
+            "draw": 22,
+            "away": 26
+          },
+          "actualOutcome": "home",
+          "finalScore": "3-1",
+          "correct": true
+        },
+        {
+          "rank": 5,
+          "fixtureId": 564734,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-11-01T15:15:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Real Racing Club de Santander",
+          "away": "Real Madrid CF",
+          "predictedOutcome": "away",
+          "prediction": "Real Madrid CF win",
+          "confidence": 48,
+          "probabilities": {
+            "home": 30,
+            "draw": 22,
+            "away": 48
+          },
+          "actualOutcome": "away",
+          "finalScore": "0-3",
+          "correct": true
+        }
+      ],
+      "correct": 11,
+      "accuracy": 73.3,
+      "averageConfidence": 66.8
+    }
   },
   "byLeague": {
     "BL1": {
@@ -81,6 +1904,26 @@
       "averageConfidence": 66.7
     }
   },
+  "byKickoffBand": {
+    "evening_1700_plus": {
+      "predictions": 15,
+      "correct": 11,
+      "accuracy": 73.3,
+      "averageConfidence": 75.8
+    },
+    "afternoon_1400_1659": {
+      "predictions": 20,
+      "correct": 14,
+      "accuracy": 70,
+      "averageConfidence": 72.3
+    },
+    "early_before_1400": {
+      "predictions": 5,
+      "correct": 3,
+      "accuracy": 60,
+      "averageConfidence": 74.2
+    }
+  },
   "weeks": [
     {
       "predictionBatch": "2026-10-14T13:13:51.161Z",
@@ -98,6 +1941,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-17T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "FC Bayern München",
           "away": "RB Leipzig",
           "predictedOutcome": "home",
@@ -120,6 +1965,8 @@
             "name": "Premier League"
           },
           "utcDate": "2026-10-17T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Manchester City FC",
           "away": "Ipswich Town FC",
           "predictedOutcome": "home",
@@ -142,6 +1989,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-10-17T13:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Venezia FC",
           "away": "SSC Napoli",
           "predictedOutcome": "away",
@@ -164,6 +2013,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-10-17T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Southampton FC",
           "away": "Bolton Wanderers FC",
           "predictedOutcome": "home",
@@ -186,6 +2037,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-10-17T18:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "AS Roma",
           "away": "Genoa CFC",
           "predictedOutcome": "home",
@@ -208,6 +2061,8 @@
             "name": "La Liga"
           },
           "utcDate": "2026-10-18T19:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Real Madrid CF",
           "away": "Sevilla FC",
           "predictedOutcome": "home",
@@ -230,6 +2085,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-10-18T13:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "ACF Fiorentina",
           "away": "Como 1907",
           "predictedOutcome": "away",
@@ -252,6 +2109,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-10-17T11:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
           "home": "Middlesbrough FC",
           "away": "Cardiff City FC",
           "predictedOutcome": "home",
@@ -274,6 +2133,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-18T13:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Bayer 04 Leverkusen",
           "away": "SC Freiburg",
           "predictedOutcome": "home",
@@ -296,6 +2157,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-17T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "1. FC Union Berlin",
           "away": "Borussia Dortmund",
           "predictedOutcome": "away",
@@ -310,11 +2173,514 @@
           "finalScore": "0-0",
           "correct": false
         }
-      ]
+      ],
+      "strategies": {
+        "top10": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 565825,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-17T16:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Bayern München",
+              "away": "RB Leipzig",
+              "predictedOutcome": "home",
+              "prediction": "FC Bayern München win",
+              "confidence": 90,
+              "probabilities": {
+                "home": 90,
+                "draw": 7,
+                "away": 3
+              },
+              "actualOutcome": "home",
+              "finalScore": "6-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 560610,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-17T14:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Manchester City FC",
+              "away": "Ipswich Town FC",
+              "predictedOutcome": "home",
+              "prediction": "Manchester City FC win",
+              "confidence": 82,
+              "probabilities": {
+                "home": 82,
+                "draw": 11,
+                "away": 8
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-2",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 558575,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-17T13:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Venezia FC",
+              "away": "SSC Napoli",
+              "predictedOutcome": "away",
+              "prediction": "SSC Napoli win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 10,
+                "draw": 15,
+                "away": 76
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 561882,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-17T14:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Southampton FC",
+              "away": "Bolton Wanderers FC",
+              "predictedOutcome": "home",
+              "prediction": "Southampton FC win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 76,
+                "draw": 13,
+                "away": 11
+              },
+              "actualOutcome": "draw",
+              "finalScore": "0-0",
+              "correct": false
+            },
+            {
+              "rank": 5,
+              "fixtureId": 558572,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-17T18:45:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "AS Roma",
+              "away": "Genoa CFC",
+              "predictedOutcome": "home",
+              "prediction": "AS Roma win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 76,
+                "draw": 15,
+                "away": 9
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "correct": true
+            },
+            {
+              "rank": 6,
+              "fixtureId": 564709,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-18T19:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Real Madrid CF",
+              "away": "Sevilla FC",
+              "predictedOutcome": "home",
+              "prediction": "Real Madrid CF win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 75,
+                "draw": 15,
+                "away": 10
+              },
+              "actualOutcome": "home",
+              "finalScore": "4-1",
+              "correct": true
+            },
+            {
+              "rank": 7,
+              "fixtureId": 558577,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-18T13:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "ACF Fiorentina",
+              "away": "Como 1907",
+              "predictedOutcome": "away",
+              "prediction": "Como 1907 win",
+              "confidence": 72,
+              "probabilities": {
+                "home": 11,
+                "draw": 17,
+                "away": 72
+              },
+              "actualOutcome": "away",
+              "finalScore": "1-3",
+              "correct": true
+            },
+            {
+              "rank": 8,
+              "fixtureId": 561887,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-17T11:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "early_before_1400",
+              "home": "Middlesbrough FC",
+              "away": "Cardiff City FC",
+              "predictedOutcome": "home",
+              "prediction": "Middlesbrough FC win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 17,
+                "away": 13
+              },
+              "actualOutcome": "draw",
+              "finalScore": "2-2",
+              "correct": false
+            },
+            {
+              "rank": 9,
+              "fixtureId": 565827,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-18T13:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Bayer 04 Leverkusen",
+              "away": "SC Freiburg",
+              "predictedOutcome": "home",
+              "prediction": "Bayer 04 Leverkusen win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 17,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 10,
+              "fixtureId": 565821,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-17T13:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "1. FC Union Berlin",
+              "away": "Borussia Dortmund",
+              "predictedOutcome": "away",
+              "prediction": "Borussia Dortmund win",
+              "confidence": 67,
+              "probabilities": {
+                "home": 15,
+                "draw": 18,
+                "away": 67
+              },
+              "actualOutcome": "draw",
+              "finalScore": "0-0",
+              "correct": false
+            }
+          ],
+          "correct": 6,
+          "accuracy": 60,
+          "averageConfidence": 75.4
+        },
+        "saturdayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 565825,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-17T16:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Bayern München",
+              "away": "RB Leipzig",
+              "predictedOutcome": "home",
+              "prediction": "FC Bayern München win",
+              "confidence": 90,
+              "probabilities": {
+                "home": 90,
+                "draw": 7,
+                "away": 3
+              },
+              "actualOutcome": "home",
+              "finalScore": "6-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 560610,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-17T14:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Manchester City FC",
+              "away": "Ipswich Town FC",
+              "predictedOutcome": "home",
+              "prediction": "Manchester City FC win",
+              "confidence": 82,
+              "probabilities": {
+                "home": 82,
+                "draw": 11,
+                "away": 8
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-2",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 558575,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-17T13:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Venezia FC",
+              "away": "SSC Napoli",
+              "predictedOutcome": "away",
+              "prediction": "SSC Napoli win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 10,
+                "draw": 15,
+                "away": 76
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 561882,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-17T14:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Southampton FC",
+              "away": "Bolton Wanderers FC",
+              "predictedOutcome": "home",
+              "prediction": "Southampton FC win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 76,
+                "draw": 13,
+                "away": 11
+              },
+              "actualOutcome": "draw",
+              "finalScore": "0-0",
+              "correct": false
+            },
+            {
+              "rank": 5,
+              "fixtureId": 558572,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-17T18:45:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "AS Roma",
+              "away": "Genoa CFC",
+              "predictedOutcome": "home",
+              "prediction": "AS Roma win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 76,
+                "draw": 15,
+                "away": 9
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "correct": true
+            }
+          ],
+          "correct": 3,
+          "accuracy": 60,
+          "averageConfidence": 80
+        },
+        "sundayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 564709,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-18T19:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Real Madrid CF",
+              "away": "Sevilla FC",
+              "predictedOutcome": "home",
+              "prediction": "Real Madrid CF win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 75,
+                "draw": 15,
+                "away": 10
+              },
+              "actualOutcome": "home",
+              "finalScore": "4-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 558577,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-18T13:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "ACF Fiorentina",
+              "away": "Como 1907",
+              "predictedOutcome": "away",
+              "prediction": "Como 1907 win",
+              "confidence": 72,
+              "probabilities": {
+                "home": 11,
+                "draw": 17,
+                "away": 72
+              },
+              "actualOutcome": "away",
+              "finalScore": "1-3",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 565827,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-18T13:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Bayer 04 Leverkusen",
+              "away": "SC Freiburg",
+              "predictedOutcome": "home",
+              "prediction": "Bayer 04 Leverkusen win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 17,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 4,
+              "fixtureId": 558569,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-18T16:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "AC Milan",
+              "away": "Atalanta BC",
+              "predictedOutcome": "home",
+              "prediction": "AC Milan win",
+              "confidence": 67,
+              "probabilities": {
+                "home": 67,
+                "draw": 21,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-2",
+              "correct": true
+            },
+            {
+              "rank": 5,
+              "fixtureId": 560609,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-18T13:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Brighton & Hove Albion FC",
+              "away": "Crystal Palace FC",
+              "predictedOutcome": "home",
+              "prediction": "Brighton & Hove Albion FC win",
+              "confidence": 66,
+              "probabilities": {
+                "home": 66,
+                "draw": 21,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "5-0",
+              "correct": true
+            }
+          ],
+          "correct": 5,
+          "accuracy": 100,
+          "averageConfidence": 70
+        }
+      }
     },
     {
       "predictionBatch": "2026-10-17T18:09:16.120Z",
-      "weekendStarting": "2026-10-25",
+      "weekendStarting": "2026-10-24",
       "settledFixtures": 45,
       "top10Correct": 6,
       "top10Accuracy": 60,
@@ -328,6 +2694,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-10-25T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
           "home": "FC Internazionale Milano",
           "away": "ACF Fiorentina",
           "predictedOutcome": "home",
@@ -350,6 +2718,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-24T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "RB Leipzig",
           "away": "SV 07 Elversberg",
           "predictedOutcome": "home",
@@ -372,6 +2742,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-24T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Borussia Dortmund",
           "away": "Eintracht Frankfurt",
           "predictedOutcome": "home",
@@ -394,6 +2766,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-24T13:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "FC Augsburg",
           "away": "1. FC Union Berlin",
           "predictedOutcome": "home",
@@ -416,6 +2790,8 @@
             "name": "Premier League"
           },
           "utcDate": "2026-10-24T11:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
           "home": "Aston Villa FC",
           "away": "Manchester City FC",
           "predictedOutcome": "away",
@@ -438,6 +2814,8 @@
             "name": "La Liga"
           },
           "utcDate": "2026-10-25T20:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
           "home": "FC Barcelona",
           "away": "Real Madrid CF",
           "predictedOutcome": "home",
@@ -460,6 +2838,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-10-24T18:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "SS Lazio",
           "away": "Parma Calcio 1913",
           "predictedOutcome": "home",
@@ -482,6 +2862,8 @@
             "name": "Premier League"
           },
           "utcDate": "2026-10-24T16:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Chelsea FC",
           "away": "Tottenham Hotspur FC",
           "predictedOutcome": "home",
@@ -504,6 +2886,8 @@
             "name": "La Liga"
           },
           "utcDate": "2026-10-24T19:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Club Atlético de Madrid",
           "away": "RC Deportivo La Coruña",
           "predictedOutcome": "home",
@@ -526,6 +2910,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-10-24T14:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Wolverhampton Wanderers FC",
           "away": "Watford FC",
           "predictedOutcome": "home",
@@ -540,7 +2926,510 @@
           "finalScore": "1-0",
           "correct": true
         }
-      ]
+      ],
+      "strategies": {
+        "top10": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 558563,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-25T11:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "early_before_1400",
+              "home": "FC Internazionale Milano",
+              "away": "ACF Fiorentina",
+              "predictedOutcome": "home",
+              "prediction": "FC Internazionale Milano win",
+              "confidence": 85,
+              "probabilities": {
+                "home": 85,
+                "draw": 9,
+                "away": 6
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 565832,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-24T13:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "RB Leipzig",
+              "away": "SV 07 Elversberg",
+              "predictedOutcome": "home",
+              "prediction": "RB Leipzig win",
+              "confidence": 82,
+              "probabilities": {
+                "home": 82,
+                "draw": 11,
+                "away": 6
+              },
+              "actualOutcome": "home",
+              "finalScore": "4-0",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 565837,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-24T16:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Borussia Dortmund",
+              "away": "Eintracht Frankfurt",
+              "predictedOutcome": "home",
+              "prediction": "Borussia Dortmund win",
+              "confidence": 79,
+              "probabilities": {
+                "home": 79,
+                "draw": 12,
+                "away": 9
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            },
+            {
+              "rank": 4,
+              "fixtureId": 565838,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-24T13:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "FC Augsburg",
+              "away": "1. FC Union Berlin",
+              "predictedOutcome": "home",
+              "prediction": "FC Augsburg win",
+              "confidence": 78,
+              "probabilities": {
+                "home": 78,
+                "draw": 13,
+                "away": 9
+              },
+              "actualOutcome": "draw",
+              "finalScore": "1-1",
+              "correct": false
+            },
+            {
+              "rank": 5,
+              "fixtureId": 560614,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-24T11:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "early_before_1400",
+              "home": "Aston Villa FC",
+              "away": "Manchester City FC",
+              "predictedOutcome": "away",
+              "prediction": "Manchester City FC win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 9,
+                "draw": 16,
+                "away": 75
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": false
+            },
+            {
+              "rank": 6,
+              "fixtureId": 564723,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-25T20:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Barcelona",
+              "away": "Real Madrid CF",
+              "predictedOutcome": "home",
+              "prediction": "FC Barcelona win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 75,
+                "draw": 14,
+                "away": 11
+              },
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "correct": false
+            },
+            {
+              "rank": 7,
+              "fixtureId": 558565,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-24T18:45:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "SS Lazio",
+              "away": "Parma Calcio 1913",
+              "predictedOutcome": "home",
+              "prediction": "SS Lazio win",
+              "confidence": 74,
+              "probabilities": {
+                "home": 74,
+                "draw": 17,
+                "away": 9
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 8,
+              "fixtureId": 560617,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-24T16:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Chelsea FC",
+              "away": "Tottenham Hotspur FC",
+              "predictedOutcome": "home",
+              "prediction": "Chelsea FC win",
+              "confidence": 71,
+              "probabilities": {
+                "home": 71,
+                "draw": 16,
+                "away": 12
+              },
+              "actualOutcome": "away",
+              "finalScore": "0-2",
+              "correct": false
+            },
+            {
+              "rank": 9,
+              "fixtureId": 564724,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-24T19:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Club Atlético de Madrid",
+              "away": "RC Deportivo La Coruña",
+              "predictedOutcome": "home",
+              "prediction": "Club Atlético de Madrid win",
+              "confidence": 71,
+              "probabilities": {
+                "home": 71,
+                "draw": 17,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            },
+            {
+              "rank": 10,
+              "fixtureId": 561903,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-24T14:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Wolverhampton Wanderers FC",
+              "away": "Watford FC",
+              "predictedOutcome": "home",
+              "prediction": "Wolverhampton Wanderers FC win",
+              "confidence": 69,
+              "probabilities": {
+                "home": 69,
+                "draw": 19,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            }
+          ],
+          "correct": 6,
+          "accuracy": 60,
+          "averageConfidence": 75.9
+        },
+        "saturdayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 565832,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-24T13:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "RB Leipzig",
+              "away": "SV 07 Elversberg",
+              "predictedOutcome": "home",
+              "prediction": "RB Leipzig win",
+              "confidence": 82,
+              "probabilities": {
+                "home": 82,
+                "draw": 11,
+                "away": 6
+              },
+              "actualOutcome": "home",
+              "finalScore": "4-0",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 565837,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-24T16:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Borussia Dortmund",
+              "away": "Eintracht Frankfurt",
+              "predictedOutcome": "home",
+              "prediction": "Borussia Dortmund win",
+              "confidence": 79,
+              "probabilities": {
+                "home": 79,
+                "draw": 12,
+                "away": 9
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 565838,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-24T13:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "FC Augsburg",
+              "away": "1. FC Union Berlin",
+              "predictedOutcome": "home",
+              "prediction": "FC Augsburg win",
+              "confidence": 78,
+              "probabilities": {
+                "home": 78,
+                "draw": 13,
+                "away": 9
+              },
+              "actualOutcome": "draw",
+              "finalScore": "1-1",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 560614,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-24T11:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "early_before_1400",
+              "home": "Aston Villa FC",
+              "away": "Manchester City FC",
+              "predictedOutcome": "away",
+              "prediction": "Manchester City FC win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 9,
+                "draw": 16,
+                "away": 75
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": false
+            },
+            {
+              "rank": 5,
+              "fixtureId": 558565,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-24T18:45:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "SS Lazio",
+              "away": "Parma Calcio 1913",
+              "predictedOutcome": "home",
+              "prediction": "SS Lazio win",
+              "confidence": 74,
+              "probabilities": {
+                "home": 74,
+                "draw": 17,
+                "away": 9
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            }
+          ],
+          "correct": 3,
+          "accuracy": 60,
+          "averageConfidence": 77.6
+        },
+        "sundayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 558563,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-25T11:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "early_before_1400",
+              "home": "FC Internazionale Milano",
+              "away": "ACF Fiorentina",
+              "predictedOutcome": "home",
+              "prediction": "FC Internazionale Milano win",
+              "confidence": 85,
+              "probabilities": {
+                "home": 85,
+                "draw": 9,
+                "away": 6
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 564723,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-25T20:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Barcelona",
+              "away": "Real Madrid CF",
+              "predictedOutcome": "home",
+              "prediction": "FC Barcelona win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 75,
+                "draw": 14,
+                "away": 11
+              },
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "correct": false
+            },
+            {
+              "rank": 3,
+              "fixtureId": 560612,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-25T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Liverpool FC",
+              "away": "Brighton & Hove Albion FC",
+              "predictedOutcome": "away",
+              "prediction": "Brighton & Hove Albion FC win",
+              "confidence": 69,
+              "probabilities": {
+                "home": 14,
+                "draw": 17,
+                "away": 69
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 558566,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-25T17:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "US Lecce",
+              "away": "Juventus FC",
+              "predictedOutcome": "away",
+              "prediction": "Juventus FC win",
+              "confidence": 69,
+              "probabilities": {
+                "home": 13,
+                "draw": 18,
+                "away": 69
+              },
+              "actualOutcome": "away",
+              "finalScore": "0-2",
+              "correct": true
+            },
+            {
+              "rank": 5,
+              "fixtureId": 560615,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-10-25T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Manchester United FC",
+              "away": "AFC Bournemouth",
+              "predictedOutcome": "home",
+              "prediction": "Manchester United FC win",
+              "confidence": 63,
+              "probabilities": {
+                "home": 63,
+                "draw": 18,
+                "away": 19
+              },
+              "actualOutcome": "away",
+              "finalScore": "0-3",
+              "correct": false
+            }
+          ],
+          "correct": 2,
+          "accuracy": 40,
+          "averageConfidence": 72.2
+        }
+      }
     },
     {
       "predictionBatch": "2026-10-28T15:38:31.346Z",
@@ -558,6 +3447,8 @@
             "name": "La Liga"
           },
           "utcDate": "2026-10-31T20:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "FC Barcelona",
           "away": "Deportivo Alavés",
           "predictedOutcome": "home",
@@ -580,6 +3471,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-10-31T17:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Udinese Calcio",
           "away": "AS Roma",
           "predictedOutcome": "away",
@@ -602,6 +3495,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-31T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "FC Bayern München",
           "away": "Borussia Dortmund",
           "predictedOutcome": "home",
@@ -624,6 +3519,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-10-31T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Bayer 04 Leverkusen",
           "away": "VfB Stuttgart",
           "predictedOutcome": "home",
@@ -646,6 +3543,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-10-31T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Middlesbrough FC",
           "away": "Charlton Athletic FC",
           "predictedOutcome": "home",
@@ -668,6 +3567,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-10-31T12:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "early_before_1400",
           "home": "Stoke City FC",
           "away": "Preston North End FC",
           "predictedOutcome": "home",
@@ -690,6 +3591,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-11-01T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
           "home": "Como 1907",
           "away": "Venezia FC",
           "predictedOutcome": "home",
@@ -712,6 +3615,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-11-01T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "SS Lazio",
           "away": "Cagliari Calcio",
           "predictedOutcome": "home",
@@ -734,6 +3639,8 @@
             "name": "La Liga"
           },
           "utcDate": "2026-10-31T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Real Betis Balompié",
           "away": "Málaga CF",
           "predictedOutcome": "home",
@@ -756,6 +3663,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-10-31T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Southampton FC",
           "away": "Queens Park Rangers FC",
           "predictedOutcome": "home",
@@ -770,7 +3679,510 @@
           "finalScore": "4-1",
           "correct": true
         }
-      ]
+      ],
+      "strategies": {
+        "top10": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 564732,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-31T20:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Barcelona",
+              "away": "Deportivo Alavés",
+              "predictedOutcome": "home",
+              "prediction": "FC Barcelona win",
+              "confidence": 80,
+              "probabilities": {
+                "home": 80,
+                "draw": 13,
+                "away": 8
+              },
+              "actualOutcome": "home",
+              "finalScore": "6-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 558542,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-31T17:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Udinese Calcio",
+              "away": "AS Roma",
+              "predictedOutcome": "away",
+              "prediction": "AS Roma win",
+              "confidence": 79,
+              "probabilities": {
+                "home": 7,
+                "draw": 14,
+                "away": 79
+              },
+              "actualOutcome": "away",
+              "finalScore": "2-5",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 565845,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-31T17:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Bayern München",
+              "away": "Borussia Dortmund",
+              "predictedOutcome": "home",
+              "prediction": "FC Bayern München win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 76,
+                "draw": 14,
+                "away": 10
+              },
+              "actualOutcome": "draw",
+              "finalScore": "2-2",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 565847,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-31T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Bayer 04 Leverkusen",
+              "away": "VfB Stuttgart",
+              "predictedOutcome": "home",
+              "prediction": "Bayer 04 Leverkusen win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 75,
+                "draw": 15,
+                "away": 10
+              },
+              "actualOutcome": "away",
+              "finalScore": "2-4",
+              "correct": false
+            },
+            {
+              "rank": 5,
+              "fixtureId": 561911,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-31T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Middlesbrough FC",
+              "away": "Charlton Athletic FC",
+              "predictedOutcome": "home",
+              "prediction": "Middlesbrough FC win",
+              "confidence": 73,
+              "probabilities": {
+                "home": 73,
+                "draw": 15,
+                "away": 12
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-0",
+              "correct": true
+            },
+            {
+              "rank": 6,
+              "fixtureId": 561908,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-31T12:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "early_before_1400",
+              "home": "Stoke City FC",
+              "away": "Preston North End FC",
+              "predictedOutcome": "home",
+              "prediction": "Stoke City FC win",
+              "confidence": 71,
+              "probabilities": {
+                "home": 71,
+                "draw": 17,
+                "away": 12
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "correct": true
+            },
+            {
+              "rank": 7,
+              "fixtureId": 558543,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-01T11:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "early_before_1400",
+              "home": "Como 1907",
+              "away": "Venezia FC",
+              "predictedOutcome": "home",
+              "prediction": "Como 1907 win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 19,
+                "away": 11
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            },
+            {
+              "rank": 8,
+              "fixtureId": 558546,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-01T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "SS Lazio",
+              "away": "Cagliari Calcio",
+              "predictedOutcome": "home",
+              "prediction": "SS Lazio win",
+              "confidence": 69,
+              "probabilities": {
+                "home": 69,
+                "draw": 18,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 9,
+              "fixtureId": 564736,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-31T17:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Real Betis Balompié",
+              "away": "Málaga CF",
+              "predictedOutcome": "home",
+              "prediction": "Real Betis Balompié win",
+              "confidence": 67,
+              "probabilities": {
+                "home": 67,
+                "draw": 19,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 10,
+              "fixtureId": 561914,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-31T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Southampton FC",
+              "away": "Queens Park Rangers FC",
+              "predictedOutcome": "home",
+              "prediction": "Southampton FC win",
+              "confidence": 65,
+              "probabilities": {
+                "home": 65,
+                "draw": 20,
+                "away": 14
+              },
+              "actualOutcome": "home",
+              "finalScore": "4-1",
+              "correct": true
+            }
+          ],
+          "correct": 8,
+          "accuracy": 80,
+          "averageConfidence": 72.5
+        },
+        "saturdayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 564732,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-10-31T20:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Barcelona",
+              "away": "Deportivo Alavés",
+              "predictedOutcome": "home",
+              "prediction": "FC Barcelona win",
+              "confidence": 80,
+              "probabilities": {
+                "home": 80,
+                "draw": 13,
+                "away": 8
+              },
+              "actualOutcome": "home",
+              "finalScore": "6-1",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 558542,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-10-31T17:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Udinese Calcio",
+              "away": "AS Roma",
+              "predictedOutcome": "away",
+              "prediction": "AS Roma win",
+              "confidence": 79,
+              "probabilities": {
+                "home": 7,
+                "draw": 14,
+                "away": 79
+              },
+              "actualOutcome": "away",
+              "finalScore": "2-5",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 565845,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-31T17:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "FC Bayern München",
+              "away": "Borussia Dortmund",
+              "predictedOutcome": "home",
+              "prediction": "FC Bayern München win",
+              "confidence": 76,
+              "probabilities": {
+                "home": 76,
+                "draw": 14,
+                "away": 10
+              },
+              "actualOutcome": "draw",
+              "finalScore": "2-2",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 565847,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-10-31T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Bayer 04 Leverkusen",
+              "away": "VfB Stuttgart",
+              "predictedOutcome": "home",
+              "prediction": "Bayer 04 Leverkusen win",
+              "confidence": 75,
+              "probabilities": {
+                "home": 75,
+                "draw": 15,
+                "away": 10
+              },
+              "actualOutcome": "away",
+              "finalScore": "2-4",
+              "correct": false
+            },
+            {
+              "rank": 5,
+              "fixtureId": 561911,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-10-31T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Middlesbrough FC",
+              "away": "Charlton Athletic FC",
+              "predictedOutcome": "home",
+              "prediction": "Middlesbrough FC win",
+              "confidence": 73,
+              "probabilities": {
+                "home": 73,
+                "draw": 15,
+                "away": 12
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-0",
+              "correct": true
+            }
+          ],
+          "correct": 3,
+          "accuracy": 60,
+          "averageConfidence": 76.6
+        },
+        "sundayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 558543,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-01T11:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "early_before_1400",
+              "home": "Como 1907",
+              "away": "Venezia FC",
+              "predictedOutcome": "home",
+              "prediction": "Como 1907 win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 19,
+                "away": 11
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 558546,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-01T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "SS Lazio",
+              "away": "Cagliari Calcio",
+              "predictedOutcome": "home",
+              "prediction": "SS Lazio win",
+              "confidence": 69,
+              "probabilities": {
+                "home": 69,
+                "draw": 18,
+                "away": 13
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 565841,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-01T14:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "1. FC Union Berlin",
+              "away": "1. FC Köln",
+              "predictedOutcome": "home",
+              "prediction": "1. FC Union Berlin win",
+              "confidence": 52,
+              "probabilities": {
+                "home": 52,
+                "draw": 23,
+                "away": 24
+              },
+              "actualOutcome": "draw",
+              "finalScore": "1-1",
+              "correct": false
+            },
+            {
+              "rank": 4,
+              "fixtureId": 565844,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-01T16:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Eintracht Frankfurt",
+              "away": "Hamburger SV",
+              "predictedOutcome": "home",
+              "prediction": "Eintracht Frankfurt win",
+              "confidence": 52,
+              "probabilities": {
+                "home": 52,
+                "draw": 22,
+                "away": 26
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-1",
+              "correct": true
+            },
+            {
+              "rank": 5,
+              "fixtureId": 564734,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-11-01T15:15:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Real Racing Club de Santander",
+              "away": "Real Madrid CF",
+              "predictedOutcome": "away",
+              "prediction": "Real Madrid CF win",
+              "confidence": 48,
+              "probabilities": {
+                "home": 30,
+                "draw": 22,
+                "away": 48
+              },
+              "actualOutcome": "away",
+              "finalScore": "0-3",
+              "correct": true
+            }
+          ],
+          "correct": 4,
+          "accuracy": 80,
+          "averageConfidence": 58.2
+        }
+      }
     },
     {
       "predictionBatch": "2026-11-04T16:45:19.002Z",
@@ -788,6 +4200,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "RB Leipzig",
           "away": "FC Augsburg",
           "predictedOutcome": "home",
@@ -810,6 +4224,8 @@
             "name": "Serie A"
           },
           "utcDate": "2026-11-07T19:45:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "AS Roma",
           "away": "US Sassuolo Calcio",
           "predictedOutcome": "home",
@@ -832,6 +4248,8 @@
             "name": "La Liga"
           },
           "utcDate": "2026-11-07T20:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Valencia CF",
           "away": "Real Madrid CF",
           "predictedOutcome": "away",
@@ -854,6 +4272,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Borussia Dortmund",
           "away": "SV 07 Elversberg",
           "predictedOutcome": "home",
@@ -876,6 +4296,8 @@
             "name": "Premier League"
           },
           "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Arsenal FC",
           "away": "Hull City AFC",
           "predictedOutcome": "home",
@@ -898,6 +4320,8 @@
             "name": "Bundesliga"
           },
           "utcDate": "2026-11-07T14:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "1. FSV Mainz 05",
           "away": "FC Bayern München",
           "predictedOutcome": "away",
@@ -920,6 +4344,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Cardiff City FC",
           "away": "Burnley FC",
           "predictedOutcome": "home",
@@ -942,6 +4368,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Birmingham City FC",
           "away": "Swansea City AFC",
           "predictedOutcome": "home",
@@ -964,6 +4392,8 @@
             "name": "Premier League"
           },
           "utcDate": "2026-11-07T17:30:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "evening_1700_plus",
           "home": "Nottingham Forest FC",
           "away": "Manchester City FC",
           "predictedOutcome": "away",
@@ -986,6 +4416,8 @@
             "name": "Championship"
           },
           "utcDate": "2026-11-07T15:00:00Z",
+          "kickoffDay": "saturday",
+          "kickoffBand": "afternoon_1400_1659",
           "home": "Preston North End FC",
           "away": "Southampton FC",
           "predictedOutcome": "away",
@@ -1000,7 +4432,389 @@
           "finalScore": "1-0",
           "correct": false
         }
-      ]
+      ],
+      "strategies": {
+        "top10": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 565848,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-07T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "RB Leipzig",
+              "away": "FC Augsburg",
+              "predictedOutcome": "home",
+              "prediction": "RB Leipzig win",
+              "confidence": 89,
+              "probabilities": {
+                "home": 89,
+                "draw": 7,
+                "away": 4
+              },
+              "actualOutcome": "home",
+              "finalScore": "5-2",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 558531,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-07T19:45:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "AS Roma",
+              "away": "US Sassuolo Calcio",
+              "predictedOutcome": "home",
+              "prediction": "AS Roma win",
+              "confidence": 84,
+              "probabilities": {
+                "home": 84,
+                "draw": 10,
+                "away": 6
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-0",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 564741,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-11-07T20:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Valencia CF",
+              "away": "Real Madrid CF",
+              "predictedOutcome": "away",
+              "prediction": "Real Madrid CF win",
+              "confidence": 74,
+              "probabilities": {
+                "home": 9,
+                "draw": 17,
+                "away": 74
+              },
+              "actualOutcome": "away",
+              "finalScore": "0-3",
+              "correct": true
+            },
+            {
+              "rank": 4,
+              "fixtureId": 565850,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-07T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Borussia Dortmund",
+              "away": "SV 07 Elversberg",
+              "predictedOutcome": "home",
+              "prediction": "Borussia Dortmund win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 18,
+                "away": 11
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 5,
+              "fixtureId": 560640,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-07T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Arsenal FC",
+              "away": "Hull City AFC",
+              "predictedOutcome": "home",
+              "prediction": "Arsenal FC win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 19,
+                "away": 11
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            },
+            {
+              "rank": 6,
+              "fixtureId": 565851,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-07T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "1. FSV Mainz 05",
+              "away": "FC Bayern München",
+              "predictedOutcome": "away",
+              "prediction": "FC Bayern München win",
+              "confidence": 69,
+              "probabilities": {
+                "home": 14,
+                "draw": 17,
+                "away": 69
+              },
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "correct": true
+            },
+            {
+              "rank": 7,
+              "fixtureId": 561930,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-11-07T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Cardiff City FC",
+              "away": "Burnley FC",
+              "predictedOutcome": "home",
+              "prediction": "Cardiff City FC win",
+              "confidence": 67,
+              "probabilities": {
+                "home": 67,
+                "draw": 18,
+                "away": 16
+              },
+              "actualOutcome": "home",
+              "finalScore": "5-4",
+              "correct": true
+            },
+            {
+              "rank": 8,
+              "fixtureId": 561940,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-11-07T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Birmingham City FC",
+              "away": "Swansea City AFC",
+              "predictedOutcome": "home",
+              "prediction": "Birmingham City FC win",
+              "confidence": 67,
+              "probabilities": {
+                "home": 67,
+                "draw": 18,
+                "away": 15
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 9,
+              "fixtureId": 560641,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-07T17:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Nottingham Forest FC",
+              "away": "Manchester City FC",
+              "predictedOutcome": "away",
+              "prediction": "Manchester City FC win",
+              "confidence": 66,
+              "probabilities": {
+                "home": 11,
+                "draw": 23,
+                "away": 66
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-1",
+              "correct": false
+            },
+            {
+              "rank": 10,
+              "fixtureId": 561937,
+              "competition": {
+                "code": "ELC",
+                "name": "Championship"
+              },
+              "utcDate": "2026-11-07T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Preston North End FC",
+              "away": "Southampton FC",
+              "predictedOutcome": "away",
+              "prediction": "Southampton FC win",
+              "confidence": 61,
+              "probabilities": {
+                "home": 17,
+                "draw": 22,
+                "away": 61
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": false
+            }
+          ],
+          "correct": 8,
+          "accuracy": 80,
+          "averageConfidence": 71.7
+        },
+        "saturdayTop5": {
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 565848,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-07T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "RB Leipzig",
+              "away": "FC Augsburg",
+              "predictedOutcome": "home",
+              "prediction": "RB Leipzig win",
+              "confidence": 89,
+              "probabilities": {
+                "home": 89,
+                "draw": 7,
+                "away": 4
+              },
+              "actualOutcome": "home",
+              "finalScore": "5-2",
+              "correct": true
+            },
+            {
+              "rank": 2,
+              "fixtureId": 558531,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-07T19:45:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "AS Roma",
+              "away": "US Sassuolo Calcio",
+              "predictedOutcome": "home",
+              "prediction": "AS Roma win",
+              "confidence": 84,
+              "probabilities": {
+                "home": 84,
+                "draw": 10,
+                "away": 6
+              },
+              "actualOutcome": "home",
+              "finalScore": "3-0",
+              "correct": true
+            },
+            {
+              "rank": 3,
+              "fixtureId": 564741,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-11-07T20:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Valencia CF",
+              "away": "Real Madrid CF",
+              "predictedOutcome": "away",
+              "prediction": "Real Madrid CF win",
+              "confidence": 74,
+              "probabilities": {
+                "home": 9,
+                "draw": 17,
+                "away": 74
+              },
+              "actualOutcome": "away",
+              "finalScore": "0-3",
+              "correct": true
+            },
+            {
+              "rank": 4,
+              "fixtureId": 565850,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-07T14:30:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Borussia Dortmund",
+              "away": "SV 07 Elversberg",
+              "predictedOutcome": "home",
+              "prediction": "Borussia Dortmund win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 18,
+                "away": 11
+              },
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "correct": true
+            },
+            {
+              "rank": 5,
+              "fixtureId": 560640,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-07T15:00:00Z",
+              "kickoffDay": "saturday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Arsenal FC",
+              "away": "Hull City AFC",
+              "predictedOutcome": "home",
+              "prediction": "Arsenal FC win",
+              "confidence": 70,
+              "probabilities": {
+                "home": 70,
+                "draw": 19,
+                "away": 11
+              },
+              "actualOutcome": "home",
+              "finalScore": "1-0",
+              "correct": true
+            }
+          ],
+          "correct": 5,
+          "accuracy": 100,
+          "averageConfidence": 77.4
+        },
+        "sundayTop5": {
+          "picks": [],
+          "correct": 0,
+          "accuracy": 0,
+          "averageConfidence": 0
+        }
+      }
     }
   ]
 }
