@@ -13,7 +13,6 @@ let historyFixtures = [];
 let performanceData = null;
 let currentLeague = "all";
 let selectedReviewWeek = "all";
-let selectedReviewStrategy = "top10";
 
 const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
 const total = results => results.reduce((sum, result) => sum + points(result), 0);
@@ -164,21 +163,25 @@ function render() {
   if (currentFilter === "review") bindReviewControls();
 }
 
-function strategyFor(week) {
-  if (week.strategies) return week.strategies[selectedReviewStrategy];
-  return selectedReviewStrategy === "top10" ? { picks: week.picks, correct: week.top10Correct, accuracy: week.top10Accuracy } : { picks: [], correct: 0, accuracy: 0 };
+function strategyFor(week, strategy) {
+  if (week.strategies) return week.strategies[strategy];
+  return strategy === "top10" ? { picks: week.picks, correct: week.top10Correct, accuracy: week.top10Accuracy } : { picks: [], correct: 0, accuracy: 0 };
 }
 
 function reviewWeeks() {
   return [...(performanceData?.weeks ?? [])].reverse().map(week => {
-    const strategy = strategyFor(week) ?? { picks: [] };
-    const picks = (strategy.picks ?? []).filter(pick => currentLeague === "all" || (pick.competition?.code || "PL") === currentLeague);
-    return { ...week, reviewPicks: picks, reviewCorrect: picks.filter(pick => pick.correct).length };
+    const strategies = Object.fromEntries(["top10", "saturdayTop5", "sundayTop5"].map(name => {
+      const source = strategyFor(week, name) ?? { picks: [] };
+      const picks = (source.picks ?? []).filter(pick => currentLeague === "all" || (pick.competition?.code || "PL") === currentLeague);
+      const settled = picks.filter(pick => pick.settled !== false && pick.actualOutcome);
+      return [name, { picks, settled: settled.length, correct: settled.filter(pick => pick.correct).length }];
+    }));
+    return { ...week, reviewStrategies: strategies };
   });
 }
 
 function reviewCount() {
-  return reviewWeeks().reduce((sum, week) => sum + week.reviewPicks.length, 0);
+  return reviewWeeks().reduce((sum, week) => sum + week.reviewStrategies.top10.picks.length, 0);
 }
 
 function kickoffBand(utcDate) {
@@ -191,20 +194,33 @@ function formatReviewKickoff(utcDate) {
 }
 
 function pickRows(picks) {
-  return picks.map(pick => `<article class="review-row">
+  return picks.map(pick => {
+    const pending = pick.settled === false || !pick.actualOutcome;
+    return `<article class="review-row">
     <span class="review-rank">${pick.rank}</span>
-    <div><span class="top-pick-league">${pick.competition?.name || "League"}</span><div class="review-match"><strong>${pick.home} ${pick.finalScore} ${pick.away}</strong><small>${formatReviewKickoff(pick.utcDate)} · ${kickoffBand(pick.utcDate)}</small></div></div>
+    <div><span class="top-pick-league">${pick.competition?.name || "League"}</span><div class="review-match"><strong>${pick.home} ${pick.finalScore ?? "vs"} ${pick.away}</strong><small>${formatReviewKickoff(pick.utcDate)} · ${kickoffBand(pick.utcDate)}</small></div></div>
     <div class="review-call"><span>Predicted</span><strong>${pick.prediction}</strong><small>${pick.confidence}% confidence</small></div>
-    <div class="review-result ${pick.correct ? "is-correct" : "is-missed"}"><b>${pick.correct ? "✓ Correct" : "× Missed"}</b><small>${pick.actualOutcome}</small></div>
-  </article>`).join("");
+    <div class="review-result ${pending ? "is-pending" : pick.correct ? "is-correct" : "is-missed"}"><b>${pending ? "Pending" : pick.correct ? "✓ Correct" : "× Missed"}</b><small>${pending ? "Awaiting result" : pick.actualOutcome}</small></div>
+  </article>`;
+  }).join("");
+}
+
+function portfolioSummary(strategy) {
+  const pending = strategy.picks.length - strategy.settled;
+  const accuracy = strategy.settled ? Math.round(strategy.correct / strategy.settled * 100) : 0;
+  return { pending, accuracy, score: `${strategy.correct}/${strategy.settled}` };
+}
+
+function portfolioSection(title, subtitle, strategy) {
+  const summary = portfolioSummary(strategy);
+  return `<section class="portfolio-section"><div class="portfolio-heading"><div><span class="section-kicker">${subtitle}</span><h3>${title}</h3></div><div class="portfolio-score"><strong>${summary.score}</strong><span>${summary.accuracy}% correct${summary.pending ? ` · ${summary.pending} pending` : ""}</span></div></div><div class="review-list">${strategy.picks.length ? pickRows(strategy.picks) : '<div class="empty compact">No qualifying picks for this day.</div>'}</div></section>`;
 }
 
 function reviewDashboard() {
   const weeks = reviewWeeks();
   if (!weeks.length) return '<div class="empty"><strong>No completed review yet.</strong><br>The first report will appear after a completed weekend is settled.</div>';
-  const allPicks = weeks.flatMap(week => week.reviewPicks);
+  const allPicks = weeks.flatMap(week => week.reviewStrategies.top10.picks).filter(pick => pick.actualOutcome);
   const selected = selectedReviewWeek === "all" ? null : weeks.find(week => week.predictionBatch === selectedReviewWeek);
-  const shownPicks = selected?.reviewPicks ?? [];
   const correct = allPicks.filter(pick => pick.correct).length;
   const accuracy = Math.round(correct / Math.max(1, allPicks.length) * 100);
   const averageConfidence = Math.round(allPicks.reduce((sum, pick) => sum + pick.confidence, 0) / Math.max(1, allPicks.length));
@@ -215,19 +231,18 @@ function reviewDashboard() {
     return `<div class="audit-card"><span>${band}</span><strong>${picks.length ? Math.round(hits / picks.length * 100) : 0}%</strong><small>${hits}/${picks.length} correct</small></div>`;
   }).join("");
   const options = [`<option value="all" ${selectedReviewWeek === "all" ? "selected" : ""}>All completed weeks</option>`, ...weeks.map(week => `<option value="${week.predictionBatch}" ${selectedReviewWeek === week.predictionBatch ? "selected" : ""}>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</option>`)].join("");
-  const strategyOptions = [["top10", "Top 10 overall"], ["saturdayTop5", "Saturday Top 5"], ["sundayTop5", "Sunday Top 5"]].map(([value, label]) => `<option value="${value}" ${selectedReviewStrategy === value ? "selected" : ""}>${label}</option>`).join("");
   const weekCards = weeks.map(week => {
-    const total = week.reviewPicks.length;
-    const pct = total ? Math.round(week.reviewCorrect / total * 100) : 0;
-    return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${week.reviewCorrect}/${total}</strong><small>${pct}% correct</small></button>`;
+    const top = portfolioSummary(week.reviewStrategies.top10);
+    const sat = portfolioSummary(week.reviewStrategies.saturdayTop5);
+    const sun = portfolioSummary(week.reviewStrategies.sundayTop5);
+    return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${top.score}</strong><small>Top 10 · ${top.accuracy}%</small><em>Sat ${sat.score} · Sun ${sun.score}</em></button>`;
   }).join("");
-  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">WEEKLY PICKS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div><span class="threshold">${selected.reviewCorrect}/${selected.reviewPicks.length}</span></div><div class="review-list">${pickRows(shownPicks)}</div>` : `<div class="week-grid">${weekCards}</div>`;
-  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Compare previous weeks, strategies and UK kickoff-time results.</p></div><div class="review-controls"><label>View<select id="review-week">${options}</select></label><label>Strategy<select id="review-strategy">${strategyOptions}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>All selected picks</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
+  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">THREE SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${portfolioSection("Top 10 overall", "FULL WEEKEND", selected.reviewStrategies.top10)}${portfolioSection("Saturday Top 5", "SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "SUNDAY", selected.reviewStrategies.sundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
+  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Only the saved Top 10, Saturday Top 5 and Sunday Top 5 are reviewed.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
 }
 
 function bindReviewControls() {
   document.querySelector("#review-week")?.addEventListener("change", event => { selectedReviewWeek = event.target.value; render(); });
-  document.querySelector("#review-strategy")?.addEventListener("change", event => { selectedReviewStrategy = event.target.value; render(); });
   document.querySelectorAll("[data-review-week]").forEach(button => button.addEventListener("click", () => { selectedReviewWeek = button.dataset.reviewWeek; render(); }));
 }
 
