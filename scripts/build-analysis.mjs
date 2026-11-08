@@ -49,6 +49,24 @@ function makePicks(ranked, limit) {
   });
 }
 
+function makeMarketPicks(ranked, market, day, limit) {
+  const selected = ranked
+    .filter(({ fixture }) => !day || londonDay(fixture.utcDate) === day)
+    .sort((a, b) => b.prediction.goalMarkets[market] - a.prediction.goalMarkets[market] || new Date(a.fixture.utcDate) - new Date(b.fixture.utcDate));
+  return makePicks(selected, limit).map(pick => {
+    const marketProbability = pick.goalMarkets[market];
+    const marketWon = market === "over25" ? pick.actualGoals >= 3 : pick.actualBtts;
+    return {
+      ...pick,
+      market,
+      marketLabel: market === "over25" ? "Over 2.5 goals" : "BTTS Yes",
+      marketProbability,
+      marketActual: pick.settled ? (market === "over25" ? `${pick.actualGoals} total goals` : pick.actualBtts ? "BTTS Yes" : "BTTS No") : null,
+      correct: pick.settled ? marketWon : null,
+    };
+  });
+}
+
 function strategySummary(picks) {
   const settledPicks = picks.filter(pick => pick.settled);
   const correct = settledPicks.filter(pick => pick.correct).length;
@@ -65,6 +83,12 @@ const weeks = batches.map(batch => {
   const marginPicks = makePicks([...ranked].sort((a, b) => (b.prediction.confidence * 0.7 + b.prediction.outcomeMargin * 0.3) - (a.prediction.confidence * 0.7 + a.prediction.outcomeMargin * 0.3)), 10);
   const saturdayPicks = makePicks(ranked.filter(({ fixture }) => londonDay(fixture.utcDate) === "saturday"), 5);
   const sundayPicks = makePicks(ranked.filter(({ fixture }) => londonDay(fixture.utcDate) === "sunday"), 5);
+  const over25Picks = makeMarketPicks(ranked, "over25", null, 10);
+  const over25SaturdayPicks = makeMarketPicks(ranked, "over25", "saturday", 5);
+  const over25SundayPicks = makeMarketPicks(ranked, "over25", "sunday", 5);
+  const bttsPicks = makeMarketPicks(ranked, "btts", null, 10);
+  const bttsSaturdayPicks = makeMarketPicks(ranked, "btts", "saturday", 5);
+  const bttsSundayPicks = makeMarketPicks(ranked, "btts", "sunday", 5);
   const settledTop10 = picks.filter(pick => pick.settled);
   const correct = settledTop10.filter(pick => pick.correct).length;
   return {
@@ -81,6 +105,12 @@ const weeks = batches.map(batch => {
       marginShadowTop10: strategySummary(marginPicks),
       saturdayTop5: strategySummary(saturdayPicks),
       sundayTop5: strategySummary(sundayPicks),
+      over25Top10: strategySummary(over25Picks),
+      over25SaturdayTop5: strategySummary(over25SaturdayPicks),
+      over25SundayTop5: strategySummary(over25SundayPicks),
+      bttsTop10: strategySummary(bttsPicks),
+      bttsSaturdayTop5: strategySummary(bttsSaturdayPicks),
+      bttsSundayTop5: strategySummary(bttsSundayPicks),
     },
   };
 });
@@ -103,7 +133,7 @@ function groupedSummary(items, keyFor) {
 }
 
 const allPicks = weeks.flatMap(week => week.picks);
-const strategyOverall = Object.fromEntries(["top10", "filteredTop10", "marginShadowTop10", "saturdayTop5", "sundayTop5"].map(strategy => {
+const strategyOverall = Object.fromEntries(["top10", "filteredTop10", "marginShadowTop10", "saturdayTop5", "sundayTop5", "over25Top10", "over25SaturdayTop5", "over25SundayTop5", "bttsTop10", "bttsSaturdayTop5", "bttsSundayTop5"].map(strategy => {
   const picks = weeks.flatMap(week => week.strategies[strategy].picks);
   return [strategy, strategySummary(picks)];
 }));
