@@ -192,7 +192,7 @@ function marketTable(title, subtitle, picks, market) {
   const rows = picks.map((fixture, index) => {
     const result = predict(fixture);
     const probability = result.goalMarkets[market];
-    return `<article class="top-pick-row market-row"><div class="top-pick-match"><span class="review-rank">${index + 1}</span><div><span class="top-pick-league">${fixture.competition?.name || "League"}</span><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><span class="top-pick-kickoff">${fixture.date}</span></div></div><div class="top-pick-call"><div><span class="eyebrow">${label.toUpperCase()}</span><strong>${probability >= 50 ? "Yes" : "Caution"}</strong><small>Expected score ${result.expectedScore}</small></div><div class="top-pick-score"><b>${probability}%</b><small>probability</small></div></div></article>`;
+    return `<article class="top-pick-row"><div class="top-pick-match"><span class="top-pick-league">${fixture.competition?.name || "League"}</span><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><span class="top-pick-kickoff">${fixture.date}</span></div><div class="top-pick-call"><div><span class="eyebrow">${label.toUpperCase()}</span><strong>${probability >= 50 ? "Yes" : "Caution"}</strong><small>Expected score ${result.expectedScore}</small></div><div class="top-pick-score"><b>${probability}%</b><small>probability</small></div></div></article>`;
   }).join("");
   return `<section class="market-section"><div class="portfolio-heading"><div><span class="section-kicker">${subtitle}</span><h3>${title}</h3></div><span class="threshold">${picks.length} picks</span></div><div class="top-picks-list">${rows || `<div class="empty compact">No fixtures available.</div>`}</div></section>`;
 }
@@ -209,7 +209,7 @@ function strategyFor(week, strategy) {
 
 function reviewWeeks() {
   return [...(performanceData?.weeks ?? [])].reverse().map(week => {
-    const strategies = Object.fromEntries(["top10", "filteredTop10", "saturdayTop5", "sundayTop5"].map(name => {
+    const strategies = Object.fromEntries(["top10", "filteredTop10", "saturdayTop5", "sundayTop5", "over25Top10", "over25SaturdayTop5", "over25SundayTop5", "bttsTop10", "bttsSaturdayTop5", "bttsSundayTop5"].map(name => {
       const source = strategyFor(week, name) ?? { picks: [] };
       const picks = (source.picks ?? []).filter(pick => currentLeague === "all" || (pick.competition?.code || "PL") === currentLeague);
       const settled = picks.filter(pick => pick.settled !== false && pick.actualOutcome);
@@ -258,8 +258,8 @@ function pickRows(picks) {
     return `<article class="review-row">
     <span class="review-rank">${pick.rank}</span>
     <div><span class="top-pick-league">${pick.competition?.name || "League"}</span><div class="review-match"><strong>${pick.home} ${pick.finalScore ?? "vs"} ${pick.away}</strong><small>${formatReviewKickoff(pick.utcDate)} · ${kickoffBand(pick.utcDate)}</small></div></div>
-    <div class="review-call"><span>Predicted</span><strong>${pick.prediction}</strong><small>${pick.confidence}% confidence</small><div class="caution-list">${cautionBadges(pick)}</div></div>
-    <div class="review-result ${pending ? "is-pending" : pick.correct ? "is-correct" : "is-missed"}"><b>${pending ? "Pending" : pick.correct ? "✓ Correct" : "× Missed"}</b><small>${pending ? "Awaiting result" : pick.actualOutcome}</small></div>
+    <div class="review-call"><span>${pick.market ? "Market selection" : "Predicted"}</span><strong>${pick.marketLabel ?? pick.prediction}</strong><small>${pick.market ? pick.marketProbability : pick.confidence}% probability</small>${pick.market ? "" : `<div class="caution-list">${cautionBadges(pick)}</div>`}</div>
+    <div class="review-result ${pending ? "is-pending" : pick.correct ? "is-correct" : "is-missed"}"><b>${pending ? "Pending" : pick.correct ? "✓ Correct" : "× Missed"}</b><small>${pending ? "Awaiting result" : pick.marketActual ?? pick.actualOutcome}</small></div>
   </article>`;
   }).join("");
 }
@@ -297,7 +297,7 @@ function reviewDashboard() {
     const sun = portfolioSummary(week.reviewStrategies.sundayTop5);
     return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${top.score}</strong><small>Top 10 · ${top.accuracy}%</small><em>Filtered ${filtered.score} · Sat ${sat.score} · Sun ${sun.score}</em></button>`;
   }).join("");
-  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">FOUR SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${portfolioSection("Top 10 overall", "FULL WEEKEND", selected.reviewStrategies.top10)}${portfolioSection("Filtered Top 10", "NO EARLY KICKOFFS OR AWAY WINS", selected.reviewStrategies.filteredTop10)}${portfolioSection("Saturday Top 5", "SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "SUNDAY", selected.reviewStrategies.sundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
+  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${portfolioSection("Top 10 overall", "MATCH RESULT", selected.reviewStrategies.top10)}${portfolioSection("Filtered Top 10", "MATCH RESULT · FILTERED", selected.reviewStrategies.filteredTop10)}${portfolioSection("Saturday Top 5", "MATCH RESULT · SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "MATCH RESULT · SUNDAY", selected.reviewStrategies.sundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Over 2.5 goals</h3></div>${portfolioSection("Weekend Top 10", "OVER 2.5 · ALL WEEKEND", selected.reviewStrategies.over25Top10)}${portfolioSection("Saturday Top 5", "OVER 2.5 · SATURDAY", selected.reviewStrategies.over25SaturdayTop5)}${portfolioSection("Sunday Top 5", "OVER 2.5 · SUNDAY", selected.reviewStrategies.over25SundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Both teams to score</h3></div>${portfolioSection("Weekend Top 10", "BTTS · ALL WEEKEND", selected.reviewStrategies.bttsTop10)}${portfolioSection("Saturday Top 5", "BTTS · SATURDAY", selected.reviewStrategies.bttsSaturdayTop5)}${portfolioSection("Sunday Top 5", "BTTS · SUNDAY", selected.reviewStrategies.bttsSundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
   return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Review the saved Top 10, Filtered Top 10 and both daily Top 5 portfolios.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
 }
 
