@@ -275,6 +275,33 @@ function portfolioSection(title, subtitle, strategy) {
   return `<section class="portfolio-section"><div class="portfolio-heading"><div><span class="section-kicker">${subtitle}</span><h3>${title}</h3></div><div class="portfolio-score"><strong>${summary.score}</strong><span>${summary.accuracy}% correct${summary.pending ? ` · ${summary.pending} pending` : ""}</span></div></div><div class="review-list">${strategy.picks.length ? pickRows(strategy.picks) : '<div class="empty compact">No qualifying picks for this day.</div>'}</div></section>`;
 }
 
+function weeklySummary(week) {
+  const resultPortfolios = [
+    ["Top 10", week.reviewStrategies.top10],
+    ["Filtered Top 10", week.reviewStrategies.filteredTop10],
+    ["Saturday Top 5", week.reviewStrategies.saturdayTop5],
+    ["Sunday Top 5", week.reviewStrategies.sundayTop5],
+  ].map(([name, strategy]) => ({ name, strategy, ...portfolioSummary(strategy) }));
+  const completed = resultPortfolios.filter(portfolio => portfolio.strategy.settled > 0);
+  const best = [...completed].sort((a, b) => b.accuracy - a.accuracy || b.strategy.settled - a.strategy.settled)[0];
+  const top = resultPortfolios[0];
+  const over25 = portfolioSummary(week.reviewStrategies.over25Top10);
+  const btts = portfolioSummary(week.reviewStrategies.bttsTop10);
+  const misses = week.reviewStrategies.top10.picks.filter(pick => pick.settled !== false && pick.actualOutcome && !pick.correct);
+  const earlyMisses = misses.filter(pick => kickoffHour(pick.utcDate) < 14).length;
+  const awayMisses = misses.filter(pick => pick.predictedOutcome === "away").length;
+  const drawRiskMisses = misses.filter(pick => {
+    const selected = pick.probabilities?.[pick.predictedOutcome];
+    return pick.predictedOutcome !== "draw" && selected != null && pick.probabilities?.draw != null && selected - pick.probabilities.draw <= 10;
+  }).length;
+  const cautionText = !misses.length ? "No missed Top 10 calls to analyse." : [
+    earlyMisses ? `${earlyMisses} involved an early kickoff` : "",
+    awayMisses ? `${awayMisses} were away-win calls` : "",
+    drawRiskMisses ? `${drawRiskMisses} carried draw risk` : "",
+  ].filter(Boolean).join(" · ") || "The missed calls had no shared caution marker.";
+  return `<section class="weekly-summary"><div><span class="section-kicker">WEEK AT A GLANCE</span><h3>${top.score} Top 10 selections correct</h3><p>${top.accuracy}% accuracy${top.pending ? ` with ${top.pending} still pending` : ""}. ${best ? `${best.name} was the strongest result portfolio at ${best.accuracy}%.` : "Results are still pending."}</p></div><div class="weekly-summary-stat"><span>OVER 2.5</span><strong>${over25.score}</strong><small>${over25.accuracy}% correct</small></div><div class="weekly-summary-stat"><span>BTTS</span><strong>${btts.score}</strong><small>${btts.accuracy}% correct</small></div><div class="weekly-summary-note"><span>WHAT STOOD OUT</span><p>${cautionText}</p></div></section>`;
+}
+
 function reviewDashboard() {
   const weeks = reviewWeeks();
   if (!weeks.length) return '<div class="empty"><strong>No completed review yet.</strong><br>The first report will appear after a completed weekend is settled.</div>';
@@ -297,7 +324,7 @@ function reviewDashboard() {
     const sun = portfolioSummary(week.reviewStrategies.sundayTop5);
     return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${top.score}</strong><small>Top 10 · ${top.accuracy}%</small><em>Filtered ${filtered.score} · Sat ${sat.score} · Sun ${sun.score}</em></button>`;
   }).join("");
-  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${portfolioSection("Top 10 overall", "MATCH RESULT", selected.reviewStrategies.top10)}${portfolioSection("Filtered Top 10", "MATCH RESULT · FILTERED", selected.reviewStrategies.filteredTop10)}${portfolioSection("Saturday Top 5", "MATCH RESULT · SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "MATCH RESULT · SUNDAY", selected.reviewStrategies.sundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Over 2.5 goals</h3></div>${portfolioSection("Weekend Top 10", "OVER 2.5 · ALL WEEKEND", selected.reviewStrategies.over25Top10)}${portfolioSection("Saturday Top 5", "OVER 2.5 · SATURDAY", selected.reviewStrategies.over25SaturdayTop5)}${portfolioSection("Sunday Top 5", "OVER 2.5 · SUNDAY", selected.reviewStrategies.over25SundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Both teams to score</h3></div>${portfolioSection("Weekend Top 10", "BTTS · ALL WEEKEND", selected.reviewStrategies.bttsTop10)}${portfolioSection("Saturday Top 5", "BTTS · SATURDAY", selected.reviewStrategies.bttsSaturdayTop5)}${portfolioSection("Sunday Top 5", "BTTS · SUNDAY", selected.reviewStrategies.bttsSundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
+  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${weeklySummary(selected)}${portfolioSection("Top 10 overall", "MATCH RESULT", selected.reviewStrategies.top10)}${portfolioSection("Filtered Top 10", "MATCH RESULT · FILTERED", selected.reviewStrategies.filteredTop10)}${portfolioSection("Saturday Top 5", "MATCH RESULT · SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "MATCH RESULT · SUNDAY", selected.reviewStrategies.sundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Over 2.5 goals</h3></div>${portfolioSection("Weekend Top 10", "OVER 2.5 · ALL WEEKEND", selected.reviewStrategies.over25Top10)}${portfolioSection("Saturday Top 5", "OVER 2.5 · SATURDAY", selected.reviewStrategies.over25SaturdayTop5)}${portfolioSection("Sunday Top 5", "OVER 2.5 · SUNDAY", selected.reviewStrategies.over25SundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Both teams to score</h3></div>${portfolioSection("Weekend Top 10", "BTTS · ALL WEEKEND", selected.reviewStrategies.bttsTop10)}${portfolioSection("Saturday Top 5", "BTTS · SATURDAY", selected.reviewStrategies.bttsSaturdayTop5)}${portfolioSection("Sunday Top 5", "BTTS · SUNDAY", selected.reviewStrategies.bttsSundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
   return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Review the saved Top 10, Filtered Top 10 and both daily Top 5 portfolios.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
 }
 
@@ -317,7 +344,7 @@ function topPicksTable(picks, filter) {
         <span class="top-pick-kickoff">${fixture.date}</span>
       </div>
       <div class="top-pick-call">
-        <div><span class="eyebrow">OUR PREDICTION</span><strong>${result.label}</strong></div>
+        <div><span class="eyebrow">OUR PREDICTION</span><strong>${result.label}</strong><small class="top-pick-reason">${result.reason || "Based on form, venue performance and team strength"}</small></div>
         <div class="top-pick-score"><b>${result.confidence}%</b><small>confidence</small></div>
       </div>
     </article>`;
