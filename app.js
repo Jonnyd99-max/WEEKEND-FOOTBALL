@@ -10,7 +10,10 @@ const CONFIG = {
 
 let fixtures = [];
 let historyFixtures = [];
+let performanceData = null;
 let currentLeague = "all";
+let selectedReviewWeek = "all";
+let selectedReviewStrategy = "top10";
 
 const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
 const total = results => results.reduce((sum, result) => sum + points(result), 0);
@@ -148,46 +151,87 @@ function card(fixture) {
 
 let currentFilter = "all";
 function render() {
+  const isTop = currentFilter.startsWith("top");
   let visible = fixtures.filter(fixture => {
-    const matchesDay = currentFilter === "all" || currentFilter === "top" || currentFilter === "review" || fixture.day === currentFilter;
+    const topDay = currentFilter === "top-saturday" ? "saturday" : currentFilter === "top-sunday" ? "sunday" : null;
+    const matchesDay = currentFilter === "all" || currentFilter === "review" || (isTop && (!topDay || fixture.day === topDay)) || fixture.day === currentFilter;
     const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
     return matchesDay && matchesLeague;
   });
-  if (currentFilter === "top") visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, 10);
-  document.querySelector("#fixture-count").textContent = currentFilter === "review" ? reviewPicks().length : visible.length;
-  document.querySelector("#match-list").innerHTML = currentFilter === "top" ? topPicksTable(visible) : currentFilter === "review" ? reviewTable() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+  if (isTop) visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, currentFilter === "top" ? 10 : 5);
+  document.querySelector("#fixture-count").textContent = currentFilter === "review" ? reviewCount() : visible.length;
+  document.querySelector("#match-list").innerHTML = isTop ? topPicksTable(visible, currentFilter) : currentFilter === "review" ? reviewDashboard() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+  if (currentFilter === "review") bindReviewControls();
 }
 
-function reviewPicks() {
-  const filtered = historyFixtures.filter(fixture => fixture.actual && (currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague));
-  const batches = [...new Set(filtered.map(fixture => fixture.predictionBatch).filter(Boolean))].sort((a, b) => new Date(b) - new Date(a));
-  if (!batches.length) return [];
-  return filtered.filter(fixture => fixture.predictionBatch === batches[0])
-    .sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, 10);
+function strategyFor(week) {
+  if (week.strategies) return week.strategies[selectedReviewStrategy];
+  return selectedReviewStrategy === "top10" ? { picks: week.picks, correct: week.top10Correct, accuracy: week.top10Accuracy } : { picks: [], correct: 0, accuracy: 0 };
 }
 
-function reviewTable() {
-  const picks = reviewPicks();
-  if (!picks.length) return '<div class="empty"><strong>No completed review yet.</strong><br>The first result report will appear after the next Wednesday update settles a completed weekend.</div>';
-  const predictedOutcome = prediction => prediction.probabilities ? ["home", "draw", "away"].sort((a, b) => prediction.probabilities[b] - prediction.probabilities[a])[0] : null;
-  const correct = picks.filter(fixture => predictedOutcome(predict(fixture)) === fixture.actual.outcome).length;
-  const accuracy = Math.round(correct / picks.length * 100);
-  const rows = picks.map((fixture, index) => {
-    const prediction = predict(fixture);
-    const actualLabel = fixture.actual.outcome === "draw" ? "Draw" : `${fixture[fixture.actual.outcome].name} won`;
-    const hit = predictedOutcome(prediction) === fixture.actual.outcome;
-    return `<article class="review-row">
-      <span class="review-rank">${index + 1}</span>
-      <div><span class="top-pick-league">${fixture.competition?.name || "Premier League"}</span><div class="review-match"><strong>${fixture.home.name} ${fixture.actual.homeGoals}–${fixture.actual.awayGoals} ${fixture.away.name}</strong><small>${fixture.date}</small></div></div>
-      <div class="review-call"><span>Predicted</span><strong>${prediction.label}</strong><small>${prediction.confidence}% confidence</small></div>
-      <div class="review-result ${hit ? "is-correct" : "is-missed"}"><b>${hit ? "✓ Correct" : "× Missed"}</b><small>${actualLabel}</small></div>
-    </article>`;
+function reviewWeeks() {
+  return [...(performanceData?.weeks ?? [])].reverse().map(week => {
+    const strategy = strategyFor(week) ?? { picks: [] };
+    const picks = (strategy.picks ?? []).filter(pick => currentLeague === "all" || (pick.competition?.code || "PL") === currentLeague);
+    return { ...week, reviewPicks: picks, reviewCorrect: picks.filter(pick => pick.correct).length };
+  });
+}
+
+function reviewCount() {
+  return reviewWeeks().reduce((sum, week) => sum + week.reviewPicks.length, 0);
+}
+
+function kickoffBand(utcDate) {
+  const hour = Number(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", hour12: false }).format(new Date(utcDate)).slice(0, 2));
+  return hour < 14 ? "Early · before 14:00" : hour < 17 ? "Afternoon · 14:00–16:59" : "Evening · 17:00+";
+}
+
+function formatReviewKickoff(utcDate) {
+  return new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(utcDate)).replace(" at ", " · ");
+}
+
+function pickRows(picks) {
+  return picks.map(pick => `<article class="review-row">
+    <span class="review-rank">${pick.rank}</span>
+    <div><span class="top-pick-league">${pick.competition?.name || "League"}</span><div class="review-match"><strong>${pick.home} ${pick.finalScore} ${pick.away}</strong><small>${formatReviewKickoff(pick.utcDate)} · ${kickoffBand(pick.utcDate)}</small></div></div>
+    <div class="review-call"><span>Predicted</span><strong>${pick.prediction}</strong><small>${pick.confidence}% confidence</small></div>
+    <div class="review-result ${pick.correct ? "is-correct" : "is-missed"}"><b>${pick.correct ? "✓ Correct" : "× Missed"}</b><small>${pick.actualOutcome}</small></div>
+  </article>`).join("");
+}
+
+function reviewDashboard() {
+  const weeks = reviewWeeks();
+  if (!weeks.length) return '<div class="empty"><strong>No completed review yet.</strong><br>The first report will appear after a completed weekend is settled.</div>';
+  const allPicks = weeks.flatMap(week => week.reviewPicks);
+  const selected = selectedReviewWeek === "all" ? null : weeks.find(week => week.predictionBatch === selectedReviewWeek);
+  const shownPicks = selected?.reviewPicks ?? [];
+  const correct = allPicks.filter(pick => pick.correct).length;
+  const accuracy = Math.round(correct / Math.max(1, allPicks.length) * 100);
+  const averageConfidence = Math.round(allPicks.reduce((sum, pick) => sum + pick.confidence, 0) / Math.max(1, allPicks.length));
+  const bands = ["Early · before 14:00", "Afternoon · 14:00–16:59", "Evening · 17:00+"];
+  const bandCards = bands.map(band => {
+    const picks = allPicks.filter(pick => kickoffBand(pick.utcDate) === band);
+    const hits = picks.filter(pick => pick.correct).length;
+    return `<div class="audit-card"><span>${band}</span><strong>${picks.length ? Math.round(hits / picks.length * 100) : 0}%</strong><small>${hits}/${picks.length} correct</small></div>`;
   }).join("");
-  const batchDate = new Date(picks[0].predictionBatch).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
-  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">LATEST COMPLETED TOP 10</span><h2>Performance review</h2><p>Predictions published ${batchDate}, checked against final scores.</p></div><div class="review-stat"><strong>${correct}/${picks.length}</strong><span>correct · ${accuracy}%</span></div></div><div class="review-list">${rows}</div></div>`;
+  const options = [`<option value="all" ${selectedReviewWeek === "all" ? "selected" : ""}>All completed weeks</option>`, ...weeks.map(week => `<option value="${week.predictionBatch}" ${selectedReviewWeek === week.predictionBatch ? "selected" : ""}>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</option>`)].join("");
+  const strategyOptions = [["top10", "Top 10 overall"], ["saturdayTop5", "Saturday Top 5"], ["sundayTop5", "Sunday Top 5"]].map(([value, label]) => `<option value="${value}" ${selectedReviewStrategy === value ? "selected" : ""}>${label}</option>`).join("");
+  const weekCards = weeks.map(week => {
+    const total = week.reviewPicks.length;
+    const pct = total ? Math.round(week.reviewCorrect / total * 100) : 0;
+    return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${week.reviewCorrect}/${total}</strong><small>${pct}% correct</small></button>`;
+  }).join("");
+  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">WEEKLY PICKS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div><span class="threshold">${selected.reviewCorrect}/${selected.reviewPicks.length}</span></div><div class="review-list">${pickRows(shownPicks)}</div>` : `<div class="week-grid">${weekCards}</div>`;
+  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Compare previous weeks, strategies and UK kickoff-time results.</p></div><div class="review-controls"><label>View<select id="review-week">${options}</select></label><label>Strategy<select id="review-strategy">${strategyOptions}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>All selected picks</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
 }
 
-function topPicksTable(picks) {
+function bindReviewControls() {
+  document.querySelector("#review-week")?.addEventListener("change", event => { selectedReviewWeek = event.target.value; render(); });
+  document.querySelector("#review-strategy")?.addEventListener("change", event => { selectedReviewStrategy = event.target.value; render(); });
+  document.querySelectorAll("[data-review-week]").forEach(button => button.addEventListener("click", () => { selectedReviewWeek = button.dataset.reviewWeek; render(); }));
+}
+
+function topPicksTable(picks, filter) {
   if (!picks.length) return '<div class="empty">No predictions are currently available.</div>';
   const rows = picks.map(fixture => {
     const result = predict(fixture);
@@ -203,7 +247,9 @@ function topPicksTable(picks) {
       </div>
     </article>`;
   }).join("");
-  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGHEST-CONFIDENCE FORECASTS</span><h2>Top picks</h2><p>The ten strongest calls across your selected leagues.</p></div><span class="threshold">Top 10</span></div><div class="top-picks-list">${rows}</div></div>`;
+  const day = filter === "top-saturday" ? "Saturday" : filter === "top-sunday" ? "Sunday" : "Weekend";
+  const count = filter === "top" ? 10 : 5;
+  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGHEST-CONFIDENCE FORECASTS</span><h2>${day} top picks</h2><p>The ${count} strongest calls across your selected leagues.</p></div><span class="threshold">Top ${count}</span></div><div class="top-picks-list">${rows}</div></div>`;
 }
 
 function renderLeaguePicker() {
@@ -238,6 +284,12 @@ async function loadFixtures() {
       if (historyResponse.ok) historyFixtures = (await historyResponse.json()).fixtures ?? [];
     } catch (historyError) {
       console.warn("Performance history is not available yet.", historyError);
+    }
+    try {
+      const performanceResponse = await fetch(`performance.json?v=${Date.now()}`);
+      if (performanceResponse.ok) performanceData = await performanceResponse.json();
+    } catch (performanceError) {
+      console.warn("Performance audit is not available yet.", performanceError);
     }
     fixtures = data.fixtures;
     renderLeaguePicker();
