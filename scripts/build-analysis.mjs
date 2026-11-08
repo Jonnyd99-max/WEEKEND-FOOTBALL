@@ -33,6 +33,8 @@ function makePicks(ranked, limit) {
       predictedOutcome: outcome,
       prediction: prediction.label,
       confidence: prediction.confidence,
+      reason: prediction.reason ?? null,
+      expectedScore: prediction.expectedScore ?? null,
       probabilities: prediction.probabilities,
       outcomeMargin: prediction.outcomeMargin,
       drawRisk: prediction.drawRisk,
