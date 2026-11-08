@@ -174,7 +174,7 @@ function strategyFor(week, strategy) {
 
 function reviewWeeks() {
   return [...(performanceData?.weeks ?? [])].reverse().map(week => {
-    const strategies = Object.fromEntries(["top10", "saturdayTop5", "sundayTop5"].map(name => {
+    const strategies = Object.fromEntries(["top10", "filteredTop10", "saturdayTop5", "sundayTop5"].map(name => {
       const source = strategyFor(week, name) ?? { picks: [] };
       const picks = (source.picks ?? []).filter(pick => currentLeague === "all" || (pick.competition?.code || "PL") === currentLeague);
       const settled = picks.filter(pick => pick.settled !== false && pick.actualOutcome);
@@ -254,12 +254,13 @@ function reviewDashboard() {
   const options = [`<option value="all" ${selectedReviewWeek === "all" ? "selected" : ""}>All completed weeks</option>`, ...weeks.map(week => `<option value="${week.predictionBatch}" ${selectedReviewWeek === week.predictionBatch ? "selected" : ""}>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</option>`)].join("");
   const weekCards = weeks.map(week => {
     const top = portfolioSummary(week.reviewStrategies.top10);
+    const filtered = portfolioSummary(week.reviewStrategies.filteredTop10);
     const sat = portfolioSummary(week.reviewStrategies.saturdayTop5);
     const sun = portfolioSummary(week.reviewStrategies.sundayTop5);
-    return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${top.score}</strong><small>Top 10 · ${top.accuracy}%</small><em>Sat ${sat.score} · Sun ${sun.score}</em></button>`;
+    return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${top.score}</strong><small>Top 10 · ${top.accuracy}%</small><em>Filtered ${filtered.score} · Sat ${sat.score} · Sun ${sun.score}</em></button>`;
   }).join("");
-  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">THREE SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${portfolioSection("Top 10 overall", "FULL WEEKEND", selected.reviewStrategies.top10)}${portfolioSection("Saturday Top 5", "SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "SUNDAY", selected.reviewStrategies.sundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
-  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Only the saved Top 10, Saturday Top 5 and Sunday Top 5 are reviewed.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
+  const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">FOUR SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${portfolioSection("Top 10 overall", "FULL WEEKEND", selected.reviewStrategies.top10)}${portfolioSection("Filtered Top 10", "NO EARLY KICKOFFS OR AWAY WINS", selected.reviewStrategies.filteredTop10)}${portfolioSection("Saturday Top 5", "SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "SUNDAY", selected.reviewStrategies.sundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
+  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Review the saved Top 10, Filtered Top 10 and both daily Top 5 portfolios.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
 }
 
 function bindReviewControls() {
