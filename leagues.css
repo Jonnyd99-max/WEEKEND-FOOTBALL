@@ -101,6 +101,8 @@
 
 .review-wrap,.review-list{display:grid;gap:14px}.review-summary{display:flex;align-items:center;justify-content:space-between;padding:26px 28px;background:#fffef8;border:1px solid #e1e3dc;border-radius:18px;box-shadow:0 5px 22px #213a2c0a}.review-summary h2{margin:5px 0 2px;color:#172d23;font:600 27px 'Space Grotesk',sans-serif}.review-summary p{margin:0;color:#728078;font-size:11px}.review-stat{display:grid;place-items:center;min-width:94px;padding:14px;color:#fff;background:#174f3c;border-radius:13px}.review-stat strong{font:600 26px 'Space Grotesk',sans-serif}.review-stat span{font-size:8px;font-weight:800;text-transform:uppercase}.review-row{display:grid;grid-template-columns:38px minmax(0,1.6fr) minmax(190px,.8fr) 100px;align-items:center;gap:18px;padding:18px 22px;background:#fffef8;border:1px solid #e1e3dc;border-radius:15px;box-shadow:0 5px 22px #213a2c0a}.review-rank{display:grid;place-items:center;width:32px;height:32px;color:#315546;background:#e7eee9;border-radius:9px;font:700 12px 'Space Grotesk',sans-serif}.review-match{display:grid;gap:4px;margin-top:8px}.review-match strong{font:600 14px 'Space Grotesk',sans-serif}.review-match small,.review-call span,.review-call small,.review-result small{color:#728078;font-size:9px}.review-call{display:grid;gap:3px}.review-call strong{font:600 13px 'Space Grotesk',sans-serif}.review-result{display:grid;gap:3px;padding:10px;border-radius:9px;text-align:center}.review-result b{font-size:11px}.review-result.is-correct{color:#28521e;background:#e4f5cb}.review-result.is-missed{color:#7a302b;background:#f8dedb}.review-result small{color:inherit}
 
+.review-controls{display:flex;gap:10px;align-items:end}.review-controls label{display:grid;gap:5px;color:#728078;font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.review-controls select{min-width:165px;padding:10px 32px 10px 11px;color:#173629;background:#f2f3ed;border:1px solid #d9ded5;border-radius:8px;font:700 10px Manrope,Arial,sans-serif}.audit-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.audit-card{display:grid;gap:4px;padding:17px 18px;background:#fffef8;border:1px solid #e1e3dc;border-radius:13px}.audit-card.primary{color:#fff;background:#174f3c;border-color:#174f3c}.audit-card span{font-size:8px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.audit-card strong{font:600 23px 'Space Grotesk',sans-serif}.audit-card small{color:#728078;font-size:9px}.audit-card.primary small{color:#c8d8d1}.week-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.week-card{display:grid;gap:5px;padding:18px;text-align:left;color:#173629;background:#fffef8;border:1px solid #e1e3dc;border-radius:13px;cursor:pointer}.week-card:hover{border-color:#174f3c;transform:translateY(-1px)}.week-card span{font-size:9px;font-weight:800;text-transform:uppercase}.week-card strong{font:600 24px 'Space Grotesk',sans-serif}.week-card small{color:#728078;font-size:9px}.review-detail-heading{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:#fffef8;border:1px solid #e1e3dc;border-radius:14px}.review-detail-heading h3{margin:5px 0 0;font:600 21px 'Space Grotesk',sans-serif}
+
 .top-pick-row {
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(290px, 1fr);
@@ -213,6 +215,8 @@
   .top-pick-match {
     grid-template-columns: 105px minmax(0, 1fr) 150px;
   }
+
+  .audit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.week-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
 @media (max-width: 760px) {
@@ -278,6 +282,6 @@
     height: 58px;
   }
 
-  .review-summary{align-items:flex-start;padding:21px}.review-summary h2{font-size:24px}.review-summary p{max-width:210px}.review-stat{min-width:78px;margin-left:12px}.review-row{grid-template-columns:34px 1fr;padding:17px;gap:13px}.review-call{grid-column:2}.review-result{grid-column:2;justify-self:start;min-width:100px}
+  .review-summary{align-items:flex-start;flex-direction:column;padding:21px}.review-summary h2{font-size:24px}.review-summary p{max-width:280px}.review-controls{width:100%;align-items:stretch;flex-direction:column;margin-top:12px}.review-controls select{width:100%}.audit-grid{grid-template-columns:1fr 1fr}.week-grid{grid-template-columns:1fr}.review-row{grid-template-columns:34px 1fr;padding:17px;gap:13px}.review-call{grid-column:2}.review-result{grid-column:2;justify-self:start;min-width:100px}
 }
 
