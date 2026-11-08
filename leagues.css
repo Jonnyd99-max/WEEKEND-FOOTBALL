@@ -232,6 +232,7 @@
 .review-call .caution-chip { font-size: 6px; }
 
 .market-dashboard{display:grid;gap:18px}.market-section{display:grid;gap:12px;padding:22px;background:#f2f3ed;border-radius:17px}.top-pick-call small{display:block;margin-top:4px;color:#b8cbc3;font-size:8px}.review-market-divider{padding:20px 24px;color:#fff;background:linear-gradient(100deg,#143e31,#1c5743);border-radius:14px}.review-market-divider span{color:#c9f54a;font-size:8px;font-weight:800;letter-spacing:.14em}.review-market-divider h3{margin:5px 0 0;font:600 22px 'Space Grotesk',sans-serif}
+.top-pick-reason{max-width:260px;line-height:1.45}.weekly-summary{display:grid;grid-template-columns:minmax(260px,1.6fr) repeat(2,minmax(105px,.45fr));gap:12px;padding:22px;color:#173629;background:#eaf5c8;border:1px solid #d6e9a3;border-radius:17px}.weekly-summary h3{margin:5px 0 6px;font:600 22px 'Space Grotesk',sans-serif}.weekly-summary p{margin:0;color:#53635a;font-size:10px;line-height:1.6}.weekly-summary-stat{display:grid;align-content:center;padding:14px;text-align:center;background:#fffef8;border-radius:12px}.weekly-summary-stat span,.weekly-summary-note span{font-size:8px;font-weight:800;letter-spacing:.1em}.weekly-summary-stat strong{font:600 24px 'Space Grotesk',sans-serif}.weekly-summary-stat small{color:#68786f;font-size:8px}.weekly-summary-note{grid-column:1/-1;padding:13px 15px;background:#fffef899;border-radius:10px}.weekly-summary-note p{margin-top:4px}
 
 @media (max-width: 980px) {
   .top-pick-row {
@@ -309,5 +310,6 @@
   }
 
   .review-summary{align-items:flex-start;flex-direction:column;padding:21px}.review-summary h2{font-size:24px}.review-summary p{max-width:280px}.review-controls{width:100%;align-items:stretch;flex-direction:column;margin-top:12px}.review-controls select{width:100%}.audit-grid{grid-template-columns:1fr 1fr}.week-grid{grid-template-columns:1fr}.review-row{grid-template-columns:34px 1fr;padding:17px;gap:13px}.review-call{grid-column:2}.review-result{grid-column:2;justify-self:start;min-width:100px}
+  .weekly-summary{grid-template-columns:1fr 1fr}.weekly-summary>div:first-child,.weekly-summary-note{grid-column:1/-1}
 }
 
