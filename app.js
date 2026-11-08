@@ -71,12 +71,16 @@ function predict(fixture) {
   let homeProbability = 0;
   let drawProbability = 0;
   let awayProbability = 0;
+  let over25Probability = 0;
+  let bttsProbability = 0;
   for (let homeGoals = 0; homeGoals <= 8; homeGoals += 1) {
     for (let awayGoals = 0; awayGoals <= 8; awayGoals += 1) {
       const probability = poisson(homeGoals, expectedHome) * poisson(awayGoals, expectedAway);
       if (homeGoals > awayGoals) homeProbability += probability;
       else if (homeGoals < awayGoals) awayProbability += probability;
       else drawProbability += probability;
+      if (homeGoals + awayGoals >= 3) over25Probability += probability;
+      if (homeGoals > 0 && awayGoals > 0) bttsProbability += probability;
     }
   }
   const probabilityTotal = homeProbability + drawProbability + awayProbability;
@@ -88,7 +92,10 @@ function predict(fixture) {
     { key: "draw", probability: drawProbability, label: "Draw expected" },
     { key: "away", probability: awayProbability, label: `${fixture.away.name} win` },
   ];
-  const winner = outcomes.sort((a, b) => b.probability - a.probability)[0];
+  const rankedOutcomes = [...outcomes].sort((a, b) => b.probability - a.probability);
+  const winner = rankedOutcomes[0];
+  const outcomeMargin = Math.round((rankedOutcomes[0].probability - rankedOutcomes[1].probability) * 100);
+  const drawRisk = winner.key !== "draw" && winner.probability - drawProbability <= 0.1;
   const likelyHomeGoals = Math.min(6, Math.floor(expectedHome));
   const likelyAwayGoals = Math.min(6, Math.floor(expectedAway));
   const reasons = [];
@@ -104,6 +111,9 @@ function predict(fixture) {
     expectedHome: expectedHome.toFixed(2),
     expectedAway: expectedAway.toFixed(2),
     probabilities: { home: Math.round(homeProbability * 100), draw: Math.round(drawProbability * 100), away: Math.round(awayProbability * 100) },
+    outcomeMargin,
+    drawRisk,
+    goalMarkets: { over25: Math.round(over25Probability / probabilityTotal * 100), btts: Math.round(bttsProbability / probabilityTotal * 100) },
     baselineWeight: Math.round(baselineWeight * 100),
     reason: reasons.slice(0, 2).join(" · "),
     homeForm: total(fixture.home.form),
@@ -120,6 +130,7 @@ function card(fixture) {
   const explanation = result.modelVersion === 2 ? `<div class="breakdown">
         <div><span>Expected goals</span><strong>${result.expectedHome} — ${result.expectedAway}</strong></div><div><span>Likely score</span><strong>${result.expectedScore}</strong></div>
         <div><span>Home / draw / away</span><strong>${result.probabilities.home}% / ${result.probabilities.draw}% / ${result.probabilities.away}%</strong></div><div><span>Venue PPG</span><strong>${fixture.home.venuePointsPerGame} — ${fixture.away.venuePointsPerGame}</strong></div>
+        <div><span>Outcome margin</span><strong>${result.outcomeMargin} points</strong></div><div><span>Over 2.5 / BTTS</span><strong>${result.goalMarkets.over25}% / ${result.goalMarkets.btts}%</strong></div>
         <div><span>League position</span><strong>${fixture.home.position || "—"} — ${fixture.away.position || "—"}</strong></div><div><span>Rest days · all comps</span><strong>${fixture.home.restDays ?? "—"} — ${fixture.away.restDays ?? "—"}</strong></div>
       </div><p class="formula">Model V2 · ${result.baselineWeight}% previous-season baseline + current attack and defence + home/away record + opponent-adjusted form + all-competition rest + 5% head-to-head</p>` : `<div class="breakdown">
         <div><span>Home form</span><strong>${result.homeForm}<small>/15</small></strong></div><div><span>Away form</span><strong>${result.awayForm}<small>/15</small></strong></div>
@@ -207,6 +218,9 @@ function cautionBadges({ utcDate, predictedOutcome: savedOutcome, confidence, pr
   if (kickoffHour(utcDate) < 14) cautions.push("Early kickoff");
   if (outcome === "away") cautions.push("Away win");
   if (confidence < 80) cautions.push("Under 80%");
+  const drawProbability = probabilities?.draw;
+  const selectedProbability = outcome && probabilities?.[outcome];
+  if (outcome !== "draw" && selectedProbability != null && drawProbability != null && selectedProbability - drawProbability <= 10) cautions.push("Draw risk");
   return cautions.map(reason => `<span class="caution-chip">⚠ ${reason}</span>`).join("");
 }
 
