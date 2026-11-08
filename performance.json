@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-11-08T12:48:40.599Z",
+  "generatedAt": "2026-11-08T12:59:27.803Z",
   "modelVersion": 2,
   "note": "Frozen weekly Top 10 predictions recomputed from their saved original model inputs. Use this file for model reviews; never tune from one surprising result.",
   "overall": {
     "completedWeeks": 4,
-    "top10Predictions": 40,
-    "correct": 28,
-    "accuracy": 70,
-    "averageConfidence": 73.9
+    "top10Predictions": 37,
+    "pendingTop10Predictions": 3,
+    "correct": 27,
+    "accuracy": 73,
+    "averageConfidence": 74.7
   },
   "strategyOverall": {
     "top10": {
@@ -34,6 +35,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "6-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -58,6 +60,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -82,6 +85,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -106,6 +110,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "0-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -130,6 +135,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -154,6 +160,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -178,6 +185,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-3",
+          "settled": true,
           "correct": true
         },
         {
@@ -202,6 +210,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "2-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -226,6 +235,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -250,6 +260,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "0-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -274,6 +285,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -298,6 +310,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -322,6 +335,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -346,6 +360,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "1-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -370,6 +385,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -394,6 +410,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -418,6 +435,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -442,6 +460,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -466,6 +485,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -490,6 +510,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -514,6 +535,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "6-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -538,6 +560,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "2-5",
+          "settled": true,
           "correct": true
         },
         {
@@ -562,6 +585,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "2-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -586,6 +610,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "2-4",
+          "settled": true,
           "correct": false
         },
         {
@@ -610,6 +635,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -634,6 +660,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -658,6 +685,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -682,6 +710,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -706,6 +735,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -730,6 +760,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -754,6 +785,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "5-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -778,10 +810,36 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-0",
+          "settled": true,
           "correct": true
         },
         {
           "rank": 3,
+          "fixtureId": 565854,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-08T16:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "SC Freiburg",
+          "away": "1. FC Union Berlin",
+          "predictedOutcome": "home",
+          "prediction": "SC Freiburg win",
+          "confidence": 84,
+          "probabilities": {
+            "home": 84,
+            "draw": 10,
+            "away": 6
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 4,
           "fixtureId": 564741,
           "competition": {
             "code": "PD",
@@ -802,10 +860,36 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-3",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 4,
+          "rank": 5,
+          "fixtureId": 560638,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-08T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Brighton & Hove Albion FC",
+          "away": "Brentford FC",
+          "predictedOutcome": "home",
+          "prediction": "Brighton & Hove Albion FC win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 74,
+            "draw": 16,
+            "away": 10
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 6,
           "fixtureId": 565850,
           "competition": {
             "code": "BL1",
@@ -826,10 +910,11 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 5,
+          "rank": 7,
           "fixtureId": 560640,
           "competition": {
             "code": "PL",
@@ -850,10 +935,11 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 6,
+          "rank": 8,
           "fixtureId": 565851,
           "competition": {
             "code": "BL1",
@@ -874,10 +960,36 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-2",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 7,
+          "rank": 9,
+          "fixtureId": 560635,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-08T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Crystal Palace FC",
+          "away": "Liverpool FC",
+          "predictedOutcome": "away",
+          "prediction": "Liverpool FC win",
+          "confidence": 68,
+          "probabilities": {
+            "home": 14,
+            "draw": 18,
+            "away": 68
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 10,
           "fixtureId": 561930,
           "competition": {
             "code": "ELC",
@@ -898,84 +1010,15 @@
           },
           "actualOutcome": "home",
           "finalScore": "5-4",
+          "settled": true,
           "correct": true
-        },
-        {
-          "rank": 8,
-          "fixtureId": 561940,
-          "competition": {
-            "code": "ELC",
-            "name": "Championship"
-          },
-          "utcDate": "2026-11-07T15:00:00Z",
-          "kickoffDay": "saturday",
-          "kickoffBand": "afternoon_1400_1659",
-          "home": "Birmingham City FC",
-          "away": "Swansea City AFC",
-          "predictedOutcome": "home",
-          "prediction": "Birmingham City FC win",
-          "confidence": 67,
-          "probabilities": {
-            "home": 67,
-            "draw": 18,
-            "away": 15
-          },
-          "actualOutcome": "home",
-          "finalScore": "2-1",
-          "correct": true
-        },
-        {
-          "rank": 9,
-          "fixtureId": 560641,
-          "competition": {
-            "code": "PL",
-            "name": "Premier League"
-          },
-          "utcDate": "2026-11-07T17:30:00Z",
-          "kickoffDay": "saturday",
-          "kickoffBand": "evening_1700_plus",
-          "home": "Nottingham Forest FC",
-          "away": "Manchester City FC",
-          "predictedOutcome": "away",
-          "prediction": "Manchester City FC win",
-          "confidence": 66,
-          "probabilities": {
-            "home": 11,
-            "draw": 23,
-            "away": 66
-          },
-          "actualOutcome": "home",
-          "finalScore": "3-1",
-          "correct": false
-        },
-        {
-          "rank": 10,
-          "fixtureId": 561937,
-          "competition": {
-            "code": "ELC",
-            "name": "Championship"
-          },
-          "utcDate": "2026-11-07T15:00:00Z",
-          "kickoffDay": "saturday",
-          "kickoffBand": "afternoon_1400_1659",
-          "home": "Preston North End FC",
-          "away": "Southampton FC",
-          "predictedOutcome": "away",
-          "prediction": "Southampton FC win",
-          "confidence": 61,
-          "probabilities": {
-            "home": 17,
-            "draw": 22,
-            "away": 61
-          },
-          "actualOutcome": "home",
-          "finalScore": "1-0",
-          "correct": false
         }
       ],
-      "correct": 28,
-      "accuracy": 70,
-      "averageConfidence": 73.9
+      "settled": 37,
+      "pending": 3,
+      "correct": 27,
+      "accuracy": 73,
+      "averageConfidence": 74.7
     },
     "saturdayTop5": {
       "picks": [
@@ -1001,6 +1044,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "6-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1025,6 +1069,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -1049,6 +1094,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -1073,6 +1119,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "0-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -1097,6 +1144,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1121,6 +1169,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1145,6 +1194,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1169,6 +1219,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "1-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -1193,6 +1244,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -1217,6 +1269,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1241,6 +1294,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "6-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1265,6 +1319,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "2-5",
+          "settled": true,
           "correct": true
         },
         {
@@ -1289,6 +1344,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "2-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -1313,6 +1369,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "2-4",
+          "settled": true,
           "correct": false
         },
         {
@@ -1337,6 +1394,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1361,6 +1419,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "5-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -1385,6 +1444,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1409,6 +1469,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-3",
+          "settled": true,
           "correct": true
         },
         {
@@ -1433,6 +1494,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1457,9 +1519,12 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         }
       ],
+      "settled": 20,
+      "pending": 0,
       "correct": 14,
       "accuracy": 70,
       "averageConfidence": 77.9
@@ -1488,6 +1553,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1512,6 +1578,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-3",
+          "settled": true,
           "correct": true
         },
         {
@@ -1536,6 +1603,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1560,6 +1628,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -1584,6 +1653,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "5-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1608,6 +1678,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1632,6 +1703,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -1656,6 +1728,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -1680,6 +1753,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -1704,6 +1778,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-3",
+          "settled": true,
           "correct": false
         },
         {
@@ -1728,6 +1803,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -1752,6 +1828,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1776,6 +1853,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "1-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -1800,6 +1878,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1824,12 +1903,140 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-3",
+          "settled": true,
           "correct": true
+        },
+        {
+          "rank": 1,
+          "fixtureId": 565854,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-08T16:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "SC Freiburg",
+          "away": "1. FC Union Berlin",
+          "predictedOutcome": "home",
+          "prediction": "SC Freiburg win",
+          "confidence": 84,
+          "probabilities": {
+            "home": 84,
+            "draw": 10,
+            "away": 6
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 2,
+          "fixtureId": 560638,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-08T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Brighton & Hove Albion FC",
+          "away": "Brentford FC",
+          "predictedOutcome": "home",
+          "prediction": "Brighton & Hove Albion FC win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 74,
+            "draw": 16,
+            "away": 10
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 3,
+          "fixtureId": 560635,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-08T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Crystal Palace FC",
+          "away": "Liverpool FC",
+          "predictedOutcome": "away",
+          "prediction": "Liverpool FC win",
+          "confidence": 68,
+          "probabilities": {
+            "home": 14,
+            "draw": 18,
+            "away": 68
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 4,
+          "fixtureId": 558533,
+          "competition": {
+            "code": "SA",
+            "name": "Serie A"
+          },
+          "utcDate": "2026-11-08T11:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "early_before_1400",
+          "home": "SSC Napoli",
+          "away": "SS Lazio",
+          "predictedOutcome": "away",
+          "prediction": "SS Lazio win",
+          "confidence": 62,
+          "probabilities": {
+            "home": 18,
+            "draw": 20,
+            "away": 62
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 5,
+          "fixtureId": 564747,
+          "competition": {
+            "code": "PD",
+            "name": "La Liga"
+          },
+          "utcDate": "2026-11-08T17:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "evening_1700_plus",
+          "home": "Villarreal CF",
+          "away": "Getafe CF",
+          "predictedOutcome": "home",
+          "prediction": "Villarreal CF win",
+          "confidence": 62,
+          "probabilities": {
+            "home": 62,
+            "draw": 23,
+            "away": 14
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
         }
       ],
+      "settled": 15,
+      "pending": 5,
       "correct": 11,
       "accuracy": 73.3,
-      "averageConfidence": 66.8
+      "averageConfidence": 67.6
     }
   },
   "byLeague": {
@@ -1840,10 +2047,10 @@
       "averageConfidence": 76.8
     },
     "PL": {
-      "predictions": 5,
+      "predictions": 4,
       "correct": 2,
-      "accuracy": 40,
-      "averageConfidence": 72.8
+      "accuracy": 50,
+      "averageConfidence": 74.5
     },
     "SA": {
       "predictions": 9,
@@ -1852,10 +2059,10 @@
       "averageConfidence": 76.1
     },
     "ELC": {
-      "predictions": 9,
-      "correct": 6,
-      "accuracy": 66.7,
-      "averageConfidence": 68.8
+      "predictions": 7,
+      "correct": 5,
+      "accuracy": 71.4,
+      "averageConfidence": 70.1
     },
     "PD": {
       "predictions": 6,
@@ -1866,16 +2073,16 @@
   },
   "byPredictedOutcome": {
     "home": {
-      "predictions": 31,
-      "correct": 24,
-      "accuracy": 77.4,
-      "averageConfidence": 74.7
+      "predictions": 30,
+      "correct": 23,
+      "accuracy": 76.7,
+      "averageConfidence": 75
     },
     "away": {
-      "predictions": 9,
+      "predictions": 7,
       "correct": 4,
-      "accuracy": 44.4,
-      "averageConfidence": 71
+      "accuracy": 57.1,
+      "averageConfidence": 73.1
     }
   },
   "byConfidenceBand": {
@@ -1898,24 +2105,24 @@
       "averageConfidence": 73.7
     },
     "60-69%": {
-      "predictions": 10,
-      "correct": 7,
-      "accuracy": 70,
-      "averageConfidence": 66.7
+      "predictions": 7,
+      "correct": 6,
+      "accuracy": 85.7,
+      "averageConfidence": 67.6
     }
   },
   "byKickoffBand": {
     "evening_1700_plus": {
-      "predictions": 15,
+      "predictions": 14,
       "correct": 11,
-      "accuracy": 73.3,
-      "averageConfidence": 75.8
+      "accuracy": 78.6,
+      "averageConfidence": 76.5
     },
     "afternoon_1400_1659": {
-      "predictions": 20,
-      "correct": 14,
-      "accuracy": 70,
-      "averageConfidence": 72.3
+      "predictions": 18,
+      "correct": 13,
+      "accuracy": 72.2,
+      "averageConfidence": 73.3
     },
     "early_before_1400": {
       "predictions": 5,
@@ -1955,6 +2162,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "6-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -1979,6 +2187,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -2003,6 +2212,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -2027,6 +2237,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "0-0",
+          "settled": true,
           "correct": false
         },
         {
@@ -2051,6 +2262,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -2075,6 +2287,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -2099,6 +2312,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-3",
+          "settled": true,
           "correct": true
         },
         {
@@ -2123,6 +2337,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "2-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -2147,6 +2362,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -2171,6 +2387,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "0-0",
+          "settled": true,
           "correct": false
         }
       ],
@@ -2199,6 +2416,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "6-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2223,6 +2441,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-2",
+              "settled": true,
               "correct": true
             },
             {
@@ -2247,6 +2466,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": false
             },
             {
@@ -2271,6 +2491,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "0-0",
+              "settled": true,
               "correct": false
             },
             {
@@ -2295,6 +2516,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -2319,6 +2541,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "4-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2343,6 +2566,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "1-3",
+              "settled": true,
               "correct": true
             },
             {
@@ -2367,6 +2591,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "2-2",
+              "settled": true,
               "correct": false
             },
             {
@@ -2391,6 +2616,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2415,9 +2641,12 @@
               },
               "actualOutcome": "draw",
               "finalScore": "0-0",
+              "settled": true,
               "correct": false
             }
           ],
+          "settled": 10,
+          "pending": 0,
           "correct": 6,
           "accuracy": 60,
           "averageConfidence": 75.4
@@ -2446,6 +2675,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "6-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2470,6 +2700,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-2",
+              "settled": true,
               "correct": true
             },
             {
@@ -2494,6 +2725,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": false
             },
             {
@@ -2518,6 +2750,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "0-0",
+              "settled": true,
               "correct": false
             },
             {
@@ -2542,9 +2775,12 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-0",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 3,
           "accuracy": 60,
           "averageConfidence": 80
@@ -2573,6 +2809,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "4-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2597,6 +2834,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "1-3",
+              "settled": true,
               "correct": true
             },
             {
@@ -2621,6 +2859,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2645,6 +2884,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-2",
+              "settled": true,
               "correct": true
             },
             {
@@ -2669,9 +2909,12 @@
               },
               "actualOutcome": "home",
               "finalScore": "5-0",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 5,
           "accuracy": 100,
           "averageConfidence": 70
@@ -2708,6 +2951,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -2732,6 +2976,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -2756,6 +3001,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -2780,6 +3026,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "1-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -2804,6 +3051,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": false
         },
         {
@@ -2828,6 +3076,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -2852,6 +3101,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -2876,6 +3126,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -2900,6 +3151,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -2924,6 +3176,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         }
       ],
@@ -2952,6 +3205,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -2976,6 +3230,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "4-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3000,6 +3255,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3024,6 +3280,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "1-1",
+              "settled": true,
               "correct": false
             },
             {
@@ -3048,6 +3305,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": false
             },
             {
@@ -3072,6 +3330,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "1-2",
+              "settled": true,
               "correct": false
             },
             {
@@ -3096,6 +3355,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -3120,6 +3380,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "0-2",
+              "settled": true,
               "correct": false
             },
             {
@@ -3144,6 +3405,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3168,9 +3430,12 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 10,
+          "pending": 0,
           "correct": 6,
           "accuracy": 60,
           "averageConfidence": 75.9
@@ -3199,6 +3464,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "4-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3223,6 +3489,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3247,6 +3514,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "1-1",
+              "settled": true,
               "correct": false
             },
             {
@@ -3271,6 +3539,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": false
             },
             {
@@ -3295,9 +3564,12 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 3,
           "accuracy": 60,
           "averageConfidence": 77.6
@@ -3326,6 +3598,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -3350,6 +3623,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "1-2",
+              "settled": true,
               "correct": false
             },
             {
@@ -3374,6 +3648,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-0",
+              "settled": true,
               "correct": false
             },
             {
@@ -3398,6 +3673,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "0-2",
+              "settled": true,
               "correct": true
             },
             {
@@ -3422,9 +3698,12 @@
               },
               "actualOutcome": "away",
               "finalScore": "0-3",
+              "settled": true,
               "correct": false
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 2,
           "accuracy": 40,
           "averageConfidence": 72.2
@@ -3461,6 +3740,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "6-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -3485,6 +3765,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "2-5",
+          "settled": true,
           "correct": true
         },
         {
@@ -3509,6 +3790,7 @@
           },
           "actualOutcome": "draw",
           "finalScore": "2-2",
+          "settled": true,
           "correct": false
         },
         {
@@ -3533,6 +3815,7 @@
           },
           "actualOutcome": "away",
           "finalScore": "2-4",
+          "settled": true,
           "correct": false
         },
         {
@@ -3557,6 +3840,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -3581,6 +3865,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -3605,6 +3890,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
@@ -3629,6 +3915,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -3653,6 +3940,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
@@ -3677,6 +3965,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "4-1",
+          "settled": true,
           "correct": true
         }
       ],
@@ -3705,6 +3994,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "6-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -3729,6 +4019,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "2-5",
+              "settled": true,
               "correct": true
             },
             {
@@ -3753,6 +4044,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "2-2",
+              "settled": true,
               "correct": false
             },
             {
@@ -3777,6 +4069,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "2-4",
+              "settled": true,
               "correct": false
             },
             {
@@ -3801,6 +4094,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3825,6 +4119,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3849,6 +4144,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -3873,6 +4169,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -3897,6 +4194,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -3921,9 +4219,12 @@
               },
               "actualOutcome": "home",
               "finalScore": "4-1",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 10,
+          "pending": 0,
           "correct": 8,
           "accuracy": 80,
           "averageConfidence": 72.5
@@ -3952,6 +4253,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "6-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -3976,6 +4278,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "2-5",
+              "settled": true,
               "correct": true
             },
             {
@@ -4000,6 +4303,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "2-2",
+              "settled": true,
               "correct": false
             },
             {
@@ -4024,6 +4328,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "2-4",
+              "settled": true,
               "correct": false
             },
             {
@@ -4048,9 +4353,12 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-0",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 3,
           "accuracy": 60,
           "averageConfidence": 76.6
@@ -4079,6 +4387,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -4103,6 +4412,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -4127,6 +4437,7 @@
               },
               "actualOutcome": "draw",
               "finalScore": "1-1",
+              "settled": true,
               "correct": false
             },
             {
@@ -4151,6 +4462,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -4175,9 +4487,12 @@
               },
               "actualOutcome": "away",
               "finalScore": "0-3",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 4,
           "accuracy": 80,
           "averageConfidence": 58.2
@@ -4188,9 +4503,9 @@
       "predictionBatch": "2026-11-04T16:45:19.002Z",
       "weekendStarting": "2026-11-07",
       "settledFixtures": 28,
-      "top10Correct": 8,
-      "top10Accuracy": 80,
-      "averageConfidence": 71.7,
+      "top10Correct": 7,
+      "top10Accuracy": 100,
+      "averageConfidence": 74.9,
       "picks": [
         {
           "rank": 1,
@@ -4214,6 +4529,7 @@
           },
           "actualOutcome": "home",
           "finalScore": "5-2",
+          "settled": true,
           "correct": true
         },
         {
@@ -4238,10 +4554,36 @@
           },
           "actualOutcome": "home",
           "finalScore": "3-0",
+          "settled": true,
           "correct": true
         },
         {
           "rank": 3,
+          "fixtureId": 565854,
+          "competition": {
+            "code": "BL1",
+            "name": "Bundesliga"
+          },
+          "utcDate": "2026-11-08T16:30:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "SC Freiburg",
+          "away": "1. FC Union Berlin",
+          "predictedOutcome": "home",
+          "prediction": "SC Freiburg win",
+          "confidence": 84,
+          "probabilities": {
+            "home": 84,
+            "draw": 10,
+            "away": 6
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 4,
           "fixtureId": 564741,
           "competition": {
             "code": "PD",
@@ -4262,10 +4604,36 @@
           },
           "actualOutcome": "away",
           "finalScore": "0-3",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 4,
+          "rank": 5,
+          "fixtureId": 560638,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-08T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Brighton & Hove Albion FC",
+          "away": "Brentford FC",
+          "predictedOutcome": "home",
+          "prediction": "Brighton & Hove Albion FC win",
+          "confidence": 74,
+          "probabilities": {
+            "home": 74,
+            "draw": 16,
+            "away": 10
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 6,
           "fixtureId": 565850,
           "competition": {
             "code": "BL1",
@@ -4286,10 +4654,11 @@
           },
           "actualOutcome": "home",
           "finalScore": "2-1",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 5,
+          "rank": 7,
           "fixtureId": 560640,
           "competition": {
             "code": "PL",
@@ -4310,10 +4679,11 @@
           },
           "actualOutcome": "home",
           "finalScore": "1-0",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 6,
+          "rank": 8,
           "fixtureId": 565851,
           "competition": {
             "code": "BL1",
@@ -4334,10 +4704,36 @@
           },
           "actualOutcome": "away",
           "finalScore": "1-2",
+          "settled": true,
           "correct": true
         },
         {
-          "rank": 7,
+          "rank": 9,
+          "fixtureId": 560635,
+          "competition": {
+            "code": "PL",
+            "name": "Premier League"
+          },
+          "utcDate": "2026-11-08T14:00:00Z",
+          "kickoffDay": "sunday",
+          "kickoffBand": "afternoon_1400_1659",
+          "home": "Crystal Palace FC",
+          "away": "Liverpool FC",
+          "predictedOutcome": "away",
+          "prediction": "Liverpool FC win",
+          "confidence": 68,
+          "probabilities": {
+            "home": 14,
+            "draw": 18,
+            "away": 68
+          },
+          "actualOutcome": null,
+          "finalScore": null,
+          "settled": false,
+          "correct": null
+        },
+        {
+          "rank": 10,
           "fixtureId": 561930,
           "competition": {
             "code": "ELC",
@@ -4358,79 +4754,8 @@
           },
           "actualOutcome": "home",
           "finalScore": "5-4",
+          "settled": true,
           "correct": true
-        },
-        {
-          "rank": 8,
-          "fixtureId": 561940,
-          "competition": {
-            "code": "ELC",
-            "name": "Championship"
-          },
-          "utcDate": "2026-11-07T15:00:00Z",
-          "kickoffDay": "saturday",
-          "kickoffBand": "afternoon_1400_1659",
-          "home": "Birmingham City FC",
-          "away": "Swansea City AFC",
-          "predictedOutcome": "home",
-          "prediction": "Birmingham City FC win",
-          "confidence": 67,
-          "probabilities": {
-            "home": 67,
-            "draw": 18,
-            "away": 15
-          },
-          "actualOutcome": "home",
-          "finalScore": "2-1",
-          "correct": true
-        },
-        {
-          "rank": 9,
-          "fixtureId": 560641,
-          "competition": {
-            "code": "PL",
-            "name": "Premier League"
-          },
-          "utcDate": "2026-11-07T17:30:00Z",
-          "kickoffDay": "saturday",
-          "kickoffBand": "evening_1700_plus",
-          "home": "Nottingham Forest FC",
-          "away": "Manchester City FC",
-          "predictedOutcome": "away",
-          "prediction": "Manchester City FC win",
-          "confidence": 66,
-          "probabilities": {
-            "home": 11,
-            "draw": 23,
-            "away": 66
-          },
-          "actualOutcome": "home",
-          "finalScore": "3-1",
-          "correct": false
-        },
-        {
-          "rank": 10,
-          "fixtureId": 561937,
-          "competition": {
-            "code": "ELC",
-            "name": "Championship"
-          },
-          "utcDate": "2026-11-07T15:00:00Z",
-          "kickoffDay": "saturday",
-          "kickoffBand": "afternoon_1400_1659",
-          "home": "Preston North End FC",
-          "away": "Southampton FC",
-          "predictedOutcome": "away",
-          "prediction": "Southampton FC win",
-          "confidence": 61,
-          "probabilities": {
-            "home": 17,
-            "draw": 22,
-            "away": 61
-          },
-          "actualOutcome": "home",
-          "finalScore": "1-0",
-          "correct": false
         }
       ],
       "strategies": {
@@ -4458,6 +4783,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "5-2",
+              "settled": true,
               "correct": true
             },
             {
@@ -4482,10 +4808,36 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-0",
+              "settled": true,
               "correct": true
             },
             {
               "rank": 3,
+              "fixtureId": 565854,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-08T16:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "SC Freiburg",
+              "away": "1. FC Union Berlin",
+              "predictedOutcome": "home",
+              "prediction": "SC Freiburg win",
+              "confidence": 84,
+              "probabilities": {
+                "home": 84,
+                "draw": 10,
+                "away": 6
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 4,
               "fixtureId": 564741,
               "competition": {
                 "code": "PD",
@@ -4506,10 +4858,36 @@
               },
               "actualOutcome": "away",
               "finalScore": "0-3",
+              "settled": true,
               "correct": true
             },
             {
-              "rank": 4,
+              "rank": 5,
+              "fixtureId": 560638,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-08T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Brighton & Hove Albion FC",
+              "away": "Brentford FC",
+              "predictedOutcome": "home",
+              "prediction": "Brighton & Hove Albion FC win",
+              "confidence": 74,
+              "probabilities": {
+                "home": 74,
+                "draw": 16,
+                "away": 10
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 6,
               "fixtureId": 565850,
               "competition": {
                 "code": "BL1",
@@ -4530,10 +4908,11 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
-              "rank": 5,
+              "rank": 7,
               "fixtureId": 560640,
               "competition": {
                 "code": "PL",
@@ -4554,10 +4933,11 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             },
             {
-              "rank": 6,
+              "rank": 8,
               "fixtureId": 565851,
               "competition": {
                 "code": "BL1",
@@ -4578,10 +4958,36 @@
               },
               "actualOutcome": "away",
               "finalScore": "1-2",
+              "settled": true,
               "correct": true
             },
             {
-              "rank": 7,
+              "rank": 9,
+              "fixtureId": 560635,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-08T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Crystal Palace FC",
+              "away": "Liverpool FC",
+              "predictedOutcome": "away",
+              "prediction": "Liverpool FC win",
+              "confidence": 68,
+              "probabilities": {
+                "home": 14,
+                "draw": 18,
+                "away": 68
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 10,
               "fixtureId": 561930,
               "competition": {
                 "code": "ELC",
@@ -4602,84 +5008,15 @@
               },
               "actualOutcome": "home",
               "finalScore": "5-4",
+              "settled": true,
               "correct": true
-            },
-            {
-              "rank": 8,
-              "fixtureId": 561940,
-              "competition": {
-                "code": "ELC",
-                "name": "Championship"
-              },
-              "utcDate": "2026-11-07T15:00:00Z",
-              "kickoffDay": "saturday",
-              "kickoffBand": "afternoon_1400_1659",
-              "home": "Birmingham City FC",
-              "away": "Swansea City AFC",
-              "predictedOutcome": "home",
-              "prediction": "Birmingham City FC win",
-              "confidence": 67,
-              "probabilities": {
-                "home": 67,
-                "draw": 18,
-                "away": 15
-              },
-              "actualOutcome": "home",
-              "finalScore": "2-1",
-              "correct": true
-            },
-            {
-              "rank": 9,
-              "fixtureId": 560641,
-              "competition": {
-                "code": "PL",
-                "name": "Premier League"
-              },
-              "utcDate": "2026-11-07T17:30:00Z",
-              "kickoffDay": "saturday",
-              "kickoffBand": "evening_1700_plus",
-              "home": "Nottingham Forest FC",
-              "away": "Manchester City FC",
-              "predictedOutcome": "away",
-              "prediction": "Manchester City FC win",
-              "confidence": 66,
-              "probabilities": {
-                "home": 11,
-                "draw": 23,
-                "away": 66
-              },
-              "actualOutcome": "home",
-              "finalScore": "3-1",
-              "correct": false
-            },
-            {
-              "rank": 10,
-              "fixtureId": 561937,
-              "competition": {
-                "code": "ELC",
-                "name": "Championship"
-              },
-              "utcDate": "2026-11-07T15:00:00Z",
-              "kickoffDay": "saturday",
-              "kickoffBand": "afternoon_1400_1659",
-              "home": "Preston North End FC",
-              "away": "Southampton FC",
-              "predictedOutcome": "away",
-              "prediction": "Southampton FC win",
-              "confidence": 61,
-              "probabilities": {
-                "home": 17,
-                "draw": 22,
-                "away": 61
-              },
-              "actualOutcome": "home",
-              "finalScore": "1-0",
-              "correct": false
             }
           ],
-          "correct": 8,
-          "accuracy": 80,
-          "averageConfidence": 71.7
+          "settled": 7,
+          "pending": 3,
+          "correct": 7,
+          "accuracy": 100,
+          "averageConfidence": 74.9
         },
         "saturdayTop5": {
           "picks": [
@@ -4705,6 +5042,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "5-2",
+              "settled": true,
               "correct": true
             },
             {
@@ -4729,6 +5067,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "3-0",
+              "settled": true,
               "correct": true
             },
             {
@@ -4753,6 +5092,7 @@
               },
               "actualOutcome": "away",
               "finalScore": "0-3",
+              "settled": true,
               "correct": true
             },
             {
@@ -4777,6 +5117,7 @@
               },
               "actualOutcome": "home",
               "finalScore": "2-1",
+              "settled": true,
               "correct": true
             },
             {
@@ -4801,18 +5142,149 @@
               },
               "actualOutcome": "home",
               "finalScore": "1-0",
+              "settled": true,
               "correct": true
             }
           ],
+          "settled": 5,
+          "pending": 0,
           "correct": 5,
           "accuracy": 100,
           "averageConfidence": 77.4
         },
         "sundayTop5": {
-          "picks": [],
+          "picks": [
+            {
+              "rank": 1,
+              "fixtureId": 565854,
+              "competition": {
+                "code": "BL1",
+                "name": "Bundesliga"
+              },
+              "utcDate": "2026-11-08T16:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "SC Freiburg",
+              "away": "1. FC Union Berlin",
+              "predictedOutcome": "home",
+              "prediction": "SC Freiburg win",
+              "confidence": 84,
+              "probabilities": {
+                "home": 84,
+                "draw": 10,
+                "away": 6
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 2,
+              "fixtureId": 560638,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-08T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Brighton & Hove Albion FC",
+              "away": "Brentford FC",
+              "predictedOutcome": "home",
+              "prediction": "Brighton & Hove Albion FC win",
+              "confidence": 74,
+              "probabilities": {
+                "home": 74,
+                "draw": 16,
+                "away": 10
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 3,
+              "fixtureId": 560635,
+              "competition": {
+                "code": "PL",
+                "name": "Premier League"
+              },
+              "utcDate": "2026-11-08T14:00:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "afternoon_1400_1659",
+              "home": "Crystal Palace FC",
+              "away": "Liverpool FC",
+              "predictedOutcome": "away",
+              "prediction": "Liverpool FC win",
+              "confidence": 68,
+              "probabilities": {
+                "home": 14,
+                "draw": 18,
+                "away": 68
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 4,
+              "fixtureId": 558533,
+              "competition": {
+                "code": "SA",
+                "name": "Serie A"
+              },
+              "utcDate": "2026-11-08T11:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "early_before_1400",
+              "home": "SSC Napoli",
+              "away": "SS Lazio",
+              "predictedOutcome": "away",
+              "prediction": "SS Lazio win",
+              "confidence": 62,
+              "probabilities": {
+                "home": 18,
+                "draw": 20,
+                "away": 62
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            },
+            {
+              "rank": 5,
+              "fixtureId": 564747,
+              "competition": {
+                "code": "PD",
+                "name": "La Liga"
+              },
+              "utcDate": "2026-11-08T17:30:00Z",
+              "kickoffDay": "sunday",
+              "kickoffBand": "evening_1700_plus",
+              "home": "Villarreal CF",
+              "away": "Getafe CF",
+              "predictedOutcome": "home",
+              "prediction": "Villarreal CF win",
+              "confidence": 62,
+              "probabilities": {
+                "home": 62,
+                "draw": 23,
+                "away": 14
+              },
+              "actualOutcome": null,
+              "finalScore": null,
+              "settled": false,
+              "correct": null
+            }
+          ],
+          "settled": 0,
+          "pending": 5,
           "correct": 0,
           "accuracy": 0,
-          "averageConfidence": 0
+          "averageConfidence": 70
         }
       }
     }
