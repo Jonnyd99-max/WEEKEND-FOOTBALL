@@ -10,6 +10,7 @@ A dependency-free, responsive weekend football prediction dashboard covering fiv
 - Separate home and away performance
 - Expected goals, likely score, and home/draw/away probabilities
 - Draw-risk, outcome-separation, over-2.5 and both-teams-to-score diagnostics
+- Separate Over 2.5 and BTTS weekend Top 10, Saturday Top 5 and Sunday Top 5 tables
 - Rest-day adjustments and lightly weighted head-to-head history
 - Top 10 overall plus separate Saturday Top 5 and Sunday Top 5 rankings
 - Filtered Top 10 excluding early kickoffs and away-win calls, with visible caution markers
