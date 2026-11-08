@@ -157,7 +157,11 @@ function render() {
     const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
     return matchesDay && matchesLeague;
   });
-  if (isTop) visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, currentFilter === "top" ? 10 : 5);
+  if (currentFilter === "top-filtered") visible = visible.filter(fixture => {
+    const result = predict(fixture);
+    return kickoffHour(fixture.utcDate) >= 14 && predictedOutcome(result) !== "away";
+  });
+  if (isTop) visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, ["top", "top-filtered"].includes(currentFilter) ? 10 : 5);
   document.querySelector("#fixture-count").textContent = currentFilter === "review" ? reviewCount() : visible.length;
   document.querySelector("#match-list").innerHTML = isTop ? topPicksTable(visible, currentFilter) : currentFilter === "review" ? reviewDashboard() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
   if (currentFilter === "review") bindReviewControls();
@@ -185,8 +189,25 @@ function reviewCount() {
 }
 
 function kickoffBand(utcDate) {
-  const hour = Number(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", hour12: false }).format(new Date(utcDate)).slice(0, 2));
+  const hour = kickoffHour(utcDate);
   return hour < 14 ? "Early · before 14:00" : hour < 17 ? "Afternoon · 14:00–16:59" : "Evening · 17:00+";
+}
+
+function kickoffHour(utcDate) {
+  return Number(new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", hour12: false }).format(new Date(utcDate)).slice(0, 2));
+}
+
+function predictedOutcome(prediction) {
+  return prediction.probabilities ? ["home", "draw", "away"].sort((a, b) => prediction.probabilities[b] - prediction.probabilities[a])[0] : null;
+}
+
+function cautionBadges({ utcDate, predictedOutcome: savedOutcome, confidence, probabilities }) {
+  const outcome = savedOutcome ?? predictedOutcome({ probabilities });
+  const cautions = [];
+  if (kickoffHour(utcDate) < 14) cautions.push("Early kickoff");
+  if (outcome === "away") cautions.push("Away win");
+  if (confidence < 80) cautions.push("Under 80%");
+  return cautions.map(reason => `<span class="caution-chip">⚠ ${reason}</span>`).join("");
 }
 
 function formatReviewKickoff(utcDate) {
@@ -199,7 +220,7 @@ function pickRows(picks) {
     return `<article class="review-row">
     <span class="review-rank">${pick.rank}</span>
     <div><span class="top-pick-league">${pick.competition?.name || "League"}</span><div class="review-match"><strong>${pick.home} ${pick.finalScore ?? "vs"} ${pick.away}</strong><small>${formatReviewKickoff(pick.utcDate)} · ${kickoffBand(pick.utcDate)}</small></div></div>
-    <div class="review-call"><span>Predicted</span><strong>${pick.prediction}</strong><small>${pick.confidence}% confidence</small></div>
+    <div class="review-call"><span>Predicted</span><strong>${pick.prediction}</strong><small>${pick.confidence}% confidence</small><div class="caution-list">${cautionBadges(pick)}</div></div>
     <div class="review-result ${pending ? "is-pending" : pick.correct ? "is-correct" : "is-missed"}"><b>${pending ? "Pending" : pick.correct ? "✓ Correct" : "× Missed"}</b><small>${pending ? "Awaiting result" : pick.actualOutcome}</small></div>
   </article>`;
   }).join("");
@@ -253,7 +274,7 @@ function topPicksTable(picks, filter) {
     return `<article class="top-pick-row">
       <div class="top-pick-match">
         <span class="top-pick-league">${fixture.competition?.name || "Premier League"}</span>
-        <div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div>
+        <div><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><div class="caution-list">${cautionBadges({ utcDate: fixture.utcDate, confidence: result.confidence, probabilities: result.probabilities })}</div></div>
         <span class="top-pick-kickoff">${fixture.date}</span>
       </div>
       <div class="top-pick-call">
@@ -262,9 +283,10 @@ function topPicksTable(picks, filter) {
       </div>
     </article>`;
   }).join("");
-  const day = filter === "top-saturday" ? "Saturday" : filter === "top-sunday" ? "Sunday" : "Weekend";
-  const count = filter === "top" ? 10 : 5;
-  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGHEST-CONFIDENCE FORECASTS</span><h2>${day} top picks</h2><p>The ${count} strongest calls across your selected leagues.</p></div><span class="threshold">Top ${count}</span></div><div class="top-picks-list">${rows}</div></div>`;
+  const day = filter === "top-saturday" ? "Saturday" : filter === "top-sunday" ? "Sunday" : filter === "top-filtered" ? "Filtered" : "Weekend";
+  const count = ["top", "top-filtered"].includes(filter) ? 10 : 5;
+  const description = filter === "top-filtered" ? "Highest-confidence calls after removing early kickoffs and away-win predictions. Sub-80% calls remain marked." : `The ${count} strongest calls across your selected leagues.`;
+  return `<div class="top-picks-wrap"><div class="top-picks-heading"><div><span class="section-kicker">HIGHEST-CONFIDENCE FORECASTS</span><h2>${day} top picks</h2><p>${description}</p></div><span class="threshold">Top ${count}</span></div><div class="top-picks-list">${rows}</div></div>`;
 }
 
 function renderLeaguePicker() {
