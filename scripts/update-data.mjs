@@ -190,6 +190,7 @@ for (const competition of COMPETITIONS) {
       date: formatKickoff(match.utcDate),
       utcDate: match.utcDate,
       venue: match.venue || "Venue TBC",
+      odds: match.odds ?? null,
       model: { version: 2, league },
       home: { id: match.homeTeam.id, name: match.homeTeam.name, short: match.homeTeam.tla || match.homeTeam.shortName.slice(0, 3).toUpperCase(), ...homeStats },
       away: { id: match.awayTeam.id, name: match.awayTeam.name, short: match.awayTeam.tla || match.awayTeam.shortName.slice(0, 3).toUpperCase(), ...awayStats },
