@@ -23,17 +23,19 @@ jobs:
       - name: Fetch upcoming weekend data
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
-        run: node scripts/update-data.mjs
+        run: |
+          node scripts/update-data.mjs
+          node scripts/build-analysis.mjs
 
       - name: Commit refreshed data
         run: |
-          if git diff --quiet -- data.json history.json; then
+          if git diff --quiet -- data.json history.json performance.json; then
             echo "No data changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json history.json
+          git add data.json history.json performance.json
           git commit -m "Update weekend football data"
           git push
 
