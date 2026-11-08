@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T13:28:58.885Z",
+  "updatedAt": "2026-11-08T13:49:58.122Z",
   "fixtures": [
     {
       "id": 564746,
@@ -1500,8 +1500,12 @@
         "L"
       ],
       "predictionBatch": "2026-11-04T16:45:19.002Z",
-      "settledAt": null,
-      "actual": null
+      "settledAt": "2026-11-08T13:49:58.122Z",
+      "actual": {
+        "outcome": "draw",
+        "homeGoals": 1,
+        "awayGoals": 1
+      }
     },
     {
       "id": 564741,
