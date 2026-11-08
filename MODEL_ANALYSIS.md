@@ -31,4 +31,5 @@ The first four completed Top 10 weeks scored 6/10, 6/10, 8/10 and 8/10: 28 corre
 ## Change log
 
 - 8 November 2026: Established the permanent performance audit. No model weights changed.
+- 8 November 2026: Added draw-risk and outcome-margin diagnostics, goal-market scoring, league reliability labels, a margin-ranked shadow Top 10, and optional odds/ROI storage. Live Model V2 weights remain unchanged.
 
