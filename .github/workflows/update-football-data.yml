@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/update-data.mjs"
+      - "scripts/build-analysis.mjs"
       - ".github/workflows/update-football-data.yml"
   schedule:
     - cron: "0 9 * * 3"
