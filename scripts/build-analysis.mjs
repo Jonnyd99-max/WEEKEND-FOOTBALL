@@ -34,10 +34,17 @@ function makePicks(ranked, limit) {
       prediction: prediction.label,
       confidence: prediction.confidence,
       probabilities: prediction.probabilities,
+      outcomeMargin: prediction.outcomeMargin,
+      drawRisk: prediction.drawRisk,
+      shadowScore: Number((prediction.confidence * 0.7 + prediction.outcomeMargin * 0.3).toFixed(1)),
+      goalMarkets: prediction.goalMarkets,
+      odds: fixture.odds ?? null,
       actualOutcome: fixture.actual?.outcome ?? null,
       finalScore: fixture.actual ? `${fixture.actual.homeGoals}-${fixture.actual.awayGoals}` : null,
       settled: Boolean(fixture.actual),
       correct: fixture.actual ? outcome === fixture.actual.outcome : null,
+      actualGoals: fixture.actual ? fixture.actual.homeGoals + fixture.actual.awayGoals : null,
+      actualBtts: fixture.actual ? fixture.actual.homeGoals > 0 && fixture.actual.awayGoals > 0 : null,
     };
   });
 }
@@ -55,6 +62,7 @@ const weeks = batches.map(batch => {
     .sort((a, b) => b.prediction.confidence - a.prediction.confidence || new Date(a.fixture.utcDate) - new Date(b.fixture.utcDate));
   const picks = makePicks(ranked, 10);
   const filteredPicks = makePicks(ranked.filter(({ fixture, prediction }) => londonHour(fixture.utcDate) >= 14 && predictedOutcome(prediction) !== "away"), 10);
+  const marginPicks = makePicks([...ranked].sort((a, b) => (b.prediction.confidence * 0.7 + b.prediction.outcomeMargin * 0.3) - (a.prediction.confidence * 0.7 + a.prediction.outcomeMargin * 0.3)), 10);
   const saturdayPicks = makePicks(ranked.filter(({ fixture }) => londonDay(fixture.utcDate) === "saturday"), 5);
   const sundayPicks = makePicks(ranked.filter(({ fixture }) => londonDay(fixture.utcDate) === "sunday"), 5);
   const settledTop10 = picks.filter(pick => pick.settled);
@@ -70,6 +78,7 @@ const weeks = batches.map(batch => {
     strategies: {
       top10: strategySummary(picks),
       filteredTop10: strategySummary(filteredPicks),
+      marginShadowTop10: strategySummary(marginPicks),
       saturdayTop5: strategySummary(saturdayPicks),
       sundayTop5: strategySummary(sundayPicks),
     },
@@ -94,13 +103,28 @@ function groupedSummary(items, keyFor) {
 }
 
 const allPicks = weeks.flatMap(week => week.picks);
-const strategyOverall = Object.fromEntries(["top10", "filteredTop10", "saturdayTop5", "sundayTop5"].map(strategy => {
+const strategyOverall = Object.fromEntries(["top10", "filteredTop10", "marginShadowTop10", "saturdayTop5", "sundayTop5"].map(strategy => {
   const picks = weeks.flatMap(week => week.strategies[strategy].picks);
   return [strategy, strategySummary(picks)];
 }));
 const confidenceBand = pick => `${Math.floor(pick.confidence / 10) * 10}-${Math.floor(pick.confidence / 10) * 10 + 9}%`;
 const settledPicks = allPicks.filter(pick => pick.settled);
 const totalCorrect = settledPicks.filter(pick => pick.correct).length;
+const goalMarketSummary = market => {
+  const picks = settledPicks.filter(pick => pick.goalMarkets?.[market] != null);
+  const correct = picks.filter(pick => market === "over25" ? (pick.goalMarkets.over25 >= 50) === (pick.actualGoals >= 3) : (pick.goalMarkets.btts >= 50) === pick.actualBtts).length;
+  return { predictions: picks.length, correct, accuracy: Number((correct / Math.max(1, picks.length) * 100).toFixed(1)) };
+};
+const oddsPicks = settledPicks.flatMap(pick => {
+  const key = pick.predictedOutcome === "home" ? "homeWin" : pick.predictedOutcome === "away" ? "awayWin" : "draw";
+  const price = pick.odds?.[key];
+  return Number.isFinite(price) ? [{ ...pick, price }] : [];
+});
+const oddsProfit = oddsPicks.reduce((sum, pick) => sum + (pick.correct ? pick.price - 1 : -1), 0);
+const leagueSummary = groupedSummary(allPicks, pick => pick.competition?.code || "UNKNOWN");
+for (const summary of Object.values(leagueSummary)) {
+  summary.reliability = summary.predictions < 10 ? "insufficient data" : summary.predictions < 20 ? (summary.accuracy >= 70 ? "promising" : "under review") : (summary.accuracy >= 70 ? "strong evidence" : "under review");
+}
 const output = {
   generatedAt: new Date().toISOString(),
   modelVersion: 2,
@@ -114,10 +138,12 @@ const output = {
     averageConfidence: Number((allPicks.reduce((sum, pick) => sum + pick.confidence, 0) / Math.max(1, allPicks.length)).toFixed(1)),
   },
   strategyOverall,
-  byLeague: groupedSummary(allPicks, pick => pick.competition?.code || "UNKNOWN"),
+  byLeague: leagueSummary,
   byPredictedOutcome: groupedSummary(allPicks, pick => pick.predictedOutcome),
   byConfidenceBand: groupedSummary(allPicks, confidenceBand),
   byKickoffBand: groupedSummary(allPicks, pick => pick.kickoffBand),
+  goalMarkets: { over25: goalMarketSummary("over25"), btts: goalMarketSummary("btts") },
+  oddsReview: { available: oddsPicks.length, profitToOneUnitStakes: Number(oddsProfit.toFixed(2)), roi: Number((oddsProfit / Math.max(1, oddsPicks.length) * 100).toFixed(1)) },
   weeks,
 };
 
