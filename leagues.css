@@ -231,6 +231,8 @@
 .review-call .caution-list { margin-top: 4px; }
 .review-call .caution-chip { font-size: 6px; }
 
+.market-dashboard{display:grid;gap:18px}.market-section{display:grid;gap:12px;padding:22px;background:#f2f3ed;border-radius:17px}.market-row .top-pick-match{grid-template-columns:38px minmax(0,1fr)}.market-row .top-pick-kickoff{display:block;margin-top:7px;text-align:left}.top-pick-call small{display:block;margin-top:4px;color:#b8cbc3;font-size:8px}
+
 @media (max-width: 980px) {
   .top-pick-row {
     grid-template-columns: 1fr;
