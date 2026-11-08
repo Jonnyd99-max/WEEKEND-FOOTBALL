@@ -12,12 +12,13 @@ This repository keeps a permanent audit trail so later chats can review the mode
 ## Review policy
 
 1. Treat 8/10 as a good week, not proof that every weight is correct.
-2. Do not change the model because of one plausible upset. Football contains unavoidable variance.
-3. Prefer at least 6-10 completed weeks before recalibrating a factor, unless a clear data or calculation bug is found.
-4. Compare accuracy with average confidence. If 70% predictions win only 55% of the time over a useful sample, confidence is over-stated even if the selected outcome is often right.
-5. Break results down by league, predicted outcome, confidence band and UK kickoff-time band. Require a reasonable sample before acting on a split.
-6. Specifically compare early kickoffs (before 14:00 UK time) with afternoon and evening matches. Keep the exact kickoff visible: do not assume early games are less reliable unless the saved results support it.
-7. Make one explainable model change at a time and record the reason below, so results before and after the change can be compared.
+2. Freeze the Top 10 overall, Saturday Top 5 and Sunday Top 5 from the complete prediction batch before checking results. Never re-rank only the matches that have already finished.
+3. Do not change the model because of one plausible upset. Football contains unavoidable variance.
+4. Prefer at least 6-10 completed weeks before recalibrating a factor, unless a clear data or calculation bug is found.
+5. Compare accuracy with average confidence. If 70% predictions win only 55% of the time over a useful sample, confidence is over-stated even if the selected outcome is often right.
+6. Break results down by league, predicted outcome, confidence band and UK kickoff-time band. Require a reasonable sample before acting on a split.
+7. Specifically compare early kickoffs (before 14:00 UK time) with afternoon and evening matches. Keep the exact kickoff visible: do not assume early games are less reliable unless the saved results support it.
+8. Make one explainable model change at a time and record the reason below, so results before and after the change can be compared.
 
 ## Baseline on 8 November 2026
 
