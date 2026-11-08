@@ -11,6 +11,7 @@ A dependency-free, responsive weekend football prediction dashboard covering fiv
 - Expected goals, likely score, and home/draw/away probabilities
 - Rest-day adjustments and lightly weighted head-to-head history
 - Top 10 overall plus separate Saturday Top 5 and Sunday Top 5 rankings
+- Filtered Top 10 excluding early kickoffs and away-win calls, with visible caution markers
 - Interactive historical dashboard with weekly, strategy and kickoff-time analysis
 - Permanent weekly performance history for future model reviews
 - Expandable calculation details
