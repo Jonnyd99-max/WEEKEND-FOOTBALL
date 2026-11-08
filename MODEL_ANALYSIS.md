@@ -12,7 +12,7 @@ This repository keeps a permanent audit trail so later chats can review the mode
 ## Review policy
 
 1. Treat 8/10 as a good week, not proof that every weight is correct.
-2. Freeze the Top 10 overall, Saturday Top 5 and Sunday Top 5 from the complete prediction batch before checking results. Never re-rank only the matches that have already finished.
+2. Freeze the Top 10 overall, Filtered Top 10, Saturday Top 5 and Sunday Top 5 from the complete prediction batch before checking results. Never re-rank only the matches that have already finished.
 3. Do not change the model because of one plausible upset. Football contains unavoidable variance.
 4. Prefer at least 6-10 completed weeks before recalibrating a factor, unless a clear data or calculation bug is found.
 5. Compare accuracy with average confidence. If 70% predictions win only 55% of the time over a useful sample, confidence is over-stated even if the selected outcome is often right.
