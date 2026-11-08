@@ -162,9 +162,10 @@ function card(fixture) {
 let currentFilter = "all";
 function render() {
   const isTop = currentFilter.startsWith("top");
+  const isMarket = currentFilter.startsWith("market-");
   let visible = fixtures.filter(fixture => {
     const topDay = currentFilter === "top-saturday" ? "saturday" : currentFilter === "top-sunday" ? "sunday" : null;
-    const matchesDay = currentFilter === "all" || currentFilter === "review" || (isTop && (!topDay || fixture.day === topDay)) || fixture.day === currentFilter;
+    const matchesDay = currentFilter === "all" || currentFilter === "review" || isMarket || (isTop && (!topDay || fixture.day === topDay)) || fixture.day === currentFilter;
     const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
     return matchesDay && matchesLeague;
   });
@@ -174,8 +175,31 @@ function render() {
   });
   if (isTop) visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, ["top", "top-filtered"].includes(currentFilter) ? 10 : 5);
   document.querySelector("#fixture-count").textContent = currentFilter === "review" ? reviewCount() : visible.length;
-  document.querySelector("#match-list").innerHTML = isTop ? topPicksTable(visible, currentFilter) : currentFilter === "review" ? reviewDashboard() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+  document.querySelector("#match-list").innerHTML = isTop ? topPicksTable(visible, currentFilter) : isMarket ? marketDashboard(visible, currentFilter === "market-over25" ? "over25" : "btts") : currentFilter === "review" ? reviewDashboard() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
   if (currentFilter === "review") bindReviewControls();
+}
+
+function marketProbability(fixture, market) {
+  return predict(fixture).goalMarkets[market];
+}
+
+function marketSelection(fixturesToRank, market, day, limit) {
+  return fixturesToRank.filter(fixture => !day || fixture.day === day).sort((a, b) => marketProbability(b, market) - marketProbability(a, market) || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, limit);
+}
+
+function marketTable(title, subtitle, picks, market) {
+  const label = market === "over25" ? "Over 2.5 goals" : "Both teams to score";
+  const rows = picks.map((fixture, index) => {
+    const result = predict(fixture);
+    const probability = result.goalMarkets[market];
+    return `<article class="top-pick-row market-row"><div class="top-pick-match"><span class="review-rank">${index + 1}</span><div><span class="top-pick-league">${fixture.competition?.name || "League"}</span><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><span class="top-pick-kickoff">${fixture.date}</span></div></div><div class="top-pick-call"><div><span class="eyebrow">${label.toUpperCase()}</span><strong>${probability >= 50 ? "Yes" : "Caution"}</strong><small>Expected score ${result.expectedScore}</small></div><div class="top-pick-score"><b>${probability}%</b><small>probability</small></div></div></article>`;
+  }).join("");
+  return `<section class="market-section"><div class="portfolio-heading"><div><span class="section-kicker">${subtitle}</span><h3>${title}</h3></div><span class="threshold">${picks.length} picks</span></div><div class="top-picks-list">${rows || `<div class="empty compact">No fixtures available.</div>`}</div></section>`;
+}
+
+function marketDashboard(visible, market) {
+  const title = market === "over25" ? "Over 2.5 goals" : "Both teams to score";
+  return `<div class="market-dashboard"><div class="top-picks-heading"><div><span class="section-kicker">GOAL-MARKET FORECASTS</span><h2>${title}</h2><p>Ranked independently by the model's calculated probability—not bookmaker odds.</p></div><span class="threshold">MODEL</span></div>${marketTable("Weekend Top 10", "ALL WEEKEND", marketSelection(visible, market, null, 10), market)}${marketTable("Saturday Top 5", "SATURDAY", marketSelection(visible, market, "saturday", 5), market)}${marketTable("Sunday Top 5", "SUNDAY", marketSelection(visible, market, "sunday", 5), market)}</div>`;
 }
 
 function strategyFor(week, strategy) {
