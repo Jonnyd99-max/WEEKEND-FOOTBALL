@@ -10,7 +10,8 @@ A dependency-free, responsive weekend football prediction dashboard covering fiv
 - Separate home and away performance
 - Expected goals, likely score, and home/draw/away probabilities
 - Rest-day adjustments and lightly weighted head-to-head history
-- Top picks ranking of the ten highest-confidence fixtures
+- Top 10 overall plus separate Saturday Top 5 and Sunday Top 5 rankings
+- Interactive historical dashboard with weekly, strategy and kickoff-time analysis
 - Permanent weekly performance history for future model reviews
 - Expandable calculation details
 - Automated real-world fixtures and form for the Premier League, Championship, Bundesliga, La Liga, and Serie A
