@@ -20,7 +20,7 @@ This repository keeps a permanent audit trail so later chats can review the mode
 
 ## Baseline on 8 November 2026
 
-The first three completed Top 10 weeks scored 6/10, 6/10 and 8/10. This is encouraging but still too small a sample for automatic weight changes.
+The first four completed Top 10 weeks scored 6/10, 6/10, 8/10 and 8/10: 28 correct from 40 selections (70%). This is encouraging but still too small a sample for automatic weight changes. `performance.json` is the live source of truth as further weeks are added.
 
 ## Suggested prompt for a future chat
 
