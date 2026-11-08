@@ -198,7 +198,6 @@ for (const competition of COMPETITIONS) {
   }
 }
 
-if (!fixtures.length) throw new Error(`No selected-league fixtures found from ${from} to ${to}`);
 fixtures.sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
 
 const now = new Date().toISOString();
@@ -226,8 +225,12 @@ for (const [id, fixture] of historyById) {
 }
 const historyFixtures = [...historyById.values()].sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate));
 
-await writeFile("data.json", `${JSON.stringify({ updatedAt: now, source: "football-data.org", modelVersion: 2, fixtures }, null, 2)}\n`);
+if (fixtures.length) {
+  await writeFile("data.json", `${JSON.stringify({ updatedAt: now, source: "football-data.org", modelVersion: 2, fixtures }, null, 2)}\n`);
+} else {
+  console.log(`No selected-league fixtures found from ${from} to ${to}; keeping the existing data.json.`);
+}
 await writeFile("history.json", `${JSON.stringify({ updatedAt: now, fixtures: historyFixtures }, null, 2)}\n`);
-console.log(`Updated ${fixtures.length} Model V2 fixtures across ${COMPETITIONS.length} leagues (${from} to ${to}).`);
+if (fixtures.length) console.log(`Updated ${fixtures.length} Model V2 fixtures across ${COMPETITIONS.length} leagues (${from} to ${to}).`);
 console.log(`Performance history contains ${historyFixtures.length} saved fixtures; ${settledCount} settled on this run.`);
 
