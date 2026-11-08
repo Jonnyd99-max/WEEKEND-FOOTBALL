@@ -54,6 +54,7 @@ const weeks = batches.map(batch => {
     .map(fixture => ({ fixture, prediction: predict(fixture) }))
     .sort((a, b) => b.prediction.confidence - a.prediction.confidence || new Date(a.fixture.utcDate) - new Date(b.fixture.utcDate));
   const picks = makePicks(ranked, 10);
+  const filteredPicks = makePicks(ranked.filter(({ fixture, prediction }) => londonHour(fixture.utcDate) >= 14 && predictedOutcome(prediction) !== "away"), 10);
   const saturdayPicks = makePicks(ranked.filter(({ fixture }) => londonDay(fixture.utcDate) === "saturday"), 5);
   const sundayPicks = makePicks(ranked.filter(({ fixture }) => londonDay(fixture.utcDate) === "sunday"), 5);
   const settledTop10 = picks.filter(pick => pick.settled);
@@ -68,6 +69,7 @@ const weeks = batches.map(batch => {
     picks,
     strategies: {
       top10: strategySummary(picks),
+      filteredTop10: strategySummary(filteredPicks),
       saturdayTop5: strategySummary(saturdayPicks),
       sundayTop5: strategySummary(sundayPicks),
     },
@@ -92,7 +94,7 @@ function groupedSummary(items, keyFor) {
 }
 
 const allPicks = weeks.flatMap(week => week.picks);
-const strategyOverall = Object.fromEntries(["top10", "saturdayTop5", "sundayTop5"].map(strategy => {
+const strategyOverall = Object.fromEntries(["top10", "filteredTop10", "saturdayTop5", "sundayTop5"].map(strategy => {
   const picks = weeks.flatMap(week => week.strategies[strategy].picks);
   return [strategy, strategySummary(picks)];
 }));
