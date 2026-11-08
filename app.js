@@ -302,6 +302,53 @@ function weeklySummary(week) {
   return `<section class="weekly-summary"><div><span class="section-kicker">WEEK AT A GLANCE</span><h3>${top.score} Top 10 selections correct</h3><p>${top.accuracy}% accuracy${top.pending ? ` with ${top.pending} still pending` : ""}. ${best ? `${best.name} was the strongest result portfolio at ${best.accuracy}%.` : "Results are still pending."}</p></div><div class="weekly-summary-stat"><span>OVER 2.5</span><strong>${over25.score}</strong><small>${over25.accuracy}% correct</small></div><div class="weekly-summary-stat"><span>BTTS</span><strong>${btts.score}</strong><small>${btts.accuracy}% correct</small></div><div class="weekly-summary-note"><span>WHAT STOOD OUT</span><p>${cautionText}</p></div></section>`;
 }
 
+function insightMetric(picks) {
+  const settled = picks.filter(pick => pick.settled !== false && pick.actualOutcome);
+  const correct = settled.filter(pick => pick.correct).length;
+  const accuracy = settled.length ? Math.round(correct / settled.length * 100) : 0;
+  return { settled: settled.length, correct, accuracy };
+}
+
+function insightPanel(title, subtitle, rows) {
+  const content = rows.map(row => {
+    const metric = insightMetric(row.picks);
+    const evidence = metric.settled < 5 ? "Very small sample" : metric.settled < 10 ? "Early evidence" : "Useful sample";
+    const detail = row.detail ? row.detail(metric) : `${metric.correct}/${metric.settled} correct`;
+    return `<div class="insight-row"><div class="insight-row-label"><strong>${row.label}</strong><small>${detail}</small></div><div class="insight-bar"><span style="width:${metric.accuracy}%"></span></div><b>${metric.settled ? `${metric.accuracy}%` : "—"}</b><em class="${metric.settled < 10 ? "is-caution" : ""}">${evidence}</em></div>`;
+  }).join("");
+  return `<section class="insight-panel"><div class="insight-heading"><span class="section-kicker">${subtitle}</span><h3>${title}</h3></div><div class="insight-rows">${content || '<div class="empty compact">Not enough saved predictions yet.</div>'}</div></section>`;
+}
+
+function modelInsights(weeks) {
+  const topPicks = weeks.flatMap(week => week.reviewStrategies.top10.picks);
+  const leagues = [...new Map(topPicks.map(pick => [pick.competition?.code || "UNKNOWN", pick.competition?.name || "League"])).entries()];
+  const leagueRows = leagues.map(([code, name]) => ({ label: name, picks: topPicks.filter(pick => (pick.competition?.code || "UNKNOWN") === code) }));
+  const outcomeRows = [["Home wins", "home"], ["Draws", "draw"], ["Away wins", "away"]].map(([label, outcome]) => ({ label, picks: topPicks.filter(pick => pick.predictedOutcome === outcome) }));
+  const confidenceRows = [
+    { label: "Under 60%", minimum: 0, maximum: 59 },
+    { label: "60–69%", minimum: 60, maximum: 69 },
+    { label: "70–79%", minimum: 70, maximum: 79 },
+    { label: "80%+", minimum: 80, maximum: 100 },
+  ].map(band => {
+    const picks = topPicks.filter(pick => pick.confidence >= band.minimum && pick.confidence <= band.maximum);
+    return { label: band.label, picks, detail: metric => {
+      const average = picks.length ? Math.round(picks.reduce((sum, pick) => sum + pick.confidence, 0) / picks.length) : 0;
+      const gap = metric.settled ? metric.accuracy - average : 0;
+      return metric.settled ? `${metric.correct}/${metric.settled} · model avg ${average}% · ${gap > 0 ? "+" : ""}${gap} pts` : "No settled picks";
+    } };
+  });
+  const kickoffRows = [
+    ["Early · before 14:00", pick => kickoffHour(pick.utcDate) < 14],
+    ["Afternoon · 14:00–16:59", pick => kickoffHour(pick.utcDate) >= 14 && kickoffHour(pick.utcDate) < 17],
+    ["Evening · 17:00+", pick => kickoffHour(pick.utcDate) >= 17],
+  ].map(([label, test]) => ({ label, picks: topPicks.filter(test) }));
+  const portfolios = [
+    ["Top 10", "top10"], ["Filtered Top 10", "filteredTop10"], ["Saturday Top 5", "saturdayTop5"], ["Sunday Top 5", "sundayTop5"],
+    ["Over 2.5 · Top 10", "over25Top10"], ["BTTS · Top 10", "bttsTop10"],
+  ].map(([label, name]) => ({ label, picks: weeks.flatMap(week => week.reviewStrategies[name].picks) }));
+  return `<section class="model-insights"><div class="model-insights-heading"><div><span class="section-kicker">MODEL INSIGHTS</span><h2>Where the predictor performs best</h2><p>Every percentage comes from saved pre-match selections. Treat fewer than 10 settled picks as provisional evidence.</p></div><span class="threshold">LIVE AUDIT</span></div><div class="insight-grid">${insightPanel("By league", "TOP 10 RESULTS", leagueRows)}${insightPanel("By prediction", "HOME · DRAW · AWAY", outcomeRows)}${insightPanel("Confidence calibration", "RESULTS VS DISPLAYED CONFIDENCE", confidenceRows)}${insightPanel("By kickoff time", "MATCH TIMING", kickoffRows)}${insightPanel("Portfolio comparison", "SAVED STRATEGIES", portfolios)}</div></section>`;
+}
+
 function reviewDashboard() {
   const weeks = reviewWeeks();
   if (!weeks.length) return '<div class="empty"><strong>No completed review yet.</strong><br>The first report will appear after a completed weekend is settled.</div>';
@@ -325,7 +372,7 @@ function reviewDashboard() {
     return `<button class="week-card" data-review-week="${week.predictionBatch}"><span>Weekend ${new Date(week.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span><strong>${top.score}</strong><small>Top 10 · ${top.accuracy}%</small><em>Filtered ${filtered.score} · Sat ${sat.score} · Sun ${sun.score}</em></button>`;
   }).join("");
   const detail = selected ? `<div class="review-detail-heading"><div><span class="section-kicker">SAVED PORTFOLIOS</span><h3>Weekend ${new Date(selected.weekendStarting).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</h3></div></div>${weeklySummary(selected)}${portfolioSection("Top 10 overall", "MATCH RESULT", selected.reviewStrategies.top10)}${portfolioSection("Filtered Top 10", "MATCH RESULT · FILTERED", selected.reviewStrategies.filteredTop10)}${portfolioSection("Saturday Top 5", "MATCH RESULT · SATURDAY", selected.reviewStrategies.saturdayTop5)}${portfolioSection("Sunday Top 5", "MATCH RESULT · SUNDAY", selected.reviewStrategies.sundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Over 2.5 goals</h3></div>${portfolioSection("Weekend Top 10", "OVER 2.5 · ALL WEEKEND", selected.reviewStrategies.over25Top10)}${portfolioSection("Saturday Top 5", "OVER 2.5 · SATURDAY", selected.reviewStrategies.over25SaturdayTop5)}${portfolioSection("Sunday Top 5", "OVER 2.5 · SUNDAY", selected.reviewStrategies.over25SundayTop5)}<div class="review-market-divider"><span>GOAL MARKET</span><h3>Both teams to score</h3></div>${portfolioSection("Weekend Top 10", "BTTS · ALL WEEKEND", selected.reviewStrategies.bttsTop10)}${portfolioSection("Saturday Top 5", "BTTS · SATURDAY", selected.reviewStrategies.bttsSaturdayTop5)}${portfolioSection("Sunday Top 5", "BTTS · SUNDAY", selected.reviewStrategies.bttsSundayTop5)}` : `<div class="week-grid">${weekCards}</div>`;
-  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Review the saved Top 10, Filtered Top 10 and both daily Top 5 portfolios.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${detail}</div>`;
+  return `<div class="review-wrap"><div class="review-summary"><div><span class="section-kicker">PERFORMANCE AUDIT</span><h2>Interactive review</h2><p>Review the saved Top 10, Filtered Top 10 and both daily Top 5 portfolios.</p></div><div class="review-controls"><label>Review week<select id="review-week">${options}</select></label></div></div><div class="audit-grid"><div class="audit-card primary"><span>Top 10 record</span><strong>${correct}/${allPicks.length}</strong><small>${accuracy}% correct</small></div><div class="audit-card"><span>Average confidence</span><strong>${averageConfidence}%</strong><small>compare with ${accuracy}% results</small></div>${bandCards}</div>${modelInsights(weeks)}${detail}</div>`;
 }
 
 function bindReviewControls() {
