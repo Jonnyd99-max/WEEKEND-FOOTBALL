@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-08T14:19:20.764Z",
+  "generatedAt": "2026-11-11T16:42:54.126Z",
   "modelVersion": 2,
   "note": "Frozen weekly Top 10 predictions recomputed from their saved original model inputs. Use this file for model reviews; never tune from one surprising result.",
   "overall": {
     "completedWeeks": 4,
-    "top10Predictions": 37,
-    "pendingTop10Predictions": 3,
-    "correct": 27,
-    "accuracy": 73,
+    "top10Predictions": 40,
+    "pendingTop10Predictions": 0,
+    "correct": 30,
+    "accuracy": 75,
     "averageConfidence": 74.7
   },
   "strategyOverall": {
@@ -1227,12 +1227,12 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 4,
@@ -1301,12 +1301,12 @@
             "btts": 50
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 6,
@@ -1449,12 +1449,12 @@
             "btts": 58
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "away",
+          "finalScore": "1-3",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 4,
+          "actualBtts": true
         },
         {
           "rank": 10,
@@ -1494,10 +1494,10 @@
           "actualBtts": true
         }
       ],
-      "settled": 37,
-      "pending": 3,
-      "correct": 27,
-      "accuracy": 73,
+      "settled": 40,
+      "pending": 0,
+      "correct": 30,
+      "accuracy": 75,
       "averageConfidence": 74.7
     },
     "filteredTop10": {
@@ -2716,12 +2716,12 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 4,
@@ -2753,12 +2753,12 @@
             "btts": 50
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 5,
@@ -2938,12 +2938,12 @@
             "btts": 40
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 10,
@@ -2975,18 +2975,18 @@
             "btts": 62
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-1",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true
         }
       ],
-      "settled": 36,
-      "pending": 4,
-      "correct": 28,
-      "accuracy": 77.8,
+      "settled": 40,
+      "pending": 0,
+      "correct": 32,
+      "accuracy": 80,
       "averageConfidence": 71.4
     },
     "marginShadowTop10": {
@@ -4205,12 +4205,12 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 4,
@@ -4242,12 +4242,12 @@
             "btts": 50
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 5,
@@ -4427,12 +4427,12 @@
             "btts": 58
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "away",
+          "finalScore": "1-3",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 4,
+          "actualBtts": true
         },
         {
           "rank": 10,
@@ -4472,10 +4472,10 @@
           "actualBtts": true
         }
       ],
-      "settled": 37,
-      "pending": 3,
-      "correct": 26,
-      "accuracy": 70.3,
+      "settled": 40,
+      "pending": 0,
+      "correct": 29,
+      "accuracy": 72.5,
       "averageConfidence": 74.7
     },
     "saturdayTop5": {
@@ -5814,12 +5814,12 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 2,
@@ -5851,12 +5851,12 @@
             "btts": 50
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 3,
@@ -5888,12 +5888,12 @@
             "btts": 58
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "away",
+          "finalScore": "1-3",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 4,
+          "actualBtts": true
         },
         {
           "rank": 4,
@@ -5962,18 +5962,18 @@
             "btts": 40
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         }
       ],
-      "settled": 16,
-      "pending": 4,
-      "correct": 11,
-      "accuracy": 68.8,
+      "settled": 20,
+      "pending": 0,
+      "correct": 15,
+      "accuracy": 75,
       "averageConfidence": 67.6
     },
     "over25Top10": {
@@ -7320,16 +7320,16 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 2,
+          "actualBtts": false,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 80,
-          "marketActual": null
+          "marketActual": "2 total goals"
         },
         {
           "rank": 4,
@@ -7361,16 +7361,16 @@
             "btts": 74
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 2,
+          "actualBtts": false,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 75,
-          "marketActual": null
+          "marketActual": "2 total goals"
         },
         {
           "rank": 5,
@@ -7402,16 +7402,16 @@
             "btts": 71
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "0-1",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 1,
+          "actualBtts": false,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 72,
-          "marketActual": null
+          "marketActual": "1 total goals"
         },
         {
           "rank": 6,
@@ -7484,16 +7484,16 @@
             "btts": 69
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 71,
-          "marketActual": null
+          "marketActual": "3 total goals"
         },
         {
           "rank": 8,
@@ -7619,10 +7619,10 @@
           "marketActual": "3 total goals"
         }
       ],
-      "settled": 36,
-      "pending": 4,
-      "correct": 21,
-      "accuracy": 58.3,
+      "settled": 40,
+      "pending": 0,
+      "correct": 22,
+      "accuracy": 55,
       "averageConfidence": 64
     },
     "over25SaturdayTop5": {
@@ -9101,16 +9101,16 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 2,
+          "actualBtts": false,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 80,
-          "marketActual": null
+          "marketActual": "2 total goals"
         },
         {
           "rank": 2,
@@ -9142,16 +9142,16 @@
             "btts": 74
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 2,
+          "actualBtts": false,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 75,
-          "marketActual": null
+          "marketActual": "2 total goals"
         },
         {
           "rank": 3,
@@ -9183,16 +9183,16 @@
             "btts": 71
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "0-1",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 1,
+          "actualBtts": false,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 72,
-          "marketActual": null
+          "marketActual": "1 total goals"
         },
         {
           "rank": 4,
@@ -9224,16 +9224,16 @@
             "btts": 69
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 71,
-          "marketActual": null
+          "marketActual": "3 total goals"
         },
         {
           "rank": 5,
@@ -9265,22 +9265,22 @@
             "btts": 68
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "over25",
           "marketLabel": "Over 2.5 goals",
           "marketProbability": 68,
-          "marketActual": null
+          "marketActual": "3 total goals"
         }
       ],
-      "settled": 15,
-      "pending": 5,
-      "correct": 12,
-      "accuracy": 80,
+      "settled": 20,
+      "pending": 0,
+      "correct": 14,
+      "accuracy": 70,
       "averageConfidence": 57.4
     },
     "bttsTop10": {
@@ -10545,16 +10545,16 @@
             "btts": 74
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 2,
+          "actualBtts": false,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 74,
-          "marketActual": null
+          "marketActual": "BTTS No"
         },
         {
           "rank": 2,
@@ -10586,16 +10586,16 @@
             "btts": 71
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "0-1",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 1,
+          "actualBtts": false,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 71,
-          "marketActual": null
+          "marketActual": "BTTS No"
         },
         {
           "rank": 3,
@@ -10668,16 +10668,16 @@
             "btts": 69
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 69,
-          "marketActual": null
+          "marketActual": "BTTS Yes"
         },
         {
           "rank": 5,
@@ -10709,16 +10709,16 @@
             "btts": 68
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 68,
-          "marketActual": null
+          "marketActual": "BTTS Yes"
         },
         {
           "rank": 6,
@@ -10914,22 +10914,22 @@
             "btts": 64
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 64,
-          "marketActual": null
+          "marketActual": "BTTS Yes"
         }
       ],
-      "settled": 35,
-      "pending": 5,
-      "correct": 15,
-      "accuracy": 42.9,
+      "settled": 40,
+      "pending": 0,
+      "correct": 18,
+      "accuracy": 45,
       "averageConfidence": 51.4
     },
     "bttsSaturdayTop5": {
@@ -12408,16 +12408,16 @@
             "btts": 74
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 2,
+          "actualBtts": false,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 74,
-          "marketActual": null
+          "marketActual": "BTTS No"
         },
         {
           "rank": 2,
@@ -12449,16 +12449,16 @@
             "btts": 71
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "0-1",
+          "settled": true,
+          "correct": false,
+          "actualGoals": 1,
+          "actualBtts": false,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 71,
-          "marketActual": null
+          "marketActual": "BTTS No"
         },
         {
           "rank": 3,
@@ -12490,16 +12490,16 @@
             "btts": 69
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 69,
-          "marketActual": null
+          "marketActual": "BTTS Yes"
         },
         {
           "rank": 4,
@@ -12531,16 +12531,16 @@
             "btts": 68
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 68,
-          "marketActual": null
+          "marketActual": "BTTS Yes"
         },
         {
           "rank": 5,
@@ -12572,38 +12572,38 @@
             "btts": 64
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null,
+          "actualOutcome": "away",
+          "finalScore": "1-2",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 3,
+          "actualBtts": true,
           "market": "btts",
           "marketLabel": "BTTS Yes",
           "marketProbability": 64,
-          "marketActual": null
+          "marketActual": "BTTS Yes"
         }
       ],
-      "settled": 15,
-      "pending": 5,
-      "correct": 8,
-      "accuracy": 53.3,
+      "settled": 20,
+      "pending": 0,
+      "correct": 11,
+      "accuracy": 55,
       "averageConfidence": 52.5
     }
   },
   "byLeague": {
     "BL1": {
-      "predictions": 11,
-      "correct": 7,
-      "accuracy": 63.6,
-      "averageConfidence": 76.8,
+      "predictions": 12,
+      "correct": 8,
+      "accuracy": 66.7,
+      "averageConfidence": 77.4,
       "reliability": "under review"
     },
     "PL": {
-      "predictions": 4,
-      "correct": 2,
-      "accuracy": 50,
-      "averageConfidence": 74.5,
+      "predictions": 6,
+      "correct": 4,
+      "accuracy": 66.7,
+      "averageConfidence": 73.3,
       "reliability": "insufficient data"
     },
     "SA": {
@@ -12630,16 +12630,16 @@
   },
   "byPredictedOutcome": {
     "home": {
-      "predictions": 30,
-      "correct": 23,
-      "accuracy": 76.7,
-      "averageConfidence": 75
+      "predictions": 32,
+      "correct": 25,
+      "accuracy": 78.1,
+      "averageConfidence": 75.2
     },
     "away": {
-      "predictions": 7,
-      "correct": 4,
-      "accuracy": 57.1,
-      "averageConfidence": 73.1
+      "predictions": 8,
+      "correct": 5,
+      "accuracy": 62.5,
+      "averageConfidence": 72.5
     }
   },
   "byConfidenceBand": {
@@ -12650,21 +12650,21 @@
       "averageConfidence": 90
     },
     "80-89%": {
-      "predictions": 6,
-      "correct": 6,
+      "predictions": 7,
+      "correct": 7,
       "accuracy": 100,
       "averageConfidence": 83.7
     },
     "70-79%": {
-      "predictions": 23,
-      "correct": 14,
-      "accuracy": 60.9,
-      "averageConfidence": 73.7
+      "predictions": 24,
+      "correct": 15,
+      "accuracy": 62.5,
+      "averageConfidence": 73.8
     },
     "60-69%": {
-      "predictions": 7,
-      "correct": 6,
-      "accuracy": 85.7,
+      "predictions": 8,
+      "correct": 7,
+      "accuracy": 87.5,
       "averageConfidence": 67.6
     }
   },
@@ -12676,10 +12676,10 @@
       "averageConfidence": 76.5
     },
     "afternoon_1400_1659": {
-      "predictions": 18,
-      "correct": 13,
-      "accuracy": 72.2,
-      "averageConfidence": 73.3
+      "predictions": 21,
+      "correct": 16,
+      "accuracy": 76.2,
+      "averageConfidence": 73.6
     },
     "early_before_1400": {
       "predictions": 5,
@@ -12690,14 +12690,14 @@
   },
   "goalMarkets": {
     "over25": {
-      "predictions": 37,
-      "correct": 25,
-      "accuracy": 67.6
+      "predictions": 40,
+      "correct": 26,
+      "accuracy": 65
     },
     "btts": {
-      "predictions": 37,
-      "correct": 20,
-      "accuracy": 54.1
+      "predictions": 40,
+      "correct": 21,
+      "accuracy": 52.5
     }
   },
   "oddsReview": {
@@ -23512,8 +23512,8 @@
     {
       "predictionBatch": "2026-11-04T16:45:19.002Z",
       "weekendStarting": "2026-11-07",
-      "settledFixtures": 29,
-      "top10Correct": 7,
+      "settledFixtures": 46,
+      "top10Correct": 10,
       "top10Accuracy": 100,
       "averageConfidence": 74.9,
       "picks": [
@@ -23621,12 +23621,12 @@
             "btts": 57
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 4,
@@ -23695,12 +23695,12 @@
             "btts": 50
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "home",
+          "finalScore": "2-0",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 2,
+          "actualBtts": false
         },
         {
           "rank": 6,
@@ -23843,12 +23843,12 @@
             "btts": 58
           },
           "odds": null,
-          "actualOutcome": null,
-          "finalScore": null,
-          "settled": false,
-          "correct": null,
-          "actualGoals": null,
-          "actualBtts": null
+          "actualOutcome": "away",
+          "finalScore": "1-3",
+          "settled": true,
+          "correct": true,
+          "actualGoals": 4,
+          "actualBtts": true
         },
         {
           "rank": 10,
@@ -23995,12 +23995,12 @@
                 "btts": 57
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 4,
@@ -24069,12 +24069,12 @@
                 "btts": 50
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 6,
@@ -24217,12 +24217,12 @@
                 "btts": 58
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "away",
+              "finalScore": "1-3",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 4,
+              "actualBtts": true
             },
             {
               "rank": 10,
@@ -24262,9 +24262,9 @@
               "actualBtts": true
             }
           ],
-          "settled": 7,
-          "pending": 3,
-          "correct": 7,
+          "settled": 10,
+          "pending": 0,
+          "correct": 10,
           "accuracy": 100,
           "averageConfidence": 74.9
         },
@@ -24374,12 +24374,12 @@
                 "btts": 57
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 4,
@@ -24411,12 +24411,12 @@
                 "btts": 50
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 5,
@@ -24596,12 +24596,12 @@
                 "btts": 40
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 10,
@@ -24633,17 +24633,17 @@
                 "btts": 62
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-1",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true
             }
           ],
-          "settled": 6,
-          "pending": 4,
-          "correct": 6,
+          "settled": 10,
+          "pending": 0,
+          "correct": 10,
           "accuracy": 100,
           "averageConfidence": 72.7
         },
@@ -24753,12 +24753,12 @@
                 "btts": 57
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 4,
@@ -24790,12 +24790,12 @@
                 "btts": 50
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 5,
@@ -24975,12 +24975,12 @@
                 "btts": 58
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "away",
+              "finalScore": "1-3",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 4,
+              "actualBtts": true
             },
             {
               "rank": 10,
@@ -25020,9 +25020,9 @@
               "actualBtts": true
             }
           ],
-          "settled": 7,
-          "pending": 3,
-          "correct": 7,
+          "settled": 10,
+          "pending": 0,
+          "correct": 10,
           "accuracy": 100,
           "averageConfidence": 74.9
         },
@@ -25252,12 +25252,12 @@
                 "btts": 57
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 2,
@@ -25289,12 +25289,12 @@
                 "btts": 50
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             },
             {
               "rank": 3,
@@ -25326,12 +25326,12 @@
                 "btts": 58
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "away",
+              "finalScore": "1-3",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 4,
+              "actualBtts": true
             },
             {
               "rank": 4,
@@ -25400,18 +25400,18 @@
                 "btts": 40
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 2,
+              "actualBtts": false
             }
           ],
-          "settled": 1,
-          "pending": 4,
-          "correct": 0,
-          "accuracy": 0,
+          "settled": 5,
+          "pending": 0,
+          "correct": 4,
+          "accuracy": 80,
           "averageConfidence": 70
         },
         "over25Top10": {
@@ -25528,16 +25528,16 @@
                 "btts": 57
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 2,
+              "actualBtts": false,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 80,
-              "marketActual": null
+              "marketActual": "2 total goals"
             },
             {
               "rank": 4,
@@ -25569,16 +25569,16 @@
                 "btts": 74
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 2,
+              "actualBtts": false,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 75,
-              "marketActual": null
+              "marketActual": "2 total goals"
             },
             {
               "rank": 5,
@@ -25610,16 +25610,16 @@
                 "btts": 71
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "0-1",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 1,
+              "actualBtts": false,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 72,
-              "marketActual": null
+              "marketActual": "1 total goals"
             },
             {
               "rank": 6,
@@ -25692,16 +25692,16 @@
                 "btts": 69
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 71,
-              "marketActual": null
+              "marketActual": "3 total goals"
             },
             {
               "rank": 8,
@@ -25827,10 +25827,10 @@
               "marketActual": "3 total goals"
             }
           ],
-          "settled": 6,
-          "pending": 4,
-          "correct": 5,
-          "accuracy": 83.3,
+          "settled": 10,
+          "pending": 0,
+          "correct": 6,
+          "accuracy": 60,
           "averageConfidence": 65
         },
         "over25SaturdayTop5": {
@@ -26079,16 +26079,16 @@
                 "btts": 57
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 2,
+              "actualBtts": false,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 80,
-              "marketActual": null
+              "marketActual": "2 total goals"
             },
             {
               "rank": 2,
@@ -26120,16 +26120,16 @@
                 "btts": 74
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 2,
+              "actualBtts": false,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 75,
-              "marketActual": null
+              "marketActual": "2 total goals"
             },
             {
               "rank": 3,
@@ -26161,16 +26161,16 @@
                 "btts": 71
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "0-1",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 1,
+              "actualBtts": false,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 72,
-              "marketActual": null
+              "marketActual": "1 total goals"
             },
             {
               "rank": 4,
@@ -26202,16 +26202,16 @@
                 "btts": 69
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 71,
-              "marketActual": null
+              "marketActual": "3 total goals"
             },
             {
               "rank": 5,
@@ -26243,22 +26243,22 @@
                 "btts": 68
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "over25",
               "marketLabel": "Over 2.5 goals",
               "marketProbability": 68,
-              "marketActual": null
+              "marketActual": "3 total goals"
             }
           ],
-          "settled": 0,
-          "pending": 5,
-          "correct": 0,
-          "accuracy": 0,
+          "settled": 5,
+          "pending": 0,
+          "correct": 2,
+          "accuracy": 40,
           "averageConfidence": 53.2
         },
         "bttsTop10": {
@@ -26293,16 +26293,16 @@
                 "btts": 74
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 2,
+              "actualBtts": false,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 74,
-              "marketActual": null
+              "marketActual": "BTTS No"
             },
             {
               "rank": 2,
@@ -26334,16 +26334,16 @@
                 "btts": 71
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "0-1",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 1,
+              "actualBtts": false,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 71,
-              "marketActual": null
+              "marketActual": "BTTS No"
             },
             {
               "rank": 3,
@@ -26416,16 +26416,16 @@
                 "btts": 69
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 69,
-              "marketActual": null
+              "marketActual": "BTTS Yes"
             },
             {
               "rank": 5,
@@ -26457,16 +26457,16 @@
                 "btts": 68
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 68,
-              "marketActual": null
+              "marketActual": "BTTS Yes"
             },
             {
               "rank": 6,
@@ -26662,22 +26662,22 @@
                 "btts": 64
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 64,
-              "marketActual": null
+              "marketActual": "BTTS Yes"
             }
           ],
-          "settled": 5,
-          "pending": 5,
-          "correct": 4,
-          "accuracy": 80,
+          "settled": 10,
+          "pending": 0,
+          "correct": 7,
+          "accuracy": 70,
           "averageConfidence": 46.5
         },
         "bttsSaturdayTop5": {
@@ -26926,16 +26926,16 @@
                 "btts": 74
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "home",
+              "finalScore": "2-0",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 2,
+              "actualBtts": false,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 74,
-              "marketActual": null
+              "marketActual": "BTTS No"
             },
             {
               "rank": 2,
@@ -26967,16 +26967,16 @@
                 "btts": 71
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "0-1",
+              "settled": true,
+              "correct": false,
+              "actualGoals": 1,
+              "actualBtts": false,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 71,
-              "marketActual": null
+              "marketActual": "BTTS No"
             },
             {
               "rank": 3,
@@ -27008,16 +27008,16 @@
                 "btts": 69
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 69,
-              "marketActual": null
+              "marketActual": "BTTS Yes"
             },
             {
               "rank": 4,
@@ -27049,16 +27049,16 @@
                 "btts": 68
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 68,
-              "marketActual": null
+              "marketActual": "BTTS Yes"
             },
             {
               "rank": 5,
@@ -27090,22 +27090,22 @@
                 "btts": 64
               },
               "odds": null,
-              "actualOutcome": null,
-              "finalScore": null,
-              "settled": false,
-              "correct": null,
-              "actualGoals": null,
-              "actualBtts": null,
+              "actualOutcome": "away",
+              "finalScore": "1-2",
+              "settled": true,
+              "correct": true,
+              "actualGoals": 3,
+              "actualBtts": true,
               "market": "btts",
               "marketLabel": "BTTS Yes",
               "marketProbability": 64,
-              "marketActual": null
+              "marketActual": "BTTS Yes"
             }
           ],
-          "settled": 0,
-          "pending": 5,
-          "correct": 0,
-          "accuracy": 0,
+          "settled": 5,
+          "pending": 0,
+          "correct": 3,
+          "accuracy": 60,
           "averageConfidence": 44.2
         }
       }
