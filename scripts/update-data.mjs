@@ -160,19 +160,40 @@ const completedById = new Map();
 for (const competition of COMPETITIONS) {
   console.log(`Fetching ${competition.name}…`);
   const upcoming = await api(`/competitions/${competition.code}/matches?dateFrom=${from}&dateTo=${to}`);
-  const completed = await api(`/competitions/${competition.code}/matches?status=FINISHED`);
   const matches = upcoming.matches ?? [];
+  // Use the actual fixture's season, so every new season is selected automatically.
   const currentSeason = Number(matches[0]?.season?.startDate?.slice(0, 4) ?? (new Date(from).getUTCMonth() >= 6 ? new Date(from).getUTCFullYear() : new Date(from).getUTCFullYear() - 1));
+  const completed = await api(`/competitions/${competition.code}/matches?season=${currentSeason}&status=FINISHED`);
   const previous = await api(`/competitions/${competition.code}/matches?season=${currentSeason - 1}&status=FINISHED`);
   const finishedMatches = (completed.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
   finishedMatches.forEach(match => completedById.set(match.id, match));
   const previousMatches = (previous.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
+  // An API can respond successfully but return only a fraction of a season.
+  // Compare with saved predictions from the *same* season; do not compare
+  // against last season when a new season legitimately starts from zero.
+  const historicalCounts = [...(previousData.fixtures ?? []), ...(existingHistory.fixtures ?? [])]
+    .filter(fixture => {
+      const date = new Date(fixture.utcDate);
+      const fixtureSeason = fixture.model?.league?.seasonStartYear ??
+        (date.getUTCFullYear() - (date.getUTCMonth() < 6 ? 1 : 0));
+      return fixture.competition?.code === competition.code && fixtureSeason === currentSeason;
+    })
+    .map(fixture => fixture.model?.league?.completedMatches)
+    .filter(Number.isFinite);
+  const previousCompletedMatches = historicalCounts.length ? Math.max(...historicalCounts) : null;
+  const hasMissingSeasonData = previousCompletedMatches >= 20 && finishedMatches.length < previousCompletedMatches * 0.75;
+  if (hasMissingSeasonData) {
+    console.warn(`DATA QUALITY WARNING: ${competition.name} has only ${finishedMatches.length} completed matches; previous saved data contained ${previousCompletedMatches} for season ${currentSeason}. Predictions will be flagged.`);
+  }
   const table = buildTable(finishedMatches);
   const previousTable = buildTable(previousMatches);
   const league = {
     avgHomeGoals: Number((finishedMatches.reduce((sum, match) => sum + match.score.fullTime.home, 0) / Math.max(1, finishedMatches.length)).toFixed(3)),
     avgAwayGoals: Number((finishedMatches.reduce((sum, match) => sum + match.score.fullTime.away, 0) / Math.max(1, finishedMatches.length)).toFixed(3)),
     completedMatches: finishedMatches.length,
+    seasonStartYear: currentSeason,
+    previousCompletedMatches,
+    dataQuality: hasMissingSeasonData ? "warning" : "ok",
     previousAverageGoals: Number((previousMatches.reduce((sum, match) => sum + match.score.fullTime.home + match.score.fullTime.away, 0) / Math.max(1, previousMatches.length * 2)).toFixed(3)),
   };
 
