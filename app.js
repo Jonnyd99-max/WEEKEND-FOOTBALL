@@ -13,6 +13,67 @@ let historyFixtures = [];
 let performanceData = null;
 let currentLeague = "all";
 let selectedReviewWeek = "all";
+let dataUpdatedAt = null;
+
+// The audit only reads stored match data. It never alters a prediction.
+function auditFixture(fixture) {
+  const warnings = [];
+  const league = fixture.model?.league ?? {};
+  const completed = league.completedMatches ?? 0;
+  const historical = league.previousCompletedMatches;
+  if (league.dataQuality === "warning" ||
+      (historical >= 20 && completed < historical * 0.75)) {
+    warnings.push(`Season history dropped from ${historical} to ${completed} matches`);
+  }
+  // At the beginning of a season short form is expected, not a data fault.
+  const expectedForm = Math.min(5, Math.max(0, Math.floor(completed / 10)));
+  for (const team of [fixture.home, fixture.away]) {
+    const found = Array.isArray(team.form) ? team.form.length : 0;
+    if (expectedForm >= 3 && found < expectedForm) {
+      warnings.push(`${team.name}: only ${found}/5 form results`);
+    }
+    if (completed >= 30 && (team.played == null || team.played === 0)) {
+      warnings.push(`${team.name}: missing season matches`);
+    }
+    if (team.position == null && completed >= 30) {
+      warnings.push(`${team.name}: league position unavailable`);
+    }
+  }
+  return [...new Set(warnings)];
+}
+
+function auditLeagues() {
+  return [...new Map(fixtures.map(fixture => [fixture.competition?.code || "PL", fixture.competition?.name || "League"]))]
+    .map(([code, name]) => {
+      const matches = fixtures.filter(fixture => (fixture.competition?.code || "PL") === code);
+      const problemMatches = matches.map(fixture => ({ fixture, warnings: auditFixture(fixture) }))
+        .filter(entry => entry.warnings.length);
+      const league = matches[0]?.model?.league || {};
+      return { code, name, matches, problemMatches, league };
+    });
+}
+
+function dataHealthPanel() {
+  const leagues = auditLeagues().filter(league => currentLeague === "all" || currentLeague === league.code);
+  const affected = leagues.reduce((sum, league) => sum + league.problemMatches.length, 0);
+  const rows = leagues.map(league => {
+    const { completedMatches, previousCompletedMatches, seasonStartYear } = league.league;
+    const issues = league.problemMatches.map(({ fixture, warnings }) =>
+      `<li><strong>${fixture.home.name} vs ${fixture.away.name}</strong><span>${warnings.join(" · ")}</span></li>`).join("");
+    return `<article class="health-league ${issues ? "health-warning" : "health-ok"}">
+      <div class="health-league-heading"><strong>${league.name}</strong><span>${issues ? "⚠ Review required" : "✓ No issues detected"}</span></div>
+      <p>Season ${Number.isFinite(seasonStartYear) ? seasonStartYear + "–" + String((seasonStartYear + 1) % 100).padStart(2, "0") : "unknown"} · ${completedMatches ?? "?"} completed matches
+      ${previousCompletedMatches != null ? " · Previous recorded: " + previousCompletedMatches : ""}</p>
+      ${issues ? `<ul class="health-issues">${issues}</ul>` : ""}
+    </article>`;
+  }).join("");
+  return `<section class="health-report"><div class="health-report-heading"><span class="section-kicker">DATA HEALTH</span>
+    <h2>Fixture data review</h2><p>Checks current form, league positions, team appearances and sudden drops in league history. Short histories early in a season are normal.</p>
+    <div class="health-summary ${affected ? "health-warning" : "health-ok"}">${affected ? `⚠ ${affected} of ${leagues.reduce((sum, league) => sum + league.matches.length, 0)} fixtures need review` : "✓ No missing data detected"}</div>
+    <small>Last refreshed: ${dataUpdatedAt ? new Date(dataUpdatedAt).toLocaleString("en-GB") : "Unknown"} · Green means checks passed, not guaranteed accuracy.</small>
+    </div><div class="health-leagues">${rows}</div></section>`;
+}
+
 
 const points = result => result === "W" ? 3 : result === "D" ? 1 : 0;
 const total = results => results.reduce((sum, result) => sum + points(result), 0);
@@ -137,8 +198,10 @@ function card(fixture) {
         <div><span>Home H2H</span><strong>${result.homeH2h}<small>/12</small></strong></div><div><span>Home boost</span><strong>+${CONFIG.homeAdvantage}</strong></div>
         <div><span>Final rating</span><strong>${result.homeRating} — ${result.awayRating}</strong></div><div><span>Rating gap</span><strong>${result.gap}</strong></div>
       </div><p class="formula">Legacy model · 70% recent form + 30% head-to-head + ${CONFIG.homeAdvantage} home advantage</p>`;
+  const dataWarnings = auditFixture(fixture);
   return `<article class="match-card">
     <div class="card-topline"><span>${fixture.date}<span class="competition-tag">${fixture.competition?.name || "Premier League"}</span></span><span class="venue">${fixture.venue}</span></div>
+    ${dataWarnings.length ? `<div class="health-match-warning">⚠ Incomplete data · ${dataWarnings.join(" · ")}</div>` : ""}
     <div class="teams">
       <div class="team"><span class="crest crest-home">${fixture.home.short[0]}</span><div><small>HOME</small><h2>${fixture.home.name}</h2></div></div>
       <div class="versus">VS</div>
@@ -162,6 +225,7 @@ function card(fixture) {
 let currentFilter = "all";
 function render() {
   const isTop = currentFilter.startsWith("top");
+  const isHealth = currentFilter === "health";
   const isMarket = currentFilter.startsWith("market-");
   let visible = fixtures.filter(fixture => {
     const topDay = currentFilter === "top-saturday" ? "saturday" : currentFilter === "top-sunday" ? "sunday" : null;
@@ -175,7 +239,7 @@ function render() {
   });
   if (isTop) visible = visible.sort((a, b) => predict(b).confidence - predict(a).confidence || new Date(a.utcDate) - new Date(b.utcDate)).slice(0, ["top", "top-filtered"].includes(currentFilter) ? 10 : 5);
   document.querySelector("#fixture-count").textContent = currentFilter === "review" ? reviewCount() : visible.length;
-  document.querySelector("#match-list").innerHTML = isTop ? topPicksTable(visible, currentFilter) : isMarket ? marketDashboard(visible, currentFilter === "market-over25" ? "over25" : "btts") : currentFilter === "review" ? reviewDashboard() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
+  document.querySelector("#match-list").innerHTML = isHealth ? dataHealthPanel() : isTop ? topPicksTable(visible, currentFilter) : isMarket ? marketDashboard(visible, currentFilter === "market-over25" ? "over25" : "btts") : currentFilter === "review" ? reviewDashboard() : visible.map(card).join("") || '<div class="empty">No fixtures found for this day.</div>';
   if (currentFilter === "review") bindReviewControls();
 }
 
@@ -446,7 +510,7 @@ function topPicksTable(picks, filter) {
     return `<article class="top-pick-row">
       <div class="top-pick-match">
         <span class="top-pick-league">${fixture.competition?.name || "Premier League"}</span>
-        <div><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><div class="caution-list">${cautionBadges({ utcDate: fixture.utcDate, confidence: result.confidence, probabilities: result.probabilities })}</div></div>
+        <div><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><div class="caution-list">${cautionBadges({ utcDate: fixture.utcDate, confidence: result.confidence, probabilities: result.probabilities })}${auditFixture(fixture).length ? '<span class="caution-chip">⚠ Incomplete data</span>' : ""}</div></div>
         <span class="top-pick-kickoff">${fixture.date}</span>
       </div>
       <div class="top-pick-call">
@@ -501,6 +565,7 @@ async function loadFixtures() {
       console.warn("Performance audit is not available yet.", performanceError);
     }
     fixtures = data.fixtures;
+    dataUpdatedAt = data.updatedAt;
     renderLeaguePicker();
     document.querySelector("#data-status").textContent = "Live weekly data · football-data.org";
     if (fixtures.length) {
@@ -509,7 +574,15 @@ async function loadFixtures() {
       document.querySelector("#weekend-days").textContent = `${first.getDate()}—${last.getDate()}`;
       document.querySelector("#weekend-month").textContent = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(first).toUpperCase();
     }
-    document.querySelector(".notice").innerHTML = `<span>✓</span>Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} · football-data.org`;
+    const flagged = auditLeagues().filter(league => league.problemMatches.length);
+    document.querySelector(".notice").innerHTML = flagged.length
+      ? `<span>⚠</span> Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} · ${flagged.length} league(s) have missing data. <button id="open-data-health">Review data health</button>`
+      : `<span>✓</span>Updated ${new Date(data.updatedAt).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" })} · football-data.org · Data checks passed`;
+    document.querySelector("#open-data-health")?.addEventListener("click", () => {
+      currentFilter = "health";
+      document.querySelectorAll("[data-filter]").forEach(button => button.classList.toggle("active", button.dataset.filter === "health"));
+      render();
+    });
     render();
   } catch (error) {
     document.querySelector("#data-status").textContent = "Football data unavailable";
