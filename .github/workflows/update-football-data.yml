@@ -11,6 +11,12 @@ on:
     - cron: "0 9 * * 3"
       timezone: "Europe/London"
 
+# Serialise scheduled and push-triggered refreshes across branches to avoid
+# sharing the same API token at the same time.
+concurrency:
+  group: weekend-football-api-refresh
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
