@@ -255,7 +255,7 @@ function render() {
   const isMarket = currentFilter.startsWith("market-");
   let visible = fixtures.filter(fixture => {
     const topDay = currentFilter === "top-saturday" ? "saturday" : currentFilter === "top-sunday" ? "sunday" : null;
-    const matchesDay = currentFilter === "all" || currentFilter === "review" || isMarket || (isTop && (!topDay || fixture.day === topDay)) || fixture.day === currentFilter;
+    const matchesDay = currentFilter === "all" || currentFilter === "review" || isHealth || isMarket || (isTop && (!topDay || fixture.day === topDay)) || fixture.day === currentFilter;
     const matchesLeague = currentLeague === "all" || (fixture.competition?.code || "PL") === currentLeague;
     return matchesDay && matchesLeague;
   });
@@ -568,9 +568,16 @@ document.querySelectorAll("[data-filter]").forEach(button => button.addEventList
   render();
 }));
 
-document.querySelector("#refresh").addEventListener("click", event => {
-  event.currentTarget.classList.add("spinning");
-  setTimeout(() => { render(); event.currentTarget.classList.remove("spinning"); }, 450);
+document.querySelector("#refresh").addEventListener("click", async event => {
+  const button = event.currentTarget;
+  button.disabled = true;
+  button.classList.add("spinning");
+  try {
+    await loadFixtures(); // Actually refetch cache-busted JSON, not just re-render old data.
+  } finally {
+    button.classList.remove("spinning");
+    button.disabled = false;
+  }
 });
 
 async function loadFixtures() {
