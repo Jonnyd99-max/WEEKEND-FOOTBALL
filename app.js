@@ -15,27 +15,50 @@ let currentLeague = "all";
 let selectedReviewWeek = "all";
 let dataUpdatedAt = null;
 
-// The audit only reads stored match data. It never alters a prediction.
+// Audit the current season against saved snapshots. An incomplete API response
+// must never set its own target for the quality check.
+let historyLoaded = false;
+function fixtureSeason(fixture) {
+  const explicit = Number(fixture.model?.league?.seasonStartYear);
+  if (Number.isInteger(explicit) && explicit >= 1900) return explicit;
+  const date = new Date(fixture.utcDate);
+  return Number.isNaN(date.getTime()) ? null : date.getUTCFullYear() - (date.getUTCMonth() < 6 ? 1 : 0);
+}
+function historicalMatchCount(fixture) {
+  const season = fixtureSeason(fixture);
+  const league = fixture.competition?.code || "PL";
+  const matching = historyFixtures.filter(saved =>
+    (saved.competition?.code || "PL") === league && fixtureSeason(saved) === season);
+  const snapshots = matching.map(saved => saved.model?.league?.completedMatches).filter(Number.isFinite);
+  const settled = new Set(matching.filter(saved => saved.actual).map(saved => saved.id)).size;
+  return Math.max(settled, ...snapshots, 0);
+}
+function knownSeasonMatches(fixture) {
+  const current = Number(fixture.model?.league?.completedMatches) || 0;
+  const prior = Number(fixture.model?.league?.previousCompletedMatches) || 0;
+  return { current, previouslyRecorded: Math.max(prior, historicalMatchCount(fixture)) };
+}
 function auditFixture(fixture) {
   const warnings = [];
-  const league = fixture.model?.league ?? {};
-  const completed = league.completedMatches ?? 0;
-  const historical = league.previousCompletedMatches;
-  if (league.dataQuality === "warning" ||
-      (historical >= 20 && completed < historical * 0.75)) {
-    warnings.push(`Season history dropped from ${historical} to ${completed} matches`);
+  const { current, previouslyRecorded } = knownSeasonMatches(fixture);
+  if (previouslyRecorded >= 20 && current < previouslyRecorded * 0.75) {
+    warnings.push(`Season history dropped from ${previouslyRecorded} to ${current} matches`);
   }
-  // At the beginning of a season short form is expected, not a data fault.
-  const expectedForm = Math.min(5, Math.max(0, Math.floor(completed / 10)));
+  if (!historyLoaded && !fixture.model?.league?.previousCompletedMatches) {
+    warnings.push("Historical verification unavailable");
+  }
+  // Early-season form is short by design; use same-season historical evidence
+  // to distinguish it from missing form halfway through a season.
+  const expectedForm = Math.min(5, Math.floor(Math.max(current, previouslyRecorded) / 10));
   for (const team of [fixture.home, fixture.away]) {
     const found = Array.isArray(team.form) ? team.form.length : 0;
     if (expectedForm >= 3 && found < expectedForm) {
-      warnings.push(`${team.name}: only ${found}/5 form results`);
+      warnings.push(`${team.name}: only ${found}/${expectedForm} expected form results`);
     }
-    if (completed >= 30 && (team.played == null || team.played === 0)) {
+    if (Math.max(current, previouslyRecorded) >= 30 && (team.played == null || team.played === 0)) {
       warnings.push(`${team.name}: missing season matches`);
     }
-    if (team.position == null && completed >= 30) {
+    if (Math.max(current, previouslyRecorded) >= 30 && team.position == null) {
       warnings.push(`${team.name}: league position unavailable`);
     }
   }
@@ -48,7 +71,10 @@ function auditLeagues() {
       const matches = fixtures.filter(fixture => (fixture.competition?.code || "PL") === code);
       const problemMatches = matches.map(fixture => ({ fixture, warnings: auditFixture(fixture) }))
         .filter(entry => entry.warnings.length);
-      const league = matches[0]?.model?.league || {};
+      const league = { ...(matches[0]?.model?.league || {}) };
+      const compared = matches[0] ? knownSeasonMatches(matches[0]) : { previouslyRecorded: 0 };
+      league.previousCompletedMatches = Math.max(league.previousCompletedMatches || 0, compared.previouslyRecorded) || null;
+      league.seasonStartYear = matches[0] ? fixtureSeason(matches[0]) : null;
       return { code, name, matches, problemMatches, league };
     });
 }
@@ -256,7 +282,7 @@ function marketTable(title, subtitle, picks, market) {
   const rows = picks.map((fixture, index) => {
     const result = predict(fixture);
     const probability = result.goalMarkets[market];
-    return `<article class="top-pick-row"><div class="top-pick-match"><span class="top-pick-league">${fixture.competition?.name || "League"}</span><div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><span class="top-pick-kickoff">${fixture.date}</span></div><div class="top-pick-call"><div><span class="eyebrow">${label.toUpperCase()}</span><strong>${probability >= 50 ? "Yes" : "Caution"}</strong><small>Expected score ${result.expectedScore}</small></div><div class="top-pick-score"><b>${probability}%</b><small>probability</small></div></div></article>`;
+    return `<article class="top-pick-row"><div class="top-pick-match"><span class="top-pick-league">${fixture.competition?.name || "League"}</span>${auditFixture(fixture).length ? '<span class="caution-chip">⚠ Incomplete data</span>' : ""}<div class="top-pick-teams"><strong>${fixture.home.name}</strong><span>vs</span><strong>${fixture.away.name}</strong></div><span class="top-pick-kickoff">${fixture.date}</span></div><div class="top-pick-call"><div><span class="eyebrow">${label.toUpperCase()}</span><strong>${probability >= 50 ? "Yes" : "Caution"}</strong><small>Expected score ${result.expectedScore}</small></div><div class="top-pick-score"><b>${probability}%</b><small>probability</small></div></div></article>`;
   }).join("");
   return `<section class="market-section"><div class="portfolio-heading"><div><span class="section-kicker">${subtitle}</span><h3>${title}</h3></div><span class="threshold">${picks.length} picks</span></div><div class="top-picks-list">${rows || `<div class="empty compact">No fixtures available.</div>`}</div></section>`;
 }
@@ -554,7 +580,10 @@ async function loadFixtures() {
     const data = await response.json();
     try {
       const historyResponse = await fetch(`history.json?v=${Date.now()}`);
-      if (historyResponse.ok) historyFixtures = (await historyResponse.json()).fixtures ?? [];
+      if (historyResponse.ok) {
+        historyFixtures = (await historyResponse.json()).fixtures ?? [];
+        historyLoaded = true;
+      }
     } catch (historyError) {
       console.warn("Performance history is not available yet.", historyError);
     }
@@ -567,7 +596,8 @@ async function loadFixtures() {
     fixtures = data.fixtures;
     dataUpdatedAt = data.updatedAt;
     renderLeaguePicker();
-    document.querySelector("#data-status").textContent = "Live weekly data · football-data.org";
+    document.querySelector("#data-status").textContent = auditLeagues().some(league => league.problemMatches.length)
+      ? "⚠ Data quality warnings" : "Live weekly data · football-data.org";
     if (fixtures.length) {
       const first = new Date(fixtures[0].utcDate);
       const last = new Date(fixtures[fixtures.length - 1].utcDate);
