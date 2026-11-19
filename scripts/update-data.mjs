@@ -16,13 +16,27 @@ const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, millise
 const clamp = (value, minimum, maximum) => Math.min(maximum, Math.max(minimum, value));
 let lastRequestAt = 0;
 
+// Respect the free plan's 10 requests/minute and retry recoverable 429 responses.
 async function api(path) {
-  const wait = Math.max(0, 6500 - (Date.now() - lastRequestAt));
-  if (wait) await sleep(wait);
-  const response = await fetch(`${API_ROOT}${path}`, { headers: { "X-Auth-Token": token } });
-  lastRequestAt = Date.now();
-  if (!response.ok) throw new Error(`${path} returned ${response.status}: ${await response.text()}`);
-  return response.json();
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const wait = Math.max(0, 8000 - (Date.now() - lastRequestAt));
+    if (wait) await sleep(wait);
+    const response = await fetch(`${API_ROOT}${path}`, { headers: { "X-Auth-Token": token } });
+    lastRequestAt = Date.now();
+    if (response.ok) return response.json();
+    const body = await response.text();
+    if (response.status !== 429 || attempt === 4) {
+      throw new Error(`${path} returned ${response.status}: ${body}`);
+    }
+    const retryAfter = Number(response.headers.get("Retry-After"));
+    const resetAfter = Number(response.headers.get("X-RequestCounter-Reset"));
+    const messageDelay = Number(body.match(/Wait\\s+(\\d+)\\s+seconds?/i)?.[1]);
+    const seconds = [retryAfter, resetAfter, messageDelay].filter(value =>
+      Number.isFinite(value) && value > 0);
+    const pause = Math.min(120, Math.max(10, seconds.length ? Math.max(...seconds) + 2 : 30));
+    console.warn(`API rate limit (429) on ${path}; retry ${attempt + 1}/4 in ${pause}s`);
+    await sleep(pause * 1000);
+  }
 }
 
 function nextWeekend(now = new Date()) {
@@ -165,8 +179,7 @@ for (const competition of COMPETITIONS) {
   const currentSeason = Number(matches[0]?.season?.startDate?.slice(0, 4) ?? (new Date(from).getUTCMonth() >= 6 ? new Date(from).getUTCFullYear() : new Date(from).getUTCFullYear() - 1));
   const completed = await api(`/competitions/${competition.code}/matches?season=${currentSeason}&status=FINISHED`);
   const previous = await api(`/competitions/${competition.code}/matches?season=${currentSeason - 1}&status=FINISHED`);
-  const finishedMatches = (completed.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
-  finishedMatches.forEach(match => completedById.set(match.id, match));
+  let finishedMatches = (completed.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
   const previousMatches = (previous.matches ?? []).filter(match => Number.isFinite(match.score?.fullTime?.home) && Number.isFinite(match.score?.fullTime?.away));
   // An API can respond successfully but return only a fraction of a season.
   // Compare with saved predictions from the *same* season; do not compare
@@ -181,6 +194,20 @@ for (const competition of COMPETITIONS) {
     .map(fixture => fixture.model?.league?.completedMatches)
     .filter(Number.isFinite);
   const previousCompletedMatches = historicalCounts.length ? Math.max(...historicalCounts) : null;
+  // A status-filtered response can occasionally be unexpectedly short.
+  // Verify against the unfiltered season endpoint before accepting it.
+  if (previousCompletedMatches >= 20 && finishedMatches.length < previousCompletedMatches * 0.75) {
+    const allStatuses = await api(`/competitions/${competition.code}/matches?season=${currentSeason}`);
+    const recovered = (allStatuses.matches ?? []).filter(match =>
+      match.status === "FINISHED" &&
+      Number.isFinite(match.score?.fullTime?.home) &&
+      Number.isFinite(match.score?.fullTime?.away));
+    if (recovered.length > finishedMatches.length) {
+      console.log(`Recovered ${competition.name}: ${finishedMatches.length} to ${recovered.length} finished matches using unfiltered season data.`);
+      finishedMatches = recovered;
+    }
+  }
+  finishedMatches.forEach(match => completedById.set(match.id, match));
   const hasMissingSeasonData = previousCompletedMatches >= 20 && finishedMatches.length < previousCompletedMatches * 0.75;
   if (hasMissingSeasonData) {
     console.warn(`DATA QUALITY WARNING: ${competition.name} has only ${finishedMatches.length} completed matches; previous saved data contained ${previousCompletedMatches} for season ${currentSeason}. Predictions will be flagged.`);
