@@ -30,7 +30,7 @@ async function api(path) {
     }
     const retryAfter = Number(response.headers.get("Retry-After"));
     const resetAfter = Number(response.headers.get("X-RequestCounter-Reset"));
-    const messageDelay = Number(body.match(/Wait\\s+(\\d+)\\s+seconds?/i)?.[1]);
+    const messageDelay = Number(body.match(/Wait\s+(\d+)\s+seconds?/i)?.[1]);
     const seconds = [retryAfter, resetAfter, messageDelay].filter(value =>
       Number.isFinite(value) && value > 0);
     const pause = Math.min(120, Math.max(10, seconds.length ? Math.max(...seconds) + 2 : 30));
